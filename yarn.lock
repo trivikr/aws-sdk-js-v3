@@ -55,6 +55,85 @@
   dependencies:
     tslib "^1.9.3"
 
+"@aws-sdk/client-cognito-identity-browser@^0.1.0-preview.10":
+  version "0.1.0-preview.10"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity-browser/-/client-cognito-identity-browser-0.1.0-preview.10.tgz#148bd70a282da20e1f2b5e75fe290c08f31a535c"
+  integrity sha512-XuBJ6UAIpM/YrVEQw+DtyTYE/yH8iuZGnZW+XRlmGlYW7Xh1aAh2QjToXNNnk0GB7Tk3lygIX+lGpEj3chCPjQ==
+  dependencies:
+    "@aws-crypto/sha256-browser" "^0.1.0-preview.1"
+    "@aws-sdk/config-resolver" "^0.1.0-preview.7"
+    "@aws-sdk/core-handler" "^0.1.0-preview.7"
+    "@aws-sdk/fetch-http-handler" "^0.1.0-preview.8"
+    "@aws-sdk/json-builder" "^0.1.0-preview.7"
+    "@aws-sdk/json-error-unmarshaller" "^0.1.0-preview.8"
+    "@aws-sdk/json-parser" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-content-length" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-header-default" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-serializer" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-stack" "^0.1.0-preview.9"
+    "@aws-sdk/protocol-json-rpc" "^0.1.0-preview.8"
+    "@aws-sdk/retry-middleware" "^0.1.0-preview.7"
+    "@aws-sdk/signature-v4" "^0.1.0-preview.10"
+    "@aws-sdk/signing-middleware" "^0.1.0-preview.10"
+    "@aws-sdk/stream-collector-browser" "^0.1.0-preview.7"
+    "@aws-sdk/types" "^0.1.0-preview.7"
+    "@aws-sdk/url-parser-browser" "^0.1.0-preview.7"
+    "@aws-sdk/util-base64-browser" "^0.1.0-preview.3"
+    "@aws-sdk/util-body-length-browser" "^0.1.0-preview.3"
+    "@aws-sdk/util-user-agent-browser" "^0.1.0-preview.9"
+    "@aws-sdk/util-utf8-browser" "^0.1.0-preview.3"
+    tslib "^1.8.0"
+
+"@aws-sdk/client-s3-node@^0.1.0-preview.7":
+  version "0.1.0-preview.7"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-s3-node/-/client-s3-node-0.1.0-preview.7.tgz#0a69535012320e135408788e0b611b6612c60b2c"
+  integrity sha512-eDwBUN/tMmsYJIyvsXf6wLQobZKHndlXXcl7SBiO7SqxtprD79JInyRn5RzfMiaiq+Gy20LeZ5JOvmhfkWaxBA==
+  dependencies:
+    "@aws-sdk/apply-body-checksum-middleware" "^0.1.0-preview.8"
+    "@aws-sdk/bucket-endpoint-middleware" "^0.1.0-preview.7"
+    "@aws-sdk/config-resolver" "^0.1.0-preview.7"
+    "@aws-sdk/core-handler" "^0.1.0-preview.7"
+    "@aws-sdk/credential-provider-node" "^0.1.0-preview.10"
+    "@aws-sdk/hash-node" "^0.1.0-preview.8"
+    "@aws-sdk/hash-stream-node" "^0.1.0-preview.9"
+    "@aws-sdk/location-constraint-middleware" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-content-length" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-expect-continue" "^0.1.0-preview.8"
+    "@aws-sdk/middleware-header-default" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-sdk-s3" "^0.1.0-preview.4"
+    "@aws-sdk/middleware-serializer" "^0.1.0-preview.7"
+    "@aws-sdk/middleware-stack" "^0.1.0-preview.9"
+    "@aws-sdk/node-http-handler" "^0.1.0-preview.8"
+    "@aws-sdk/protocol-rest" "^0.1.0-preview.10"
+    "@aws-sdk/query-error-unmarshaller" "^0.1.0-preview.8"
+    "@aws-sdk/region-provider" "^0.1.0-preview.7"
+    "@aws-sdk/retry-middleware" "^0.1.0-preview.7"
+    "@aws-sdk/s3-error-unmarshaller" "^0.1.0-preview.5"
+    "@aws-sdk/signature-v4" "^0.1.0-preview.10"
+    "@aws-sdk/signing-middleware" "^0.1.0-preview.10"
+    "@aws-sdk/ssec-middleware" "^0.1.0-preview.8"
+    "@aws-sdk/stream-collector-node" "^0.1.0-preview.9"
+    "@aws-sdk/types" "^0.1.0-preview.7"
+    "@aws-sdk/url-parser-node" "^0.1.0-preview.8"
+    "@aws-sdk/util-base64-node" "^0.1.0-preview.4"
+    "@aws-sdk/util-body-length-node" "^0.1.0-preview.5"
+    "@aws-sdk/util-user-agent-node" "^0.1.0-preview.10"
+    "@aws-sdk/util-utf8-node" "^0.1.0-preview.4"
+    "@aws-sdk/xml-body-builder" "^0.1.0-preview.7"
+    "@aws-sdk/xml-body-parser" "^0.1.0-preview.9"
+    tslib "^1.8.0"
+
+"@aws-sdk/protocol-json-rpc@^0.1.0-preview.8":
+  version "0.1.0-preview.8"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/protocol-json-rpc/-/protocol-json-rpc-0.1.0-preview.8.tgz#b8d52d4bc930bc946a2e0c44414fd55c1d98bd6d"
+  integrity sha512-HF7g/xE/mGLzaYqO5tDFqxFvHS4vbuLAmRsWnUKsNBzg+G9+r6XK+4+PrUKwEJT69lNXezUetjwuemqnycsStA==
+  dependencies:
+    "@aws-sdk/is-array-buffer" "^0.1.0-preview.3"
+    "@aws-sdk/response-metadata-extractor" "^0.1.0-preview.8"
+    "@aws-sdk/types" "^0.1.0-preview.7"
+    "@aws-sdk/util-error-constructor" "^0.1.0-preview.7"
+    tslib "^1.8.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -1447,6 +1526,13 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.19.0.tgz#a2502fb7ce9b6626fdbfc2e2a496f472de1bdd05"
   integrity sha512-gDE8JJEygpay7IjA/u3JiIURvwZW08f0cZSZLAzFoX/ZmeqvS0Sqv+97aKuHpNsalAMMhwPe+iAS6fQbfmbt7A==
 
+"@types/resolve@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-0.0.8.tgz#f26074d238e02659e323ce1a13d041eee280e194"
+  integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
+  dependencies:
+    "@types/node" "*"
+
 "@types/rimraf@^2.0.2":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/rimraf/-/rimraf-2.0.3.tgz#0199a46af106729ba14213fda7b981278d8c84f2"
@@ -2308,6 +2394,11 @@ buffer@^5.2.1:
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
+
+builtin-modules@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
+  integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
 
 builtin-status-codes@^3.0.0:
   version "3.0.0"
@@ -3647,6 +3738,11 @@ estraverse@^4.2.0:
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
   integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
 
+estree-walker@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.1.tgz#53049143f40c6eb918b23671d1fe3219f3a1b362"
+  integrity sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==
+
 esutils@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
@@ -4949,6 +5045,11 @@ is-glob@^4.0.0, is-glob@^4.0.1:
   dependencies:
     is-extglob "^2.1.1"
 
+is-module@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-module/-/is-module-1.0.0.tgz#3258fb69f78c14d5b815d664336b4cffb6441591"
+  integrity sha1-Mlj7afeMFNW4FdZkM2tM/7ZEFZE=
+
 is-nan@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/is-nan/-/is-nan-1.2.1.tgz#9faf65b6fb6db24b7f5c0628475ea71f988401e2"
@@ -6157,6 +6258,13 @@ macos-release@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/macos-release/-/macos-release-2.3.0.tgz#eb1930b036c0800adebccd5f17bc4c12de8bb71f"
   integrity sha512-OHhSbtcviqMPt7yfw5ef5aghS2jzFVKEFyCJndQt2YpSQ9qRVSEv2axSJI1paVThEu+FFGs584h/1YhxjVqajA==
+
+magic-string@^0.25.2:
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.3.tgz#34b8d2a2c7fec9d9bdf9929a3fd81d271ef35be9"
+  integrity sha512-6QK0OpF/phMz0Q2AxILkX2mFhi7m+WMwTRg0LQKq/WBB0cDP4rYH3Wp4/d3OTXlrPLVJT/RFqj8tFeAR4nk8AA==
+  dependencies:
+    sourcemap-codec "^1.4.4"
 
 make-dir@^1.0.0:
   version "1.3.0"
@@ -8007,7 +8115,7 @@ resolve@^1.1.3:
   dependencies:
     path-parse "^1.0.6"
 
-resolve@^1.1.6, resolve@^1.10.0, resolve@^1.3.2:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.11.1, resolve@^1.3.2:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.12.0.tgz#3fc644a35c84a48554609ff26ec52b66fa577df6"
   integrity sha512-B/dOmuoAik5bKcD6s6nXDCjzUKnaDvdkRyAk6rsmsKLipWj4797iothd7jmmUhWTfinVMU+wc56rYKsit2Qy4w==
@@ -8082,6 +8190,47 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rollup-plugin-json@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-json/-/rollup-plugin-json-4.0.0.tgz#a18da0a4b30bf5ca1ee76ddb1422afbb84ae2b9e"
+  integrity sha512-hgb8N7Cgfw5SZAkb3jf0QXii6QX/FOkiIq2M7BAQIEydjHvTyxXHQiIzZaTFgx1GK0cRCHOCBHIyEkkLdWKxow==
+  dependencies:
+    rollup-pluginutils "^2.5.0"
+
+rollup-plugin-node-resolve@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.2.0.tgz#730f93d10ed202473b1fb54a5997a7db8c6d8523"
+  integrity sha512-jUlyaDXts7TW2CqQ4GaO5VJ4PwwaV8VUGA7+km3n6k6xtOEacf61u0VXwN80phY/evMcaS+9eIeJ9MOyDxt5Zw==
+  dependencies:
+    "@types/resolve" "0.0.8"
+    builtin-modules "^3.1.0"
+    is-module "^1.0.0"
+    resolve "^1.11.1"
+    rollup-pluginutils "^2.8.1"
+
+rollup-plugin-replace@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-replace/-/rollup-plugin-replace-2.2.0.tgz#f41ae5372e11e7a217cde349c8b5d5fd115e70e3"
+  integrity sha512-/5bxtUPkDHyBJAKketb4NfaeZjL5yLZdeUihSfbF2PQMz+rSTEb8ARKoOl3UBT4m7/X+QOXJo3sLTcq+yMMYTA==
+  dependencies:
+    magic-string "^0.25.2"
+    rollup-pluginutils "^2.6.0"
+
+rollup-plugin-sourcemaps@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-sourcemaps/-/rollup-plugin-sourcemaps-0.4.2.tgz#62125aa94087aadf7b83ef4dfaf629b473135e87"
+  integrity sha1-YhJaqUCHqt97g+9N+vYptHMTXoc=
+  dependencies:
+    rollup-pluginutils "^2.0.1"
+    source-map-resolve "^0.5.0"
+
+rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
+  integrity sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
+  dependencies:
+    estree-walker "^0.6.1"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -8483,6 +8632,11 @@ source-map@~0.4.0, source-map@~0.4.2:
   integrity sha1-66T12pwNyZneaAMti092FzZSA2s=
   dependencies:
     amdefine ">=0.0.4"
+
+sourcemap-codec@^1.4.4:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.6.tgz#e30a74f0402bad09807640d39e971090a08ce1e9"
+  integrity sha512-1ZooVLYFxC448piVLBbtOxFcXwnymH9oUF8nRd3CuYDVvkRBxRl6pB4Mtas5a4drtL+E8LDgFkQNcgIw6tc8Hg==
 
 spdx-correct@^3.0.0:
   version "3.1.0"
