@@ -142,22 +142,22 @@
     "@aws-sdk/util-error-constructor" "^0.1.0-preview.7"
     tslib "^1.8.0"
 
-"@aws-sdk/retry-middleware@^0.1.0-preview.5":
-  version "0.1.0-preview.5"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/retry-middleware/-/retry-middleware-0.1.0-preview.5.tgz#f8d1466294ee18ceaa60e19a66e271af706288db"
-  integrity sha512-bxsY5LlUqrzqrGIJBDLjasiBzBzib+1fSLg6MR4DrYd9WmilnNKR+lmf592+enaR2K1DNdvmkfJz3CKl9HMZIg==
+"@aws-sdk/retry-middleware@^0.1.0-preview.7":
+  version "0.1.0-preview.7"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/retry-middleware/-/retry-middleware-0.1.0-preview.7.tgz#4923089c9a2c5306c91489fd7d041f70f4b597e2"
+  integrity sha512-ULiq+dffOPurjyHm95PYWi1Cy27LQg9jPwLz5tiL7oIla/j9b5bcclZE3n0RtqbHDUvWJL5kxmYw0Kjrggr5iw==
   dependencies:
     "@aws-sdk/service-error-classification" "^0.1.0-preview.3"
-    "@aws-sdk/types" "^0.1.0-preview.5"
+    "@aws-sdk/types" "^0.1.0-preview.7"
     tslib "^1.8.0"
 
-"@aws-sdk/signing-middleware@^0.1.0-preview.7":
-  version "0.1.0-preview.7"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/signing-middleware/-/signing-middleware-0.1.0-preview.7.tgz#55f3b5c4703fe7cd5999adbbd6629497588225fb"
-  integrity sha512-tmQcI3tdVMdxdOR8o17fHEyMRGepe8tEL+TPnvnD7TX0c8tkxZ+bHxRV9KU+s0DW+b2rWe7l+E1ytgS1tY04UA==
+"@aws-sdk/signing-middleware@^0.1.0-preview.10":
+  version "0.1.0-preview.10"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/signing-middleware/-/signing-middleware-0.1.0-preview.10.tgz#906ff790653c6a07563d9aed5e4805ce276668c0"
+  integrity sha512-aKyPNr41JuOhl3QGqGp+XSerwPRbkG/TzBHiNsRX/0EeB1ZyxZ2cckhssswL3k4lvEBPQS0SqnGi2FHXozyOvw==
   dependencies:
-    "@aws-sdk/signature-v4" "^0.1.0-preview.7"
-    "@aws-sdk/types" "^0.1.0-preview.5"
+    "@aws-sdk/signature-v4" "^0.1.0-preview.10"
+    "@aws-sdk/types" "^0.1.0-preview.7"
     tslib "^1.8.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
@@ -9310,10 +9310,10 @@ typescript@3.2.x:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
   integrity sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==
 
-typescript@3.7.0-dev.20190926:
-  version "3.7.0-dev.20190926"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.0-dev.20190926.tgz#2e90fa4e56fad0fddb87e4d837cd33c7e4a55e7c"
-  integrity sha512-uOQij3UHJnzxY/8Kv1kdmvWTjghgbCD0kBOgVGbY7Rni8ER51O8iPMmI4YpanZmaiZbPK6zUaS60b04/2C91bA==
+typescript@^3.7.0, typescript@^3.7.0-dev.20190926:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
 
 typescript@~3.4.0:
   version "3.4.5"
