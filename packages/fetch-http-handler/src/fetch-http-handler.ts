@@ -1,20 +1,30 @@
-import {
-  BrowserHttpOptions,
-  Handler,
-  HeaderBag,
-  HttpHandler,
-  HttpHandlerOptions,
-  HttpRequest,
-  HttpResponse,
-  QueryParameterBag
-} from "@aws-sdk/types";
-
+import { HeaderBag, HttpHandlerOptions } from "@aws-sdk/types";
+import { HttpHandler, HttpRequest, HttpResponse } from "@aws-sdk/protocol-http";
 import { requestTimeout } from "./request-timeout";
 import { buildQueryString } from "@aws-sdk/querystring-builder";
 
 declare var AbortController: any;
 
-export class FetchHttpHandler implements HttpHandler<Blob, BrowserHttpOptions> {
+/**
+ * Represents the http options that can be passed to a browser http client.
+ */
+export interface BrowserHttpOptions {
+  /**
+   * The number of milliseconds a request can take before being automatically
+   * terminated.
+   */
+  requestTimeout?: number;
+  /**
+   * Buffer the whole response body before returning. This option is useful in the
+   * runtime that doesn't support ReadableStream in response like ReactNative. When
+   * set to true, the response body of http handler will be a Blob instead of
+   * ReadableStream.
+   * This option is only useful in ReactNative.
+   */
+  bufferBody?: boolean;
+}
+
+export class FetchHttpHandler implements HttpHandler {
   constructor(private readonly httpOptions: BrowserHttpOptions = {}) {}
 
   destroy(): void {
@@ -23,14 +33,14 @@ export class FetchHttpHandler implements HttpHandler<Blob, BrowserHttpOptions> {
   }
 
   handle(
-    request: HttpRequest<Blob>,
+    request: HttpRequest,
     options: HttpHandlerOptions
-  ): Promise<HttpResponse<Blob>> {
-    const abortSignal = options && options.abortSignal;
+  ): Promise<{ response: HttpResponse }> {
+    const abortSignal = options?.abortSignal;
     const requestTimeoutInMs = this.httpOptions.requestTimeout;
 
     // if the request was already aborted, prevent doing extra work
-    if (abortSignal && abortSignal.aborted) {
+    if (abortSignal?.aborted) {
       const abortError = new Error("Request aborted");
       abortError.name = "AbortError";
       return Promise.reject(abortError);
@@ -70,11 +80,24 @@ export class FetchHttpHandler implements HttpHandler<Blob, BrowserHttpOptions> {
           transformedHeaders[pair[0]] = pair[1];
         }
 
-        return response.blob().then<HttpResponse<Blob>>(body => ({
-          headers: transformedHeaders,
-          statusCode: response.status,
-          body
-        }));
+        // Return the response with buffered body
+        if (this.httpOptions.bufferBody) {
+          return response.blob().then(body => ({
+            response: new HttpResponse({
+              headers: transformedHeaders,
+              statusCode: response.status,
+              body
+            })
+          }));
+        }
+        // Return the response with streaming body
+        return {
+          response: new HttpResponse({
+            headers: transformedHeaders,
+            statusCode: response.status,
+            body: response.body
+          })
+        };
       }),
       requestTimeout(requestTimeoutInMs)
     ];

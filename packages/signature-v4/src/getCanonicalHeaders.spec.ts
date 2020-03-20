@@ -1,21 +1,23 @@
 import { getCanonicalHeaders } from "./getCanonicalHeaders";
 import { ALWAYS_UNSIGNABLE_HEADERS } from "./constants";
-import { HttpRequest } from "@aws-sdk/types";
+import { HttpRequest } from "@aws-sdk/protocol-http";
 
 describe("getCanonicalHeaders", () => {
   it("should downcase all headers", () => {
     expect(
-      getCanonicalHeaders({
-        method: "POST",
-        protocol: "https:",
-        path: "/",
-        headers: {
-          fOo: "bar",
-          BaZ: "QUUX",
-          HoSt: "foo.us-east-1.amazonaws.com"
-        },
-        hostname: "foo.us-east-1.amazonaws.com"
-      })
+      getCanonicalHeaders(
+        new HttpRequest({
+          method: "POST",
+          protocol: "https:",
+          path: "/",
+          headers: {
+            fOo: "bar",
+            BaZ: "QUUX",
+            HoSt: "foo.us-east-1.amazonaws.com"
+          },
+          hostname: "foo.us-east-1.amazonaws.com"
+        })
+      )
     ).toEqual({
       foo: "bar",
       baz: "QUUX",
@@ -24,28 +26,30 @@ describe("getCanonicalHeaders", () => {
   });
 
   it("should remove all unsignable headers", () => {
-    const request: HttpRequest<never> = {
+    const request = new HttpRequest({
       method: "POST",
       protocol: "https:",
       path: "/",
       headers: {
+        "x-amz-user-agent": "aws-sdk-js-v3",
         host: "foo.us-east-1.amazonaws.com",
         foo: "bar"
       },
       hostname: "foo.us-east-1.amazonaws.com"
-    };
+    });
     for (let headerName of Object.keys(ALWAYS_UNSIGNABLE_HEADERS)) {
       request.headers[headerName] = "baz";
     }
 
     expect(getCanonicalHeaders(request)).toEqual({
+      "x-amz-user-agent": "aws-sdk-js-v3",
       host: "foo.us-east-1.amazonaws.com",
       foo: "bar"
     });
   });
 
   it("should allow specifying custom unsignable headers", () => {
-    const request: HttpRequest<never> = {
+    const request = new HttpRequest({
       method: "POST",
       protocol: "https:",
       path: "/",
@@ -55,7 +59,7 @@ describe("getCanonicalHeaders", () => {
         "user-agent": "foo-user"
       },
       hostname: "foo.us-east-1.amazonaws.com"
-    };
+    });
 
     expect(getCanonicalHeaders(request, new Set(["foo"]))).toEqual({
       host: "foo.us-east-1.amazonaws.com"
@@ -63,7 +67,7 @@ describe("getCanonicalHeaders", () => {
   });
 
   it("should allow specifying custom signable headers that override unsignable ones", () => {
-    const request: HttpRequest<never> = {
+    const request = new HttpRequest({
       method: "POST",
       protocol: "https:",
       path: "/",
@@ -73,7 +77,7 @@ describe("getCanonicalHeaders", () => {
         "user-agent": "foo-user"
       },
       hostname: "foo.us-east-1.amazonaws.com"
-    };
+    });
 
     expect(
       getCanonicalHeaders(

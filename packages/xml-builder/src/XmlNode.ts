@@ -12,6 +12,11 @@ export class XmlNode {
     public readonly children: Stringable[] = []
   ) {}
 
+  withName(name: string): XmlNode {
+    this.name = name;
+    return this;
+  }
+
   addAttribute(name: string, value: any): XmlNode {
     this.attributes[name] = value;
     return this;

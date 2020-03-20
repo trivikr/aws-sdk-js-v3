@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/url-parser-node",
-  "version": "0.1.0-preview.8",
+  "version": "1.0.0-alpha.6",
   "scripts": {
     "prepublishOnly": "tsc",
     "pretest": "tsc -p tsconfig.test.json",
@@ -14,14 +14,18 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/querystring-parser": "^0.1.0-preview.7",
-    "@aws-sdk/types": "^0.1.0-preview.7",
-    "tslib": "^1.8.0"
+    "@aws-sdk/querystring-parser": "^1.0.0-alpha.5",
+    "@aws-sdk/types": "^1.0.0-alpha.5",
+    "tslib": "^1.8.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
     "@types/node": "^10.0.0",
     "jest": "^24.7.1",
-    "typescript": "~3.4.0"
+    "typescript": "~3.8.3"
+  },
+  "react-native": {
+    "url": "url/"
   }
 }

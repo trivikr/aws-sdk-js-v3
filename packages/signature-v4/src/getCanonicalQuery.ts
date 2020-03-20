@@ -1,10 +1,11 @@
 import { SIGNATURE_HEADER } from "./constants";
 import { HttpRequest } from "@aws-sdk/types";
+import { escapeUri } from "@aws-sdk/util-uri-escape";
 
 /**
  * @internal
  */
-export function getCanonicalQuery({ query = {} }: HttpRequest<any>): string {
+export function getCanonicalQuery({ query = {} }: HttpRequest): string {
   const keys: Array<string> = [];
   const serialized: { [key: string]: string } = {};
   for (let key of Object.keys(query).sort()) {
@@ -15,18 +16,14 @@ export function getCanonicalQuery({ query = {} }: HttpRequest<any>): string {
     keys.push(key);
     const value = query[key];
     if (typeof value === "string") {
-      serialized[key] = `${encodeURIComponent(key)}=${encodeURIComponent(
-        value
-      )}`;
+      serialized[key] = `${escapeUri(key)}=${escapeUri(value)}`;
     } else if (Array.isArray(value)) {
       serialized[key] = value
         .slice(0)
         .sort()
         .reduce(
           (encoded: Array<string>, value: string) =>
-            encoded.concat([
-              `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
-            ]),
+            encoded.concat([`${escapeUri(key)}=${escapeUri(value)}`]),
           []
         )
         .join("&");

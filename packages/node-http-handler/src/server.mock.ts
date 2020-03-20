@@ -8,6 +8,7 @@ import {
   createServer as createHttpsServer,
   Server as HttpsServer
 } from "https";
+import { createServer as createHttp2Server, Http2Server } from "http2";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { Readable } from "stream";
@@ -16,7 +17,7 @@ import { HttpResponse } from "@aws-sdk/types";
 
 const fixturesDir = join(__dirname, "..", "fixtures");
 
-export function createResponseFunction(httpResp: HttpResponse<Readable>) {
+export function createResponseFunction(httpResp: HttpResponse) {
   return function(request: IncomingMessage, response: ServerResponse) {
     response.statusCode = httpResp.statusCode;
     for (let name of Object.keys(httpResp.headers)) {
@@ -31,9 +32,7 @@ export function createResponseFunction(httpResp: HttpResponse<Readable>) {
   };
 }
 
-export function createContinueResponseFunction(
-  httpResp: HttpResponse<Readable>
-) {
+export function createContinueResponseFunction(httpResp: HttpResponse) {
   return function(request: IncomingMessage, response: ServerResponse) {
     response.writeContinue();
     setTimeout(() => {
@@ -52,5 +51,10 @@ export function createMockHttpsServer(): HttpsServer {
 
 export function createMockHttpServer(): HttpServer {
   const server = createHttpServer();
+  return server;
+}
+
+export function createMockHttp2Server(): Http2Server {
+  const server = createHttp2Server();
   return server;
 }

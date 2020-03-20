@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/is-node",
-  "version": "0.1.0-preview.3",
+  "version": "1.0.0-alpha.2",
   "description": "Provides a function for detecting if the host environment is Node.JS",
   "scripts": {
     "prepublishOnly": "tsc",
@@ -17,7 +17,7 @@
     "@types/jest": "^24.0.12",
     "@types/node": "^10.0.0",
     "jest": "^24.7.1",
-    "typescript": "~3.4.0"
+    "typescript": "~3.8.3"
   },
   "types": "./build/index.d.ts",
   "dependencies": {

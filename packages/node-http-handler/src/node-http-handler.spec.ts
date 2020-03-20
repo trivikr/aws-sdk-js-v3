@@ -1,4 +1,5 @@
 import { AbortController } from "@aws-sdk/abort-controller";
+import { HttpRequest, HttpResponse } from "@aws-sdk/protocol-http";
 import { Server as HttpServer } from "http";
 import { Server as HttpsServer } from "https";
 import * as https from "https";
@@ -8,12 +9,27 @@ import { ReadFromBuffers } from "./readable.mock";
 import {
   createMockHttpServer,
   createMockHttpsServer,
-  createContinueResponseFunction,
   createResponseFunction
 } from "./server.mock";
 import { AddressInfo } from "net";
 
 describe("NodeHttpHandler", () => {
+  describe("constructor", () => {
+    it("can set httpAgent and httpsAgent", () => {
+      let maxSockets = Math.round(Math.random() * 50);
+      let nodeHttpHandler = new NodeHttpHandler({
+        httpAgent: new http.Agent({ maxSockets })
+      });
+      expect((nodeHttpHandler as any).httpAgent.maxSockets).toEqual(maxSockets);
+      maxSockets = Math.round(Math.random() * 50);
+      nodeHttpHandler = new NodeHttpHandler({
+        httpsAgent: new https.Agent({ maxSockets })
+      });
+      expect((nodeHttpHandler as any).httpsAgent.maxSockets).toEqual(
+        maxSockets
+      );
+    });
+  });
   describe("http", () => {
     const mockHttpServer: HttpServer = createMockHttpServer().listen(54321);
 
@@ -24,6 +40,10 @@ describe("NodeHttpHandler", () => {
 
     afterAll(() => {
       mockHttpServer.close();
+    });
+    it("has metadata", () => {
+      const nodeHttpHandler = new NodeHttpHandler();
+      expect(nodeHttpHandler.metadata.handlerProtocol).toContain("http/1.1");
     });
     it("can send http requests", async () => {
       const mockResponse = {
@@ -37,15 +57,15 @@ describe("NodeHttpHandler", () => {
       );
       const nodeHttpHandler = new NodeHttpHandler();
 
-      let response = await nodeHttpHandler.handle(
-        {
+      let { response } = await nodeHttpHandler.handle(
+        new HttpRequest({
           hostname: "localhost",
           method: "GET",
           port: (mockHttpServer.address() as AddressInfo).port,
           protocol: "http:",
           path: "/",
           headers: {}
-        },
+        }),
         {}
       );
 
@@ -89,15 +109,15 @@ describe("NodeHttpHandler", () => {
       );
       const nodeHttpHandler = new NodeHttpHandler();
 
-      let response = await nodeHttpHandler.handle(
-        {
+      let { response } = await nodeHttpHandler.handle(
+        new HttpRequest({
           hostname: "localhost",
           method: "GET",
-          port: (mockHttpServer.address() as AddressInfo).port,
+          port: (mockHttpsServer.address() as AddressInfo).port,
           protocol: "https:",
           path: "/",
           headers: {}
-        },
+        }),
         {}
       );
 
@@ -124,16 +144,16 @@ describe("NodeHttpHandler", () => {
       });
 
       const nodeHttpHandler = new NodeHttpHandler();
-      let response = await nodeHttpHandler.handle(
-        {
+      let { response } = await nodeHttpHandler.handle(
+        new HttpRequest({
           hostname: "localhost",
           method: "PUT",
-          port: (mockHttpServer.address() as AddressInfo).port,
+          port: (mockHttpsServer.address() as AddressInfo).port,
           protocol: "https:",
           path: "/",
           headers: {},
           body
-        },
+        }),
         {}
       );
 
@@ -214,16 +234,16 @@ describe("NodeHttpHandler", () => {
       );
       const nodeHttpHandler = new NodeHttpHandler();
 
-      let response = await nodeHttpHandler.handle(
-        {
+      let { response } = await nodeHttpHandler.handle(
+        new HttpRequest({
           hostname: "localhost",
           method: "PUT",
-          port: (mockHttpServer.address() as AddressInfo).port,
+          port: (mockHttpsServer.address() as AddressInfo).port,
           protocol: "https:",
           path: "/",
           headers: {},
           body
-        },
+        }),
         {}
       );
 
@@ -247,14 +267,14 @@ describe("NodeHttpHandler", () => {
 
       await expect(
         nodeHttpHandler.handle(
-          {
+          new HttpRequest({
             hostname: "localhost",
             method: "GET",
             port: (mockHttpsServer.address() as AddressInfo).port,
             protocol: "fake:", // trigger a request error
             path: "/",
             headers: {}
-          },
+          }),
           {}
         )
       ).rejects.toHaveProperty("message");
@@ -281,14 +301,14 @@ describe("NodeHttpHandler", () => {
 
       await expect(
         nodeHttpHandler.handle(
-          {
+          new HttpRequest({
             hostname: "localhost",
             method: "GET",
             port: (mockHttpsServer.address() as AddressInfo).port,
             protocol: "https:",
             path: "/",
             headers: {}
-          },
+          }),
           {
             abortSignal: {
               aborted: true
@@ -331,14 +351,14 @@ describe("NodeHttpHandler", () => {
 
       await expect(
         nodeHttpHandler.handle(
-          {
+          new HttpRequest({
             hostname: "localhost",
             method: "GET",
             port: (mockHttpsServer.address() as AddressInfo).port,
             protocol: "https:",
             path: "/",
             headers: {}
-          },
+          }),
           {
             abortSignal: abortController.signal
           }

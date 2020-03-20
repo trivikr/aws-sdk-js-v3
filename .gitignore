@@ -24,3 +24,9 @@ package-lock.json
 
 !serviceModels/logs
 build
+
+codegen/build
+codegen/sdk-codegen/smithy-build.json
+.gradle
+*/out/
+*/*/out/

@@ -1,10 +1,9 @@
 module.exports = {
-
-  assert: require('./assertions').assert,
+  assert: require("./assertions").assert,
 
   uniqueName: function uniqueName(base, sep) {
-    if (sep === undefined) sep = '-';
-    if (base === '') return '';
+    if (sep === undefined) sep = "-";
+    if (base === "") return "";
     return base + sep + new Date().getTime();
   },
 
@@ -31,31 +30,32 @@ module.exports = {
    *   maxTime: Maximum duration of milliseconds to wait for success.
    */
   eventually: function eventually(callback, block, options) {
-
     if (!options) options = {};
     if (!options.delay) options.delay = 0;
     if (!options.backoff) options.backoff = 500;
     if (!options.maxTime) options.maxTime = 5;
 
     var delay = options.delay;
-    var started = this.AWS.util.date.getDate();
+    //TODO: apply clock offset
+    var started = new Date();
 
     var self = this;
-    var retry = function() { callback(); };
+    var retry = function() {
+      callback();
+    };
     retry.fail = function(err) {
       var now = self.AWS.util.date.getDate();
       if (now - started < options.maxTime * 1000) {
-        setTimeout(function () {
+        setTimeout(function() {
           delay += options.backoff;
           block.call(self, retry);
         }, delay);
       } else {
-        callback.fail(err || new Error('Eventually block timed out'));
+        callback.fail(err || new Error("Eventually block timed out"));
       }
     };
 
     block.call(this, retry);
-
   },
 
   /**
@@ -66,7 +66,7 @@ module.exports = {
     var world = this;
 
     if (!svc) svc = this.service;
-    if (typeof svc === 'string') svc = this[svc];
+    if (typeof svc === "string") svc = this[svc];
 
     svc[operation](params, function(err, data) {
       world.response = this;
@@ -74,10 +74,10 @@ module.exports = {
       world.data = data;
 
       try {
-        if (typeof next.condition === 'function') {
+        if (typeof next.condition === "function") {
           var condition = next.condition.call(world, world);
           if (!condition) {
-            next.fail(new Error('Request success condition failed'));
+            next.fail(new Error("Request success condition failed"));
             return;
           }
         }
@@ -85,8 +85,7 @@ module.exports = {
         if (extra) {
           extra.call(world, world.data);
           next.call(world);
-        }
-        else if (extra !== false && err) {
+        } else if (extra !== false && err) {
           world.unexpectedError(
             svc.config.signingName,
             operation,
@@ -109,18 +108,18 @@ module.exports = {
    * operation failed.
    */
   unexpectedError: function unexpectedError(svc, op, name, msg, next) {
-    next.fail(new Error(
-      `Received unexpected error from ${svc}.${op}, ${name}: ${msg}`
-    ));
+    next.fail(
+      new Error(`Received unexpected error from ${svc}.${op}, ${name}: ${msg}`)
+    );
   },
 
   /**
    * Cache bucket names used for cleanup after all features have run.
    */
   cacheBucketName: function(bucket) {
-    var fs = require('fs');
-    var path = require('path');
-    var filePath = path.resolve('integ.buckets.json');
+    var fs = require("fs");
+    var path = require("path");
+    var filePath = path.resolve("integ.buckets.json");
     var cache;
     if (fs.existsSync(filePath)) {
       try {
@@ -141,22 +140,28 @@ module.exports = {
    * Creates a fixture file of given size and returns the path.
    */
   createFile: function(size, name) {
-    var fs = require('fs');
-    var path = require('path');
+    var fs = require("fs");
+    var path = require("path");
     name = this.uniqueName(name);
     // Cannot set this as a world property because the world
     // is cleaned up before the AfterFeatures hook is fired.
-    var fixturePath = path.resolve('./features/extra/fixtures/tmp');
+    var fixturePath = path.resolve("./features/extra/fixtures/tmp");
     if (!fs.existsSync(fixturePath)) fs.mkdirSync(fixturePath);
     var filename = path.join(fixturePath, name);
     var body;
-    if (typeof size === 'string') {
+    if (typeof size === "string") {
       switch (size) {
-        case 'empty': body = Buffer.alloc(0); break;
-        case 'small': body = Buffer.alloc(1024 * 1024); break;
-        case 'large': body = Buffer.alloc(1024 * 1024 * 20); break;
+        case "empty":
+          body = Buffer.alloc(0);
+          break;
+        case "small":
+          body = Buffer.alloc(1024 * 1024);
+          break;
+        case "large":
+          body = Buffer.alloc(1024 * 1024 * 20);
+          break;
       }
-    } else if (typeof size === 'number') {
+    } else if (typeof size === "number") {
       body = Buffer.alloc(size);
     }
 
@@ -170,20 +175,78 @@ module.exports = {
   createBuffer: function(size) {
     var match;
     var buffer;
-    if (match = size.match(/(\d+)KB/)) {
+    if ((match = size.match(/(\d+)KB/))) {
       buffer = Buffer.alloc(parseInt(match[1]) * 1024);
-    } else if (match = size.match(/(\d+)MB/)) {
+    } else if ((match = size.match(/(\d+)MB/))) {
       buffer = Buffer.alloc(parseInt(match[1]) * 1024 * 1024);
     } else {
       switch (size) {
-        case 'empty': buffer = Buffer.alloc(0); break;
-        case 'small': buffer = Buffer.alloc(1024 * 1024); break;
-        case 'large': buffer = Buffer.alloc(1024 * 1024 * 20); break;
-        default: return Buffer.alloc(1024 * 1024);
+        case "empty":
+          buffer = Buffer.alloc(0);
+          break;
+        case "small":
+          buffer = Buffer.alloc(1024 * 1024);
+          break;
+        case "large":
+          buffer = Buffer.alloc(1024 * 1024 * 20);
+          break;
+        default:
+          return Buffer.alloc(1024 * 1024);
       }
     }
-    buffer.fill('x');
+    buffer.fill("x");
     return buffer;
-  }
+  },
 
+  /**
+   * Waits for the bucketExists state by periodically calling the underlying S3.headBucket() operation
+   * every 5 seconds (at most 20 times).
+   */
+  waitForBucketExists: function(s3client, params, callback) {
+    const maxAttempts = 20;
+    let currentAttempt = 0;
+    const delay = 5000;
+
+    const checkForBucketExists = () => {
+      currentAttempt++;
+      s3client.headBucket(params, function(err, data) {
+        if (currentAttempt > maxAttempts) {
+          callback.fail();
+        } else if (data) {
+          callback();
+        } else {
+          setTimeout(function() {
+            checkForBucketExists();
+          }, delay);
+        }
+      });
+    };
+    checkForBucketExists();
+  },
+
+  /**
+   * Waits for the bucketNotExists state by periodically calling the underlying S3.headBucket() operation
+   * every 5 seconds (at most 20 times).
+   */
+  waitForBucketNotExists: function(s3client, params, callback) {
+    const maxAttempts = 20;
+    let currentAttempt = 0;
+    const delay = 5000;
+
+    const checkForBucketNotExists = () => {
+      currentAttempt++;
+      s3client.headBucket(params, function(err, data) {
+        if (currentAttempt > maxAttempts) {
+          callback.fail();
+        } else if (err && err.name === "NotFound") {
+          callback();
+        } else {
+          setTimeout(function() {
+            checkForBucketNotExists();
+          }, delay);
+        }
+      });
+    };
+    checkForBucketNotExists();
+  }
 };

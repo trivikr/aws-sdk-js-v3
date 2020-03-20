@@ -1,22 +1,22 @@
 {
   "name": "aws-sdk-js-v3",
   "private": true,
-  "version": "0.7.0",
+  "version": "1.0.0-alpha.27",
   "description": "AWS SDK for JavaScript from the future",
   "main": "index.js",
   "scripts": {
+    "generate-clients": "node ./scripts/generate-clients",
     "bootstrap": "yarn",
     "clean": "yarn clear-build-cache && yarn clear-build-info && lerna clean",
     "clear-build-cache": "rimraf ./packages/*/build/* ./clients/*/*/build/*",
     "clear-build-info": "rimraf ./packages/*/*.tsbuildinfo ./clients/*/*/*.tsbuildinfo",
-    "copy-models": "node ./scripts/copyModels.js",
-    "update-clients": "node ./packages/package-generator/build/cli.js import-all --matching './models/*/*/service-2.json'",
-    "build-crypto-dependencies": "lerna run --scope '@aws-sdk/types' --scope '@aws-sdk/util-utf8-browser' --scope '@aws-sdk/util-locate-window' --scope '@aws-sdk/hash-node' --include-dependencies pretest",
-    "pretest": "yarn build-crypto-dependencies && lerna run pretest --since 'master' --include-dependencies",
-    "test": "jest --coverage --passWithNoTests",
-    "pretest-all": "lerna run pretest",
-    "test-all": "jest --coverage",
-    "integ-test": "cucumber.js"
+    "build:crypto-dependencies": "lerna run --scope '@aws-sdk/types' --scope '@aws-sdk/util-utf8-browser' --scope '@aws-sdk/util-locate-window' --scope '@aws-sdk/hash-node' --include-dependencies pretest",
+    "build:smithy-client": "yarn build:crypto-dependencies && lerna run --scope '@aws-sdk/client-rds-data' --include-dependencies pretest",
+    "build:all": "yarn build:crypto-dependencies && lerna run pretest --include-dependencies --include-dependents",
+    "pretest:all": "yarn build:all",
+    "test:all": "jest --coverage --passWithNoTests && lerna run test --scope @aws-sdk/stream-collector-browser --scope @aws-sdk/hash-blob-browser",
+    "test:functional": "jest --config tests/functional/jest.config.js --passWithNoTests",
+    "test:integration": "cucumber-js"
   },
   "repository": {
     "type": "git",
@@ -28,32 +28,38 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
-    "glob": "^7.1.2",
+    "glob": "^7.1.6",
     "rimraf": "^2.6.2",
-    "yargs": "^8.0.2"
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/fs-extra": "^8.0.1",
     "@types/jest": "^24.0.12",
     "codecov": "^3.4.0",
     "cucumber": "0.5.x",
+    "fs-extra": "^8.1.0",
     "generate-changelog": "^1.7.1",
-    "husky": "^3.0.0",
+    "husky": "^4.2.3",
     "jest": "^24.7.1",
     "jmespath": "^0.15.0",
-    "lerna": "3.18.3",
-    "lint-staged": "^9.0.0",
+    "lerna": "3.20.2",
+    "lint-staged": "^10.0.1",
     "prettier": "1.19.1",
-    "typescript": "~3.4.0",
-    "yarn": "1.19.1"
+    "typescript": "~3.8.3",
+    "yarn": "1.22.4"
   },
-  "workspaces": [
-    "packages/*",
-    "clients/browser/*",
-    "clients/node/*",
-    "clients/universal/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "clients/*"
+    ],
+    "nohoist": [
+      "**/karma*",
+      "**/karma*/**"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -61,9 +67,6 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{ts,js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "**/*.{ts,js,md,json}": "prettier --write"
   }
 }

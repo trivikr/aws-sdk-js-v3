@@ -1,5 +1,5 @@
 import { AbortSignal } from "./abort";
-
+import { Readable } from "stream";
 /**
  * A collection of key/value pairs with case-insensitive keys.
  */
@@ -46,11 +46,11 @@ export interface HeaderBag {
 
 /**
  * Represents an HTTP message with headers and an optional static or streaming
- * body.
+ * body. bode: ArrayBuffer | ArrayBufferView | string | Uint8Array | Readable | ReadableStream;
  */
-export interface HttpMessage<StreamType = Uint8Array> {
+export interface HttpMessage {
   headers: HeaderBag;
-  body?: ArrayBuffer | ArrayBufferView | string | StreamType;
+  body?: any;
 }
 
 /**
@@ -62,7 +62,7 @@ export interface QueryParameterBag {
   [key: string]: string | Array<string> | null;
 }
 
-export interface HttpEndpoint {
+export interface Endpoint {
   protocol: string;
   hostname: string;
   port?: number;
@@ -71,12 +71,10 @@ export interface HttpEndpoint {
 }
 
 /**
- * Represents an HTTP message constructed to be sent to a host. Contains
+ * Interface an HTTP request class. Contains
  * addressing information in addition to standard message properties.
  */
-export interface HttpRequest<StreamType = Uint8Array>
-  extends HttpMessage<StreamType>,
-    HttpEndpoint {
+export interface HttpRequest extends HttpMessage, Endpoint {
   method: string;
 }
 
@@ -84,8 +82,7 @@ export interface HttpRequest<StreamType = Uint8Array>
  * Represents an HTTP message as received in reply to a request. Contains a
  * numeric status code in addition to standard message properties.
  */
-export interface HttpResponse<StreamType = Uint8Array>
-  extends HttpMessage<StreamType> {
+export interface HttpResponse extends HttpMessage {
   statusCode: number;
 }
 
@@ -98,80 +95,8 @@ export interface ResolvedHttpResponse extends HttpResponse {
 }
 
 /**
- * A class that stores httpOptions and can make requests by calling handle.
- */
-export interface HttpHandler<
-  StreamType = Uint8Array,
-  HttpOptionsType = HttpOptions
-> {
-  /**
-   * Perform any necessary cleanup actions, such as closing any open
-   * connections. Calling `destroy` should allow the host application to
-   * immediately proceed with graceful termination.
-   *
-   * HttpHandlers should be considered unusable after `destroy` has been
-   * called.
-   */
-  destroy(): void;
-
-  /**
-   * A function that takes an HTTP request and returns a promise for an HTTP
-   * response.
-   *
-   * If a `StreamType` type parameter is supplied, both the request and the
-   * response may have streaming bodies. In such implementations, the promise
-   * returned should resolve as soon as headers are available, and the as-yet
-   * uncollected stream should be set as the response's `body` property.
-   */
-  handle(
-    request: HttpRequest<StreamType>,
-    options: HttpHandlerOptions
-  ): Promise<HttpResponse<StreamType>>;
-}
-
-/**
  * Represents the options that may be passed to an Http Handler.
  */
 export interface HttpHandlerOptions {
   abortSignal?: AbortSignal;
-}
-
-/**
- * Represents the http options that can be shared across environments.
- */
-export interface HttpOptions {}
-
-/**
- * Represents the http options that can be passed to a browser http client.
- */
-export interface BrowserHttpOptions extends HttpOptions {
-  /**
-   * The number of milliseconds a request can take before being automatically
-   * terminated.
-   */
-  requestTimeout?: number;
-}
-
-/**
- * Represents the http options that can be passed to a node http client.
- */
-export interface NodeHttpOptions extends HttpOptions {
-  /**
-   * The maximum time in milliseconds that the connection phase of a request
-   * may take before the connection attempt is abandoned.
-   */
-  connectionTimeout?: number;
-
-  /**
-   * Whether sockets should be kept open even when there are no outstanding
-   * requests so that future requests can forgo having to reestablish a TCP or
-   * TLS connection.
-   */
-  keepAlive?: boolean;
-
-  /**
-   * The maximum time in milliseconds that a socket may remain idle before it
-   * is closed.
-   */
-  socketTimeout?: number;
 }

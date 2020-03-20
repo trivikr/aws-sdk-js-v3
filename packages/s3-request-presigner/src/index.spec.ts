@@ -1,6 +1,6 @@
-import { S3RequestPresigner } from "./index";
-import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3-node";
-import { HttpRequest } from "@aws-sdk/types";
+import { S3RequestPresigner, S3RequestPresignerOptions } from "./index";
+import { HttpRequest } from "@aws-sdk/protocol-http";
+import { Hash } from "@aws-sdk/hash-node";
 import {
   ALGORITHM_IDENTIFIER,
   SHA256_HEADER,
@@ -14,20 +14,22 @@ import {
 } from "./constants";
 
 describe("s3 presigner", () => {
-  const s3 = new S3Client({
+  const s3ResolvedConfig: S3RequestPresignerOptions = {
     credentials: {
       accessKeyId: "akid",
       secretAccessKey: "skey"
     },
-    region: "us-bar-1"
-  });
+    region: "us-bar-1",
+    sha256: Hash.bind(null, "sha256"),
+    signingName: "s3"
+  };
   const expiration = Math.floor(
     (new Date("2000-01-01T00:00:00.000Z").valueOf() + 60 * 60 * 1000) / 1000
   );
   const presigningOptions = {
     signingDate: new Date("2000-01-01T00:00:00.000Z")
   };
-  const minimalRequest: HttpRequest<any> = {
+  const minimalRequest = new HttpRequest({
     method: "GET",
     protocol: "https:",
     path: "/foo/bar/baz",
@@ -35,13 +37,11 @@ describe("s3 presigner", () => {
       host: "foo.s3.us-bar-1.amazonaws.com"
     },
     hostname: "foo.s3.us-bar-1.amazonaws.com"
-  };
+  });
 
   it("should not double uri encode the path", async () => {
-    const signer = new S3RequestPresigner({
-      ...s3.config
-    });
-    const signed = await signer.presignRequest(
+    const signer = new S3RequestPresigner(s3ResolvedConfig);
+    const signed = await signer.presign(
       minimalRequest,
       expiration,
       presigningOptions
@@ -50,10 +50,8 @@ describe("s3 presigner", () => {
   });
 
   it("should set the body digest to 'UNSIGNED_PAYLOAD'", async () => {
-    const signer = new S3RequestPresigner({
-      ...s3.config
-    });
-    const signed = await signer.presignRequest(
+    const signer = new S3RequestPresigner(s3ResolvedConfig);
+    const signed = await signer.presign(
       minimalRequest,
       expiration,
       presigningOptions
@@ -62,11 +60,9 @@ describe("s3 presigner", () => {
   });
 
   it("should not change original request", async () => {
-    const signer = new S3RequestPresigner({
-      ...s3.config
-    });
+    const signer = new S3RequestPresigner(s3ResolvedConfig);
     const originalRequest = { ...minimalRequest };
-    const signed = await signer.presignRequest(
+    const signed = await signer.presign(
       minimalRequest,
       expiration,
       presigningOptions
@@ -80,5 +76,24 @@ describe("s3 presigner", () => {
       [SIGNED_HEADERS_QUERY_PARAM]: HOST_HEADER
     });
     expect(minimalRequest).toMatchObject(originalRequest);
+  });
+
+  it("should not sign content-type header", async () => {
+    const signer = new S3RequestPresigner(s3ResolvedConfig);
+    const requestWithContentTypeHeader = {
+      ...minimalRequest,
+      headers: {
+        ...minimalRequest.headers,
+        "Content-Type": "application/octet-stream"
+      }
+    };
+    const signed = await signer.presign(
+      requestWithContentTypeHeader,
+      expiration,
+      presigningOptions
+    );
+    expect(signed.query).toMatchObject({
+      [SIGNED_HEADERS_QUERY_PARAM]: HOST_HEADER
+    });
   });
 });

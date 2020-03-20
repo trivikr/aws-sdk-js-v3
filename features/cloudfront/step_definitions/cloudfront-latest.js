@@ -1,53 +1,59 @@
+var { CloudFront } = require("../../../clients/client-cloudfront");
+
 module.exports = function() {
   var createParams = {
-    CallerReference: '',
+    CallerReference: "",
     Aliases: {
       Quantity: 0
     },
-    DefaultRootObject: '',
+    DefaultRootObject: "",
     Origins: {
-      Items: [{
-        Id: 'origin',
-        DomainName: 'example.com',
-        CustomOriginConfig: {
-          HTTPPort: 80,
-          HTTPSPort: 443,
-          OriginProtocolPolicy: 'match-viewer'
+      Items: [
+        {
+          Id: "origin",
+          DomainName: "example.com",
+          CustomOriginConfig: {
+            HTTPPort: 80,
+            HTTPSPort: 443,
+            OriginProtocolPolicy: "match-viewer"
+          }
         }
-      }],
+      ],
       Quantity: 1
     },
     DefaultCacheBehavior: {
-      TargetOriginId: 'origin',
+      TargetOriginId: "origin",
       ForwardedValues: {
         QueryString: false,
-        Cookies: { Forward: 'all' }
+        Cookies: {
+          Forward: "all"
+        }
       },
       TrustedSigners: {
         Items: [],
         Enabled: false,
         Quantity: 0
       },
-      ViewerProtocolPolicy: 'allow-all',
+      ViewerProtocolPolicy: "allow-all",
       MinTTL: 0
     },
     CacheBehaviors: {
       Items: [],
       Quantity: 0
     },
-    Comment: '',
+    Comment: "",
     Logging: {
       Enabled: false,
-      Bucket: 'invalidbucket.s3.amazonaws.com',
-      Prefix: 'prefix',
+      Bucket: "invalidbucket.s3.amazonaws.com",
+      Prefix: "prefix",
       IncludeCookies: false
     },
-    PriceClass: 'PriceClass_All',
+    PriceClass: "PriceClass_All",
     Enabled: false
   };
 
-  this.Before("@cloudfront", function (callback) {
-    this.service = new this.AWS.CloudFront();
+  this.Before("@cloudfront", function(callback) {
+    this.service = new CloudFront({});
     this.cfCreateParams = createParams;
     callback();
   });

@@ -1,55 +1,35 @@
-import {
-  CommandInput,
-  FinalizeHandler,
-  FinalizeHandlerArguments,
-  HttpRequest,
-  AWSClient,
-  Command,
-  MetadataBearer,
-  MiddlewareStack
-} from "@aws-sdk/types";
+import { HttpRequest, MetadataBearer, BuildMiddleware } from "@aws-sdk/types";
+import { MiddlewareStack } from "@aws-sdk/middleware-stack";
+import { Client, Command } from "@aws-sdk/smithy-client";
 
 export async function createRequest<
   InputTypesUnion extends object,
   InputType extends InputTypesUnion,
-  StreamType,
   OutputType extends MetadataBearer = MetadataBearer
 >(
-  client: AWSClient<InputTypesUnion, MetadataBearer, StreamType>,
-  command: Command<
-    InputTypesUnion,
+  client: Client<any, InputTypesUnion, MetadataBearer, any>,
+  command: Command<InputType, OutputType, any, InputTypesUnion, MetadataBearer>
+): Promise<HttpRequest> {
+  const interceptMiddleware: BuildMiddleware<
     InputType,
-    MetadataBearer,
-    OutputType,
-    any,
-    StreamType
-  >
-): Promise<HttpRequest<StreamType>> {
-  const presignHandler: FinalizeHandler<
-    any,
-    HttpRequest<StreamType>,
-    StreamType
-  > = async (
-    args: FinalizeHandlerArguments<CommandInput>
-  ): Promise<HttpRequest<StreamType>> => Promise.resolve(args.request);
+    OutputType
+  > = next => async args => {
+    return { output: { request: args.request } as any, response: undefined };
+  };
   const clientStack = client.middlewareStack.clone();
-  const commandStack = (command.middlewareStack.clone() as unknown) as MiddlewareStack<
-    InputType,
-    any,
-    StreamType
-  >;
-  const concatenatedStack = clientStack
-    .concat(commandStack)
-    .filter(middlewareStats => {
-      return (
-        middlewareStats.step === "initialize" ||
-        middlewareStats.step === "serialize"
-      );
-    });
 
-  const handler = concatenatedStack.resolve(presignHandler, {
-    model: command.model,
-    logger: {} as any
+  //add middleware to the last of 'build' step
+  clientStack.add(interceptMiddleware, {
+    step: "build",
+    priority: "low"
   });
-  return await handler(command);
+
+  const handler = command.resolveMiddleware(
+    clientStack as MiddlewareStack<any, any>,
+    client.config,
+    undefined
+  );
+
+  //@ts-ignore
+  return await handler(command).then(output => output.output.request);
 }

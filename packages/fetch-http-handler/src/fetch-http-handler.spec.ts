@@ -1,6 +1,7 @@
 import { FetchHttpHandler } from "./fetch-http-handler";
 import { AbortController } from "@aws-sdk/abort-controller";
 import * as timeouts from "./request-timeout";
+import { HttpRequest } from "@aws-sdk/protocol-http";
 
 const mockRequest = jest.fn();
 let mockResponse: any;
@@ -39,7 +40,7 @@ describe("httpHandler", () => {
           ["bizz", "bazz"]
         ])
       },
-      blob: jest.fn().mockResolvedValue("")
+      body: "FOO" //should be a ReadableStream in real life.
     };
     const mockFetch = jest.fn().mockResolvedValue(mockResponse);
 
@@ -49,7 +50,7 @@ describe("httpHandler", () => {
     let response = await fetchHttpHandler.handle({} as any, {});
 
     expect(mockFetch.mock.calls.length).toBe(1);
-    expect(mockResponse.blob.mock.calls.length).toBe(1);
+    expect(response.response.body).toBe("FOO");
   });
 
   it("properly constructs url", async () => {
@@ -60,20 +61,20 @@ describe("httpHandler", () => {
           ["bizz", "bazz"]
         ])
       },
-      blob: jest.fn().mockResolvedValue("")
+      body: ""
     };
     const mockFetch = jest.fn().mockResolvedValue(mockResponse);
 
     (global as any).fetch = mockFetch;
 
-    let httpRequest = {
+    let httpRequest = new HttpRequest({
       headers: {},
       hostname: "foo.amazonaws.com",
       method: "GET",
       path: "/test/?bar=baz",
       protocol: "https:",
       port: 443
-    };
+    });
     const fetchHttpHandler = new FetchHttpHandler();
 
     let response = await fetchHttpHandler.handle(httpRequest, {});

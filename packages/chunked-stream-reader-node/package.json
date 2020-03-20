@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/chunked-stream-reader-node",
-  "version": "0.1.0-preview.4",
+  "version": "1.0.0-alpha.2",
   "scripts": {
     "prepublishOnly": "tsc",
     "pretest": "tsc -p tsconfig.test.json",
@@ -20,6 +20,6 @@
     "@types/jest": "^24.0.12",
     "@types/node": "^10.0.0",
     "jest": "^24.7.1",
-    "typescript": "~3.4.0"
+    "typescript": "~3.8.3"
   }
 }

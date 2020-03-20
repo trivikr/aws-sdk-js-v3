@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/is-array-buffer",
-  "version": "0.1.0-preview.3",
+  "version": "1.0.0-alpha.2",
   "description": "Provides a function for detecting if an argument is an ArrayBuffer",
   "scripts": {
     "prepublishOnly": "tsc",
@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.12",
     "jest": "^24.7.1",
-    "typescript": "~3.4.0"
+    "typescript": "~3.8.3"
   },
   "types": "./build/index.d.ts",
   "dependencies": {
