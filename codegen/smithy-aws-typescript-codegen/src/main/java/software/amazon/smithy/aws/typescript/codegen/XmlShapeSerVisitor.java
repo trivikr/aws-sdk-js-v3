@@ -71,8 +71,7 @@ final class XmlShapeSerVisitor extends DocumentShapeSerVisitor {
                 .orElse("member");
 
         // Set up a location to store all of the child node(s).
-        writer.write("const collectedNodes: any = [];");
-        writer.openBlock("for (let entry of input) {", "}", () -> {
+        writer.openBlock("return input.map(entry => {", "});", () -> {
             // Dispatch to the input value provider for any additional handling.
             writer.write("const node = $L;", target.accept(getMemberVisitor("entry")));
             // Handle proper unwrapping of target nodes.
@@ -84,15 +83,13 @@ final class XmlShapeSerVisitor extends DocumentShapeSerVisitor {
                     AwsProtocolUtils.writeXmlNamespace(context, memberShape, "workingNode");
                     writer.write("container.addChildNode(workingNode);");
                 });
-                writer.write("collectedNodes.push(container);");
+                writer.write("return container;");
             } else {
                 // Add @xmlNamespace value of the target member.
                 AwsProtocolUtils.writeXmlNamespace(context, memberShape, "node");
-                writer.write("collectedNodes.push(node.withName($S));", locationName);
+                writer.write("return node.withName($S);", locationName);
             }
         });
-
-        writer.write("return collectedNodes;");
     }
 
     @Override
