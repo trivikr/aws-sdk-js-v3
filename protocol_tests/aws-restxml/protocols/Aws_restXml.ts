@@ -4117,8 +4117,7 @@ const serializeAws_restXmlFlattenedXmlMapWithXmlNameInputOutputMap = (
   input: { [key: string]: string },
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  Object.keys(input).forEach(key => {
+  return Object.keys(input).map(key => {
     const entryNode = new __XmlNode("entry");
     const keyNode = new __XmlNode("String")
       .addChildNode(new __XmlText(key))
@@ -4128,9 +4127,8 @@ const serializeAws_restXmlFlattenedXmlMapWithXmlNameInputOutputMap = (
       new __XmlText(input[key])
     );
     entryNode.addChildNode(node.withName("V"));
-    collectedNodes.push(entryNode);
+    return entryNode;
   });
-  return collectedNodes;
 };
 
 const serializeAws_restXmlNestedPayload = (
@@ -4302,8 +4300,7 @@ const serializeAws_restXmlXmlMapsInputOutputMap = (
   input: { [key: string]: GreetingStruct },
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  Object.keys(input).forEach(key => {
+  return Object.keys(input).map(key => {
     const entryNode = new __XmlNode("entry");
     const keyNode = new __XmlNode("String")
       .addChildNode(new __XmlText(key))
@@ -4311,17 +4308,15 @@ const serializeAws_restXmlXmlMapsInputOutputMap = (
     entryNode.addChildNode(keyNode);
     const node = serializeAws_restXmlGreetingStruct(input[key], context);
     entryNode.addChildNode(node.withName("value"));
-    collectedNodes.push(entryNode);
+    return entryNode;
   });
-  return collectedNodes;
 };
 
 const serializeAws_restXmlXmlMapsXmlNameInputOutputMap = (
   input: { [key: string]: GreetingStruct },
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  Object.keys(input).forEach(key => {
+  return Object.keys(input).map(key => {
     const entryNode = new __XmlNode("entry");
     const keyNode = new __XmlNode("String")
       .addChildNode(new __XmlText(key))
@@ -4329,9 +4324,8 @@ const serializeAws_restXmlXmlMapsXmlNameInputOutputMap = (
     entryNode.addChildNode(keyNode);
     const node = serializeAws_restXmlGreetingStruct(input[key], context);
     entryNode.addChildNode(node.withName("Setting"));
-    collectedNodes.push(entryNode);
+    return entryNode;
   });
-  return collectedNodes;
 };
 
 const serializeAws_restXmlXmlNamespaceNested = (
@@ -4401,8 +4395,7 @@ const serializeAws_restXmlFooEnumMap = (
   input: { [key: string]: FooEnum | string },
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  Object.keys(input).forEach(key => {
+  return Object.keys(input).map(key => {
     const entryNode = new __XmlNode("entry");
     const keyNode = new __XmlNode("String")
       .addChildNode(new __XmlText(key))
@@ -4412,9 +4405,8 @@ const serializeAws_restXmlFooEnumMap = (
       new __XmlText(input[key])
     );
     entryNode.addChildNode(node.withName("value"));
-    collectedNodes.push(entryNode);
+    return entryNode;
   });
-  return collectedNodes;
 };
 
 const serializeAws_restXmlFooEnumSet = (
