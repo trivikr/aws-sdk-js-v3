@@ -2075,17 +2075,12 @@ const serializeAws_restJson1_1GroupFilter = (
   input: GroupFilter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Values !== undefined) {
-    bodyParams["Values"] = serializeAws_restJson1_1GroupFilterValues(
-      input.Values,
-      context
-    );
-  }
-  return bodyParams;
+  return {
+    ...(input.Name !== undefined && { Name: input.Name }),
+    ...(input.Values !== undefined && {
+      Values: serializeAws_restJson1_1GroupFilterValues(input.Values, context)
+    })
+  };
 };
 
 const serializeAws_restJson1_1GroupFilterList = (
@@ -2114,17 +2109,15 @@ const serializeAws_restJson1_1ResourceFilter = (
   input: ResourceFilter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Values !== undefined) {
-    bodyParams["Values"] = serializeAws_restJson1_1ResourceFilterValues(
-      input.Values,
-      context
-    );
-  }
-  return bodyParams;
+  return {
+    ...(input.Name !== undefined && { Name: input.Name }),
+    ...(input.Values !== undefined && {
+      Values: serializeAws_restJson1_1ResourceFilterValues(
+        input.Values,
+        context
+      )
+    })
+  };
 };
 
 const serializeAws_restJson1_1ResourceFilterList = (
@@ -2153,14 +2146,10 @@ const serializeAws_restJson1_1ResourceQuery = (
   input: ResourceQuery,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Query !== undefined) {
-    bodyParams["Query"] = input.Query;
-  }
-  if (input.Type !== undefined) {
-    bodyParams["Type"] = input.Type;
-  }
-  return bodyParams;
+  return {
+    ...(input.Query !== undefined && { Query: input.Query }),
+    ...(input.Type !== undefined && { Type: input.Type })
+  };
 };
 
 const serializeAws_restJson1_1TagKeyList = (

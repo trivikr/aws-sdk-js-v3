@@ -1,74 +1,74 @@
 import {
   CancelRotateSecretCommandInput,
-  CancelRotateSecretCommandOutput
+  CancelRotateSecretCommandOutput,
 } from "../commands/CancelRotateSecretCommand";
 import {
   CreateSecretCommandInput,
-  CreateSecretCommandOutput
+  CreateSecretCommandOutput,
 } from "../commands/CreateSecretCommand";
 import {
   DeleteResourcePolicyCommandInput,
-  DeleteResourcePolicyCommandOutput
+  DeleteResourcePolicyCommandOutput,
 } from "../commands/DeleteResourcePolicyCommand";
 import {
   DeleteSecretCommandInput,
-  DeleteSecretCommandOutput
+  DeleteSecretCommandOutput,
 } from "../commands/DeleteSecretCommand";
 import {
   DescribeSecretCommandInput,
-  DescribeSecretCommandOutput
+  DescribeSecretCommandOutput,
 } from "../commands/DescribeSecretCommand";
 import {
   GetRandomPasswordCommandInput,
-  GetRandomPasswordCommandOutput
+  GetRandomPasswordCommandOutput,
 } from "../commands/GetRandomPasswordCommand";
 import {
   GetResourcePolicyCommandInput,
-  GetResourcePolicyCommandOutput
+  GetResourcePolicyCommandOutput,
 } from "../commands/GetResourcePolicyCommand";
 import {
   GetSecretValueCommandInput,
-  GetSecretValueCommandOutput
+  GetSecretValueCommandOutput,
 } from "../commands/GetSecretValueCommand";
 import {
   ListSecretVersionIdsCommandInput,
-  ListSecretVersionIdsCommandOutput
+  ListSecretVersionIdsCommandOutput,
 } from "../commands/ListSecretVersionIdsCommand";
 import {
   ListSecretsCommandInput,
-  ListSecretsCommandOutput
+  ListSecretsCommandOutput,
 } from "../commands/ListSecretsCommand";
 import {
   PutResourcePolicyCommandInput,
-  PutResourcePolicyCommandOutput
+  PutResourcePolicyCommandOutput,
 } from "../commands/PutResourcePolicyCommand";
 import {
   PutSecretValueCommandInput,
-  PutSecretValueCommandOutput
+  PutSecretValueCommandOutput,
 } from "../commands/PutSecretValueCommand";
 import {
   RestoreSecretCommandInput,
-  RestoreSecretCommandOutput
+  RestoreSecretCommandOutput,
 } from "../commands/RestoreSecretCommand";
 import {
   RotateSecretCommandInput,
-  RotateSecretCommandOutput
+  RotateSecretCommandOutput,
 } from "../commands/RotateSecretCommand";
 import {
   TagResourceCommandInput,
-  TagResourceCommandOutput
+  TagResourceCommandOutput,
 } from "../commands/TagResourceCommand";
 import {
   UntagResourceCommandInput,
-  UntagResourceCommandOutput
+  UntagResourceCommandOutput,
 } from "../commands/UntagResourceCommand";
 import {
   UpdateSecretCommandInput,
-  UpdateSecretCommandOutput
+  UpdateSecretCommandOutput,
 } from "../commands/UpdateSecretCommand";
 import {
   UpdateSecretVersionStageCommandInput,
-  UpdateSecretVersionStageCommandOutput
+  UpdateSecretVersionStageCommandOutput,
 } from "../commands/UpdateSecretVersionStageCommand";
 import {
   CancelRotateSecretRequest,
@@ -119,11 +119,11 @@ import {
   UpdateSecretRequest,
   UpdateSecretResponse,
   UpdateSecretVersionStageRequest,
-  UpdateSecretVersionStageResponse
+  UpdateSecretVersionStageResponse,
 } from "../models/index";
 import {
   HttpRequest as __HttpRequest,
-  HttpResponse as __HttpResponse
+  HttpResponse as __HttpResponse,
 } from "@aws-sdk/protocol-http";
 import { SmithyException as __SmithyException } from "@aws-sdk/smithy-client";
 import {
@@ -131,336 +131,288 @@ import {
   HeaderBag as __HeaderBag,
   MetadataBearer as __MetadataBearer,
   ResponseMetadata as __ResponseMetadata,
-  SerdeContext as __SerdeContext
+  SerdeContext as __SerdeContext,
 } from "@aws-sdk/types";
 import { v4 as generateIdempotencyToken } from "uuid";
 
-export const serializeAws_json1_1CancelRotateSecretCommand = async (
+export const serializeAws_json1_1CancelRotateSecretCommand = async(
   input: CancelRotateSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.CancelRotateSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.CancelRotateSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CancelRotateSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CancelRotateSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateSecretCommand = async (
+export const serializeAws_json1_1CreateSecretCommand = async(
   input: CreateSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.CreateSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.CreateSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteResourcePolicyCommand = async (
+export const serializeAws_json1_1DeleteResourcePolicyCommand = async(
   input: DeleteResourcePolicyCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.DeleteResourcePolicy";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.DeleteResourcePolicy";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteResourcePolicyRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteResourcePolicyRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteSecretCommand = async (
+export const serializeAws_json1_1DeleteSecretCommand = async(
   input: DeleteSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.DeleteSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.DeleteSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeSecretCommand = async (
+export const serializeAws_json1_1DescribeSecretCommand = async(
   input: DescribeSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.DescribeSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.DescribeSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetRandomPasswordCommand = async (
+export const serializeAws_json1_1GetRandomPasswordCommand = async(
   input: GetRandomPasswordCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.GetRandomPassword";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.GetRandomPassword";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetRandomPasswordRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetRandomPasswordRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetResourcePolicyCommand = async (
+export const serializeAws_json1_1GetResourcePolicyCommand = async(
   input: GetResourcePolicyCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.GetResourcePolicy";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.GetResourcePolicy";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetResourcePolicyRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetResourcePolicyRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetSecretValueCommand = async (
+export const serializeAws_json1_1GetSecretValueCommand = async(
   input: GetSecretValueCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.GetSecretValue";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.GetSecretValue";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetSecretValueRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetSecretValueRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListSecretVersionIdsCommand = async (
+export const serializeAws_json1_1ListSecretVersionIdsCommand = async(
   input: ListSecretVersionIdsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.ListSecretVersionIds";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.ListSecretVersionIds";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListSecretVersionIdsRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListSecretVersionIdsRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListSecretsCommand = async (
+export const serializeAws_json1_1ListSecretsCommand = async(
   input: ListSecretsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.ListSecrets";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.ListSecrets";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1ListSecretsRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1PutResourcePolicyCommand = async (
+export const serializeAws_json1_1PutResourcePolicyCommand = async(
   input: PutResourcePolicyCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.PutResourcePolicy";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.PutResourcePolicy";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1PutResourcePolicyRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1PutResourcePolicyRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1PutSecretValueCommand = async (
+export const serializeAws_json1_1PutSecretValueCommand = async(
   input: PutSecretValueCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.PutSecretValue";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.PutSecretValue";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1PutSecretValueRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1PutSecretValueRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1RestoreSecretCommand = async (
+export const serializeAws_json1_1RestoreSecretCommand = async(
   input: RestoreSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.RestoreSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.RestoreSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1RestoreSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1RestoreSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1RotateSecretCommand = async (
+export const serializeAws_json1_1RotateSecretCommand = async(
   input: RotateSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.RotateSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.RotateSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1RotateSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1RotateSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1TagResourceCommand = async (
+export const serializeAws_json1_1TagResourceCommand = async(
   input: TagResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.TagResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.TagResource";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1TagResourceRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UntagResourceCommand = async (
+export const serializeAws_json1_1UntagResourceCommand = async(
   input: UntagResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.UntagResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.UntagResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UntagResourceRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UntagResourceRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateSecretCommand = async (
+export const serializeAws_json1_1UpdateSecretCommand = async(
   input: UpdateSecretCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.UpdateSecret";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.UpdateSecret";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateSecretRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateSecretRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateSecretVersionStageCommand = async (
+export const serializeAws_json1_1UpdateSecretVersionStageCommand = async(
   input: UpdateSecretVersionStageCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "secretsmanager.UpdateSecretVersionStage";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "secretsmanager.UpdateSecretVersionStage";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateSecretVersionStageRequest(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateSecretVersionStageRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const deserializeAws_json1_1CancelRotateSecretCommand = async (
+export const deserializeAws_json1_1CancelRotateSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CancelRotateSecretCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1CancelRotateSecretCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1CancelRotateSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CancelRotateSecretResponse(data, context);
   const response: CancelRotateSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CancelRotateSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CancelRotateSecretCommandError = async (
+const deserializeAws_json1_1CancelRotateSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CancelRotateSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -477,138 +429,110 @@ const deserializeAws_json1_1CancelRotateSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateSecretCommand = async (
+export const deserializeAws_json1_1CreateSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateSecretResponse(data, context);
   const response: CreateSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateSecretCommandError = async (
+const deserializeAws_json1_1CreateSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "EncryptionFailure":
     case "com.amazon.AWSMimirService#EncryptionFailure":
       response = {
-        ...(await deserializeAws_json1_1EncryptionFailureResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1EncryptionFailureResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazon.AWSMimirService#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "MalformedPolicyDocumentException":
     case "com.amazon.AWSMimirService#MalformedPolicyDocumentException":
       response = {
-        ...(await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "PreconditionNotMetException":
     case "com.amazon.AWSMimirService#PreconditionNotMetException":
       response = {
-        ...(await deserializeAws_json1_1PreconditionNotMetExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1PreconditionNotMetExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceExistsException":
     case "com.amazon.AWSMimirService#ResourceExistsException":
       response = {
-        ...(await deserializeAws_json1_1ResourceExistsExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceExistsExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -625,75 +549,62 @@ const deserializeAws_json1_1CreateSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteResourcePolicyCommand = async (
+export const deserializeAws_json1_1DeleteResourcePolicyCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DeleteResourcePolicyCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DeleteResourcePolicyCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteResourcePolicyResponse(data, context);
   const response: DeleteResourcePolicyCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteResourcePolicyResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteResourcePolicyCommandError = async (
+const deserializeAws_json1_1DeleteResourcePolicyCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteResourcePolicyCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -710,83 +621,70 @@ const deserializeAws_json1_1DeleteResourcePolicyCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteSecretCommand = async (
+export const deserializeAws_json1_1DeleteSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteSecretResponse(data, context);
   const response: DeleteSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteSecretCommandError = async (
+const deserializeAws_json1_1DeleteSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -803,61 +701,54 @@ const deserializeAws_json1_1DeleteSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeSecretCommand = async (
+export const deserializeAws_json1_1DescribeSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DescribeSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeSecretResponse(data, context);
   const response: DescribeSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeSecretCommandError = async (
+const deserializeAws_json1_1DescribeSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -874,72 +765,62 @@ const deserializeAws_json1_1DescribeSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetRandomPasswordCommand = async (
+export const deserializeAws_json1_1GetRandomPasswordCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetRandomPasswordCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetRandomPasswordCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetRandomPasswordResponse(data, context);
   const response: GetRandomPasswordCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetRandomPasswordResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetRandomPasswordCommandError = async (
+const deserializeAws_json1_1GetRandomPasswordCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetRandomPasswordCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -956,72 +837,62 @@ const deserializeAws_json1_1GetRandomPasswordCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetResourcePolicyCommand = async (
+export const deserializeAws_json1_1GetResourcePolicyCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetResourcePolicyCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetResourcePolicyCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetResourcePolicyResponse(data, context);
   const response: GetResourcePolicyCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetResourcePolicyResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetResourcePolicyCommandError = async (
+const deserializeAws_json1_1GetResourcePolicyCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetResourcePolicyCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1038,94 +909,78 @@ const deserializeAws_json1_1GetResourcePolicyCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetSecretValueCommand = async (
+export const deserializeAws_json1_1GetSecretValueCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetSecretValueCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetSecretValueCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetSecretValueResponse(data, context);
   const response: GetSecretValueCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetSecretValueResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetSecretValueCommandError = async (
+const deserializeAws_json1_1GetSecretValueCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetSecretValueCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DecryptionFailure":
     case "com.amazon.AWSMimirService#DecryptionFailure":
       response = {
-        ...(await deserializeAws_json1_1DecryptionFailureResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DecryptionFailureResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1142,75 +997,62 @@ const deserializeAws_json1_1GetSecretValueCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListSecretVersionIdsCommand = async (
+export const deserializeAws_json1_1ListSecretVersionIdsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListSecretVersionIdsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListSecretVersionIdsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListSecretVersionIdsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListSecretVersionIdsResponse(data, context);
   const response: ListSecretVersionIdsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListSecretVersionIdsResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListSecretVersionIdsCommandError = async (
+const deserializeAws_json1_1ListSecretVersionIdsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecretVersionIdsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidNextTokenException":
     case "com.amazon.AWSMimirService#InvalidNextTokenException":
       response = {
-        ...(await deserializeAws_json1_1InvalidNextTokenExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidNextTokenExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1227,72 +1069,62 @@ const deserializeAws_json1_1ListSecretVersionIdsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListSecretsCommand = async (
+export const deserializeAws_json1_1ListSecretsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListSecretsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListSecretsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListSecretsResponse(data, context);
   const response: ListSecretsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListSecretsResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListSecretsCommandError = async (
+const deserializeAws_json1_1ListSecretsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListSecretsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidNextTokenException":
     case "com.amazon.AWSMimirService#InvalidNextTokenException":
       response = {
-        ...(await deserializeAws_json1_1InvalidNextTokenExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidNextTokenExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1309,94 +1141,78 @@ const deserializeAws_json1_1ListSecretsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1PutResourcePolicyCommand = async (
+export const deserializeAws_json1_1PutResourcePolicyCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<PutResourcePolicyCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1PutResourcePolicyCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1PutResourcePolicyResponse(data, context);
   const response: PutResourcePolicyCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "PutResourcePolicyResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1PutResourcePolicyCommandError = async (
+const deserializeAws_json1_1PutResourcePolicyCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutResourcePolicyCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "MalformedPolicyDocumentException":
     case "com.amazon.AWSMimirService#MalformedPolicyDocumentException":
       response = {
-        ...(await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1413,116 +1229,94 @@ const deserializeAws_json1_1PutResourcePolicyCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1PutSecretValueCommand = async (
+export const deserializeAws_json1_1PutSecretValueCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<PutSecretValueCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1PutSecretValueCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1PutSecretValueResponse(data, context);
   const response: PutSecretValueCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "PutSecretValueResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1PutSecretValueCommandError = async (
+const deserializeAws_json1_1PutSecretValueCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<PutSecretValueCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "EncryptionFailure":
     case "com.amazon.AWSMimirService#EncryptionFailure":
       response = {
-        ...(await deserializeAws_json1_1EncryptionFailureResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1EncryptionFailureResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazon.AWSMimirService#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceExistsException":
     case "com.amazon.AWSMimirService#ResourceExistsException":
       response = {
-        ...(await deserializeAws_json1_1ResourceExistsExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceExistsExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1539,83 +1333,70 @@ const deserializeAws_json1_1PutSecretValueCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1RestoreSecretCommand = async (
+export const deserializeAws_json1_1RestoreSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<RestoreSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1RestoreSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1RestoreSecretResponse(data, context);
   const response: RestoreSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "RestoreSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1RestoreSecretCommandError = async (
+const deserializeAws_json1_1RestoreSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RestoreSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1632,83 +1413,70 @@ const deserializeAws_json1_1RestoreSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1RotateSecretCommand = async (
+export const deserializeAws_json1_1RotateSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<RotateSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1RotateSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1RotateSecretResponse(data, context);
   const response: RotateSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "RotateSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1RotateSecretCommandError = async (
+const deserializeAws_json1_1RotateSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RotateSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1725,9 +1493,9 @@ const deserializeAws_json1_1RotateSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1TagResourceCommand = async (
+export const deserializeAws_json1_1TagResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<TagResourceCommandOutput> => {
@@ -1736,68 +1504,55 @@ export const deserializeAws_json1_1TagResourceCommand = async (
   }
   await collectBody(output.body, context);
   const response: TagResourceCommandOutput = {
-    $metadata: deserializeMetadata(output)
+    $metadata: deserializeMetadata(output),
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1TagResourceCommandError = async (
+const deserializeAws_json1_1TagResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1814,9 +1569,9 @@ const deserializeAws_json1_1TagResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UntagResourceCommand = async (
+export const deserializeAws_json1_1UntagResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UntagResourceCommandOutput> => {
@@ -1825,68 +1580,55 @@ export const deserializeAws_json1_1UntagResourceCommand = async (
   }
   await collectBody(output.body, context);
   const response: UntagResourceCommandOutput = {
-    $metadata: deserializeMetadata(output)
+    $metadata: deserializeMetadata(output),
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UntagResourceCommandError = async (
+const deserializeAws_json1_1UntagResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1903,138 +1645,110 @@ const deserializeAws_json1_1UntagResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateSecretCommand = async (
+export const deserializeAws_json1_1UpdateSecretCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateSecretCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdateSecretCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateSecretResponse(data, context);
   const response: UpdateSecretCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateSecretResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateSecretCommandError = async (
+const deserializeAws_json1_1UpdateSecretCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecretCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "EncryptionFailure":
     case "com.amazon.AWSMimirService#EncryptionFailure":
       response = {
-        ...(await deserializeAws_json1_1EncryptionFailureResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1EncryptionFailureResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazon.AWSMimirService#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "MalformedPolicyDocumentException":
     case "com.amazon.AWSMimirService#MalformedPolicyDocumentException":
       response = {
-        ...(await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "PreconditionNotMetException":
     case "com.amazon.AWSMimirService#PreconditionNotMetException":
       response = {
-        ...(await deserializeAws_json1_1PreconditionNotMetExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1PreconditionNotMetExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceExistsException":
     case "com.amazon.AWSMimirService#ResourceExistsException":
       response = {
-        ...(await deserializeAws_json1_1ResourceExistsExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceExistsExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2051,100 +1765,78 @@ const deserializeAws_json1_1UpdateSecretCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateSecretVersionStageCommand = async (
+export const deserializeAws_json1_1UpdateSecretVersionStageCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateSecretVersionStageCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1UpdateSecretVersionStageCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1UpdateSecretVersionStageCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1UpdateSecretVersionStageResponse(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1UpdateSecretVersionStageResponse(data, context);
   const response: UpdateSecretVersionStageCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateSecretVersionStageResponse",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateSecretVersionStageCommandError = async (
+const deserializeAws_json1_1UpdateSecretVersionStageCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateSecretVersionStageCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServiceError":
     case "com.amazon.AWSMimirService#InternalServiceError":
       response = {
-        ...(await deserializeAws_json1_1InternalServiceErrorResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServiceErrorResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParameterException":
     case "com.amazon.AWSMimirService#InvalidParameterException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParameterExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParameterExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazon.AWSMimirService#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazon.AWSMimirService#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazon.AWSMimirService#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2161,22 +1853,19 @@ const deserializeAws_json1_1UpdateSecretVersionStageCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
 const deserializeAws_json1_1DecryptionFailureResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<DecryptionFailure> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1DecryptionFailure(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1DecryptionFailure(body, context);
   const contents: DecryptionFailure = {
     name: "DecryptionFailure",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2185,16 +1874,13 @@ const deserializeAws_json1_1EncryptionFailureResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<EncryptionFailure> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1EncryptionFailure(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1EncryptionFailure(body, context);
   const contents: EncryptionFailure = {
     name: "EncryptionFailure",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2203,16 +1889,13 @@ const deserializeAws_json1_1InternalServiceErrorResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InternalServiceError> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InternalServiceError(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InternalServiceError(body, context);
   const contents: InternalServiceError = {
     name: "InternalServiceError",
     $fault: "server",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2221,16 +1904,13 @@ const deserializeAws_json1_1InvalidNextTokenExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidNextTokenException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidNextTokenException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidNextTokenException(body, context);
   const contents: InvalidNextTokenException = {
     name: "InvalidNextTokenException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2239,16 +1919,13 @@ const deserializeAws_json1_1InvalidParameterExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidParameterException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidParameterException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidParameterException(body, context);
   const contents: InvalidParameterException = {
     name: "InvalidParameterException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2257,16 +1934,13 @@ const deserializeAws_json1_1InvalidRequestExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidRequestException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidRequestException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidRequestException(body, context);
   const contents: InvalidRequestException = {
     name: "InvalidRequestException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2275,16 +1949,13 @@ const deserializeAws_json1_1LimitExceededExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<LimitExceededException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1LimitExceededException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1LimitExceededException(body, context);
   const contents: LimitExceededException = {
     name: "LimitExceededException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2293,16 +1964,13 @@ const deserializeAws_json1_1MalformedPolicyDocumentExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<MalformedPolicyDocumentException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1MalformedPolicyDocumentException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1MalformedPolicyDocumentException(body, context);
   const contents: MalformedPolicyDocumentException = {
     name: "MalformedPolicyDocumentException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2311,16 +1979,13 @@ const deserializeAws_json1_1PreconditionNotMetExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<PreconditionNotMetException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1PreconditionNotMetException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1PreconditionNotMetException(body, context);
   const contents: PreconditionNotMetException = {
     name: "PreconditionNotMetException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2329,16 +1994,13 @@ const deserializeAws_json1_1ResourceExistsExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<ResourceExistsException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1ResourceExistsException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1ResourceExistsException(body, context);
   const contents: ResourceExistsException = {
     name: "ResourceExistsException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2347,16 +2009,13 @@ const deserializeAws_json1_1ResourceNotFoundExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<ResourceNotFoundException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(body, context);
   const contents: ResourceNotFoundException = {
     name: "ResourceNotFoundException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -2365,271 +2024,177 @@ const serializeAws_json1_1CancelRotateSecretRequest = (
   input: CancelRotateSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1CreateSecretRequest = (
   input: CreateSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.KmsKeyId !== undefined) {
-    bodyParams["KmsKeyId"] = input.KmsKeyId;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.SecretBinary !== undefined) {
-    bodyParams["SecretBinary"] = context.base64Encoder(input.SecretBinary);
-  }
-  if (input.SecretString !== undefined) {
-    bodyParams["SecretString"] = input.SecretString;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1TagListType(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.KmsKeyId !== undefined && { 'KmsKeyId': input.KmsKeyId }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.SecretBinary !== undefined && { 'SecretBinary': context.base64Encoder(input.SecretBinary) }),
+    ...(input.SecretString !== undefined && { 'SecretString': input.SecretString }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1TagListType(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1DeleteResourcePolicyRequest = (
   input: DeleteResourcePolicyRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1DeleteSecretRequest = (
   input: DeleteSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ForceDeleteWithoutRecovery !== undefined) {
-    bodyParams["ForceDeleteWithoutRecovery"] = input.ForceDeleteWithoutRecovery;
-  }
-  if (input.RecoveryWindowInDays !== undefined) {
-    bodyParams["RecoveryWindowInDays"] = input.RecoveryWindowInDays;
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ForceDeleteWithoutRecovery !== undefined && { 'ForceDeleteWithoutRecovery': input.ForceDeleteWithoutRecovery }),
+    ...(input.RecoveryWindowInDays !== undefined && { 'RecoveryWindowInDays': input.RecoveryWindowInDays }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1DescribeSecretRequest = (
   input: DescribeSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1GetRandomPasswordRequest = (
   input: GetRandomPasswordRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ExcludeCharacters !== undefined) {
-    bodyParams["ExcludeCharacters"] = input.ExcludeCharacters;
-  }
-  if (input.ExcludeLowercase !== undefined) {
-    bodyParams["ExcludeLowercase"] = input.ExcludeLowercase;
-  }
-  if (input.ExcludeNumbers !== undefined) {
-    bodyParams["ExcludeNumbers"] = input.ExcludeNumbers;
-  }
-  if (input.ExcludePunctuation !== undefined) {
-    bodyParams["ExcludePunctuation"] = input.ExcludePunctuation;
-  }
-  if (input.ExcludeUppercase !== undefined) {
-    bodyParams["ExcludeUppercase"] = input.ExcludeUppercase;
-  }
-  if (input.IncludeSpace !== undefined) {
-    bodyParams["IncludeSpace"] = input.IncludeSpace;
-  }
-  if (input.PasswordLength !== undefined) {
-    bodyParams["PasswordLength"] = input.PasswordLength;
-  }
-  if (input.RequireEachIncludedType !== undefined) {
-    bodyParams["RequireEachIncludedType"] = input.RequireEachIncludedType;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ExcludeCharacters !== undefined && { 'ExcludeCharacters': input.ExcludeCharacters }),
+    ...(input.ExcludeLowercase !== undefined && { 'ExcludeLowercase': input.ExcludeLowercase }),
+    ...(input.ExcludeNumbers !== undefined && { 'ExcludeNumbers': input.ExcludeNumbers }),
+    ...(input.ExcludePunctuation !== undefined && { 'ExcludePunctuation': input.ExcludePunctuation }),
+    ...(input.ExcludeUppercase !== undefined && { 'ExcludeUppercase': input.ExcludeUppercase }),
+    ...(input.IncludeSpace !== undefined && { 'IncludeSpace': input.IncludeSpace }),
+    ...(input.PasswordLength !== undefined && { 'PasswordLength': input.PasswordLength }),
+    ...(input.RequireEachIncludedType !== undefined && { 'RequireEachIncludedType': input.RequireEachIncludedType }),
+  };
+}
 
 const serializeAws_json1_1GetResourcePolicyRequest = (
   input: GetResourcePolicyRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1GetSecretValueRequest = (
   input: GetSecretValueRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.VersionId !== undefined) {
-    bodyParams["VersionId"] = input.VersionId;
-  }
-  if (input.VersionStage !== undefined) {
-    bodyParams["VersionStage"] = input.VersionStage;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.VersionId !== undefined && { 'VersionId': input.VersionId }),
+    ...(input.VersionStage !== undefined && { 'VersionStage': input.VersionStage }),
+  };
+}
 
 const serializeAws_json1_1ListSecretVersionIdsRequest = (
   input: ListSecretVersionIdsRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.IncludeDeprecated !== undefined) {
-    bodyParams["IncludeDeprecated"] = input.IncludeDeprecated;
-  }
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.IncludeDeprecated !== undefined && { 'IncludeDeprecated': input.IncludeDeprecated }),
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1ListSecretsRequest = (
   input: ListSecretsRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+  };
+}
 
 const serializeAws_json1_1PutResourcePolicyRequest = (
   input: PutResourcePolicyRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ResourcePolicy !== undefined) {
-    bodyParams["ResourcePolicy"] = input.ResourcePolicy;
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ResourcePolicy !== undefined && { 'ResourcePolicy': input.ResourcePolicy }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1PutSecretValueRequest = (
   input: PutSecretValueRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.SecretBinary !== undefined) {
-    bodyParams["SecretBinary"] = context.base64Encoder(input.SecretBinary);
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.SecretString !== undefined) {
-    bodyParams["SecretString"] = input.SecretString;
-  }
-  if (input.VersionStages !== undefined) {
-    bodyParams["VersionStages"] = serializeAws_json1_1SecretVersionStagesType(
-      input.VersionStages,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.SecretBinary !== undefined && { 'SecretBinary': context.base64Encoder(input.SecretBinary) }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.SecretString !== undefined && { 'SecretString': input.SecretString }),
+    ...(input.VersionStages !== undefined && { 'VersionStages': serializeAws_json1_1SecretVersionStagesType(input.VersionStages, context) }),
+  };
+}
 
 const serializeAws_json1_1RestoreSecretRequest = (
   input: RestoreSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1RotateSecretRequest = (
   input: RotateSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.RotationLambdaARN !== undefined) {
-    bodyParams["RotationLambdaARN"] = input.RotationLambdaARN;
-  }
-  if (input.RotationRules !== undefined) {
-    bodyParams["RotationRules"] = serializeAws_json1_1RotationRulesType(
-      input.RotationRules,
-      context
-    );
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.RotationLambdaARN !== undefined && { 'RotationLambdaARN': input.RotationLambdaARN }),
+    ...(input.RotationRules !== undefined && { 'RotationRules': serializeAws_json1_1RotationRulesType(input.RotationRules, context) }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+  };
+}
 
 const serializeAws_json1_1RotationRulesType = (
   input: RotationRulesType,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AutomaticallyAfterDays !== undefined) {
-    bodyParams["AutomaticallyAfterDays"] = input.AutomaticallyAfterDays;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AutomaticallyAfterDays !== undefined && { 'AutomaticallyAfterDays': input.AutomaticallyAfterDays }),
+  };
+}
 
 const serializeAws_json1_1SecretVersionStagesType = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2637,21 +2202,20 @@ const serializeAws_json1_1SecretVersionStagesType = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
-const serializeAws_json1_1Tag = (input: Tag, context: __SerdeContext): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+const serializeAws_json1_1Tag = (
+  input: Tag,
+  context: __SerdeContext
+): any => {
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1TagKeyListType = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2659,10 +2223,10 @@ const serializeAws_json1_1TagKeyListType = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1TagListType = (
-  input: Tag[],
+  input: (Tag)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2670,87 +2234,56 @@ const serializeAws_json1_1TagListType = (
     contents.push(serializeAws_json1_1Tag(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1TagResourceRequest = (
   input: TagResourceRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1TagListType(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1TagListType(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1UntagResourceRequest = (
   input: UntagResourceRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.TagKeys !== undefined) {
-    bodyParams["TagKeys"] = serializeAws_json1_1TagKeyListType(
-      input.TagKeys,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.TagKeys !== undefined && { 'TagKeys': serializeAws_json1_1TagKeyListType(input.TagKeys, context) }),
+  };
+}
 
 const serializeAws_json1_1UpdateSecretRequest = (
   input: UpdateSecretRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.KmsKeyId !== undefined) {
-    bodyParams["KmsKeyId"] = input.KmsKeyId;
-  }
-  if (input.SecretBinary !== undefined) {
-    bodyParams["SecretBinary"] = context.base64Encoder(input.SecretBinary);
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.SecretString !== undefined) {
-    bodyParams["SecretString"] = input.SecretString;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.KmsKeyId !== undefined && { 'KmsKeyId': input.KmsKeyId }),
+    ...(input.SecretBinary !== undefined && { 'SecretBinary': context.base64Encoder(input.SecretBinary) }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.SecretString !== undefined && { 'SecretString': input.SecretString }),
+  };
+}
 
 const serializeAws_json1_1UpdateSecretVersionStageRequest = (
   input: UpdateSecretVersionStageRequest,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MoveToVersionId !== undefined) {
-    bodyParams["MoveToVersionId"] = input.MoveToVersionId;
-  }
-  if (input.RemoveFromVersionId !== undefined) {
-    bodyParams["RemoveFromVersionId"] = input.RemoveFromVersionId;
-  }
-  if (input.SecretId !== undefined) {
-    bodyParams["SecretId"] = input.SecretId;
-  }
-  if (input.VersionStage !== undefined) {
-    bodyParams["VersionStage"] = input.VersionStage;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MoveToVersionId !== undefined && { 'MoveToVersionId': input.MoveToVersionId }),
+    ...(input.RemoveFromVersionId !== undefined && { 'RemoveFromVersionId': input.RemoveFromVersionId }),
+    ...(input.SecretId !== undefined && { 'SecretId': input.SecretId }),
+    ...(input.VersionStage !== undefined && { 'VersionStage': input.VersionStage }),
+  };
+}
 
 const deserializeAws_json1_1CancelRotateSecretResponse = (
   output: any,
@@ -2760,7 +2293,7 @@ const deserializeAws_json1_1CancelRotateSecretResponse = (
     __type: "CancelRotateSecretResponse",
     ARN: undefined,
     Name: undefined,
-    VersionId: undefined
+    VersionId: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2772,7 +2305,7 @@ const deserializeAws_json1_1CancelRotateSecretResponse = (
     contents.VersionId = output.VersionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateSecretResponse = (
   output: any,
@@ -2782,7 +2315,7 @@ const deserializeAws_json1_1CreateSecretResponse = (
     __type: "CreateSecretResponse",
     ARN: undefined,
     Name: undefined,
-    VersionId: undefined
+    VersionId: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2794,7 +2327,7 @@ const deserializeAws_json1_1CreateSecretResponse = (
     contents.VersionId = output.VersionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DecryptionFailure = (
   output: any,
@@ -2802,13 +2335,13 @@ const deserializeAws_json1_1DecryptionFailure = (
 ): DecryptionFailure => {
   let contents: any = {
     __type: "DecryptionFailure",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteResourcePolicyResponse = (
   output: any,
@@ -2817,7 +2350,7 @@ const deserializeAws_json1_1DeleteResourcePolicyResponse = (
   let contents: any = {
     __type: "DeleteResourcePolicyResponse",
     ARN: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2826,7 +2359,7 @@ const deserializeAws_json1_1DeleteResourcePolicyResponse = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteSecretResponse = (
   output: any,
@@ -2836,7 +2369,7 @@ const deserializeAws_json1_1DeleteSecretResponse = (
     __type: "DeleteSecretResponse",
     ARN: undefined,
     DeletionDate: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2848,7 +2381,7 @@ const deserializeAws_json1_1DeleteSecretResponse = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeSecretResponse = (
   output: any,
@@ -2869,7 +2402,7 @@ const deserializeAws_json1_1DescribeSecretResponse = (
     RotationLambdaARN: undefined,
     RotationRules: undefined,
     Tags: undefined,
-    VersionIdsToStages: undefined
+    VersionIdsToStages: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2883,23 +2416,14 @@ const deserializeAws_json1_1DescribeSecretResponse = (
   if (output.KmsKeyId !== undefined && output.KmsKeyId !== null) {
     contents.KmsKeyId = output.KmsKeyId;
   }
-  if (
-    output.LastAccessedDate !== undefined &&
-    output.LastAccessedDate !== null
-  ) {
-    contents.LastAccessedDate = new Date(
-      Math.round(output.LastAccessedDate * 1000)
-    );
+  if (output.LastAccessedDate !== undefined && output.LastAccessedDate !== null) {
+    contents.LastAccessedDate = new Date(Math.round(output.LastAccessedDate * 1000));
   }
   if (output.LastChangedDate !== undefined && output.LastChangedDate !== null) {
-    contents.LastChangedDate = new Date(
-      Math.round(output.LastChangedDate * 1000)
-    );
+    contents.LastChangedDate = new Date(Math.round(output.LastChangedDate * 1000));
   }
   if (output.LastRotatedDate !== undefined && output.LastRotatedDate !== null) {
-    contents.LastRotatedDate = new Date(
-      Math.round(output.LastRotatedDate * 1000)
-    );
+    contents.LastRotatedDate = new Date(Math.round(output.LastRotatedDate * 1000));
   }
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
@@ -2910,32 +2434,20 @@ const deserializeAws_json1_1DescribeSecretResponse = (
   if (output.RotationEnabled !== undefined && output.RotationEnabled !== null) {
     contents.RotationEnabled = output.RotationEnabled;
   }
-  if (
-    output.RotationLambdaARN !== undefined &&
-    output.RotationLambdaARN !== null
-  ) {
+  if (output.RotationLambdaARN !== undefined && output.RotationLambdaARN !== null) {
     contents.RotationLambdaARN = output.RotationLambdaARN;
   }
   if (output.RotationRules !== undefined && output.RotationRules !== null) {
-    contents.RotationRules = deserializeAws_json1_1RotationRulesType(
-      output.RotationRules,
-      context
-    );
+    contents.RotationRules = deserializeAws_json1_1RotationRulesType(output.RotationRules, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1TagListType(output.Tags, context);
   }
-  if (
-    output.VersionIdsToStages !== undefined &&
-    output.VersionIdsToStages !== null
-  ) {
-    contents.VersionIdsToStages = deserializeAws_json1_1SecretVersionsToStagesMapType(
-      output.VersionIdsToStages,
-      context
-    );
+  if (output.VersionIdsToStages !== undefined && output.VersionIdsToStages !== null) {
+    contents.VersionIdsToStages = deserializeAws_json1_1SecretVersionsToStagesMapType(output.VersionIdsToStages, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1EncryptionFailure = (
   output: any,
@@ -2943,13 +2455,13 @@ const deserializeAws_json1_1EncryptionFailure = (
 ): EncryptionFailure => {
   let contents: any = {
     __type: "EncryptionFailure",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetRandomPasswordResponse = (
   output: any,
@@ -2957,13 +2469,13 @@ const deserializeAws_json1_1GetRandomPasswordResponse = (
 ): GetRandomPasswordResponse => {
   let contents: any = {
     __type: "GetRandomPasswordResponse",
-    RandomPassword: undefined
+    RandomPassword: undefined,
   };
   if (output.RandomPassword !== undefined && output.RandomPassword !== null) {
     contents.RandomPassword = output.RandomPassword;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetResourcePolicyResponse = (
   output: any,
@@ -2973,7 +2485,7 @@ const deserializeAws_json1_1GetResourcePolicyResponse = (
     __type: "GetResourcePolicyResponse",
     ARN: undefined,
     Name: undefined,
-    ResourcePolicy: undefined
+    ResourcePolicy: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -2985,7 +2497,7 @@ const deserializeAws_json1_1GetResourcePolicyResponse = (
     contents.ResourcePolicy = output.ResourcePolicy;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetSecretValueResponse = (
   output: any,
@@ -2999,7 +2511,7 @@ const deserializeAws_json1_1GetSecretValueResponse = (
     SecretBinary: undefined,
     SecretString: undefined,
     VersionId: undefined,
-    VersionStages: undefined
+    VersionStages: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3020,13 +2532,10 @@ const deserializeAws_json1_1GetSecretValueResponse = (
     contents.VersionId = output.VersionId;
   }
   if (output.VersionStages !== undefined && output.VersionStages !== null) {
-    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(
-      output.VersionStages,
-      context
-    );
+    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(output.VersionStages, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InternalServiceError = (
   output: any,
@@ -3034,13 +2543,13 @@ const deserializeAws_json1_1InternalServiceError = (
 ): InternalServiceError => {
   let contents: any = {
     __type: "InternalServiceError",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidNextTokenException = (
   output: any,
@@ -3048,13 +2557,13 @@ const deserializeAws_json1_1InvalidNextTokenException = (
 ): InvalidNextTokenException => {
   let contents: any = {
     __type: "InvalidNextTokenException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidParameterException = (
   output: any,
@@ -3062,13 +2571,13 @@ const deserializeAws_json1_1InvalidParameterException = (
 ): InvalidParameterException => {
   let contents: any = {
     __type: "InvalidParameterException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidRequestException = (
   output: any,
@@ -3076,13 +2585,13 @@ const deserializeAws_json1_1InvalidRequestException = (
 ): InvalidRequestException => {
   let contents: any = {
     __type: "InvalidRequestException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1LimitExceededException = (
   output: any,
@@ -3090,13 +2599,13 @@ const deserializeAws_json1_1LimitExceededException = (
 ): LimitExceededException => {
   let contents: any = {
     __type: "LimitExceededException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListSecretVersionIdsResponse = (
   output: any,
@@ -3107,7 +2616,7 @@ const deserializeAws_json1_1ListSecretVersionIdsResponse = (
     ARN: undefined,
     Name: undefined,
     NextToken: undefined,
-    Versions: undefined
+    Versions: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3119,13 +2628,10 @@ const deserializeAws_json1_1ListSecretVersionIdsResponse = (
     contents.NextToken = output.NextToken;
   }
   if (output.Versions !== undefined && output.Versions !== null) {
-    contents.Versions = deserializeAws_json1_1SecretVersionsListType(
-      output.Versions,
-      context
-    );
+    contents.Versions = deserializeAws_json1_1SecretVersionsListType(output.Versions, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListSecretsResponse = (
   output: any,
@@ -3134,19 +2640,16 @@ const deserializeAws_json1_1ListSecretsResponse = (
   let contents: any = {
     __type: "ListSecretsResponse",
     NextToken: undefined,
-    SecretList: undefined
+    SecretList: undefined,
   };
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
   }
   if (output.SecretList !== undefined && output.SecretList !== null) {
-    contents.SecretList = deserializeAws_json1_1SecretListType(
-      output.SecretList,
-      context
-    );
+    contents.SecretList = deserializeAws_json1_1SecretListType(output.SecretList, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1MalformedPolicyDocumentException = (
   output: any,
@@ -3154,13 +2657,13 @@ const deserializeAws_json1_1MalformedPolicyDocumentException = (
 ): MalformedPolicyDocumentException => {
   let contents: any = {
     __type: "MalformedPolicyDocumentException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1PreconditionNotMetException = (
   output: any,
@@ -3168,13 +2671,13 @@ const deserializeAws_json1_1PreconditionNotMetException = (
 ): PreconditionNotMetException => {
   let contents: any = {
     __type: "PreconditionNotMetException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1PutResourcePolicyResponse = (
   output: any,
@@ -3183,7 +2686,7 @@ const deserializeAws_json1_1PutResourcePolicyResponse = (
   let contents: any = {
     __type: "PutResourcePolicyResponse",
     ARN: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3192,7 +2695,7 @@ const deserializeAws_json1_1PutResourcePolicyResponse = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1PutSecretValueResponse = (
   output: any,
@@ -3203,7 +2706,7 @@ const deserializeAws_json1_1PutSecretValueResponse = (
     ARN: undefined,
     Name: undefined,
     VersionId: undefined,
-    VersionStages: undefined
+    VersionStages: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3215,13 +2718,10 @@ const deserializeAws_json1_1PutSecretValueResponse = (
     contents.VersionId = output.VersionId;
   }
   if (output.VersionStages !== undefined && output.VersionStages !== null) {
-    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(
-      output.VersionStages,
-      context
-    );
+    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(output.VersionStages, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceExistsException = (
   output: any,
@@ -3229,13 +2729,13 @@ const deserializeAws_json1_1ResourceExistsException = (
 ): ResourceExistsException => {
   let contents: any = {
     __type: "ResourceExistsException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceNotFoundException = (
   output: any,
@@ -3243,13 +2743,13 @@ const deserializeAws_json1_1ResourceNotFoundException = (
 ): ResourceNotFoundException => {
   let contents: any = {
     __type: "ResourceNotFoundException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RestoreSecretResponse = (
   output: any,
@@ -3258,7 +2758,7 @@ const deserializeAws_json1_1RestoreSecretResponse = (
   let contents: any = {
     __type: "RestoreSecretResponse",
     ARN: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3267,7 +2767,7 @@ const deserializeAws_json1_1RestoreSecretResponse = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RotateSecretResponse = (
   output: any,
@@ -3277,7 +2777,7 @@ const deserializeAws_json1_1RotateSecretResponse = (
     __type: "RotateSecretResponse",
     ARN: undefined,
     Name: undefined,
-    VersionId: undefined
+    VersionId: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3289,7 +2789,7 @@ const deserializeAws_json1_1RotateSecretResponse = (
     contents.VersionId = output.VersionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RotationRulesType = (
   output: any,
@@ -3297,16 +2797,13 @@ const deserializeAws_json1_1RotationRulesType = (
 ): RotationRulesType => {
   let contents: any = {
     __type: "RotationRulesType",
-    AutomaticallyAfterDays: undefined
+    AutomaticallyAfterDays: undefined,
   };
-  if (
-    output.AutomaticallyAfterDays !== undefined &&
-    output.AutomaticallyAfterDays !== null
-  ) {
+  if (output.AutomaticallyAfterDays !== undefined && output.AutomaticallyAfterDays !== null) {
     contents.AutomaticallyAfterDays = output.AutomaticallyAfterDays;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1SecretListEntry = (
   output: any,
@@ -3327,7 +2824,7 @@ const deserializeAws_json1_1SecretListEntry = (
     RotationLambdaARN: undefined,
     RotationRules: undefined,
     SecretVersionsToStages: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3341,23 +2838,14 @@ const deserializeAws_json1_1SecretListEntry = (
   if (output.KmsKeyId !== undefined && output.KmsKeyId !== null) {
     contents.KmsKeyId = output.KmsKeyId;
   }
-  if (
-    output.LastAccessedDate !== undefined &&
-    output.LastAccessedDate !== null
-  ) {
-    contents.LastAccessedDate = new Date(
-      Math.round(output.LastAccessedDate * 1000)
-    );
+  if (output.LastAccessedDate !== undefined && output.LastAccessedDate !== null) {
+    contents.LastAccessedDate = new Date(Math.round(output.LastAccessedDate * 1000));
   }
   if (output.LastChangedDate !== undefined && output.LastChangedDate !== null) {
-    contents.LastChangedDate = new Date(
-      Math.round(output.LastChangedDate * 1000)
-    );
+    contents.LastChangedDate = new Date(Math.round(output.LastChangedDate * 1000));
   }
   if (output.LastRotatedDate !== undefined && output.LastRotatedDate !== null) {
-    contents.LastRotatedDate = new Date(
-      Math.round(output.LastRotatedDate * 1000)
-    );
+    contents.LastRotatedDate = new Date(Math.round(output.LastRotatedDate * 1000));
   }
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
@@ -3368,48 +2856,38 @@ const deserializeAws_json1_1SecretListEntry = (
   if (output.RotationEnabled !== undefined && output.RotationEnabled !== null) {
     contents.RotationEnabled = output.RotationEnabled;
   }
-  if (
-    output.RotationLambdaARN !== undefined &&
-    output.RotationLambdaARN !== null
-  ) {
+  if (output.RotationLambdaARN !== undefined && output.RotationLambdaARN !== null) {
     contents.RotationLambdaARN = output.RotationLambdaARN;
   }
   if (output.RotationRules !== undefined && output.RotationRules !== null) {
-    contents.RotationRules = deserializeAws_json1_1RotationRulesType(
-      output.RotationRules,
-      context
-    );
+    contents.RotationRules = deserializeAws_json1_1RotationRulesType(output.RotationRules, context);
   }
-  if (
-    output.SecretVersionsToStages !== undefined &&
-    output.SecretVersionsToStages !== null
-  ) {
-    contents.SecretVersionsToStages = deserializeAws_json1_1SecretVersionsToStagesMapType(
-      output.SecretVersionsToStages,
-      context
-    );
+  if (output.SecretVersionsToStages !== undefined && output.SecretVersionsToStages !== null) {
+    contents.SecretVersionsToStages = deserializeAws_json1_1SecretVersionsToStagesMapType(output.SecretVersionsToStages, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1TagListType(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1SecretListType = (
   output: any,
   context: __SerdeContext
-): SecretListEntry[] => {
+): (SecretListEntry)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1SecretListEntry(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1SecretVersionStagesType = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1SecretVersionsListEntry = (
   output: any,
@@ -3420,53 +2898,42 @@ const deserializeAws_json1_1SecretVersionsListEntry = (
     CreatedDate: undefined,
     LastAccessedDate: undefined,
     VersionId: undefined,
-    VersionStages: undefined
+    VersionStages: undefined,
   };
   if (output.CreatedDate !== undefined && output.CreatedDate !== null) {
     contents.CreatedDate = new Date(Math.round(output.CreatedDate * 1000));
   }
-  if (
-    output.LastAccessedDate !== undefined &&
-    output.LastAccessedDate !== null
-  ) {
-    contents.LastAccessedDate = new Date(
-      Math.round(output.LastAccessedDate * 1000)
-    );
+  if (output.LastAccessedDate !== undefined && output.LastAccessedDate !== null) {
+    contents.LastAccessedDate = new Date(Math.round(output.LastAccessedDate * 1000));
   }
   if (output.VersionId !== undefined && output.VersionId !== null) {
     contents.VersionId = output.VersionId;
   }
   if (output.VersionStages !== undefined && output.VersionStages !== null) {
-    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(
-      output.VersionStages,
-      context
-    );
+    contents.VersionStages = deserializeAws_json1_1SecretVersionStagesType(output.VersionStages, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1SecretVersionsListType = (
   output: any,
   context: __SerdeContext
-): SecretVersionsListEntry[] => {
+): (SecretVersionsListEntry)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1SecretVersionsListEntry(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1SecretVersionsToStagesMapType = (
   output: any,
   context: __SerdeContext
-): { [key: string]: string[] } => {
+): { [key: string]: (string)[] } => {
   const mapParams: any = {};
   Object.keys(output).forEach(key => {
-    mapParams[key] = deserializeAws_json1_1SecretVersionStagesType(
-      output[key],
-      context
-    );
+    mapParams[key] = deserializeAws_json1_1SecretVersionStagesType(output[key], context);
   });
   return mapParams;
-};
+}
 
 const deserializeAws_json1_1Tag = (
   output: any,
@@ -3475,7 +2942,7 @@ const deserializeAws_json1_1Tag = (
   let contents: any = {
     __type: "Tag",
     Key: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
@@ -3484,16 +2951,16 @@ const deserializeAws_json1_1Tag = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1TagListType = (
   output: any,
   context: __SerdeContext
-): Tag[] => {
+): (Tag)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Tag(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1UpdateSecretResponse = (
   output: any,
@@ -3503,7 +2970,7 @@ const deserializeAws_json1_1UpdateSecretResponse = (
     __type: "UpdateSecretResponse",
     ARN: undefined,
     Name: undefined,
-    VersionId: undefined
+    VersionId: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3515,7 +2982,7 @@ const deserializeAws_json1_1UpdateSecretResponse = (
     contents.VersionId = output.VersionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateSecretVersionStageResponse = (
   output: any,
@@ -3524,7 +2991,7 @@ const deserializeAws_json1_1UpdateSecretVersionStageResponse = (
   let contents: any = {
     __type: "UpdateSecretVersionStageResponse",
     ARN: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -3533,7 +3000,7 @@ const deserializeAws_json1_1UpdateSecretVersionStageResponse = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
   httpStatusCode: output.statusCode,
@@ -3542,40 +3009,31 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 });
 
 // Collect low-level response body stream to Uint8Array.
-const collectBody = (
-  streamBody: any = new Uint8Array(),
-  context: __SerdeContext
-): Promise<Uint8Array> => {
+const collectBody = (streamBody: any = new Uint8Array(), context: __SerdeContext): Promise<Uint8Array> => {
   if (streamBody instanceof Uint8Array) {
     return Promise.resolve(streamBody);
   }
-  return (
-    context.streamCollector(streamBody) || Promise.resolve(new Uint8Array())
-  );
+  return context.streamCollector(streamBody) || Promise.resolve(new Uint8Array());
 };
 
 // Encode Uint8Array data into string with utf-8.
-const collectBodyString = (
-  streamBody: any,
-  context: __SerdeContext
-): Promise<string> =>
-  collectBody(streamBody, context).then(body => context.utf8Encoder(body));
+const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> => collectBody(streamBody, context).then(body => context.utf8Encoder(body))
 
 const buildHttpRpcRequest = async (
   context: __SerdeContext,
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
-  const { hostname, protocol = "https", port } = await context.endpoint();
+  const {hostname, protocol = "https", port} = await context.endpoint();
   const contents: any = {
     protocol,
     hostname,
     port,
     method: "POST",
     path,
-    headers
+    headers,
   };
   if (resolvedHostname !== undefined) {
     contents.hostname = resolvedHostname;
@@ -3586,10 +3044,9 @@ const buildHttpRpcRequest = async (
   return new __HttpRequest(contents);
 };
 
-const parseBody = (streamBody: any, context: __SerdeContext): any =>
-  collectBodyString(streamBody, context).then(encoded => {
-    if (encoded.length) {
-      return JSON.parse(encoded);
-    }
-    return {};
-  });
+const parseBody = (streamBody: any, context: __SerdeContext): any => collectBodyString(streamBody, context).then(encoded => {
+  if (encoded.length) {
+    return JSON.parse(encoded);
+  }
+  return {};
+});

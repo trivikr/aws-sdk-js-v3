@@ -4830,25 +4830,19 @@ const serializeAws_restJson1_1ChatMessage = (
   input: ChatMessage,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Content !== undefined) {
-    bodyParams["Content"] = input.Content;
-  }
-  if (input.ContentType !== undefined) {
-    bodyParams["ContentType"] = input.ContentType;
-  }
-  return bodyParams;
+  return {
+    ...(input.Content !== undefined && { Content: input.Content }),
+    ...(input.ContentType !== undefined && { ContentType: input.ContentType })
+  };
 };
 
 const serializeAws_restJson1_1ParticipantDetails = (
   input: ParticipantDetails,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.DisplayName !== undefined) {
-    bodyParams["DisplayName"] = input.DisplayName;
-  }
-  return bodyParams;
+  return {
+    ...(input.DisplayName !== undefined && { DisplayName: input.DisplayName })
+  };
 };
 
 const serializeAws_restJson1_1Channels = (
@@ -4866,14 +4860,10 @@ const serializeAws_restJson1_1CurrentMetric = (
   input: CurrentMetric,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Unit !== undefined) {
-    bodyParams["Unit"] = input.Unit;
-  }
-  return bodyParams;
+  return {
+    ...(input.Name !== undefined && { Name: input.Name }),
+    ...(input.Unit !== undefined && { Unit: input.Unit })
+  };
 };
 
 const serializeAws_restJson1_1CurrentMetrics = (
@@ -4891,20 +4881,14 @@ const serializeAws_restJson1_1Filters = (
   input: Filters,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Channels !== undefined) {
-    bodyParams["Channels"] = serializeAws_restJson1_1Channels(
-      input.Channels,
-      context
-    );
-  }
-  if (input.Queues !== undefined) {
-    bodyParams["Queues"] = serializeAws_restJson1_1Queues(
-      input.Queues,
-      context
-    );
-  }
-  return bodyParams;
+  return {
+    ...(input.Channels !== undefined && {
+      Channels: serializeAws_restJson1_1Channels(input.Channels, context)
+    }),
+    ...(input.Queues !== undefined && {
+      Queues: serializeAws_restJson1_1Queues(input.Queues, context)
+    })
+  };
 };
 
 const serializeAws_restJson1_1Groupings = (
@@ -4922,23 +4906,14 @@ const serializeAws_restJson1_1HistoricalMetric = (
   input: HistoricalMetric,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Statistic !== undefined) {
-    bodyParams["Statistic"] = input.Statistic;
-  }
-  if (input.Threshold !== undefined) {
-    bodyParams["Threshold"] = serializeAws_restJson1_1Threshold(
-      input.Threshold,
-      context
-    );
-  }
-  if (input.Unit !== undefined) {
-    bodyParams["Unit"] = input.Unit;
-  }
-  return bodyParams;
+  return {
+    ...(input.Name !== undefined && { Name: input.Name }),
+    ...(input.Statistic !== undefined && { Statistic: input.Statistic }),
+    ...(input.Threshold !== undefined && {
+      Threshold: serializeAws_restJson1_1Threshold(input.Threshold, context)
+    }),
+    ...(input.Unit !== undefined && { Unit: input.Unit })
+  };
 };
 
 const serializeAws_restJson1_1HistoricalMetrics = (
@@ -4967,14 +4942,12 @@ const serializeAws_restJson1_1Threshold = (
   input: Threshold,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Comparison !== undefined) {
-    bodyParams["Comparison"] = input.Comparison;
-  }
-  if (input.ThresholdValue !== undefined) {
-    bodyParams["ThresholdValue"] = input.ThresholdValue;
-  }
-  return bodyParams;
+  return {
+    ...(input.Comparison !== undefined && { Comparison: input.Comparison }),
+    ...(input.ThresholdValue !== undefined && {
+      ThresholdValue: input.ThresholdValue
+    })
+  };
 };
 
 const serializeAws_restJson1_1SecurityProfileIds = (
@@ -5003,37 +4976,27 @@ const serializeAws_restJson1_1UserIdentityInfo = (
   input: UserIdentityInfo,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Email !== undefined) {
-    bodyParams["Email"] = input.Email;
-  }
-  if (input.FirstName !== undefined) {
-    bodyParams["FirstName"] = input.FirstName;
-  }
-  if (input.LastName !== undefined) {
-    bodyParams["LastName"] = input.LastName;
-  }
-  return bodyParams;
+  return {
+    ...(input.Email !== undefined && { Email: input.Email }),
+    ...(input.FirstName !== undefined && { FirstName: input.FirstName }),
+    ...(input.LastName !== undefined && { LastName: input.LastName })
+  };
 };
 
 const serializeAws_restJson1_1UserPhoneConfig = (
   input: UserPhoneConfig,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AfterContactWorkTimeLimit !== undefined) {
-    bodyParams["AfterContactWorkTimeLimit"] = input.AfterContactWorkTimeLimit;
-  }
-  if (input.AutoAccept !== undefined) {
-    bodyParams["AutoAccept"] = input.AutoAccept;
-  }
-  if (input.DeskPhoneNumber !== undefined) {
-    bodyParams["DeskPhoneNumber"] = input.DeskPhoneNumber;
-  }
-  if (input.PhoneType !== undefined) {
-    bodyParams["PhoneType"] = input.PhoneType;
-  }
-  return bodyParams;
+  return {
+    ...(input.AfterContactWorkTimeLimit !== undefined && {
+      AfterContactWorkTimeLimit: input.AfterContactWorkTimeLimit
+    }),
+    ...(input.AutoAccept !== undefined && { AutoAccept: input.AutoAccept }),
+    ...(input.DeskPhoneNumber !== undefined && {
+      DeskPhoneNumber: input.DeskPhoneNumber
+    }),
+    ...(input.PhoneType !== undefined && { PhoneType: input.PhoneType })
+  };
 };
 
 const deserializeAws_restJson1_1Attributes = (

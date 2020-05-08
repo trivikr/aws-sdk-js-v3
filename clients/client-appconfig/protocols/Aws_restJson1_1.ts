@@ -4557,14 +4557,12 @@ const serializeAws_restJson1_1Monitor = (
   input: Monitor,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AlarmArn !== undefined) {
-    bodyParams["AlarmArn"] = input.AlarmArn;
-  }
-  if (input.AlarmRoleArn !== undefined) {
-    bodyParams["AlarmRoleArn"] = input.AlarmRoleArn;
-  }
-  return bodyParams;
+  return {
+    ...(input.AlarmArn !== undefined && { AlarmArn: input.AlarmArn }),
+    ...(input.AlarmRoleArn !== undefined && {
+      AlarmRoleArn: input.AlarmRoleArn
+    })
+  };
 };
 
 const serializeAws_restJson1_1MonitorList = (
@@ -4593,14 +4591,10 @@ const serializeAws_restJson1_1Validator = (
   input: Validator,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Content !== undefined) {
-    bodyParams["Content"] = input.Content;
-  }
-  if (input.Type !== undefined) {
-    bodyParams["Type"] = input.Type;
-  }
-  return bodyParams;
+  return {
+    ...(input.Content !== undefined && { Content: input.Content }),
+    ...(input.Type !== undefined && { Type: input.Type })
+  };
 };
 
 const serializeAws_restJson1_1ValidatorList = (

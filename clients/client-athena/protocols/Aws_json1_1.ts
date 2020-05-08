@@ -1,78 +1,78 @@
 import {
   BatchGetNamedQueryCommandInput,
-  BatchGetNamedQueryCommandOutput
+  BatchGetNamedQueryCommandOutput,
 } from "../commands/BatchGetNamedQueryCommand";
 import {
   BatchGetQueryExecutionCommandInput,
-  BatchGetQueryExecutionCommandOutput
+  BatchGetQueryExecutionCommandOutput,
 } from "../commands/BatchGetQueryExecutionCommand";
 import {
   CreateNamedQueryCommandInput,
-  CreateNamedQueryCommandOutput
+  CreateNamedQueryCommandOutput,
 } from "../commands/CreateNamedQueryCommand";
 import {
   CreateWorkGroupCommandInput,
-  CreateWorkGroupCommandOutput
+  CreateWorkGroupCommandOutput,
 } from "../commands/CreateWorkGroupCommand";
 import {
   DeleteNamedQueryCommandInput,
-  DeleteNamedQueryCommandOutput
+  DeleteNamedQueryCommandOutput,
 } from "../commands/DeleteNamedQueryCommand";
 import {
   DeleteWorkGroupCommandInput,
-  DeleteWorkGroupCommandOutput
+  DeleteWorkGroupCommandOutput,
 } from "../commands/DeleteWorkGroupCommand";
 import {
   GetNamedQueryCommandInput,
-  GetNamedQueryCommandOutput
+  GetNamedQueryCommandOutput,
 } from "../commands/GetNamedQueryCommand";
 import {
   GetQueryExecutionCommandInput,
-  GetQueryExecutionCommandOutput
+  GetQueryExecutionCommandOutput,
 } from "../commands/GetQueryExecutionCommand";
 import {
   GetQueryResultsCommandInput,
-  GetQueryResultsCommandOutput
+  GetQueryResultsCommandOutput,
 } from "../commands/GetQueryResultsCommand";
 import {
   GetWorkGroupCommandInput,
-  GetWorkGroupCommandOutput
+  GetWorkGroupCommandOutput,
 } from "../commands/GetWorkGroupCommand";
 import {
   ListNamedQueriesCommandInput,
-  ListNamedQueriesCommandOutput
+  ListNamedQueriesCommandOutput,
 } from "../commands/ListNamedQueriesCommand";
 import {
   ListQueryExecutionsCommandInput,
-  ListQueryExecutionsCommandOutput
+  ListQueryExecutionsCommandOutput,
 } from "../commands/ListQueryExecutionsCommand";
 import {
   ListTagsForResourceCommandInput,
-  ListTagsForResourceCommandOutput
+  ListTagsForResourceCommandOutput,
 } from "../commands/ListTagsForResourceCommand";
 import {
   ListWorkGroupsCommandInput,
-  ListWorkGroupsCommandOutput
+  ListWorkGroupsCommandOutput,
 } from "../commands/ListWorkGroupsCommand";
 import {
   StartQueryExecutionCommandInput,
-  StartQueryExecutionCommandOutput
+  StartQueryExecutionCommandOutput,
 } from "../commands/StartQueryExecutionCommand";
 import {
   StopQueryExecutionCommandInput,
-  StopQueryExecutionCommandOutput
+  StopQueryExecutionCommandOutput,
 } from "../commands/StopQueryExecutionCommand";
 import {
   TagResourceCommandInput,
-  TagResourceCommandOutput
+  TagResourceCommandOutput,
 } from "../commands/TagResourceCommand";
 import {
   UntagResourceCommandInput,
-  UntagResourceCommandOutput
+  UntagResourceCommandOutput,
 } from "../commands/UntagResourceCommand";
 import {
   UpdateWorkGroupCommandInput,
-  UpdateWorkGroupCommandOutput
+  UpdateWorkGroupCommandOutput,
 } from "../commands/UpdateWorkGroupCommand";
 import {
   BatchGetNamedQueryInput,
@@ -136,11 +136,11 @@ import {
   WorkGroup,
   WorkGroupConfiguration,
   WorkGroupConfigurationUpdates,
-  WorkGroupSummary
+  WorkGroupSummary,
 } from "../models/index";
 import {
   HttpRequest as __HttpRequest,
-  HttpResponse as __HttpResponse
+  HttpResponse as __HttpResponse,
 } from "@aws-sdk/protocol-http";
 import { SmithyException as __SmithyException } from "@aws-sdk/smithy-client";
 import {
@@ -148,324 +148,284 @@ import {
   HeaderBag as __HeaderBag,
   MetadataBearer as __MetadataBearer,
   ResponseMetadata as __ResponseMetadata,
-  SerdeContext as __SerdeContext
+  SerdeContext as __SerdeContext,
 } from "@aws-sdk/types";
 import { v4 as generateIdempotencyToken } from "uuid";
 
-export const serializeAws_json1_1BatchGetNamedQueryCommand = async (
+export const serializeAws_json1_1BatchGetNamedQueryCommand = async(
   input: BatchGetNamedQueryCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.BatchGetNamedQuery";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.BatchGetNamedQuery";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1BatchGetNamedQueryInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1BatchGetNamedQueryInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1BatchGetQueryExecutionCommand = async (
+export const serializeAws_json1_1BatchGetQueryExecutionCommand = async(
   input: BatchGetQueryExecutionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.BatchGetQueryExecution";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.BatchGetQueryExecution";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1BatchGetQueryExecutionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1BatchGetQueryExecutionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateNamedQueryCommand = async (
+export const serializeAws_json1_1CreateNamedQueryCommand = async(
   input: CreateNamedQueryCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.CreateNamedQuery";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.CreateNamedQuery";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateNamedQueryInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateNamedQueryInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateWorkGroupCommand = async (
+export const serializeAws_json1_1CreateWorkGroupCommand = async(
   input: CreateWorkGroupCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.CreateWorkGroup";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.CreateWorkGroup";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateWorkGroupInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateWorkGroupInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteNamedQueryCommand = async (
+export const serializeAws_json1_1DeleteNamedQueryCommand = async(
   input: DeleteNamedQueryCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.DeleteNamedQuery";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.DeleteNamedQuery";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteNamedQueryInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteNamedQueryInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteWorkGroupCommand = async (
+export const serializeAws_json1_1DeleteWorkGroupCommand = async(
   input: DeleteWorkGroupCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.DeleteWorkGroup";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.DeleteWorkGroup";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteWorkGroupInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteWorkGroupInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetNamedQueryCommand = async (
+export const serializeAws_json1_1GetNamedQueryCommand = async(
   input: GetNamedQueryCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.GetNamedQuery";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.GetNamedQuery";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1GetNamedQueryInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetQueryExecutionCommand = async (
+export const serializeAws_json1_1GetQueryExecutionCommand = async(
   input: GetQueryExecutionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.GetQueryExecution";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.GetQueryExecution";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetQueryExecutionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetQueryExecutionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetQueryResultsCommand = async (
+export const serializeAws_json1_1GetQueryResultsCommand = async(
   input: GetQueryResultsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.GetQueryResults";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.GetQueryResults";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetQueryResultsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetQueryResultsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetWorkGroupCommand = async (
+export const serializeAws_json1_1GetWorkGroupCommand = async(
   input: GetWorkGroupCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.GetWorkGroup";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.GetWorkGroup";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1GetWorkGroupInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListNamedQueriesCommand = async (
+export const serializeAws_json1_1ListNamedQueriesCommand = async(
   input: ListNamedQueriesCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.ListNamedQueries";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.ListNamedQueries";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListNamedQueriesInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListNamedQueriesInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListQueryExecutionsCommand = async (
+export const serializeAws_json1_1ListQueryExecutionsCommand = async(
   input: ListQueryExecutionsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.ListQueryExecutions";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.ListQueryExecutions";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListQueryExecutionsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListQueryExecutionsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListTagsForResourceCommand = async (
+export const serializeAws_json1_1ListTagsForResourceCommand = async(
   input: ListTagsForResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.ListTagsForResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.ListTagsForResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListTagsForResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListTagsForResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListWorkGroupsCommand = async (
+export const serializeAws_json1_1ListWorkGroupsCommand = async(
   input: ListWorkGroupsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.ListWorkGroups";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.ListWorkGroups";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListWorkGroupsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListWorkGroupsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1StartQueryExecutionCommand = async (
+export const serializeAws_json1_1StartQueryExecutionCommand = async(
   input: StartQueryExecutionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.StartQueryExecution";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.StartQueryExecution";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1StartQueryExecutionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1StartQueryExecutionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1StopQueryExecutionCommand = async (
+export const serializeAws_json1_1StopQueryExecutionCommand = async(
   input: StopQueryExecutionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.StopQueryExecution";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.StopQueryExecution";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1StopQueryExecutionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1StopQueryExecutionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1TagResourceCommand = async (
+export const serializeAws_json1_1TagResourceCommand = async(
   input: TagResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.TagResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.TagResource";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1TagResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UntagResourceCommand = async (
+export const serializeAws_json1_1UntagResourceCommand = async(
   input: UntagResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.UntagResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.UntagResource";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1UntagResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateWorkGroupCommand = async (
+export const serializeAws_json1_1UpdateWorkGroupCommand = async(
   input: UpdateWorkGroupCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AmazonAthena.UpdateWorkGroup";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AmazonAthena.UpdateWorkGroup";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateWorkGroupInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateWorkGroupInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const deserializeAws_json1_1BatchGetNamedQueryCommand = async (
+export const deserializeAws_json1_1BatchGetNamedQueryCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<BatchGetNamedQueryCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1BatchGetNamedQueryCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1BatchGetNamedQueryCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1BatchGetNamedQueryOutput(data, context);
   const response: BatchGetNamedQueryCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "BatchGetNamedQueryOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1BatchGetNamedQueryCommandError = async (
+const deserializeAws_json1_1BatchGetNamedQueryCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetNamedQueryCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -482,64 +442,54 @@ const deserializeAws_json1_1BatchGetNamedQueryCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1BatchGetQueryExecutionCommand = async (
+export const deserializeAws_json1_1BatchGetQueryExecutionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<BatchGetQueryExecutionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1BatchGetQueryExecutionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1BatchGetQueryExecutionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1BatchGetQueryExecutionOutput(data, context);
   const response: BatchGetQueryExecutionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "BatchGetQueryExecutionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1BatchGetQueryExecutionCommandError = async (
+const deserializeAws_json1_1BatchGetQueryExecutionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<BatchGetQueryExecutionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -556,61 +506,54 @@ const deserializeAws_json1_1BatchGetQueryExecutionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateNamedQueryCommand = async (
+export const deserializeAws_json1_1CreateNamedQueryCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateNamedQueryCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateNamedQueryCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateNamedQueryOutput(data, context);
   const response: CreateNamedQueryCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateNamedQueryOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateNamedQueryCommandError = async (
+const deserializeAws_json1_1CreateNamedQueryCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateNamedQueryCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -627,61 +570,54 @@ const deserializeAws_json1_1CreateNamedQueryCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateWorkGroupCommand = async (
+export const deserializeAws_json1_1CreateWorkGroupCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateWorkGroupCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateWorkGroupCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateWorkGroupOutput(data, context);
   const response: CreateWorkGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateWorkGroupOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateWorkGroupCommandError = async (
+const deserializeAws_json1_1CreateWorkGroupCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateWorkGroupCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -698,61 +634,54 @@ const deserializeAws_json1_1CreateWorkGroupCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteNamedQueryCommand = async (
+export const deserializeAws_json1_1DeleteNamedQueryCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteNamedQueryCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteNamedQueryCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteNamedQueryOutput(data, context);
   const response: DeleteNamedQueryCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteNamedQueryOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteNamedQueryCommandError = async (
+const deserializeAws_json1_1DeleteNamedQueryCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteNamedQueryCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -769,61 +698,54 @@ const deserializeAws_json1_1DeleteNamedQueryCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteWorkGroupCommand = async (
+export const deserializeAws_json1_1DeleteWorkGroupCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteWorkGroupCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteWorkGroupCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteWorkGroupOutput(data, context);
   const response: DeleteWorkGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteWorkGroupOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteWorkGroupCommandError = async (
+const deserializeAws_json1_1DeleteWorkGroupCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteWorkGroupCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -840,61 +762,54 @@ const deserializeAws_json1_1DeleteWorkGroupCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetNamedQueryCommand = async (
+export const deserializeAws_json1_1GetNamedQueryCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetNamedQueryCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetNamedQueryCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetNamedQueryOutput(data, context);
   const response: GetNamedQueryCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetNamedQueryOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetNamedQueryCommandError = async (
+const deserializeAws_json1_1GetNamedQueryCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetNamedQueryCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -911,61 +826,54 @@ const deserializeAws_json1_1GetNamedQueryCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetQueryExecutionCommand = async (
+export const deserializeAws_json1_1GetQueryExecutionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetQueryExecutionCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetQueryExecutionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetQueryExecutionOutput(data, context);
   const response: GetQueryExecutionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetQueryExecutionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetQueryExecutionCommandError = async (
+const deserializeAws_json1_1GetQueryExecutionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryExecutionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -982,61 +890,54 @@ const deserializeAws_json1_1GetQueryExecutionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetQueryResultsCommand = async (
+export const deserializeAws_json1_1GetQueryResultsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetQueryResultsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetQueryResultsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetQueryResultsOutput(data, context);
   const response: GetQueryResultsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetQueryResultsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetQueryResultsCommandError = async (
+const deserializeAws_json1_1GetQueryResultsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetQueryResultsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1053,61 +954,54 @@ const deserializeAws_json1_1GetQueryResultsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetWorkGroupCommand = async (
+export const deserializeAws_json1_1GetWorkGroupCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetWorkGroupCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1GetWorkGroupCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1GetWorkGroupOutput(data, context);
   const response: GetWorkGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetWorkGroupOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetWorkGroupCommandError = async (
+const deserializeAws_json1_1GetWorkGroupCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetWorkGroupCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1124,61 +1018,54 @@ const deserializeAws_json1_1GetWorkGroupCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListNamedQueriesCommand = async (
+export const deserializeAws_json1_1ListNamedQueriesCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListNamedQueriesCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListNamedQueriesCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListNamedQueriesOutput(data, context);
   const response: ListNamedQueriesCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListNamedQueriesOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListNamedQueriesCommandError = async (
+const deserializeAws_json1_1ListNamedQueriesCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListNamedQueriesCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1195,64 +1082,54 @@ const deserializeAws_json1_1ListNamedQueriesCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListQueryExecutionsCommand = async (
+export const deserializeAws_json1_1ListQueryExecutionsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListQueryExecutionsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListQueryExecutionsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListQueryExecutionsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListQueryExecutionsOutput(data, context);
   const response: ListQueryExecutionsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListQueryExecutionsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListQueryExecutionsCommandError = async (
+const deserializeAws_json1_1ListQueryExecutionsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListQueryExecutionsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1269,75 +1146,62 @@ const deserializeAws_json1_1ListQueryExecutionsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListTagsForResourceCommand = async (
+export const deserializeAws_json1_1ListTagsForResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListTagsForResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListTagsForResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListTagsForResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListTagsForResourceOutput(data, context);
   const response: ListTagsForResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListTagsForResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListTagsForResourceCommandError = async (
+const deserializeAws_json1_1ListTagsForResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagsForResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.athena.webservice#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1354,61 +1218,54 @@ const deserializeAws_json1_1ListTagsForResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListWorkGroupsCommand = async (
+export const deserializeAws_json1_1ListWorkGroupsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListWorkGroupsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListWorkGroupsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListWorkGroupsOutput(data, context);
   const response: ListWorkGroupsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListWorkGroupsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListWorkGroupsCommandError = async (
+const deserializeAws_json1_1ListWorkGroupsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListWorkGroupsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1425,75 +1282,62 @@ const deserializeAws_json1_1ListWorkGroupsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1StartQueryExecutionCommand = async (
+export const deserializeAws_json1_1StartQueryExecutionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<StartQueryExecutionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1StartQueryExecutionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1StartQueryExecutionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1StartQueryExecutionOutput(data, context);
   const response: StartQueryExecutionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "StartQueryExecutionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1StartQueryExecutionCommandError = async (
+const deserializeAws_json1_1StartQueryExecutionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StartQueryExecutionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TooManyRequestsException":
     case "com.amazonaws.athena.webservice#TooManyRequestsException":
       response = {
-        ...(await deserializeAws_json1_1TooManyRequestsExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TooManyRequestsExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1510,64 +1354,54 @@ const deserializeAws_json1_1StartQueryExecutionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1StopQueryExecutionCommand = async (
+export const deserializeAws_json1_1StopQueryExecutionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<StopQueryExecutionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1StopQueryExecutionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1StopQueryExecutionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1StopQueryExecutionOutput(data, context);
   const response: StopQueryExecutionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "StopQueryExecutionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1StopQueryExecutionCommandError = async (
+const deserializeAws_json1_1StopQueryExecutionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<StopQueryExecutionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1584,72 +1418,62 @@ const deserializeAws_json1_1StopQueryExecutionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1TagResourceCommand = async (
+export const deserializeAws_json1_1TagResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<TagResourceCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1TagResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1TagResourceOutput(data, context);
   const response: TagResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "TagResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1TagResourceCommandError = async (
+const deserializeAws_json1_1TagResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TagResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.athena.webservice#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1666,72 +1490,62 @@ const deserializeAws_json1_1TagResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UntagResourceCommand = async (
+export const deserializeAws_json1_1UntagResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UntagResourceCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UntagResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UntagResourceOutput(data, context);
   const response: UntagResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UntagResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UntagResourceCommandError = async (
+const deserializeAws_json1_1UntagResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UntagResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.athena.webservice#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1748,61 +1562,54 @@ const deserializeAws_json1_1UntagResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateWorkGroupCommand = async (
+export const deserializeAws_json1_1UpdateWorkGroupCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateWorkGroupCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdateWorkGroupCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateWorkGroupOutput(data, context);
   const response: UpdateWorkGroupCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateWorkGroupOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateWorkGroupCommandError = async (
+const deserializeAws_json1_1UpdateWorkGroupCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateWorkGroupCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InternalServerException":
     case "com.amazonaws.athena.webservice#InternalServerException":
       response = {
-        ...(await deserializeAws_json1_1InternalServerExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InternalServerExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidRequestException":
     case "com.amazonaws.athena.webservice#InvalidRequestException":
       response = {
-        ...(await deserializeAws_json1_1InvalidRequestExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidRequestExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1819,22 +1626,19 @@ const deserializeAws_json1_1UpdateWorkGroupCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
 const deserializeAws_json1_1InternalServerExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InternalServerException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InternalServerException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InternalServerException(body, context);
   const contents: InternalServerException = {
     name: "InternalServerException",
     $fault: "server",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -1843,16 +1647,13 @@ const deserializeAws_json1_1InvalidRequestExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidRequestException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidRequestException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidRequestException(body, context);
   const contents: InvalidRequestException = {
     name: "InvalidRequestException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -1861,16 +1662,13 @@ const deserializeAws_json1_1ResourceNotFoundExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<ResourceNotFoundException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(body, context);
   const contents: ResourceNotFoundException = {
     name: "ResourceNotFoundException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -1879,16 +1677,13 @@ const deserializeAws_json1_1TooManyRequestsExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<TooManyRequestsException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1TooManyRequestsException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1TooManyRequestsException(body, context);
   const contents: TooManyRequestsException = {
     name: "TooManyRequestsException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -1897,241 +1692,164 @@ const serializeAws_json1_1BatchGetNamedQueryInput = (
   input: BatchGetNamedQueryInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.NamedQueryIds !== undefined) {
-    bodyParams["NamedQueryIds"] = serializeAws_json1_1NamedQueryIdList(
-      input.NamedQueryIds,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.NamedQueryIds !== undefined && { 'NamedQueryIds': serializeAws_json1_1NamedQueryIdList(input.NamedQueryIds, context) }),
+  };
+}
 
 const serializeAws_json1_1BatchGetQueryExecutionInput = (
   input: BatchGetQueryExecutionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.QueryExecutionIds !== undefined) {
-    bodyParams["QueryExecutionIds"] = serializeAws_json1_1QueryExecutionIdList(
-      input.QueryExecutionIds,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.QueryExecutionIds !== undefined && { 'QueryExecutionIds': serializeAws_json1_1QueryExecutionIdList(input.QueryExecutionIds, context) }),
+  };
+}
 
 const serializeAws_json1_1CreateNamedQueryInput = (
   input: CreateNamedQueryInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.Database !== undefined) {
-    bodyParams["Database"] = input.Database;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.QueryString !== undefined) {
-    bodyParams["QueryString"] = input.QueryString;
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.Database !== undefined && { 'Database': input.Database }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.QueryString !== undefined && { 'QueryString': input.QueryString }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1CreateWorkGroupInput = (
   input: CreateWorkGroupInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Configuration !== undefined) {
-    bodyParams["Configuration"] = serializeAws_json1_1WorkGroupConfiguration(
-      input.Configuration,
-      context
-    );
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1TagList(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Configuration !== undefined && { 'Configuration': serializeAws_json1_1WorkGroupConfiguration(input.Configuration, context) }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1TagList(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1DeleteNamedQueryInput = (
   input: DeleteNamedQueryInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.NamedQueryId === undefined) {
-    input.NamedQueryId = generateIdempotencyToken();
-  }
-  if (input.NamedQueryId !== undefined) {
-    bodyParams["NamedQueryId"] = input.NamedQueryId;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.NamedQueryId === undefined) {
+      input.NamedQueryId = generateIdempotencyToken();
+    }
+    ...(input.NamedQueryId !== undefined && { 'NamedQueryId': input.NamedQueryId }),
+  };
+}
 
 const serializeAws_json1_1DeleteWorkGroupInput = (
   input: DeleteWorkGroupInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.RecursiveDeleteOption !== undefined) {
-    bodyParams["RecursiveDeleteOption"] = input.RecursiveDeleteOption;
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.RecursiveDeleteOption !== undefined && { 'RecursiveDeleteOption': input.RecursiveDeleteOption }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1EncryptionConfiguration = (
   input: EncryptionConfiguration,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.EncryptionOption !== undefined) {
-    bodyParams["EncryptionOption"] = input.EncryptionOption;
-  }
-  if (input.KmsKey !== undefined) {
-    bodyParams["KmsKey"] = input.KmsKey;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.EncryptionOption !== undefined && { 'EncryptionOption': input.EncryptionOption }),
+    ...(input.KmsKey !== undefined && { 'KmsKey': input.KmsKey }),
+  };
+}
 
 const serializeAws_json1_1GetNamedQueryInput = (
   input: GetNamedQueryInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.NamedQueryId !== undefined) {
-    bodyParams["NamedQueryId"] = input.NamedQueryId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.NamedQueryId !== undefined && { 'NamedQueryId': input.NamedQueryId }),
+  };
+}
 
 const serializeAws_json1_1GetQueryExecutionInput = (
   input: GetQueryExecutionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.QueryExecutionId !== undefined) {
-    bodyParams["QueryExecutionId"] = input.QueryExecutionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.QueryExecutionId !== undefined && { 'QueryExecutionId': input.QueryExecutionId }),
+  };
+}
 
 const serializeAws_json1_1GetQueryResultsInput = (
   input: GetQueryResultsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  if (input.QueryExecutionId !== undefined) {
-    bodyParams["QueryExecutionId"] = input.QueryExecutionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+    ...(input.QueryExecutionId !== undefined && { 'QueryExecutionId': input.QueryExecutionId }),
+  };
+}
 
 const serializeAws_json1_1GetWorkGroupInput = (
   input: GetWorkGroupInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1ListNamedQueriesInput = (
   input: ListNamedQueriesInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1ListQueryExecutionsInput = (
   input: ListQueryExecutionsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1ListTagsForResourceInput = (
   input: ListTagsForResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  if (input.ResourceARN !== undefined) {
-    bodyParams["ResourceARN"] = input.ResourceARN;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+    ...(input.ResourceARN !== undefined && { 'ResourceARN': input.ResourceARN }),
+  };
+}
 
 const serializeAws_json1_1ListWorkGroupsInput = (
   input: ListWorkGroupsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.MaxResults !== undefined) {
-    bodyParams["MaxResults"] = input.MaxResults;
-  }
-  if (input.NextToken !== undefined) {
-    bodyParams["NextToken"] = input.NextToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.MaxResults !== undefined && { 'MaxResults': input.MaxResults }),
+    ...(input.NextToken !== undefined && { 'NextToken': input.NextToken }),
+  };
+}
 
 const serializeAws_json1_1NamedQueryIdList = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2139,21 +1857,19 @@ const serializeAws_json1_1NamedQueryIdList = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1QueryExecutionContext = (
   input: QueryExecutionContext,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Database !== undefined) {
-    bodyParams["Database"] = input.Database;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Database !== undefined && { 'Database': input.Database }),
+  };
+}
 
 const serializeAws_json1_1QueryExecutionIdList = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2161,114 +1877,70 @@ const serializeAws_json1_1QueryExecutionIdList = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1ResultConfiguration = (
   input: ResultConfiguration,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.EncryptionConfiguration !== undefined) {
-    bodyParams[
-      "EncryptionConfiguration"
-    ] = serializeAws_json1_1EncryptionConfiguration(
-      input.EncryptionConfiguration,
-      context
-    );
-  }
-  if (input.OutputLocation !== undefined) {
-    bodyParams["OutputLocation"] = input.OutputLocation;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.EncryptionConfiguration !== undefined && { 'EncryptionConfiguration': serializeAws_json1_1EncryptionConfiguration(input.EncryptionConfiguration, context) }),
+    ...(input.OutputLocation !== undefined && { 'OutputLocation': input.OutputLocation }),
+  };
+}
 
 const serializeAws_json1_1ResultConfigurationUpdates = (
   input: ResultConfigurationUpdates,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.EncryptionConfiguration !== undefined) {
-    bodyParams[
-      "EncryptionConfiguration"
-    ] = serializeAws_json1_1EncryptionConfiguration(
-      input.EncryptionConfiguration,
-      context
-    );
-  }
-  if (input.OutputLocation !== undefined) {
-    bodyParams["OutputLocation"] = input.OutputLocation;
-  }
-  if (input.RemoveEncryptionConfiguration !== undefined) {
-    bodyParams["RemoveEncryptionConfiguration"] =
-      input.RemoveEncryptionConfiguration;
-  }
-  if (input.RemoveOutputLocation !== undefined) {
-    bodyParams["RemoveOutputLocation"] = input.RemoveOutputLocation;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.EncryptionConfiguration !== undefined && { 'EncryptionConfiguration': serializeAws_json1_1EncryptionConfiguration(input.EncryptionConfiguration, context) }),
+    ...(input.OutputLocation !== undefined && { 'OutputLocation': input.OutputLocation }),
+    ...(input.RemoveEncryptionConfiguration !== undefined && { 'RemoveEncryptionConfiguration': input.RemoveEncryptionConfiguration }),
+    ...(input.RemoveOutputLocation !== undefined && { 'RemoveOutputLocation': input.RemoveOutputLocation }),
+  };
+}
 
 const serializeAws_json1_1StartQueryExecutionInput = (
   input: StartQueryExecutionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ClientRequestToken === undefined) {
-    input.ClientRequestToken = generateIdempotencyToken();
-  }
-  if (input.ClientRequestToken !== undefined) {
-    bodyParams["ClientRequestToken"] = input.ClientRequestToken;
-  }
-  if (input.QueryExecutionContext !== undefined) {
-    bodyParams[
-      "QueryExecutionContext"
-    ] = serializeAws_json1_1QueryExecutionContext(
-      input.QueryExecutionContext,
-      context
-    );
-  }
-  if (input.QueryString !== undefined) {
-    bodyParams["QueryString"] = input.QueryString;
-  }
-  if (input.ResultConfiguration !== undefined) {
-    bodyParams["ResultConfiguration"] = serializeAws_json1_1ResultConfiguration(
-      input.ResultConfiguration,
-      context
-    );
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.ClientRequestToken === undefined) {
+      input.ClientRequestToken = generateIdempotencyToken();
+    }
+    ...(input.ClientRequestToken !== undefined && { 'ClientRequestToken': input.ClientRequestToken }),
+    ...(input.QueryExecutionContext !== undefined && { 'QueryExecutionContext': serializeAws_json1_1QueryExecutionContext(input.QueryExecutionContext, context) }),
+    ...(input.QueryString !== undefined && { 'QueryString': input.QueryString }),
+    ...(input.ResultConfiguration !== undefined && { 'ResultConfiguration': serializeAws_json1_1ResultConfiguration(input.ResultConfiguration, context) }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1StopQueryExecutionInput = (
   input: StopQueryExecutionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.QueryExecutionId === undefined) {
-    input.QueryExecutionId = generateIdempotencyToken();
-  }
-  if (input.QueryExecutionId !== undefined) {
-    bodyParams["QueryExecutionId"] = input.QueryExecutionId;
-  }
-  return bodyParams;
-};
+  return {
+    if (input.QueryExecutionId === undefined) {
+      input.QueryExecutionId = generateIdempotencyToken();
+    }
+    ...(input.QueryExecutionId !== undefined && { 'QueryExecutionId': input.QueryExecutionId }),
+  };
+}
 
-const serializeAws_json1_1Tag = (input: Tag, context: __SerdeContext): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+const serializeAws_json1_1Tag = (
+  input: Tag,
+  context: __SerdeContext
+): any => {
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1TagKeyList = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2276,10 +1948,10 @@ const serializeAws_json1_1TagKeyList = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1TagList = (
-  input: Tag[],
+  input: (Tag)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -2287,125 +1959,66 @@ const serializeAws_json1_1TagList = (
     contents.push(serializeAws_json1_1Tag(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1TagResourceInput = (
   input: TagResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ResourceARN !== undefined) {
-    bodyParams["ResourceARN"] = input.ResourceARN;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1TagList(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ResourceARN !== undefined && { 'ResourceARN': input.ResourceARN }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1TagList(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1UntagResourceInput = (
   input: UntagResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ResourceARN !== undefined) {
-    bodyParams["ResourceARN"] = input.ResourceARN;
-  }
-  if (input.TagKeys !== undefined) {
-    bodyParams["TagKeys"] = serializeAws_json1_1TagKeyList(
-      input.TagKeys,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ResourceARN !== undefined && { 'ResourceARN': input.ResourceARN }),
+    ...(input.TagKeys !== undefined && { 'TagKeys': serializeAws_json1_1TagKeyList(input.TagKeys, context) }),
+  };
+}
 
 const serializeAws_json1_1UpdateWorkGroupInput = (
   input: UpdateWorkGroupInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ConfigurationUpdates !== undefined) {
-    bodyParams[
-      "ConfigurationUpdates"
-    ] = serializeAws_json1_1WorkGroupConfigurationUpdates(
-      input.ConfigurationUpdates,
-      context
-    );
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.State !== undefined) {
-    bodyParams["State"] = input.State;
-  }
-  if (input.WorkGroup !== undefined) {
-    bodyParams["WorkGroup"] = input.WorkGroup;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ConfigurationUpdates !== undefined && { 'ConfigurationUpdates': serializeAws_json1_1WorkGroupConfigurationUpdates(input.ConfigurationUpdates, context) }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.State !== undefined && { 'State': input.State }),
+    ...(input.WorkGroup !== undefined && { 'WorkGroup': input.WorkGroup }),
+  };
+}
 
 const serializeAws_json1_1WorkGroupConfiguration = (
   input: WorkGroupConfiguration,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.BytesScannedCutoffPerQuery !== undefined) {
-    bodyParams["BytesScannedCutoffPerQuery"] = input.BytesScannedCutoffPerQuery;
-  }
-  if (input.EnforceWorkGroupConfiguration !== undefined) {
-    bodyParams["EnforceWorkGroupConfiguration"] =
-      input.EnforceWorkGroupConfiguration;
-  }
-  if (input.PublishCloudWatchMetricsEnabled !== undefined) {
-    bodyParams["PublishCloudWatchMetricsEnabled"] =
-      input.PublishCloudWatchMetricsEnabled;
-  }
-  if (input.RequesterPaysEnabled !== undefined) {
-    bodyParams["RequesterPaysEnabled"] = input.RequesterPaysEnabled;
-  }
-  if (input.ResultConfiguration !== undefined) {
-    bodyParams["ResultConfiguration"] = serializeAws_json1_1ResultConfiguration(
-      input.ResultConfiguration,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.BytesScannedCutoffPerQuery !== undefined && { 'BytesScannedCutoffPerQuery': input.BytesScannedCutoffPerQuery }),
+    ...(input.EnforceWorkGroupConfiguration !== undefined && { 'EnforceWorkGroupConfiguration': input.EnforceWorkGroupConfiguration }),
+    ...(input.PublishCloudWatchMetricsEnabled !== undefined && { 'PublishCloudWatchMetricsEnabled': input.PublishCloudWatchMetricsEnabled }),
+    ...(input.RequesterPaysEnabled !== undefined && { 'RequesterPaysEnabled': input.RequesterPaysEnabled }),
+    ...(input.ResultConfiguration !== undefined && { 'ResultConfiguration': serializeAws_json1_1ResultConfiguration(input.ResultConfiguration, context) }),
+  };
+}
 
 const serializeAws_json1_1WorkGroupConfigurationUpdates = (
   input: WorkGroupConfigurationUpdates,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.BytesScannedCutoffPerQuery !== undefined) {
-    bodyParams["BytesScannedCutoffPerQuery"] = input.BytesScannedCutoffPerQuery;
-  }
-  if (input.EnforceWorkGroupConfiguration !== undefined) {
-    bodyParams["EnforceWorkGroupConfiguration"] =
-      input.EnforceWorkGroupConfiguration;
-  }
-  if (input.PublishCloudWatchMetricsEnabled !== undefined) {
-    bodyParams["PublishCloudWatchMetricsEnabled"] =
-      input.PublishCloudWatchMetricsEnabled;
-  }
-  if (input.RemoveBytesScannedCutoffPerQuery !== undefined) {
-    bodyParams["RemoveBytesScannedCutoffPerQuery"] =
-      input.RemoveBytesScannedCutoffPerQuery;
-  }
-  if (input.RequesterPaysEnabled !== undefined) {
-    bodyParams["RequesterPaysEnabled"] = input.RequesterPaysEnabled;
-  }
-  if (input.ResultConfigurationUpdates !== undefined) {
-    bodyParams[
-      "ResultConfigurationUpdates"
-    ] = serializeAws_json1_1ResultConfigurationUpdates(
-      input.ResultConfigurationUpdates,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.BytesScannedCutoffPerQuery !== undefined && { 'BytesScannedCutoffPerQuery': input.BytesScannedCutoffPerQuery }),
+    ...(input.EnforceWorkGroupConfiguration !== undefined && { 'EnforceWorkGroupConfiguration': input.EnforceWorkGroupConfiguration }),
+    ...(input.PublishCloudWatchMetricsEnabled !== undefined && { 'PublishCloudWatchMetricsEnabled': input.PublishCloudWatchMetricsEnabled }),
+    ...(input.RemoveBytesScannedCutoffPerQuery !== undefined && { 'RemoveBytesScannedCutoffPerQuery': input.RemoveBytesScannedCutoffPerQuery }),
+    ...(input.RequesterPaysEnabled !== undefined && { 'RequesterPaysEnabled': input.RequesterPaysEnabled }),
+    ...(input.ResultConfigurationUpdates !== undefined && { 'ResultConfigurationUpdates': serializeAws_json1_1ResultConfigurationUpdates(input.ResultConfigurationUpdates, context) }),
+  };
+}
 
 const deserializeAws_json1_1BatchGetNamedQueryOutput = (
   output: any,
@@ -2414,25 +2027,16 @@ const deserializeAws_json1_1BatchGetNamedQueryOutput = (
   let contents: any = {
     __type: "BatchGetNamedQueryOutput",
     NamedQueries: undefined,
-    UnprocessedNamedQueryIds: undefined
+    UnprocessedNamedQueryIds: undefined,
   };
   if (output.NamedQueries !== undefined && output.NamedQueries !== null) {
-    contents.NamedQueries = deserializeAws_json1_1NamedQueryList(
-      output.NamedQueries,
-      context
-    );
+    contents.NamedQueries = deserializeAws_json1_1NamedQueryList(output.NamedQueries, context);
   }
-  if (
-    output.UnprocessedNamedQueryIds !== undefined &&
-    output.UnprocessedNamedQueryIds !== null
-  ) {
-    contents.UnprocessedNamedQueryIds = deserializeAws_json1_1UnprocessedNamedQueryIdList(
-      output.UnprocessedNamedQueryIds,
-      context
-    );
+  if (output.UnprocessedNamedQueryIds !== undefined && output.UnprocessedNamedQueryIds !== null) {
+    contents.UnprocessedNamedQueryIds = deserializeAws_json1_1UnprocessedNamedQueryIdList(output.UnprocessedNamedQueryIds, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1BatchGetQueryExecutionOutput = (
   output: any,
@@ -2441,25 +2045,16 @@ const deserializeAws_json1_1BatchGetQueryExecutionOutput = (
   let contents: any = {
     __type: "BatchGetQueryExecutionOutput",
     QueryExecutions: undefined,
-    UnprocessedQueryExecutionIds: undefined
+    UnprocessedQueryExecutionIds: undefined,
   };
   if (output.QueryExecutions !== undefined && output.QueryExecutions !== null) {
-    contents.QueryExecutions = deserializeAws_json1_1QueryExecutionList(
-      output.QueryExecutions,
-      context
-    );
+    contents.QueryExecutions = deserializeAws_json1_1QueryExecutionList(output.QueryExecutions, context);
   }
-  if (
-    output.UnprocessedQueryExecutionIds !== undefined &&
-    output.UnprocessedQueryExecutionIds !== null
-  ) {
-    contents.UnprocessedQueryExecutionIds = deserializeAws_json1_1UnprocessedQueryExecutionIdList(
-      output.UnprocessedQueryExecutionIds,
-      context
-    );
+  if (output.UnprocessedQueryExecutionIds !== undefined && output.UnprocessedQueryExecutionIds !== null) {
+    contents.UnprocessedQueryExecutionIds = deserializeAws_json1_1UnprocessedQueryExecutionIdList(output.UnprocessedQueryExecutionIds, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ColumnInfo = (
   output: any,
@@ -2476,7 +2071,7 @@ const deserializeAws_json1_1ColumnInfo = (
     Scale: undefined,
     SchemaName: undefined,
     TableName: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.CaseSensitive !== undefined && output.CaseSensitive !== null) {
     contents.CaseSensitive = output.CaseSensitive;
@@ -2509,16 +2104,16 @@ const deserializeAws_json1_1ColumnInfo = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ColumnInfoList = (
   output: any,
   context: __SerdeContext
-): ColumnInfo[] => {
+): (ColumnInfo)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ColumnInfo(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1CreateNamedQueryOutput = (
   output: any,
@@ -2526,23 +2121,23 @@ const deserializeAws_json1_1CreateNamedQueryOutput = (
 ): CreateNamedQueryOutput => {
   let contents: any = {
     __type: "CreateNamedQueryOutput",
-    NamedQueryId: undefined
+    NamedQueryId: undefined,
   };
   if (output.NamedQueryId !== undefined && output.NamedQueryId !== null) {
     contents.NamedQueryId = output.NamedQueryId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateWorkGroupOutput = (
   output: any,
   context: __SerdeContext
 ): CreateWorkGroupOutput => {
   let contents: any = {
-    __type: "CreateWorkGroupOutput"
+    __type: "CreateWorkGroupOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1Datum = (
   output: any,
@@ -2550,33 +2145,33 @@ const deserializeAws_json1_1Datum = (
 ): Datum => {
   let contents: any = {
     __type: "Datum",
-    VarCharValue: undefined
+    VarCharValue: undefined,
   };
   if (output.VarCharValue !== undefined && output.VarCharValue !== null) {
     contents.VarCharValue = output.VarCharValue;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteNamedQueryOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteNamedQueryOutput => {
   let contents: any = {
-    __type: "DeleteNamedQueryOutput"
+    __type: "DeleteNamedQueryOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteWorkGroupOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteWorkGroupOutput => {
   let contents: any = {
-    __type: "DeleteWorkGroupOutput"
+    __type: "DeleteWorkGroupOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1EncryptionConfiguration = (
   output: any,
@@ -2585,19 +2180,16 @@ const deserializeAws_json1_1EncryptionConfiguration = (
   let contents: any = {
     __type: "EncryptionConfiguration",
     EncryptionOption: undefined,
-    KmsKey: undefined
+    KmsKey: undefined,
   };
-  if (
-    output.EncryptionOption !== undefined &&
-    output.EncryptionOption !== null
-  ) {
+  if (output.EncryptionOption !== undefined && output.EncryptionOption !== null) {
     contents.EncryptionOption = output.EncryptionOption;
   }
   if (output.KmsKey !== undefined && output.KmsKey !== null) {
     contents.KmsKey = output.KmsKey;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetNamedQueryOutput = (
   output: any,
@@ -2605,16 +2197,13 @@ const deserializeAws_json1_1GetNamedQueryOutput = (
 ): GetNamedQueryOutput => {
   let contents: any = {
     __type: "GetNamedQueryOutput",
-    NamedQuery: undefined
+    NamedQuery: undefined,
   };
   if (output.NamedQuery !== undefined && output.NamedQuery !== null) {
-    contents.NamedQuery = deserializeAws_json1_1NamedQuery(
-      output.NamedQuery,
-      context
-    );
+    contents.NamedQuery = deserializeAws_json1_1NamedQuery(output.NamedQuery, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetQueryExecutionOutput = (
   output: any,
@@ -2622,16 +2211,13 @@ const deserializeAws_json1_1GetQueryExecutionOutput = (
 ): GetQueryExecutionOutput => {
   let contents: any = {
     __type: "GetQueryExecutionOutput",
-    QueryExecution: undefined
+    QueryExecution: undefined,
   };
   if (output.QueryExecution !== undefined && output.QueryExecution !== null) {
-    contents.QueryExecution = deserializeAws_json1_1QueryExecution(
-      output.QueryExecution,
-      context
-    );
+    contents.QueryExecution = deserializeAws_json1_1QueryExecution(output.QueryExecution, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetQueryResultsOutput = (
   output: any,
@@ -2641,22 +2227,19 @@ const deserializeAws_json1_1GetQueryResultsOutput = (
     __type: "GetQueryResultsOutput",
     NextToken: undefined,
     ResultSet: undefined,
-    UpdateCount: undefined
+    UpdateCount: undefined,
   };
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
   }
   if (output.ResultSet !== undefined && output.ResultSet !== null) {
-    contents.ResultSet = deserializeAws_json1_1ResultSet(
-      output.ResultSet,
-      context
-    );
+    contents.ResultSet = deserializeAws_json1_1ResultSet(output.ResultSet, context);
   }
   if (output.UpdateCount !== undefined && output.UpdateCount !== null) {
     contents.UpdateCount = output.UpdateCount;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1GetWorkGroupOutput = (
   output: any,
@@ -2664,16 +2247,13 @@ const deserializeAws_json1_1GetWorkGroupOutput = (
 ): GetWorkGroupOutput => {
   let contents: any = {
     __type: "GetWorkGroupOutput",
-    WorkGroup: undefined
+    WorkGroup: undefined,
   };
   if (output.WorkGroup !== undefined && output.WorkGroup !== null) {
-    contents.WorkGroup = deserializeAws_json1_1WorkGroup(
-      output.WorkGroup,
-      context
-    );
+    contents.WorkGroup = deserializeAws_json1_1WorkGroup(output.WorkGroup, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InternalServerException = (
   output: any,
@@ -2681,13 +2261,13 @@ const deserializeAws_json1_1InternalServerException = (
 ): InternalServerException => {
   let contents: any = {
     __type: "InternalServerException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidRequestException = (
   output: any,
@@ -2696,7 +2276,7 @@ const deserializeAws_json1_1InvalidRequestException = (
   let contents: any = {
     __type: "InvalidRequestException",
     AthenaErrorCode: undefined,
-    Message: undefined
+    Message: undefined,
   };
   if (output.AthenaErrorCode !== undefined && output.AthenaErrorCode !== null) {
     contents.AthenaErrorCode = output.AthenaErrorCode;
@@ -2705,7 +2285,7 @@ const deserializeAws_json1_1InvalidRequestException = (
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListNamedQueriesOutput = (
   output: any,
@@ -2714,19 +2294,16 @@ const deserializeAws_json1_1ListNamedQueriesOutput = (
   let contents: any = {
     __type: "ListNamedQueriesOutput",
     NamedQueryIds: undefined,
-    NextToken: undefined
+    NextToken: undefined,
   };
   if (output.NamedQueryIds !== undefined && output.NamedQueryIds !== null) {
-    contents.NamedQueryIds = deserializeAws_json1_1NamedQueryIdList(
-      output.NamedQueryIds,
-      context
-    );
+    contents.NamedQueryIds = deserializeAws_json1_1NamedQueryIdList(output.NamedQueryIds, context);
   }
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListQueryExecutionsOutput = (
   output: any,
@@ -2735,22 +2312,16 @@ const deserializeAws_json1_1ListQueryExecutionsOutput = (
   let contents: any = {
     __type: "ListQueryExecutionsOutput",
     NextToken: undefined,
-    QueryExecutionIds: undefined
+    QueryExecutionIds: undefined,
   };
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
   }
-  if (
-    output.QueryExecutionIds !== undefined &&
-    output.QueryExecutionIds !== null
-  ) {
-    contents.QueryExecutionIds = deserializeAws_json1_1QueryExecutionIdList(
-      output.QueryExecutionIds,
-      context
-    );
+  if (output.QueryExecutionIds !== undefined && output.QueryExecutionIds !== null) {
+    contents.QueryExecutionIds = deserializeAws_json1_1QueryExecutionIdList(output.QueryExecutionIds, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListTagsForResourceOutput = (
   output: any,
@@ -2759,7 +2330,7 @@ const deserializeAws_json1_1ListTagsForResourceOutput = (
   let contents: any = {
     __type: "ListTagsForResourceOutput",
     NextToken: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
@@ -2768,7 +2339,7 @@ const deserializeAws_json1_1ListTagsForResourceOutput = (
     contents.Tags = deserializeAws_json1_1TagList(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListWorkGroupsOutput = (
   output: any,
@@ -2777,19 +2348,16 @@ const deserializeAws_json1_1ListWorkGroupsOutput = (
   let contents: any = {
     __type: "ListWorkGroupsOutput",
     NextToken: undefined,
-    WorkGroups: undefined
+    WorkGroups: undefined,
   };
   if (output.NextToken !== undefined && output.NextToken !== null) {
     contents.NextToken = output.NextToken;
   }
   if (output.WorkGroups !== undefined && output.WorkGroups !== null) {
-    contents.WorkGroups = deserializeAws_json1_1WorkGroupsList(
-      output.WorkGroups,
-      context
-    );
+    contents.WorkGroups = deserializeAws_json1_1WorkGroupsList(output.WorkGroups, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1NamedQuery = (
   output: any,
@@ -2802,7 +2370,7 @@ const deserializeAws_json1_1NamedQuery = (
     Name: undefined,
     NamedQueryId: undefined,
     QueryString: undefined,
-    WorkGroup: undefined
+    WorkGroup: undefined,
   };
   if (output.Database !== undefined && output.Database !== null) {
     contents.Database = output.Database;
@@ -2823,23 +2391,25 @@ const deserializeAws_json1_1NamedQuery = (
     contents.WorkGroup = output.WorkGroup;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1NamedQueryIdList = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1NamedQueryList = (
   output: any,
   context: __SerdeContext
-): NamedQuery[] => {
+): (NamedQuery)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1NamedQuery(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1QueryExecution = (
   output: any,
@@ -2854,55 +2424,34 @@ const deserializeAws_json1_1QueryExecution = (
     StatementType: undefined,
     Statistics: undefined,
     Status: undefined,
-    WorkGroup: undefined
+    WorkGroup: undefined,
   };
   if (output.Query !== undefined && output.Query !== null) {
     contents.Query = output.Query;
   }
-  if (
-    output.QueryExecutionContext !== undefined &&
-    output.QueryExecutionContext !== null
-  ) {
-    contents.QueryExecutionContext = deserializeAws_json1_1QueryExecutionContext(
-      output.QueryExecutionContext,
-      context
-    );
+  if (output.QueryExecutionContext !== undefined && output.QueryExecutionContext !== null) {
+    contents.QueryExecutionContext = deserializeAws_json1_1QueryExecutionContext(output.QueryExecutionContext, context);
   }
-  if (
-    output.QueryExecutionId !== undefined &&
-    output.QueryExecutionId !== null
-  ) {
+  if (output.QueryExecutionId !== undefined && output.QueryExecutionId !== null) {
     contents.QueryExecutionId = output.QueryExecutionId;
   }
-  if (
-    output.ResultConfiguration !== undefined &&
-    output.ResultConfiguration !== null
-  ) {
-    contents.ResultConfiguration = deserializeAws_json1_1ResultConfiguration(
-      output.ResultConfiguration,
-      context
-    );
+  if (output.ResultConfiguration !== undefined && output.ResultConfiguration !== null) {
+    contents.ResultConfiguration = deserializeAws_json1_1ResultConfiguration(output.ResultConfiguration, context);
   }
   if (output.StatementType !== undefined && output.StatementType !== null) {
     contents.StatementType = output.StatementType;
   }
   if (output.Statistics !== undefined && output.Statistics !== null) {
-    contents.Statistics = deserializeAws_json1_1QueryExecutionStatistics(
-      output.Statistics,
-      context
-    );
+    contents.Statistics = deserializeAws_json1_1QueryExecutionStatistics(output.Statistics, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
-    contents.Status = deserializeAws_json1_1QueryExecutionStatus(
-      output.Status,
-      context
-    );
+    contents.Status = deserializeAws_json1_1QueryExecutionStatus(output.Status, context);
   }
   if (output.WorkGroup !== undefined && output.WorkGroup !== null) {
     contents.WorkGroup = output.WorkGroup;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1QueryExecutionContext = (
   output: any,
@@ -2910,29 +2459,31 @@ const deserializeAws_json1_1QueryExecutionContext = (
 ): QueryExecutionContext => {
   let contents: any = {
     __type: "QueryExecutionContext",
-    Database: undefined
+    Database: undefined,
   };
   if (output.Database !== undefined && output.Database !== null) {
     contents.Database = output.Database;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1QueryExecutionIdList = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1QueryExecutionList = (
   output: any,
   context: __SerdeContext
-): QueryExecution[] => {
+): (QueryExecution)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1QueryExecution(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1QueryExecutionStatistics = (
   output: any,
@@ -2946,53 +2497,31 @@ const deserializeAws_json1_1QueryExecutionStatistics = (
     QueryPlanningTimeInMillis: undefined,
     QueryQueueTimeInMillis: undefined,
     ServiceProcessingTimeInMillis: undefined,
-    TotalExecutionTimeInMillis: undefined
+    TotalExecutionTimeInMillis: undefined,
   };
-  if (
-    output.DataManifestLocation !== undefined &&
-    output.DataManifestLocation !== null
-  ) {
+  if (output.DataManifestLocation !== undefined && output.DataManifestLocation !== null) {
     contents.DataManifestLocation = output.DataManifestLocation;
   }
-  if (
-    output.DataScannedInBytes !== undefined &&
-    output.DataScannedInBytes !== null
-  ) {
+  if (output.DataScannedInBytes !== undefined && output.DataScannedInBytes !== null) {
     contents.DataScannedInBytes = output.DataScannedInBytes;
   }
-  if (
-    output.EngineExecutionTimeInMillis !== undefined &&
-    output.EngineExecutionTimeInMillis !== null
-  ) {
+  if (output.EngineExecutionTimeInMillis !== undefined && output.EngineExecutionTimeInMillis !== null) {
     contents.EngineExecutionTimeInMillis = output.EngineExecutionTimeInMillis;
   }
-  if (
-    output.QueryPlanningTimeInMillis !== undefined &&
-    output.QueryPlanningTimeInMillis !== null
-  ) {
+  if (output.QueryPlanningTimeInMillis !== undefined && output.QueryPlanningTimeInMillis !== null) {
     contents.QueryPlanningTimeInMillis = output.QueryPlanningTimeInMillis;
   }
-  if (
-    output.QueryQueueTimeInMillis !== undefined &&
-    output.QueryQueueTimeInMillis !== null
-  ) {
+  if (output.QueryQueueTimeInMillis !== undefined && output.QueryQueueTimeInMillis !== null) {
     contents.QueryQueueTimeInMillis = output.QueryQueueTimeInMillis;
   }
-  if (
-    output.ServiceProcessingTimeInMillis !== undefined &&
-    output.ServiceProcessingTimeInMillis !== null
-  ) {
-    contents.ServiceProcessingTimeInMillis =
-      output.ServiceProcessingTimeInMillis;
+  if (output.ServiceProcessingTimeInMillis !== undefined && output.ServiceProcessingTimeInMillis !== null) {
+    contents.ServiceProcessingTimeInMillis = output.ServiceProcessingTimeInMillis;
   }
-  if (
-    output.TotalExecutionTimeInMillis !== undefined &&
-    output.TotalExecutionTimeInMillis !== null
-  ) {
+  if (output.TotalExecutionTimeInMillis !== undefined && output.TotalExecutionTimeInMillis !== null) {
     contents.TotalExecutionTimeInMillis = output.TotalExecutionTimeInMillis;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1QueryExecutionStatus = (
   output: any,
@@ -3003,35 +2532,22 @@ const deserializeAws_json1_1QueryExecutionStatus = (
     CompletionDateTime: undefined,
     State: undefined,
     StateChangeReason: undefined,
-    SubmissionDateTime: undefined
+    SubmissionDateTime: undefined,
   };
-  if (
-    output.CompletionDateTime !== undefined &&
-    output.CompletionDateTime !== null
-  ) {
-    contents.CompletionDateTime = new Date(
-      Math.round(output.CompletionDateTime * 1000)
-    );
+  if (output.CompletionDateTime !== undefined && output.CompletionDateTime !== null) {
+    contents.CompletionDateTime = new Date(Math.round(output.CompletionDateTime * 1000));
   }
   if (output.State !== undefined && output.State !== null) {
     contents.State = output.State;
   }
-  if (
-    output.StateChangeReason !== undefined &&
-    output.StateChangeReason !== null
-  ) {
+  if (output.StateChangeReason !== undefined && output.StateChangeReason !== null) {
     contents.StateChangeReason = output.StateChangeReason;
   }
-  if (
-    output.SubmissionDateTime !== undefined &&
-    output.SubmissionDateTime !== null
-  ) {
-    contents.SubmissionDateTime = new Date(
-      Math.round(output.SubmissionDateTime * 1000)
-    );
+  if (output.SubmissionDateTime !== undefined && output.SubmissionDateTime !== null) {
+    contents.SubmissionDateTime = new Date(Math.round(output.SubmissionDateTime * 1000));
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceNotFoundException = (
   output: any,
@@ -3040,7 +2556,7 @@ const deserializeAws_json1_1ResourceNotFoundException = (
   let contents: any = {
     __type: "ResourceNotFoundException",
     Message: undefined,
-    ResourceName: undefined
+    ResourceName: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
@@ -3049,7 +2565,7 @@ const deserializeAws_json1_1ResourceNotFoundException = (
     contents.ResourceName = output.ResourceName;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResultConfiguration = (
   output: any,
@@ -3058,22 +2574,16 @@ const deserializeAws_json1_1ResultConfiguration = (
   let contents: any = {
     __type: "ResultConfiguration",
     EncryptionConfiguration: undefined,
-    OutputLocation: undefined
+    OutputLocation: undefined,
   };
-  if (
-    output.EncryptionConfiguration !== undefined &&
-    output.EncryptionConfiguration !== null
-  ) {
-    contents.EncryptionConfiguration = deserializeAws_json1_1EncryptionConfiguration(
-      output.EncryptionConfiguration,
-      context
-    );
+  if (output.EncryptionConfiguration !== undefined && output.EncryptionConfiguration !== null) {
+    contents.EncryptionConfiguration = deserializeAws_json1_1EncryptionConfiguration(output.EncryptionConfiguration, context);
   }
   if (output.OutputLocation !== undefined && output.OutputLocation !== null) {
     contents.OutputLocation = output.OutputLocation;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResultSet = (
   output: any,
@@ -3082,22 +2592,16 @@ const deserializeAws_json1_1ResultSet = (
   let contents: any = {
     __type: "ResultSet",
     ResultSetMetadata: undefined,
-    Rows: undefined
+    Rows: undefined,
   };
-  if (
-    output.ResultSetMetadata !== undefined &&
-    output.ResultSetMetadata !== null
-  ) {
-    contents.ResultSetMetadata = deserializeAws_json1_1ResultSetMetadata(
-      output.ResultSetMetadata,
-      context
-    );
+  if (output.ResultSetMetadata !== undefined && output.ResultSetMetadata !== null) {
+    contents.ResultSetMetadata = deserializeAws_json1_1ResultSetMetadata(output.ResultSetMetadata, context);
   }
   if (output.Rows !== undefined && output.Rows !== null) {
     contents.Rows = deserializeAws_json1_1RowList(output.Rows, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResultSetMetadata = (
   output: any,
@@ -3105,16 +2609,13 @@ const deserializeAws_json1_1ResultSetMetadata = (
 ): ResultSetMetadata => {
   let contents: any = {
     __type: "ResultSetMetadata",
-    ColumnInfo: undefined
+    ColumnInfo: undefined,
   };
   if (output.ColumnInfo !== undefined && output.ColumnInfo !== null) {
-    contents.ColumnInfo = deserializeAws_json1_1ColumnInfoList(
-      output.ColumnInfo,
-      context
-    );
+    contents.ColumnInfo = deserializeAws_json1_1ColumnInfoList(output.ColumnInfo, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Row = (
   output: any,
@@ -3122,22 +2623,22 @@ const deserializeAws_json1_1Row = (
 ): Row => {
   let contents: any = {
     __type: "Row",
-    Data: undefined
+    Data: undefined,
   };
   if (output.Data !== undefined && output.Data !== null) {
     contents.Data = deserializeAws_json1_1datumList(output.Data, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RowList = (
   output: any,
   context: __SerdeContext
-): Row[] => {
+): (Row)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Row(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1StartQueryExecutionOutput = (
   output: any,
@@ -3145,26 +2646,23 @@ const deserializeAws_json1_1StartQueryExecutionOutput = (
 ): StartQueryExecutionOutput => {
   let contents: any = {
     __type: "StartQueryExecutionOutput",
-    QueryExecutionId: undefined
+    QueryExecutionId: undefined,
   };
-  if (
-    output.QueryExecutionId !== undefined &&
-    output.QueryExecutionId !== null
-  ) {
+  if (output.QueryExecutionId !== undefined && output.QueryExecutionId !== null) {
     contents.QueryExecutionId = output.QueryExecutionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1StopQueryExecutionOutput = (
   output: any,
   context: __SerdeContext
 ): StopQueryExecutionOutput => {
   let contents: any = {
-    __type: "StopQueryExecutionOutput"
+    __type: "StopQueryExecutionOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1Tag = (
   output: any,
@@ -3173,7 +2671,7 @@ const deserializeAws_json1_1Tag = (
   let contents: any = {
     __type: "Tag",
     Key: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
@@ -3182,26 +2680,26 @@ const deserializeAws_json1_1Tag = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1TagList = (
   output: any,
   context: __SerdeContext
-): Tag[] => {
+): (Tag)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Tag(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1TagResourceOutput = (
   output: any,
   context: __SerdeContext
 ): TagResourceOutput => {
   let contents: any = {
-    __type: "TagResourceOutput"
+    __type: "TagResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1TooManyRequestsException = (
   output: any,
@@ -3210,7 +2708,7 @@ const deserializeAws_json1_1TooManyRequestsException = (
   let contents: any = {
     __type: "TooManyRequestsException",
     Message: undefined,
-    Reason: undefined
+    Reason: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
@@ -3219,7 +2717,7 @@ const deserializeAws_json1_1TooManyRequestsException = (
     contents.Reason = output.Reason;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UnprocessedNamedQueryId = (
   output: any,
@@ -3229,7 +2727,7 @@ const deserializeAws_json1_1UnprocessedNamedQueryId = (
     __type: "UnprocessedNamedQueryId",
     ErrorCode: undefined,
     ErrorMessage: undefined,
-    NamedQueryId: undefined
+    NamedQueryId: undefined,
   };
   if (output.ErrorCode !== undefined && output.ErrorCode !== null) {
     contents.ErrorCode = output.ErrorCode;
@@ -3241,16 +2739,16 @@ const deserializeAws_json1_1UnprocessedNamedQueryId = (
     contents.NamedQueryId = output.NamedQueryId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UnprocessedNamedQueryIdList = (
   output: any,
   context: __SerdeContext
-): UnprocessedNamedQueryId[] => {
+): (UnprocessedNamedQueryId)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1UnprocessedNamedQueryId(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1UnprocessedQueryExecutionId = (
   output: any,
@@ -3260,7 +2758,7 @@ const deserializeAws_json1_1UnprocessedQueryExecutionId = (
     __type: "UnprocessedQueryExecutionId",
     ErrorCode: undefined,
     ErrorMessage: undefined,
-    QueryExecutionId: undefined
+    QueryExecutionId: undefined,
   };
   if (output.ErrorCode !== undefined && output.ErrorCode !== null) {
     contents.ErrorCode = output.ErrorCode;
@@ -3268,43 +2766,40 @@ const deserializeAws_json1_1UnprocessedQueryExecutionId = (
   if (output.ErrorMessage !== undefined && output.ErrorMessage !== null) {
     contents.ErrorMessage = output.ErrorMessage;
   }
-  if (
-    output.QueryExecutionId !== undefined &&
-    output.QueryExecutionId !== null
-  ) {
+  if (output.QueryExecutionId !== undefined && output.QueryExecutionId !== null) {
     contents.QueryExecutionId = output.QueryExecutionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UnprocessedQueryExecutionIdList = (
   output: any,
   context: __SerdeContext
-): UnprocessedQueryExecutionId[] => {
+): (UnprocessedQueryExecutionId)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1UnprocessedQueryExecutionId(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1UntagResourceOutput = (
   output: any,
   context: __SerdeContext
 ): UntagResourceOutput => {
   let contents: any = {
-    __type: "UntagResourceOutput"
+    __type: "UntagResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateWorkGroupOutput = (
   output: any,
   context: __SerdeContext
 ): UpdateWorkGroupOutput => {
   let contents: any = {
-    __type: "UpdateWorkGroupOutput"
+    __type: "UpdateWorkGroupOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1WorkGroup = (
   output: any,
@@ -3316,13 +2811,10 @@ const deserializeAws_json1_1WorkGroup = (
     CreationTime: undefined,
     Description: undefined,
     Name: undefined,
-    State: undefined
+    State: undefined,
   };
   if (output.Configuration !== undefined && output.Configuration !== null) {
-    contents.Configuration = deserializeAws_json1_1WorkGroupConfiguration(
-      output.Configuration,
-      context
-    );
+    contents.Configuration = deserializeAws_json1_1WorkGroupConfiguration(output.Configuration, context);
   }
   if (output.CreationTime !== undefined && output.CreationTime !== null) {
     contents.CreationTime = new Date(Math.round(output.CreationTime * 1000));
@@ -3337,7 +2829,7 @@ const deserializeAws_json1_1WorkGroup = (
     contents.State = output.State;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1WorkGroupConfiguration = (
   output: any,
@@ -3349,45 +2841,25 @@ const deserializeAws_json1_1WorkGroupConfiguration = (
     EnforceWorkGroupConfiguration: undefined,
     PublishCloudWatchMetricsEnabled: undefined,
     RequesterPaysEnabled: undefined,
-    ResultConfiguration: undefined
+    ResultConfiguration: undefined,
   };
-  if (
-    output.BytesScannedCutoffPerQuery !== undefined &&
-    output.BytesScannedCutoffPerQuery !== null
-  ) {
+  if (output.BytesScannedCutoffPerQuery !== undefined && output.BytesScannedCutoffPerQuery !== null) {
     contents.BytesScannedCutoffPerQuery = output.BytesScannedCutoffPerQuery;
   }
-  if (
-    output.EnforceWorkGroupConfiguration !== undefined &&
-    output.EnforceWorkGroupConfiguration !== null
-  ) {
-    contents.EnforceWorkGroupConfiguration =
-      output.EnforceWorkGroupConfiguration;
+  if (output.EnforceWorkGroupConfiguration !== undefined && output.EnforceWorkGroupConfiguration !== null) {
+    contents.EnforceWorkGroupConfiguration = output.EnforceWorkGroupConfiguration;
   }
-  if (
-    output.PublishCloudWatchMetricsEnabled !== undefined &&
-    output.PublishCloudWatchMetricsEnabled !== null
-  ) {
-    contents.PublishCloudWatchMetricsEnabled =
-      output.PublishCloudWatchMetricsEnabled;
+  if (output.PublishCloudWatchMetricsEnabled !== undefined && output.PublishCloudWatchMetricsEnabled !== null) {
+    contents.PublishCloudWatchMetricsEnabled = output.PublishCloudWatchMetricsEnabled;
   }
-  if (
-    output.RequesterPaysEnabled !== undefined &&
-    output.RequesterPaysEnabled !== null
-  ) {
+  if (output.RequesterPaysEnabled !== undefined && output.RequesterPaysEnabled !== null) {
     contents.RequesterPaysEnabled = output.RequesterPaysEnabled;
   }
-  if (
-    output.ResultConfiguration !== undefined &&
-    output.ResultConfiguration !== null
-  ) {
-    contents.ResultConfiguration = deserializeAws_json1_1ResultConfiguration(
-      output.ResultConfiguration,
-      context
-    );
+  if (output.ResultConfiguration !== undefined && output.ResultConfiguration !== null) {
+    contents.ResultConfiguration = deserializeAws_json1_1ResultConfiguration(output.ResultConfiguration, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1WorkGroupSummary = (
   output: any,
@@ -3398,7 +2870,7 @@ const deserializeAws_json1_1WorkGroupSummary = (
     CreationTime: undefined,
     Description: undefined,
     Name: undefined,
-    State: undefined
+    State: undefined,
   };
   if (output.CreationTime !== undefined && output.CreationTime !== null) {
     contents.CreationTime = new Date(Math.round(output.CreationTime * 1000));
@@ -3413,25 +2885,25 @@ const deserializeAws_json1_1WorkGroupSummary = (
     contents.State = output.State;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1WorkGroupsList = (
   output: any,
   context: __SerdeContext
-): WorkGroupSummary[] => {
+): (WorkGroupSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1WorkGroupSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1datumList = (
   output: any,
   context: __SerdeContext
-): Datum[] => {
+): (Datum)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Datum(entry, context)
   );
-};
+}
 
 const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
   httpStatusCode: output.statusCode,
@@ -3440,40 +2912,31 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 });
 
 // Collect low-level response body stream to Uint8Array.
-const collectBody = (
-  streamBody: any = new Uint8Array(),
-  context: __SerdeContext
-): Promise<Uint8Array> => {
+const collectBody = (streamBody: any = new Uint8Array(), context: __SerdeContext): Promise<Uint8Array> => {
   if (streamBody instanceof Uint8Array) {
     return Promise.resolve(streamBody);
   }
-  return (
-    context.streamCollector(streamBody) || Promise.resolve(new Uint8Array())
-  );
+  return context.streamCollector(streamBody) || Promise.resolve(new Uint8Array());
 };
 
 // Encode Uint8Array data into string with utf-8.
-const collectBodyString = (
-  streamBody: any,
-  context: __SerdeContext
-): Promise<string> =>
-  collectBody(streamBody, context).then(body => context.utf8Encoder(body));
+const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> => collectBody(streamBody, context).then(body => context.utf8Encoder(body))
 
 const buildHttpRpcRequest = async (
   context: __SerdeContext,
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
-  const { hostname, protocol = "https", port } = await context.endpoint();
+  const {hostname, protocol = "https", port} = await context.endpoint();
   const contents: any = {
     protocol,
     hostname,
     port,
     method: "POST",
     path,
-    headers
+    headers,
   };
   if (resolvedHostname !== undefined) {
     contents.hostname = resolvedHostname;
@@ -3484,10 +2947,9 @@ const buildHttpRpcRequest = async (
   return new __HttpRequest(contents);
 };
 
-const parseBody = (streamBody: any, context: __SerdeContext): any =>
-  collectBodyString(streamBody, context).then(encoded => {
-    if (encoded.length) {
-      return JSON.parse(encoded);
-    }
-    return {};
-  });
+const parseBody = (streamBody: any, context: __SerdeContext): any => collectBodyString(streamBody, context).then(encoded => {
+  if (encoded.length) {
+    return JSON.parse(encoded);
+  }
+  return {};
+});

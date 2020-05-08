@@ -1423,14 +1423,12 @@ const serializeAws_restJson1_1Account = (
   input: Account,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AccountId !== undefined) {
-    bodyParams["AccountId"] = input.AccountId;
-  }
-  if (input.EmailAddress !== undefined) {
-    bodyParams["EmailAddress"] = input.EmailAddress;
-  }
-  return bodyParams;
+  return {
+    ...(input.AccountId !== undefined && { AccountId: input.AccountId }),
+    ...(input.EmailAddress !== undefined && {
+      EmailAddress: input.EmailAddress
+    })
+  };
 };
 
 const serializeAws_restJson1_1AccountIdList = (

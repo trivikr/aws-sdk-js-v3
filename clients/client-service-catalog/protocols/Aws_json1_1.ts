@@ -1,334 +1,334 @@
 import {
   AcceptPortfolioShareCommandInput,
-  AcceptPortfolioShareCommandOutput
+  AcceptPortfolioShareCommandOutput,
 } from "../commands/AcceptPortfolioShareCommand";
 import {
   AssociateBudgetWithResourceCommandInput,
-  AssociateBudgetWithResourceCommandOutput
+  AssociateBudgetWithResourceCommandOutput,
 } from "../commands/AssociateBudgetWithResourceCommand";
 import {
   AssociatePrincipalWithPortfolioCommandInput,
-  AssociatePrincipalWithPortfolioCommandOutput
+  AssociatePrincipalWithPortfolioCommandOutput,
 } from "../commands/AssociatePrincipalWithPortfolioCommand";
 import {
   AssociateProductWithPortfolioCommandInput,
-  AssociateProductWithPortfolioCommandOutput
+  AssociateProductWithPortfolioCommandOutput,
 } from "../commands/AssociateProductWithPortfolioCommand";
 import {
   AssociateServiceActionWithProvisioningArtifactCommandInput,
-  AssociateServiceActionWithProvisioningArtifactCommandOutput
+  AssociateServiceActionWithProvisioningArtifactCommandOutput,
 } from "../commands/AssociateServiceActionWithProvisioningArtifactCommand";
 import {
   AssociateTagOptionWithResourceCommandInput,
-  AssociateTagOptionWithResourceCommandOutput
+  AssociateTagOptionWithResourceCommandOutput,
 } from "../commands/AssociateTagOptionWithResourceCommand";
 import {
   BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
-  BatchAssociateServiceActionWithProvisioningArtifactCommandOutput
+  BatchAssociateServiceActionWithProvisioningArtifactCommandOutput,
 } from "../commands/BatchAssociateServiceActionWithProvisioningArtifactCommand";
 import {
   BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
-  BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput
+  BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput,
 } from "../commands/BatchDisassociateServiceActionFromProvisioningArtifactCommand";
 import {
   CopyProductCommandInput,
-  CopyProductCommandOutput
+  CopyProductCommandOutput,
 } from "../commands/CopyProductCommand";
 import {
   CreateConstraintCommandInput,
-  CreateConstraintCommandOutput
+  CreateConstraintCommandOutput,
 } from "../commands/CreateConstraintCommand";
 import {
   CreatePortfolioCommandInput,
-  CreatePortfolioCommandOutput
+  CreatePortfolioCommandOutput,
 } from "../commands/CreatePortfolioCommand";
 import {
   CreatePortfolioShareCommandInput,
-  CreatePortfolioShareCommandOutput
+  CreatePortfolioShareCommandOutput,
 } from "../commands/CreatePortfolioShareCommand";
 import {
   CreateProductCommandInput,
-  CreateProductCommandOutput
+  CreateProductCommandOutput,
 } from "../commands/CreateProductCommand";
 import {
   CreateProvisionedProductPlanCommandInput,
-  CreateProvisionedProductPlanCommandOutput
+  CreateProvisionedProductPlanCommandOutput,
 } from "../commands/CreateProvisionedProductPlanCommand";
 import {
   CreateProvisioningArtifactCommandInput,
-  CreateProvisioningArtifactCommandOutput
+  CreateProvisioningArtifactCommandOutput,
 } from "../commands/CreateProvisioningArtifactCommand";
 import {
   CreateServiceActionCommandInput,
-  CreateServiceActionCommandOutput
+  CreateServiceActionCommandOutput,
 } from "../commands/CreateServiceActionCommand";
 import {
   CreateTagOptionCommandInput,
-  CreateTagOptionCommandOutput
+  CreateTagOptionCommandOutput,
 } from "../commands/CreateTagOptionCommand";
 import {
   DeleteConstraintCommandInput,
-  DeleteConstraintCommandOutput
+  DeleteConstraintCommandOutput,
 } from "../commands/DeleteConstraintCommand";
 import {
   DeletePortfolioCommandInput,
-  DeletePortfolioCommandOutput
+  DeletePortfolioCommandOutput,
 } from "../commands/DeletePortfolioCommand";
 import {
   DeletePortfolioShareCommandInput,
-  DeletePortfolioShareCommandOutput
+  DeletePortfolioShareCommandOutput,
 } from "../commands/DeletePortfolioShareCommand";
 import {
   DeleteProductCommandInput,
-  DeleteProductCommandOutput
+  DeleteProductCommandOutput,
 } from "../commands/DeleteProductCommand";
 import {
   DeleteProvisionedProductPlanCommandInput,
-  DeleteProvisionedProductPlanCommandOutput
+  DeleteProvisionedProductPlanCommandOutput,
 } from "../commands/DeleteProvisionedProductPlanCommand";
 import {
   DeleteProvisioningArtifactCommandInput,
-  DeleteProvisioningArtifactCommandOutput
+  DeleteProvisioningArtifactCommandOutput,
 } from "../commands/DeleteProvisioningArtifactCommand";
 import {
   DeleteServiceActionCommandInput,
-  DeleteServiceActionCommandOutput
+  DeleteServiceActionCommandOutput,
 } from "../commands/DeleteServiceActionCommand";
 import {
   DeleteTagOptionCommandInput,
-  DeleteTagOptionCommandOutput
+  DeleteTagOptionCommandOutput,
 } from "../commands/DeleteTagOptionCommand";
 import {
   DescribeConstraintCommandInput,
-  DescribeConstraintCommandOutput
+  DescribeConstraintCommandOutput,
 } from "../commands/DescribeConstraintCommand";
 import {
   DescribeCopyProductStatusCommandInput,
-  DescribeCopyProductStatusCommandOutput
+  DescribeCopyProductStatusCommandOutput,
 } from "../commands/DescribeCopyProductStatusCommand";
 import {
   DescribePortfolioCommandInput,
-  DescribePortfolioCommandOutput
+  DescribePortfolioCommandOutput,
 } from "../commands/DescribePortfolioCommand";
 import {
   DescribePortfolioShareStatusCommandInput,
-  DescribePortfolioShareStatusCommandOutput
+  DescribePortfolioShareStatusCommandOutput,
 } from "../commands/DescribePortfolioShareStatusCommand";
 import {
   DescribeProductAsAdminCommandInput,
-  DescribeProductAsAdminCommandOutput
+  DescribeProductAsAdminCommandOutput,
 } from "../commands/DescribeProductAsAdminCommand";
 import {
   DescribeProductCommandInput,
-  DescribeProductCommandOutput
+  DescribeProductCommandOutput,
 } from "../commands/DescribeProductCommand";
 import {
   DescribeProductViewCommandInput,
-  DescribeProductViewCommandOutput
+  DescribeProductViewCommandOutput,
 } from "../commands/DescribeProductViewCommand";
 import {
   DescribeProvisionedProductCommandInput,
-  DescribeProvisionedProductCommandOutput
+  DescribeProvisionedProductCommandOutput,
 } from "../commands/DescribeProvisionedProductCommand";
 import {
   DescribeProvisionedProductPlanCommandInput,
-  DescribeProvisionedProductPlanCommandOutput
+  DescribeProvisionedProductPlanCommandOutput,
 } from "../commands/DescribeProvisionedProductPlanCommand";
 import {
   DescribeProvisioningArtifactCommandInput,
-  DescribeProvisioningArtifactCommandOutput
+  DescribeProvisioningArtifactCommandOutput,
 } from "../commands/DescribeProvisioningArtifactCommand";
 import {
   DescribeProvisioningParametersCommandInput,
-  DescribeProvisioningParametersCommandOutput
+  DescribeProvisioningParametersCommandOutput,
 } from "../commands/DescribeProvisioningParametersCommand";
 import {
   DescribeRecordCommandInput,
-  DescribeRecordCommandOutput
+  DescribeRecordCommandOutput,
 } from "../commands/DescribeRecordCommand";
 import {
   DescribeServiceActionCommandInput,
-  DescribeServiceActionCommandOutput
+  DescribeServiceActionCommandOutput,
 } from "../commands/DescribeServiceActionCommand";
 import {
   DescribeServiceActionExecutionParametersCommandInput,
-  DescribeServiceActionExecutionParametersCommandOutput
+  DescribeServiceActionExecutionParametersCommandOutput,
 } from "../commands/DescribeServiceActionExecutionParametersCommand";
 import {
   DescribeTagOptionCommandInput,
-  DescribeTagOptionCommandOutput
+  DescribeTagOptionCommandOutput,
 } from "../commands/DescribeTagOptionCommand";
 import {
   DisableAWSOrganizationsAccessCommandInput,
-  DisableAWSOrganizationsAccessCommandOutput
+  DisableAWSOrganizationsAccessCommandOutput,
 } from "../commands/DisableAWSOrganizationsAccessCommand";
 import {
   DisassociateBudgetFromResourceCommandInput,
-  DisassociateBudgetFromResourceCommandOutput
+  DisassociateBudgetFromResourceCommandOutput,
 } from "../commands/DisassociateBudgetFromResourceCommand";
 import {
   DisassociatePrincipalFromPortfolioCommandInput,
-  DisassociatePrincipalFromPortfolioCommandOutput
+  DisassociatePrincipalFromPortfolioCommandOutput,
 } from "../commands/DisassociatePrincipalFromPortfolioCommand";
 import {
   DisassociateProductFromPortfolioCommandInput,
-  DisassociateProductFromPortfolioCommandOutput
+  DisassociateProductFromPortfolioCommandOutput,
 } from "../commands/DisassociateProductFromPortfolioCommand";
 import {
   DisassociateServiceActionFromProvisioningArtifactCommandInput,
-  DisassociateServiceActionFromProvisioningArtifactCommandOutput
+  DisassociateServiceActionFromProvisioningArtifactCommandOutput,
 } from "../commands/DisassociateServiceActionFromProvisioningArtifactCommand";
 import {
   DisassociateTagOptionFromResourceCommandInput,
-  DisassociateTagOptionFromResourceCommandOutput
+  DisassociateTagOptionFromResourceCommandOutput,
 } from "../commands/DisassociateTagOptionFromResourceCommand";
 import {
   EnableAWSOrganizationsAccessCommandInput,
-  EnableAWSOrganizationsAccessCommandOutput
+  EnableAWSOrganizationsAccessCommandOutput,
 } from "../commands/EnableAWSOrganizationsAccessCommand";
 import {
   ExecuteProvisionedProductPlanCommandInput,
-  ExecuteProvisionedProductPlanCommandOutput
+  ExecuteProvisionedProductPlanCommandOutput,
 } from "../commands/ExecuteProvisionedProductPlanCommand";
 import {
   ExecuteProvisionedProductServiceActionCommandInput,
-  ExecuteProvisionedProductServiceActionCommandOutput
+  ExecuteProvisionedProductServiceActionCommandOutput,
 } from "../commands/ExecuteProvisionedProductServiceActionCommand";
 import {
   GetAWSOrganizationsAccessStatusCommandInput,
-  GetAWSOrganizationsAccessStatusCommandOutput
+  GetAWSOrganizationsAccessStatusCommandOutput,
 } from "../commands/GetAWSOrganizationsAccessStatusCommand";
 import {
   ListAcceptedPortfolioSharesCommandInput,
-  ListAcceptedPortfolioSharesCommandOutput
+  ListAcceptedPortfolioSharesCommandOutput,
 } from "../commands/ListAcceptedPortfolioSharesCommand";
 import {
   ListBudgetsForResourceCommandInput,
-  ListBudgetsForResourceCommandOutput
+  ListBudgetsForResourceCommandOutput,
 } from "../commands/ListBudgetsForResourceCommand";
 import {
   ListConstraintsForPortfolioCommandInput,
-  ListConstraintsForPortfolioCommandOutput
+  ListConstraintsForPortfolioCommandOutput,
 } from "../commands/ListConstraintsForPortfolioCommand";
 import {
   ListLaunchPathsCommandInput,
-  ListLaunchPathsCommandOutput
+  ListLaunchPathsCommandOutput,
 } from "../commands/ListLaunchPathsCommand";
 import {
   ListOrganizationPortfolioAccessCommandInput,
-  ListOrganizationPortfolioAccessCommandOutput
+  ListOrganizationPortfolioAccessCommandOutput,
 } from "../commands/ListOrganizationPortfolioAccessCommand";
 import {
   ListPortfolioAccessCommandInput,
-  ListPortfolioAccessCommandOutput
+  ListPortfolioAccessCommandOutput,
 } from "../commands/ListPortfolioAccessCommand";
 import {
   ListPortfoliosCommandInput,
-  ListPortfoliosCommandOutput
+  ListPortfoliosCommandOutput,
 } from "../commands/ListPortfoliosCommand";
 import {
   ListPortfoliosForProductCommandInput,
-  ListPortfoliosForProductCommandOutput
+  ListPortfoliosForProductCommandOutput,
 } from "../commands/ListPortfoliosForProductCommand";
 import {
   ListPrincipalsForPortfolioCommandInput,
-  ListPrincipalsForPortfolioCommandOutput
+  ListPrincipalsForPortfolioCommandOutput,
 } from "../commands/ListPrincipalsForPortfolioCommand";
 import {
   ListProvisionedProductPlansCommandInput,
-  ListProvisionedProductPlansCommandOutput
+  ListProvisionedProductPlansCommandOutput,
 } from "../commands/ListProvisionedProductPlansCommand";
 import {
   ListProvisioningArtifactsCommandInput,
-  ListProvisioningArtifactsCommandOutput
+  ListProvisioningArtifactsCommandOutput,
 } from "../commands/ListProvisioningArtifactsCommand";
 import {
   ListProvisioningArtifactsForServiceActionCommandInput,
-  ListProvisioningArtifactsForServiceActionCommandOutput
+  ListProvisioningArtifactsForServiceActionCommandOutput,
 } from "../commands/ListProvisioningArtifactsForServiceActionCommand";
 import {
   ListRecordHistoryCommandInput,
-  ListRecordHistoryCommandOutput
+  ListRecordHistoryCommandOutput,
 } from "../commands/ListRecordHistoryCommand";
 import {
   ListResourcesForTagOptionCommandInput,
-  ListResourcesForTagOptionCommandOutput
+  ListResourcesForTagOptionCommandOutput,
 } from "../commands/ListResourcesForTagOptionCommand";
 import {
   ListServiceActionsCommandInput,
-  ListServiceActionsCommandOutput
+  ListServiceActionsCommandOutput,
 } from "../commands/ListServiceActionsCommand";
 import {
   ListServiceActionsForProvisioningArtifactCommandInput,
-  ListServiceActionsForProvisioningArtifactCommandOutput
+  ListServiceActionsForProvisioningArtifactCommandOutput,
 } from "../commands/ListServiceActionsForProvisioningArtifactCommand";
 import {
   ListStackInstancesForProvisionedProductCommandInput,
-  ListStackInstancesForProvisionedProductCommandOutput
+  ListStackInstancesForProvisionedProductCommandOutput,
 } from "../commands/ListStackInstancesForProvisionedProductCommand";
 import {
   ListTagOptionsCommandInput,
-  ListTagOptionsCommandOutput
+  ListTagOptionsCommandOutput,
 } from "../commands/ListTagOptionsCommand";
 import {
   ProvisionProductCommandInput,
-  ProvisionProductCommandOutput
+  ProvisionProductCommandOutput,
 } from "../commands/ProvisionProductCommand";
 import {
   RejectPortfolioShareCommandInput,
-  RejectPortfolioShareCommandOutput
+  RejectPortfolioShareCommandOutput,
 } from "../commands/RejectPortfolioShareCommand";
 import {
   ScanProvisionedProductsCommandInput,
-  ScanProvisionedProductsCommandOutput
+  ScanProvisionedProductsCommandOutput,
 } from "../commands/ScanProvisionedProductsCommand";
 import {
   SearchProductsAsAdminCommandInput,
-  SearchProductsAsAdminCommandOutput
+  SearchProductsAsAdminCommandOutput,
 } from "../commands/SearchProductsAsAdminCommand";
 import {
   SearchProductsCommandInput,
-  SearchProductsCommandOutput
+  SearchProductsCommandOutput,
 } from "../commands/SearchProductsCommand";
 import {
   SearchProvisionedProductsCommandInput,
-  SearchProvisionedProductsCommandOutput
+  SearchProvisionedProductsCommandOutput,
 } from "../commands/SearchProvisionedProductsCommand";
 import {
   TerminateProvisionedProductCommandInput,
-  TerminateProvisionedProductCommandOutput
+  TerminateProvisionedProductCommandOutput,
 } from "../commands/TerminateProvisionedProductCommand";
 import {
   UpdateConstraintCommandInput,
-  UpdateConstraintCommandOutput
+  UpdateConstraintCommandOutput,
 } from "../commands/UpdateConstraintCommand";
 import {
   UpdatePortfolioCommandInput,
-  UpdatePortfolioCommandOutput
+  UpdatePortfolioCommandOutput,
 } from "../commands/UpdatePortfolioCommand";
 import {
   UpdateProductCommandInput,
-  UpdateProductCommandOutput
+  UpdateProductCommandOutput,
 } from "../commands/UpdateProductCommand";
 import {
   UpdateProvisionedProductCommandInput,
-  UpdateProvisionedProductCommandOutput
+  UpdateProvisionedProductCommandOutput,
 } from "../commands/UpdateProvisionedProductCommand";
 import {
   UpdateProvisionedProductPropertiesCommandInput,
-  UpdateProvisionedProductPropertiesCommandOutput
+  UpdateProvisionedProductPropertiesCommandOutput,
 } from "../commands/UpdateProvisionedProductPropertiesCommand";
 import {
   UpdateProvisioningArtifactCommandInput,
-  UpdateProvisioningArtifactCommandOutput
+  UpdateProvisioningArtifactCommandOutput,
 } from "../commands/UpdateProvisioningArtifactCommand";
 import {
   UpdateServiceActionCommandInput,
-  UpdateServiceActionCommandOutput
+  UpdateServiceActionCommandOutput,
 } from "../commands/UpdateServiceActionCommand";
 import {
   UpdateTagOptionCommandInput,
-  UpdateTagOptionCommandOutput
+  UpdateTagOptionCommandOutput,
 } from "../commands/UpdateTagOptionCommand";
 import {
   AcceptPortfolioShareInput,
@@ -556,11 +556,11 @@ import {
   UpdateServiceActionOutput,
   UpdateTagOptionInput,
   UpdateTagOptionOutput,
-  UsageInstruction
+  UsageInstruction,
 } from "../models/index";
 import {
   HttpRequest as __HttpRequest,
-  HttpResponse as __HttpResponse
+  HttpResponse as __HttpResponse,
 } from "@aws-sdk/protocol-http";
 import { SmithyException as __SmithyException } from "@aws-sdk/smithy-client";
 import {
@@ -568,1305 +568,1060 @@ import {
   HeaderBag as __HeaderBag,
   MetadataBearer as __MetadataBearer,
   ResponseMetadata as __ResponseMetadata,
-  SerdeContext as __SerdeContext
+  SerdeContext as __SerdeContext,
 } from "@aws-sdk/types";
 import { v4 as generateIdempotencyToken } from "uuid";
 
-export const serializeAws_json1_1AcceptPortfolioShareCommand = async (
+export const serializeAws_json1_1AcceptPortfolioShareCommand = async(
   input: AcceptPortfolioShareCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.AcceptPortfolioShare";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AcceptPortfolioShare";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AcceptPortfolioShareInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1AcceptPortfolioShareInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1AssociateBudgetWithResourceCommand = async (
+export const serializeAws_json1_1AssociateBudgetWithResourceCommand = async(
   input: AssociateBudgetWithResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.AssociateBudgetWithResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AssociateBudgetWithResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AssociateBudgetWithResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1AssociateBudgetWithResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1AssociatePrincipalWithPortfolioCommand = async (
+export const serializeAws_json1_1AssociatePrincipalWithPortfolioCommand = async(
   input: AssociatePrincipalWithPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.AssociatePrincipalWithPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AssociatePrincipalWithPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AssociatePrincipalWithPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1AssociatePrincipalWithPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1AssociateProductWithPortfolioCommand = async (
+export const serializeAws_json1_1AssociateProductWithPortfolioCommand = async(
   input: AssociateProductWithPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.AssociateProductWithPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AssociateProductWithPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AssociateProductWithPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1AssociateProductWithPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommand = async (
+export const serializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommand = async(
   input: AssociateServiceActionWithProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AssociateServiceActionWithProvisioningArtifactInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1AssociateServiceActionWithProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1AssociateTagOptionWithResourceCommand = async (
+export const serializeAws_json1_1AssociateTagOptionWithResourceCommand = async(
   input: AssociateTagOptionWithResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.AssociateTagOptionWithResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.AssociateTagOptionWithResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1AssociateTagOptionWithResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1AssociateTagOptionWithResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommand = async (
+export const serializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommand = async(
   input: BatchAssociateServiceActionWithProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommand = async (
+export const serializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommand = async(
   input: BatchDisassociateServiceActionFromProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.BatchDisassociateServiceActionFromProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.BatchDisassociateServiceActionFromProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CopyProductCommand = async (
+export const serializeAws_json1_1CopyProductCommand = async(
   input: CopyProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CopyProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CopyProduct";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1CopyProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateConstraintCommand = async (
+export const serializeAws_json1_1CreateConstraintCommand = async(
   input: CreateConstraintCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreateConstraint";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateConstraint";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateConstraintInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateConstraintInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreatePortfolioCommand = async (
+export const serializeAws_json1_1CreatePortfolioCommand = async(
   input: CreatePortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreatePortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreatePortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreatePortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreatePortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreatePortfolioShareCommand = async (
+export const serializeAws_json1_1CreatePortfolioShareCommand = async(
   input: CreatePortfolioShareCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreatePortfolioShare";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreatePortfolioShare";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreatePortfolioShareInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreatePortfolioShareInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateProductCommand = async (
+export const serializeAws_json1_1CreateProductCommand = async(
   input: CreateProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreateProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateProduct";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1CreateProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateProvisionedProductPlanCommand = async (
+export const serializeAws_json1_1CreateProvisionedProductPlanCommand = async(
   input: CreateProvisionedProductPlanCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.CreateProvisionedProductPlan";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateProvisionedProductPlan";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateProvisionedProductPlanInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateProvisionedProductPlanInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateProvisioningArtifactCommand = async (
+export const serializeAws_json1_1CreateProvisioningArtifactCommand = async(
   input: CreateProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.CreateProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateProvisioningArtifactInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateServiceActionCommand = async (
+export const serializeAws_json1_1CreateServiceActionCommand = async(
   input: CreateServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreateServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateServiceActionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1CreateTagOptionCommand = async (
+export const serializeAws_json1_1CreateTagOptionCommand = async(
   input: CreateTagOptionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.CreateTagOption";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.CreateTagOption";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1CreateTagOptionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1CreateTagOptionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteConstraintCommand = async (
+export const serializeAws_json1_1DeleteConstraintCommand = async(
   input: DeleteConstraintCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeleteConstraint";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteConstraint";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteConstraintInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteConstraintInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeletePortfolioCommand = async (
+export const serializeAws_json1_1DeletePortfolioCommand = async(
   input: DeletePortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeletePortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeletePortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeletePortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeletePortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeletePortfolioShareCommand = async (
+export const serializeAws_json1_1DeletePortfolioShareCommand = async(
   input: DeletePortfolioShareCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeletePortfolioShare";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeletePortfolioShare";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeletePortfolioShareInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeletePortfolioShareInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteProductCommand = async (
+export const serializeAws_json1_1DeleteProductCommand = async(
   input: DeleteProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeleteProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteProduct";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1DeleteProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteProvisionedProductPlanCommand = async (
+export const serializeAws_json1_1DeleteProvisionedProductPlanCommand = async(
   input: DeleteProvisionedProductPlanCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DeleteProvisionedProductPlan";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteProvisionedProductPlan";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteProvisionedProductPlanInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteProvisionedProductPlanInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteProvisioningArtifactCommand = async (
+export const serializeAws_json1_1DeleteProvisioningArtifactCommand = async(
   input: DeleteProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DeleteProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteProvisioningArtifactInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteServiceActionCommand = async (
+export const serializeAws_json1_1DeleteServiceActionCommand = async(
   input: DeleteServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeleteServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteServiceActionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DeleteTagOptionCommand = async (
+export const serializeAws_json1_1DeleteTagOptionCommand = async(
   input: DeleteTagOptionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DeleteTagOption";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DeleteTagOption";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DeleteTagOptionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DeleteTagOptionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeConstraintCommand = async (
+export const serializeAws_json1_1DescribeConstraintCommand = async(
   input: DescribeConstraintCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeConstraint";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeConstraint";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeConstraintInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeConstraintInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeCopyProductStatusCommand = async (
+export const serializeAws_json1_1DescribeCopyProductStatusCommand = async(
   input: DescribeCopyProductStatusCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeCopyProductStatus";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeCopyProductStatus";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeCopyProductStatusInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeCopyProductStatusInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribePortfolioCommand = async (
+export const serializeAws_json1_1DescribePortfolioCommand = async(
   input: DescribePortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribePortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribePortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribePortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribePortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribePortfolioShareStatusCommand = async (
+export const serializeAws_json1_1DescribePortfolioShareStatusCommand = async(
   input: DescribePortfolioShareStatusCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribePortfolioShareStatus";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribePortfolioShareStatus";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribePortfolioShareStatusInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribePortfolioShareStatusInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProductCommand = async (
+export const serializeAws_json1_1DescribeProductCommand = async(
   input: DescribeProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProductAsAdminCommand = async (
+export const serializeAws_json1_1DescribeProductAsAdminCommand = async(
   input: DescribeProductAsAdminCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeProductAsAdmin";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProductAsAdmin";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProductAsAdminInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProductAsAdminInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProductViewCommand = async (
+export const serializeAws_json1_1DescribeProductViewCommand = async(
   input: DescribeProductViewCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeProductView";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProductView";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProductViewInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProductViewInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProvisionedProductCommand = async (
+export const serializeAws_json1_1DescribeProvisionedProductCommand = async(
   input: DescribeProvisionedProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeProvisionedProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProvisionedProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProvisionedProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProvisionedProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProvisionedProductPlanCommand = async (
+export const serializeAws_json1_1DescribeProvisionedProductPlanCommand = async(
   input: DescribeProvisionedProductPlanCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeProvisionedProductPlan";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProvisionedProductPlan";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProvisionedProductPlanInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProvisionedProductPlanInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProvisioningArtifactCommand = async (
+export const serializeAws_json1_1DescribeProvisioningArtifactCommand = async(
   input: DescribeProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProvisioningArtifactInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeProvisioningParametersCommand = async (
+export const serializeAws_json1_1DescribeProvisioningParametersCommand = async(
   input: DescribeProvisioningParametersCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeProvisioningParameters";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeProvisioningParameters";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeProvisioningParametersInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeProvisioningParametersInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeRecordCommand = async (
+export const serializeAws_json1_1DescribeRecordCommand = async(
   input: DescribeRecordCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeRecord";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeRecord";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeRecordInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeRecordInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeServiceActionCommand = async (
+export const serializeAws_json1_1DescribeServiceActionCommand = async(
   input: DescribeServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeServiceActionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeServiceActionExecutionParametersCommand = async (
+export const serializeAws_json1_1DescribeServiceActionExecutionParametersCommand = async(
   input: DescribeServiceActionExecutionParametersCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DescribeServiceActionExecutionParameters";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeServiceActionExecutionParameters";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeServiceActionExecutionParametersInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeServiceActionExecutionParametersInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DescribeTagOptionCommand = async (
+export const serializeAws_json1_1DescribeTagOptionCommand = async(
   input: DescribeTagOptionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.DescribeTagOption";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DescribeTagOption";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DescribeTagOptionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DescribeTagOptionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisableAWSOrganizationsAccessCommand = async (
+export const serializeAws_json1_1DisableAWSOrganizationsAccessCommand = async(
   input: DisableAWSOrganizationsAccessCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisableAWSOrganizationsAccess";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisableAWSOrganizationsAccess";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisableAWSOrganizationsAccessInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DisableAWSOrganizationsAccessInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisassociateBudgetFromResourceCommand = async (
+export const serializeAws_json1_1DisassociateBudgetFromResourceCommand = async(
   input: DisassociateBudgetFromResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisassociateBudgetFromResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisassociateBudgetFromResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisassociateBudgetFromResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DisassociateBudgetFromResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisassociatePrincipalFromPortfolioCommand = async (
+export const serializeAws_json1_1DisassociatePrincipalFromPortfolioCommand = async(
   input: DisassociatePrincipalFromPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisassociatePrincipalFromPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DisassociatePrincipalFromPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisassociateProductFromPortfolioCommand = async (
+export const serializeAws_json1_1DisassociateProductFromPortfolioCommand = async(
   input: DisassociateProductFromPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisassociateProductFromPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisassociateProductFromPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisassociateProductFromPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DisassociateProductFromPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommand = async (
+export const serializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommand = async(
   input: DisassociateServiceActionFromProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1DisassociateTagOptionFromResourceCommand = async (
+export const serializeAws_json1_1DisassociateTagOptionFromResourceCommand = async(
   input: DisassociateTagOptionFromResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.DisassociateTagOptionFromResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.DisassociateTagOptionFromResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1DisassociateTagOptionFromResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1DisassociateTagOptionFromResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1EnableAWSOrganizationsAccessCommand = async (
+export const serializeAws_json1_1EnableAWSOrganizationsAccessCommand = async(
   input: EnableAWSOrganizationsAccessCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.EnableAWSOrganizationsAccess";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.EnableAWSOrganizationsAccess";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1EnableAWSOrganizationsAccessInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1EnableAWSOrganizationsAccessInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ExecuteProvisionedProductPlanCommand = async (
+export const serializeAws_json1_1ExecuteProvisionedProductPlanCommand = async(
   input: ExecuteProvisionedProductPlanCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ExecuteProvisionedProductPlan";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ExecuteProvisionedProductPlan";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ExecuteProvisionedProductPlanInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ExecuteProvisionedProductPlanInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ExecuteProvisionedProductServiceActionCommand = async (
+export const serializeAws_json1_1ExecuteProvisionedProductServiceActionCommand = async(
   input: ExecuteProvisionedProductServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ExecuteProvisionedProductServiceActionInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1ExecuteProvisionedProductServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1GetAWSOrganizationsAccessStatusCommand = async (
+export const serializeAws_json1_1GetAWSOrganizationsAccessStatusCommand = async(
   input: GetAWSOrganizationsAccessStatusCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1GetAWSOrganizationsAccessStatusInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1GetAWSOrganizationsAccessStatusInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListAcceptedPortfolioSharesCommand = async (
+export const serializeAws_json1_1ListAcceptedPortfolioSharesCommand = async(
   input: ListAcceptedPortfolioSharesCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListAcceptedPortfolioShares";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListAcceptedPortfolioShares";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListAcceptedPortfolioSharesInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListAcceptedPortfolioSharesInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListBudgetsForResourceCommand = async (
+export const serializeAws_json1_1ListBudgetsForResourceCommand = async(
   input: ListBudgetsForResourceCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListBudgetsForResource";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListBudgetsForResource";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListBudgetsForResourceInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListBudgetsForResourceInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListConstraintsForPortfolioCommand = async (
+export const serializeAws_json1_1ListConstraintsForPortfolioCommand = async(
   input: ListConstraintsForPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListConstraintsForPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListConstraintsForPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListConstraintsForPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListConstraintsForPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListLaunchPathsCommand = async (
+export const serializeAws_json1_1ListLaunchPathsCommand = async(
   input: ListLaunchPathsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListLaunchPaths";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListLaunchPaths";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListLaunchPathsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListLaunchPathsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListOrganizationPortfolioAccessCommand = async (
+export const serializeAws_json1_1ListOrganizationPortfolioAccessCommand = async(
   input: ListOrganizationPortfolioAccessCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListOrganizationPortfolioAccess";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListOrganizationPortfolioAccess";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListOrganizationPortfolioAccessInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListOrganizationPortfolioAccessInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListPortfolioAccessCommand = async (
+export const serializeAws_json1_1ListPortfolioAccessCommand = async(
   input: ListPortfolioAccessCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListPortfolioAccess";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListPortfolioAccess";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListPortfolioAccessInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListPortfolioAccessInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListPortfoliosCommand = async (
+export const serializeAws_json1_1ListPortfoliosCommand = async(
   input: ListPortfoliosCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListPortfolios";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListPortfolios";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListPortfoliosInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListPortfoliosInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListPortfoliosForProductCommand = async (
+export const serializeAws_json1_1ListPortfoliosForProductCommand = async(
   input: ListPortfoliosForProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListPortfoliosForProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListPortfoliosForProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListPortfoliosForProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListPortfoliosForProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListPrincipalsForPortfolioCommand = async (
+export const serializeAws_json1_1ListPrincipalsForPortfolioCommand = async(
   input: ListPrincipalsForPortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListPrincipalsForPortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListPrincipalsForPortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListPrincipalsForPortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListPrincipalsForPortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListProvisionedProductPlansCommand = async (
+export const serializeAws_json1_1ListProvisionedProductPlansCommand = async(
   input: ListProvisionedProductPlansCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListProvisionedProductPlans";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListProvisionedProductPlans";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListProvisionedProductPlansInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListProvisionedProductPlansInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListProvisioningArtifactsCommand = async (
+export const serializeAws_json1_1ListProvisioningArtifactsCommand = async(
   input: ListProvisioningArtifactsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListProvisioningArtifacts";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListProvisioningArtifacts";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListProvisioningArtifactsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListProvisioningArtifactsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListProvisioningArtifactsForServiceActionCommand = async (
+export const serializeAws_json1_1ListProvisioningArtifactsForServiceActionCommand = async(
   input: ListProvisioningArtifactsForServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListProvisioningArtifactsForServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListProvisioningArtifactsForServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListProvisioningArtifactsForServiceActionInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1ListProvisioningArtifactsForServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListRecordHistoryCommand = async (
+export const serializeAws_json1_1ListRecordHistoryCommand = async(
   input: ListRecordHistoryCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListRecordHistory";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListRecordHistory";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListRecordHistoryInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListRecordHistoryInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListResourcesForTagOptionCommand = async (
+export const serializeAws_json1_1ListResourcesForTagOptionCommand = async(
   input: ListResourcesForTagOptionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListResourcesForTagOption";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListResourcesForTagOption";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListResourcesForTagOptionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListResourcesForTagOptionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListServiceActionsCommand = async (
+export const serializeAws_json1_1ListServiceActionsCommand = async(
   input: ListServiceActionsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListServiceActions";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListServiceActions";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListServiceActionsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListServiceActionsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListServiceActionsForProvisioningArtifactCommand = async (
+export const serializeAws_json1_1ListServiceActionsForProvisioningArtifactCommand = async(
   input: ListServiceActionsForProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListServiceActionsForProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListServiceActionsForProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListServiceActionsForProvisioningArtifactInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1ListServiceActionsForProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListStackInstancesForProvisionedProductCommand = async (
+export const serializeAws_json1_1ListStackInstancesForProvisionedProductCommand = async(
   input: ListStackInstancesForProvisionedProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListStackInstancesForProvisionedProductInput(
-      input,
-      context
-    )
-  );
+  body = JSON.stringify(serializeAws_json1_1ListStackInstancesForProvisionedProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ListTagOptionsCommand = async (
+export const serializeAws_json1_1ListTagOptionsCommand = async(
   input: ListTagOptionsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ListTagOptions";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ListTagOptions";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ListTagOptionsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ListTagOptionsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ProvisionProductCommand = async (
+export const serializeAws_json1_1ProvisionProductCommand = async(
   input: ProvisionProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.ProvisionProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ProvisionProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ProvisionProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ProvisionProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1RejectPortfolioShareCommand = async (
+export const serializeAws_json1_1RejectPortfolioShareCommand = async(
   input: RejectPortfolioShareCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.RejectPortfolioShare";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.RejectPortfolioShare";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1RejectPortfolioShareInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1RejectPortfolioShareInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1ScanProvisionedProductsCommand = async (
+export const serializeAws_json1_1ScanProvisionedProductsCommand = async(
   input: ScanProvisionedProductsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.ScanProvisionedProducts";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.ScanProvisionedProducts";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1ScanProvisionedProductsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1ScanProvisionedProductsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1SearchProductsCommand = async (
+export const serializeAws_json1_1SearchProductsCommand = async(
   input: SearchProductsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.SearchProducts";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.SearchProducts";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1SearchProductsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1SearchProductsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1SearchProductsAsAdminCommand = async (
+export const serializeAws_json1_1SearchProductsAsAdminCommand = async(
   input: SearchProductsAsAdminCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.SearchProductsAsAdmin";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.SearchProductsAsAdmin";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1SearchProductsAsAdminInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1SearchProductsAsAdminInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1SearchProvisionedProductsCommand = async (
+export const serializeAws_json1_1SearchProvisionedProductsCommand = async(
   input: SearchProvisionedProductsCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.SearchProvisionedProducts";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.SearchProvisionedProducts";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1SearchProvisionedProductsInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1SearchProvisionedProductsInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1TerminateProvisionedProductCommand = async (
+export const serializeAws_json1_1TerminateProvisionedProductCommand = async(
   input: TerminateProvisionedProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.TerminateProvisionedProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.TerminateProvisionedProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1TerminateProvisionedProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1TerminateProvisionedProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateConstraintCommand = async (
+export const serializeAws_json1_1UpdateConstraintCommand = async(
   input: UpdateConstraintCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.UpdateConstraint";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateConstraint";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateConstraintInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateConstraintInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdatePortfolioCommand = async (
+export const serializeAws_json1_1UpdatePortfolioCommand = async(
   input: UpdatePortfolioCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.UpdatePortfolio";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdatePortfolio";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdatePortfolioInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdatePortfolioInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateProductCommand = async (
+export const serializeAws_json1_1UpdateProductCommand = async(
   input: UpdateProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.UpdateProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateProduct";
   let body: any;
   body = JSON.stringify(serializeAws_json1_1UpdateProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateProvisionedProductCommand = async (
+export const serializeAws_json1_1UpdateProvisionedProductCommand = async(
   input: UpdateProvisionedProductCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.UpdateProvisionedProduct";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateProvisionedProduct";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateProvisionedProductInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateProvisionedProductInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateProvisionedProductPropertiesCommand = async (
+export const serializeAws_json1_1UpdateProvisionedProductPropertiesCommand = async(
   input: UpdateProvisionedProductPropertiesCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.UpdateProvisionedProductProperties";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateProvisionedProductProperties";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateProvisionedProductPropertiesInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateProvisionedProductPropertiesInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateProvisioningArtifactCommand = async (
+export const serializeAws_json1_1UpdateProvisioningArtifactCommand = async(
   input: UpdateProvisioningArtifactCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] =
-    "AWS242ServiceCatalogService.UpdateProvisioningArtifact";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateProvisioningArtifact";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateProvisioningArtifactInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateProvisioningArtifactInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateServiceActionCommand = async (
+export const serializeAws_json1_1UpdateServiceActionCommand = async(
   input: UpdateServiceActionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.UpdateServiceAction";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateServiceAction";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateServiceActionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateServiceActionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const serializeAws_json1_1UpdateTagOptionCommand = async (
+export const serializeAws_json1_1UpdateTagOptionCommand = async(
   input: UpdateTagOptionCommandInput,
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = {};
-  headers["Content-Type"] = "application/x-amz-json-1.1";
-  headers["X-Amz-Target"] = "AWS242ServiceCatalogService.UpdateTagOption";
+  headers['Content-Type'] = "application/x-amz-json-1.1";
+  headers['X-Amz-Target'] = "AWS242ServiceCatalogService.UpdateTagOption";
   let body: any;
-  body = JSON.stringify(
-    serializeAws_json1_1UpdateTagOptionInput(input, context)
-  );
+  body = JSON.stringify(serializeAws_json1_1UpdateTagOptionInput(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
-};
+}
 
-export const deserializeAws_json1_1AcceptPortfolioShareCommand = async (
+export const deserializeAws_json1_1AcceptPortfolioShareCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AcceptPortfolioShareCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AcceptPortfolioShareCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AcceptPortfolioShareCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1AcceptPortfolioShareOutput(data, context);
   const response: AcceptPortfolioShareCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AcceptPortfolioShareOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AcceptPortfolioShareCommandError = async (
+const deserializeAws_json1_1AcceptPortfolioShareCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AcceptPortfolioShareCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1883,89 +1638,70 @@ const deserializeAws_json1_1AcceptPortfolioShareCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1AssociateBudgetWithResourceCommand = async (
+export const deserializeAws_json1_1AssociateBudgetWithResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AssociateBudgetWithResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AssociateBudgetWithResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AssociateBudgetWithResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1AssociateBudgetWithResourceOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1AssociateBudgetWithResourceOutput(data, context);
   const response: AssociateBudgetWithResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AssociateBudgetWithResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AssociateBudgetWithResourceCommandError = async (
+const deserializeAws_json1_1AssociateBudgetWithResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateBudgetWithResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -1982,78 +1718,62 @@ const deserializeAws_json1_1AssociateBudgetWithResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1AssociatePrincipalWithPortfolioCommand = async (
+export const deserializeAws_json1_1AssociatePrincipalWithPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AssociatePrincipalWithPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AssociatePrincipalWithPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AssociatePrincipalWithPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1AssociatePrincipalWithPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1AssociatePrincipalWithPortfolioOutput(data, context);
   const response: AssociatePrincipalWithPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AssociatePrincipalWithPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AssociatePrincipalWithPortfolioCommandError = async (
+const deserializeAws_json1_1AssociatePrincipalWithPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociatePrincipalWithPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2070,78 +1790,62 @@ const deserializeAws_json1_1AssociatePrincipalWithPortfolioCommandError = async 
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1AssociateProductWithPortfolioCommand = async (
+export const deserializeAws_json1_1AssociateProductWithPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AssociateProductWithPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AssociateProductWithPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AssociateProductWithPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1AssociateProductWithPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1AssociateProductWithPortfolioOutput(data, context);
   const response: AssociateProductWithPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AssociateProductWithPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AssociateProductWithPortfolioCommandError = async (
+const deserializeAws_json1_1AssociateProductWithPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateProductWithPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2158,78 +1862,62 @@ const deserializeAws_json1_1AssociateProductWithPortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactOutput(data, context);
   const response: AssociateServiceActionWithProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AssociateServiceActionWithProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2246,111 +1934,86 @@ const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactComman
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1AssociateTagOptionWithResourceCommand = async (
+export const deserializeAws_json1_1AssociateTagOptionWithResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<AssociateTagOptionWithResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1AssociateTagOptionWithResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1AssociateTagOptionWithResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1AssociateTagOptionWithResourceOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1AssociateTagOptionWithResourceOutput(data, context);
   const response: AssociateTagOptionWithResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "AssociateTagOptionWithResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1AssociateTagOptionWithResourceCommandError = async (
+const deserializeAws_json1_1AssociateTagOptionWithResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<AssociateTagOptionWithResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2367,60 +2030,46 @@ const deserializeAws_json1_1AssociateTagOptionWithResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
-): Promise<
-  BatchAssociateServiceActionWithProvisioningArtifactCommandOutput
-> => {
+): Promise<BatchAssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactOutput(data, context);
   const response: BatchAssociateServiceActionWithProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "BatchAssociateServiceActionWithProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
-): Promise<
-  BatchAssociateServiceActionWithProvisioningArtifactCommandOutput
-> => {
+  context: __SerdeContext,
+): Promise<BatchAssociateServiceActionWithProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2437,60 +2086,46 @@ const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactC
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
-): Promise<
-  BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput
-> => {
+): Promise<BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactOutput(data, context);
   const response: BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "BatchDisassociateServiceActionFromProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
-): Promise<
-  BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput
-> => {
+  context: __SerdeContext,
+): Promise<BatchDisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2507,61 +2142,54 @@ const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifa
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CopyProductCommand = async (
+export const deserializeAws_json1_1CopyProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CopyProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CopyProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CopyProductOutput(data, context);
   const response: CopyProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CopyProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CopyProductCommandError = async (
+const deserializeAws_json1_1CopyProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CopyProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2578,83 +2206,70 @@ const deserializeAws_json1_1CopyProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateConstraintCommand = async (
+export const deserializeAws_json1_1CreateConstraintCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateConstraintCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateConstraintCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateConstraintOutput(data, context);
   const response: CreateConstraintCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateConstraintOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateConstraintCommandError = async (
+const deserializeAws_json1_1CreateConstraintCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateConstraintCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2671,72 +2286,62 @@ const deserializeAws_json1_1CreateConstraintCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreatePortfolioCommand = async (
+export const deserializeAws_json1_1CreatePortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreatePortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreatePortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreatePortfolioOutput(data, context);
   const response: CreatePortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreatePortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreatePortfolioCommandError = async (
+const deserializeAws_json1_1CreatePortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2753,97 +2358,78 @@ const deserializeAws_json1_1CreatePortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreatePortfolioShareCommand = async (
+export const deserializeAws_json1_1CreatePortfolioShareCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreatePortfolioShareCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1CreatePortfolioShareCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1CreatePortfolioShareCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreatePortfolioShareOutput(data, context);
   const response: CreatePortfolioShareCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreatePortfolioShareOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreatePortfolioShareCommandError = async (
+const deserializeAws_json1_1CreatePortfolioShareCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreatePortfolioShareCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2860,72 +2446,62 @@ const deserializeAws_json1_1CreatePortfolioShareCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateProductCommand = async (
+export const deserializeAws_json1_1CreateProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateProductOutput(data, context);
   const response: CreateProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateProductCommandError = async (
+const deserializeAws_json1_1CreateProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -2942,78 +2518,62 @@ const deserializeAws_json1_1CreateProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateProvisionedProductPlanCommand = async (
+export const deserializeAws_json1_1CreateProvisionedProductPlanCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1CreateProvisionedProductPlanCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1CreateProvisionedProductPlanCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1CreateProvisionedProductPlanOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1CreateProvisionedProductPlanOutput(data, context);
   const response: CreateProvisionedProductPlanCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateProvisionedProductPlanOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateProvisionedProductPlanCommandError = async (
+const deserializeAws_json1_1CreateProvisionedProductPlanCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProvisionedProductPlanCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3030,78 +2590,62 @@ const deserializeAws_json1_1CreateProvisionedProductPlanCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1CreateProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1CreateProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1CreateProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1CreateProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1CreateProvisioningArtifactOutput(data, context);
   const response: CreateProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1CreateProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3118,64 +2662,54 @@ const deserializeAws_json1_1CreateProvisioningArtifactCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateServiceActionCommand = async (
+export const deserializeAws_json1_1CreateServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1CreateServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1CreateServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateServiceActionOutput(data, context);
   const response: CreateServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateServiceActionCommandError = async (
+const deserializeAws_json1_1CreateServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3192,72 +2726,62 @@ const deserializeAws_json1_1CreateServiceActionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1CreateTagOptionCommand = async (
+export const deserializeAws_json1_1CreateTagOptionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<CreateTagOptionCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1CreateTagOptionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1CreateTagOptionOutput(data, context);
   const response: CreateTagOptionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "CreateTagOptionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1CreateTagOptionCommandError = async (
+const deserializeAws_json1_1CreateTagOptionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<CreateTagOptionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3274,61 +2798,54 @@ const deserializeAws_json1_1CreateTagOptionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteConstraintCommand = async (
+export const deserializeAws_json1_1DeleteConstraintCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteConstraintCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteConstraintCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteConstraintOutput(data, context);
   const response: DeleteConstraintCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteConstraintOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteConstraintCommandError = async (
+const deserializeAws_json1_1DeleteConstraintCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteConstraintCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3345,83 +2862,70 @@ const deserializeAws_json1_1DeleteConstraintCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeletePortfolioCommand = async (
+export const deserializeAws_json1_1DeletePortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeletePortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeletePortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeletePortfolioOutput(data, context);
   const response: DeletePortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeletePortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeletePortfolioCommandError = async (
+const deserializeAws_json1_1DeletePortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3438,86 +2942,70 @@ const deserializeAws_json1_1DeletePortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeletePortfolioShareCommand = async (
+export const deserializeAws_json1_1DeletePortfolioShareCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeletePortfolioShareCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DeletePortfolioShareCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DeletePortfolioShareCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeletePortfolioShareOutput(data, context);
   const response: DeletePortfolioShareCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeletePortfolioShareOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeletePortfolioShareCommandError = async (
+const deserializeAws_json1_1DeletePortfolioShareCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeletePortfolioShareCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3534,83 +3022,70 @@ const deserializeAws_json1_1DeletePortfolioShareCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteProductCommand = async (
+export const deserializeAws_json1_1DeleteProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteProductOutput(data, context);
   const response: DeleteProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteProductCommandError = async (
+const deserializeAws_json1_1DeleteProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3627,67 +3102,54 @@ const deserializeAws_json1_1DeleteProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteProvisionedProductPlanCommand = async (
+export const deserializeAws_json1_1DeleteProvisionedProductPlanCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DeleteProvisionedProductPlanCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DeleteProvisionedProductPlanCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DeleteProvisionedProductPlanOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DeleteProvisionedProductPlanOutput(data, context);
   const response: DeleteProvisionedProductPlanCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteProvisionedProductPlanOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteProvisionedProductPlanCommandError = async (
+const deserializeAws_json1_1DeleteProvisionedProductPlanCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisionedProductPlanCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3704,78 +3166,62 @@ const deserializeAws_json1_1DeleteProvisionedProductPlanCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1DeleteProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DeleteProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DeleteProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DeleteProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DeleteProvisioningArtifactOutput(data, context);
   const response: DeleteProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1DeleteProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3792,64 +3238,54 @@ const deserializeAws_json1_1DeleteProvisioningArtifactCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteServiceActionCommand = async (
+export const deserializeAws_json1_1DeleteServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DeleteServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DeleteServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteServiceActionOutput(data, context);
   const response: DeleteServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteServiceActionCommandError = async (
+const deserializeAws_json1_1DeleteServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3866,72 +3302,62 @@ const deserializeAws_json1_1DeleteServiceActionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DeleteTagOptionCommand = async (
+export const deserializeAws_json1_1DeleteTagOptionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteTagOptionCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DeleteTagOptionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DeleteTagOptionOutput(data, context);
   const response: DeleteTagOptionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DeleteTagOptionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DeleteTagOptionCommandError = async (
+const deserializeAws_json1_1DeleteTagOptionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DeleteTagOptionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -3948,53 +3374,46 @@ const deserializeAws_json1_1DeleteTagOptionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeConstraintCommand = async (
+export const deserializeAws_json1_1DescribeConstraintCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeConstraintCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeConstraintCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeConstraintCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeConstraintOutput(data, context);
   const response: DescribeConstraintCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeConstraintOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeConstraintCommandError = async (
+const deserializeAws_json1_1DescribeConstraintCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeConstraintCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4011,56 +3430,46 @@ const deserializeAws_json1_1DescribeConstraintCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeCopyProductStatusCommand = async (
+export const deserializeAws_json1_1DescribeCopyProductStatusCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeCopyProductStatusCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeCopyProductStatusCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeCopyProductStatusCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeCopyProductStatusOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeCopyProductStatusOutput(data, context);
   const response: DescribeCopyProductStatusCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeCopyProductStatusOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeCopyProductStatusCommandError = async (
+const deserializeAws_json1_1DescribeCopyProductStatusCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeCopyProductStatusCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4077,50 +3486,46 @@ const deserializeAws_json1_1DescribeCopyProductStatusCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribePortfolioCommand = async (
+export const deserializeAws_json1_1DescribePortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribePortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DescribePortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribePortfolioOutput(data, context);
   const response: DescribePortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribePortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribePortfolioCommandError = async (
+const deserializeAws_json1_1DescribePortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4137,78 +3542,62 @@ const deserializeAws_json1_1DescribePortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribePortfolioShareStatusCommand = async (
+export const deserializeAws_json1_1DescribePortfolioShareStatusCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribePortfolioShareStatusCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribePortfolioShareStatusCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribePortfolioShareStatusCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribePortfolioShareStatusOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribePortfolioShareStatusOutput(data, context);
   const response: DescribePortfolioShareStatusCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribePortfolioShareStatusOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribePortfolioShareStatusCommandError = async (
+const deserializeAws_json1_1DescribePortfolioShareStatusCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribePortfolioShareStatusCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4225,61 +3614,54 @@ const deserializeAws_json1_1DescribePortfolioShareStatusCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProductCommand = async (
+export const deserializeAws_json1_1DescribeProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DescribeProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeProductOutput(data, context);
   const response: DescribeProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProductCommandError = async (
+const deserializeAws_json1_1DescribeProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4296,53 +3678,46 @@ const deserializeAws_json1_1DescribeProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProductAsAdminCommand = async (
+export const deserializeAws_json1_1DescribeProductAsAdminCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProductAsAdminCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProductAsAdminCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProductAsAdminCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeProductAsAdminOutput(data, context);
   const response: DescribeProductAsAdminCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProductAsAdminOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProductAsAdminCommandError = async (
+const deserializeAws_json1_1DescribeProductAsAdminCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductAsAdminCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4359,64 +3734,54 @@ const deserializeAws_json1_1DescribeProductAsAdminCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProductViewCommand = async (
+export const deserializeAws_json1_1DescribeProductViewCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProductViewCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProductViewCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProductViewCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeProductViewOutput(data, context);
   const response: DescribeProductViewCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProductViewOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProductViewCommandError = async (
+const deserializeAws_json1_1DescribeProductViewCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProductViewCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4433,56 +3798,46 @@ const deserializeAws_json1_1DescribeProductViewCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProvisionedProductCommand = async (
+export const deserializeAws_json1_1DescribeProvisionedProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProvisionedProductCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProvisionedProductCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProvisionedProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeProvisionedProductOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeProvisionedProductOutput(data, context);
   const response: DescribeProvisionedProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProvisionedProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProvisionedProductCommandError = async (
+const deserializeAws_json1_1DescribeProvisionedProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisionedProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4499,67 +3854,54 @@ const deserializeAws_json1_1DescribeProvisionedProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProvisionedProductPlanCommand = async (
+export const deserializeAws_json1_1DescribeProvisionedProductPlanCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProvisionedProductPlanCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProvisionedProductPlanCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeProvisionedProductPlanOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeProvisionedProductPlanOutput(data, context);
   const response: DescribeProvisionedProductPlanCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProvisionedProductPlanOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProvisionedProductPlanCommandError = async (
+const deserializeAws_json1_1DescribeProvisionedProductPlanCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisionedProductPlanCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4576,56 +3918,46 @@ const deserializeAws_json1_1DescribeProvisionedProductPlanCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1DescribeProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeProvisioningArtifactOutput(data, context);
   const response: DescribeProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1DescribeProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4642,67 +3974,54 @@ const deserializeAws_json1_1DescribeProvisioningArtifactCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeProvisioningParametersCommand = async (
+export const deserializeAws_json1_1DescribeProvisioningParametersCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeProvisioningParametersCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeProvisioningParametersCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeProvisioningParametersCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeProvisioningParametersOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeProvisioningParametersOutput(data, context);
   const response: DescribeProvisioningParametersCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeProvisioningParametersOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeProvisioningParametersCommandError = async (
+const deserializeAws_json1_1DescribeProvisioningParametersCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeProvisioningParametersCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4719,50 +4038,46 @@ const deserializeAws_json1_1DescribeProvisioningParametersCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeRecordCommand = async (
+export const deserializeAws_json1_1DescribeRecordCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeRecordCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DescribeRecordCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeRecordOutput(data, context);
   const response: DescribeRecordCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeRecordOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeRecordCommandError = async (
+const deserializeAws_json1_1DescribeRecordCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeRecordCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4779,53 +4094,46 @@ const deserializeAws_json1_1DescribeRecordCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeServiceActionCommand = async (
+export const deserializeAws_json1_1DescribeServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeServiceActionOutput(data, context);
   const response: DescribeServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeServiceActionCommandError = async (
+const deserializeAws_json1_1DescribeServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4842,67 +4150,54 @@ const deserializeAws_json1_1DescribeServiceActionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeServiceActionExecutionParametersCommand = async (
+export const deserializeAws_json1_1DescribeServiceActionExecutionParametersCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeServiceActionExecutionParametersCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DescribeServiceActionExecutionParametersCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DescribeServiceActionExecutionParametersCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DescribeServiceActionExecutionParametersOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DescribeServiceActionExecutionParametersOutput(data, context);
   const response: DescribeServiceActionExecutionParametersCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeServiceActionExecutionParametersOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeServiceActionExecutionParametersCommandError = async (
+const deserializeAws_json1_1DescribeServiceActionExecutionParametersCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeServiceActionExecutionParametersCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4919,61 +4214,54 @@ const deserializeAws_json1_1DescribeServiceActionExecutionParametersCommandError
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DescribeTagOptionCommand = async (
+export const deserializeAws_json1_1DescribeTagOptionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DescribeTagOptionCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1DescribeTagOptionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1DescribeTagOptionOutput(data, context);
   const response: DescribeTagOptionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DescribeTagOptionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DescribeTagOptionCommandError = async (
+const deserializeAws_json1_1DescribeTagOptionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DescribeTagOptionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -4990,78 +4278,62 @@ const deserializeAws_json1_1DescribeTagOptionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisableAWSOrganizationsAccessCommand = async (
+export const deserializeAws_json1_1DisableAWSOrganizationsAccessCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisableAWSOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisableAWSOrganizationsAccessCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisableAWSOrganizationsAccessCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisableAWSOrganizationsAccessOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisableAWSOrganizationsAccessOutput(data, context);
   const response: DisableAWSOrganizationsAccessCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisableAWSOrganizationsAccessOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisableAWSOrganizationsAccessCommandError = async (
+const deserializeAws_json1_1DisableAWSOrganizationsAccessCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisableAWSOrganizationsAccessCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5078,56 +4350,46 @@ const deserializeAws_json1_1DisableAWSOrganizationsAccessCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisassociateBudgetFromResourceCommand = async (
+export const deserializeAws_json1_1DisassociateBudgetFromResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisassociateBudgetFromResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisassociateBudgetFromResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisassociateBudgetFromResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisassociateBudgetFromResourceOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisassociateBudgetFromResourceOutput(data, context);
   const response: DisassociateBudgetFromResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisassociateBudgetFromResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisassociateBudgetFromResourceCommandError = async (
+const deserializeAws_json1_1DisassociateBudgetFromResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateBudgetFromResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5144,67 +4406,54 @@ const deserializeAws_json1_1DisassociateBudgetFromResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommand = async (
+export const deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisassociatePrincipalFromPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisassociatePrincipalFromPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisassociatePrincipalFromPortfolioOutput(data, context);
   const response: DisassociatePrincipalFromPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisassociatePrincipalFromPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommandError = async (
+const deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociatePrincipalFromPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5221,78 +4470,62 @@ const deserializeAws_json1_1DisassociatePrincipalFromPortfolioCommandError = asy
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisassociateProductFromPortfolioCommand = async (
+export const deserializeAws_json1_1DisassociateProductFromPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisassociateProductFromPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisassociateProductFromPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisassociateProductFromPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisassociateProductFromPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisassociateProductFromPortfolioOutput(data, context);
   const response: DisassociateProductFromPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisassociateProductFromPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisassociateProductFromPortfolioCommandError = async (
+const deserializeAws_json1_1DisassociateProductFromPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateProductFromPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceInUseException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceInUseException":
       response = {
-        ...(await deserializeAws_json1_1ResourceInUseExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceInUseExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5309,56 +4542,46 @@ const deserializeAws_json1_1DisassociateProductFromPortfolioCommandError = async
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactOutput(data, context);
   const response: DisassociateServiceActionFromProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisassociateServiceActionFromProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateServiceActionFromProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5375,67 +4598,54 @@ const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactCom
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1DisassociateTagOptionFromResourceCommand = async (
+export const deserializeAws_json1_1DisassociateTagOptionFromResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DisassociateTagOptionFromResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1DisassociateTagOptionFromResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1DisassociateTagOptionFromResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1DisassociateTagOptionFromResourceOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1DisassociateTagOptionFromResourceOutput(data, context);
   const response: DisassociateTagOptionFromResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "DisassociateTagOptionFromResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1DisassociateTagOptionFromResourceCommandError = async (
+const deserializeAws_json1_1DisassociateTagOptionFromResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<DisassociateTagOptionFromResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5452,78 +4662,62 @@ const deserializeAws_json1_1DisassociateTagOptionFromResourceCommandError = asyn
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1EnableAWSOrganizationsAccessCommand = async (
+export const deserializeAws_json1_1EnableAWSOrganizationsAccessCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<EnableAWSOrganizationsAccessCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1EnableAWSOrganizationsAccessCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1EnableAWSOrganizationsAccessCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1EnableAWSOrganizationsAccessOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1EnableAWSOrganizationsAccessOutput(data, context);
   const response: EnableAWSOrganizationsAccessCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "EnableAWSOrganizationsAccessOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1EnableAWSOrganizationsAccessCommandError = async (
+const deserializeAws_json1_1EnableAWSOrganizationsAccessCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<EnableAWSOrganizationsAccessCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5540,78 +4734,62 @@ const deserializeAws_json1_1EnableAWSOrganizationsAccessCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ExecuteProvisionedProductPlanCommand = async (
+export const deserializeAws_json1_1ExecuteProvisionedProductPlanCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ExecuteProvisionedProductPlanCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ExecuteProvisionedProductPlanCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ExecuteProvisionedProductPlanCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ExecuteProvisionedProductPlanOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ExecuteProvisionedProductPlanOutput(data, context);
   const response: ExecuteProvisionedProductPlanCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ExecuteProvisionedProductPlanOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ExecuteProvisionedProductPlanCommandError = async (
+const deserializeAws_json1_1ExecuteProvisionedProductPlanCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteProvisionedProductPlanCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5628,78 +4806,62 @@ const deserializeAws_json1_1ExecuteProvisionedProductPlanCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommand = async (
+export const deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ExecuteProvisionedProductServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ExecuteProvisionedProductServiceActionOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ExecuteProvisionedProductServiceActionOutput(data, context);
   const response: ExecuteProvisionedProductServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ExecuteProvisionedProductServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommandError = async (
+const deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ExecuteProvisionedProductServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5716,67 +4878,54 @@ const deserializeAws_json1_1ExecuteProvisionedProductServiceActionCommandError =
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommand = async (
+export const deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<GetAWSOrganizationsAccessStatusCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1GetAWSOrganizationsAccessStatusOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1GetAWSOrganizationsAccessStatusOutput(data, context);
   const response: GetAWSOrganizationsAccessStatusCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "GetAWSOrganizationsAccessStatusOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommandError = async (
+const deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<GetAWSOrganizationsAccessStatusCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5793,67 +4942,54 @@ const deserializeAws_json1_1GetAWSOrganizationsAccessStatusCommandError = async 
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListAcceptedPortfolioSharesCommand = async (
+export const deserializeAws_json1_1ListAcceptedPortfolioSharesCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListAcceptedPortfolioSharesCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListAcceptedPortfolioSharesCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListAcceptedPortfolioSharesCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListAcceptedPortfolioSharesOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListAcceptedPortfolioSharesOutput(data, context);
   const response: ListAcceptedPortfolioSharesCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListAcceptedPortfolioSharesOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListAcceptedPortfolioSharesCommandError = async (
+const deserializeAws_json1_1ListAcceptedPortfolioSharesCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListAcceptedPortfolioSharesCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5870,64 +5006,54 @@ const deserializeAws_json1_1ListAcceptedPortfolioSharesCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListBudgetsForResourceCommand = async (
+export const deserializeAws_json1_1ListBudgetsForResourceCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListBudgetsForResourceCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListBudgetsForResourceCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListBudgetsForResourceCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListBudgetsForResourceOutput(data, context);
   const response: ListBudgetsForResourceCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListBudgetsForResourceOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListBudgetsForResourceCommandError = async (
+const deserializeAws_json1_1ListBudgetsForResourceCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListBudgetsForResourceCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -5944,67 +5070,54 @@ const deserializeAws_json1_1ListBudgetsForResourceCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListConstraintsForPortfolioCommand = async (
+export const deserializeAws_json1_1ListConstraintsForPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListConstraintsForPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListConstraintsForPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListConstraintsForPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListConstraintsForPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListConstraintsForPortfolioOutput(data, context);
   const response: ListConstraintsForPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListConstraintsForPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListConstraintsForPortfolioCommandError = async (
+const deserializeAws_json1_1ListConstraintsForPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListConstraintsForPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6021,61 +5134,54 @@ const deserializeAws_json1_1ListConstraintsForPortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListLaunchPathsCommand = async (
+export const deserializeAws_json1_1ListLaunchPathsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListLaunchPathsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListLaunchPathsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListLaunchPathsOutput(data, context);
   const response: ListLaunchPathsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListLaunchPathsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListLaunchPathsCommandError = async (
+const deserializeAws_json1_1ListLaunchPathsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListLaunchPathsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6092,78 +5198,62 @@ const deserializeAws_json1_1ListLaunchPathsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListOrganizationPortfolioAccessCommand = async (
+export const deserializeAws_json1_1ListOrganizationPortfolioAccessCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListOrganizationPortfolioAccessCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListOrganizationPortfolioAccessCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListOrganizationPortfolioAccessCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListOrganizationPortfolioAccessOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListOrganizationPortfolioAccessOutput(data, context);
   const response: ListOrganizationPortfolioAccessCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListOrganizationPortfolioAccessOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListOrganizationPortfolioAccessCommandError = async (
+const deserializeAws_json1_1ListOrganizationPortfolioAccessCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListOrganizationPortfolioAccessCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "OperationNotSupportedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#OperationNotSupportedException":
       response = {
-        ...(await deserializeAws_json1_1OperationNotSupportedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1OperationNotSupportedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6180,53 +5270,46 @@ const deserializeAws_json1_1ListOrganizationPortfolioAccessCommandError = async 
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListPortfolioAccessCommand = async (
+export const deserializeAws_json1_1ListPortfolioAccessCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListPortfolioAccessCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListPortfolioAccessCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListPortfolioAccessCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListPortfolioAccessOutput(data, context);
   const response: ListPortfolioAccessCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListPortfolioAccessOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListPortfolioAccessCommandError = async (
+const deserializeAws_json1_1ListPortfolioAccessCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfolioAccessCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6243,50 +5326,46 @@ const deserializeAws_json1_1ListPortfolioAccessCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListPortfoliosCommand = async (
+export const deserializeAws_json1_1ListPortfoliosCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListPortfoliosCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListPortfoliosCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListPortfoliosOutput(data, context);
   const response: ListPortfoliosCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListPortfoliosOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListPortfoliosCommandError = async (
+const deserializeAws_json1_1ListPortfoliosCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfoliosCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6303,67 +5382,54 @@ const deserializeAws_json1_1ListPortfoliosCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListPortfoliosForProductCommand = async (
+export const deserializeAws_json1_1ListPortfoliosForProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListPortfoliosForProductCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListPortfoliosForProductCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListPortfoliosForProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListPortfoliosForProductOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListPortfoliosForProductOutput(data, context);
   const response: ListPortfoliosForProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListPortfoliosForProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListPortfoliosForProductCommandError = async (
+const deserializeAws_json1_1ListPortfoliosForProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPortfoliosForProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6380,67 +5446,54 @@ const deserializeAws_json1_1ListPortfoliosForProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListPrincipalsForPortfolioCommand = async (
+export const deserializeAws_json1_1ListPrincipalsForPortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListPrincipalsForPortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListPrincipalsForPortfolioCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListPrincipalsForPortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListPrincipalsForPortfolioOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListPrincipalsForPortfolioOutput(data, context);
   const response: ListPrincipalsForPortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListPrincipalsForPortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListPrincipalsForPortfolioCommandError = async (
+const deserializeAws_json1_1ListPrincipalsForPortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListPrincipalsForPortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6457,67 +5510,54 @@ const deserializeAws_json1_1ListPrincipalsForPortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListProvisionedProductPlansCommand = async (
+export const deserializeAws_json1_1ListProvisionedProductPlansCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListProvisionedProductPlansCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListProvisionedProductPlansCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListProvisionedProductPlansCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListProvisionedProductPlansOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListProvisionedProductPlansOutput(data, context);
   const response: ListProvisionedProductPlansCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListProvisionedProductPlansOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListProvisionedProductPlansCommandError = async (
+const deserializeAws_json1_1ListProvisionedProductPlansCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisionedProductPlansCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6534,67 +5574,54 @@ const deserializeAws_json1_1ListProvisionedProductPlansCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListProvisioningArtifactsCommand = async (
+export const deserializeAws_json1_1ListProvisioningArtifactsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListProvisioningArtifactsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListProvisioningArtifactsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListProvisioningArtifactsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListProvisioningArtifactsOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListProvisioningArtifactsOutput(data, context);
   const response: ListProvisioningArtifactsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListProvisioningArtifactsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListProvisioningArtifactsCommandError = async (
+const deserializeAws_json1_1ListProvisioningArtifactsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisioningArtifactsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6611,67 +5638,54 @@ const deserializeAws_json1_1ListProvisioningArtifactsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommand = async (
+export const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListProvisioningArtifactsForServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListProvisioningArtifactsForServiceActionOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListProvisioningArtifactsForServiceActionOutput(data, context);
   const response: ListProvisioningArtifactsForServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListProvisioningArtifactsForServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommandError = async (
+const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListProvisioningArtifactsForServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6688,50 +5702,46 @@ const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionCommandErro
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListRecordHistoryCommand = async (
+export const deserializeAws_json1_1ListRecordHistoryCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListRecordHistoryCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListRecordHistoryCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListRecordHistoryOutput(data, context);
   const response: ListRecordHistoryCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListRecordHistoryOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListRecordHistoryCommandError = async (
+const deserializeAws_json1_1ListRecordHistoryCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListRecordHistoryCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6748,78 +5758,62 @@ const deserializeAws_json1_1ListRecordHistoryCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListResourcesForTagOptionCommand = async (
+export const deserializeAws_json1_1ListResourcesForTagOptionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListResourcesForTagOptionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListResourcesForTagOptionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListResourcesForTagOptionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListResourcesForTagOptionOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListResourcesForTagOptionOutput(data, context);
   const response: ListResourcesForTagOptionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListResourcesForTagOptionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListResourcesForTagOptionCommandError = async (
+const deserializeAws_json1_1ListResourcesForTagOptionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListResourcesForTagOptionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6836,53 +5830,46 @@ const deserializeAws_json1_1ListResourcesForTagOptionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListServiceActionsCommand = async (
+export const deserializeAws_json1_1ListServiceActionsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListServiceActionsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListServiceActionsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListServiceActionsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListServiceActionsOutput(data, context);
   const response: ListServiceActionsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListServiceActionsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListServiceActionsCommandError = async (
+const deserializeAws_json1_1ListServiceActionsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceActionsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6899,67 +5886,54 @@ const deserializeAws_json1_1ListServiceActionsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListServiceActionsForProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListServiceActionsForProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListServiceActionsForProvisioningArtifactOutput(data, context);
   const response: ListServiceActionsForProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListServiceActionsForProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListServiceActionsForProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -6976,67 +5950,54 @@ const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactCommandErro
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListStackInstancesForProvisionedProductCommand = async (
+export const deserializeAws_json1_1ListStackInstancesForProvisionedProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListStackInstancesForProvisionedProductCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ListStackInstancesForProvisionedProductCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ListStackInstancesForProvisionedProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1ListStackInstancesForProvisionedProductOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1ListStackInstancesForProvisionedProductOutput(data, context);
   const response: ListStackInstancesForProvisionedProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListStackInstancesForProvisionedProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListStackInstancesForProvisionedProductCommandError = async (
+const deserializeAws_json1_1ListStackInstancesForProvisionedProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListStackInstancesForProvisionedProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7053,61 +6014,54 @@ const deserializeAws_json1_1ListStackInstancesForProvisionedProductCommandError 
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ListTagOptionsCommand = async (
+export const deserializeAws_json1_1ListTagOptionsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ListTagOptionsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ListTagOptionsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ListTagOptionsOutput(data, context);
   const response: ListTagOptionsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ListTagOptionsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ListTagOptionsCommandError = async (
+const deserializeAws_json1_1ListTagOptionsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ListTagOptionsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7124,72 +6078,62 @@ const deserializeAws_json1_1ListTagOptionsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ProvisionProductCommand = async (
+export const deserializeAws_json1_1ProvisionProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ProvisionProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1ProvisionProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ProvisionProductOutput(data, context);
   const response: ProvisionProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ProvisionProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ProvisionProductCommandError = async (
+const deserializeAws_json1_1ProvisionProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ProvisionProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7206,53 +6150,46 @@ const deserializeAws_json1_1ProvisionProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1RejectPortfolioShareCommand = async (
+export const deserializeAws_json1_1RejectPortfolioShareCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<RejectPortfolioShareCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1RejectPortfolioShareCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1RejectPortfolioShareCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1RejectPortfolioShareOutput(data, context);
   const response: RejectPortfolioShareCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "RejectPortfolioShareOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1RejectPortfolioShareCommandError = async (
+const deserializeAws_json1_1RejectPortfolioShareCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<RejectPortfolioShareCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7269,53 +6206,46 @@ const deserializeAws_json1_1RejectPortfolioShareCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1ScanProvisionedProductsCommand = async (
+export const deserializeAws_json1_1ScanProvisionedProductsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<ScanProvisionedProductsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1ScanProvisionedProductsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1ScanProvisionedProductsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1ScanProvisionedProductsOutput(data, context);
   const response: ScanProvisionedProductsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "ScanProvisionedProductsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1ScanProvisionedProductsCommandError = async (
+const deserializeAws_json1_1ScanProvisionedProductsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<ScanProvisionedProductsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7332,50 +6262,46 @@ const deserializeAws_json1_1ScanProvisionedProductsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1SearchProductsCommand = async (
+export const deserializeAws_json1_1SearchProductsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<SearchProductsCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1SearchProductsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1SearchProductsOutput(data, context);
   const response: SearchProductsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "SearchProductsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1SearchProductsCommandError = async (
+const deserializeAws_json1_1SearchProductsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProductsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7392,64 +6318,54 @@ const deserializeAws_json1_1SearchProductsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1SearchProductsAsAdminCommand = async (
+export const deserializeAws_json1_1SearchProductsAsAdminCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<SearchProductsAsAdminCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1SearchProductsAsAdminCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1SearchProductsAsAdminCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1SearchProductsAsAdminOutput(data, context);
   const response: SearchProductsAsAdminCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "SearchProductsAsAdminOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1SearchProductsAsAdminCommandError = async (
+const deserializeAws_json1_1SearchProductsAsAdminCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProductsAsAdminCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7466,56 +6382,46 @@ const deserializeAws_json1_1SearchProductsAsAdminCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1SearchProvisionedProductsCommand = async (
+export const deserializeAws_json1_1SearchProvisionedProductsCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<SearchProvisionedProductsCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1SearchProvisionedProductsCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1SearchProvisionedProductsCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1SearchProvisionedProductsOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1SearchProvisionedProductsOutput(data, context);
   const response: SearchProvisionedProductsCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "SearchProvisionedProductsOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1SearchProvisionedProductsCommandError = async (
+const deserializeAws_json1_1SearchProvisionedProductsCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<SearchProvisionedProductsCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7532,56 +6438,46 @@ const deserializeAws_json1_1SearchProvisionedProductsCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1TerminateProvisionedProductCommand = async (
+export const deserializeAws_json1_1TerminateProvisionedProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<TerminateProvisionedProductCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1TerminateProvisionedProductCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1TerminateProvisionedProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1TerminateProvisionedProductOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1TerminateProvisionedProductOutput(data, context);
   const response: TerminateProvisionedProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "TerminateProvisionedProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1TerminateProvisionedProductCommandError = async (
+const deserializeAws_json1_1TerminateProvisionedProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<TerminateProvisionedProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7598,61 +6494,54 @@ const deserializeAws_json1_1TerminateProvisionedProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateConstraintCommand = async (
+export const deserializeAws_json1_1UpdateConstraintCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateConstraintCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdateConstraintCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateConstraintOutput(data, context);
   const response: UpdateConstraintCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateConstraintOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateConstraintCommandError = async (
+const deserializeAws_json1_1UpdateConstraintCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateConstraintCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7669,83 +6558,70 @@ const deserializeAws_json1_1UpdateConstraintCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdatePortfolioCommand = async (
+export const deserializeAws_json1_1UpdatePortfolioCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdatePortfolioCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdatePortfolioCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdatePortfolioOutput(data, context);
   const response: UpdatePortfolioCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdatePortfolioOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdatePortfolioCommandError = async (
+const deserializeAws_json1_1UpdatePortfolioCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdatePortfolioCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "LimitExceededException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#LimitExceededException":
       response = {
-        ...(await deserializeAws_json1_1LimitExceededExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1LimitExceededExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7762,72 +6638,62 @@ const deserializeAws_json1_1UpdatePortfolioCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateProductCommand = async (
+export const deserializeAws_json1_1UpdateProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateProductCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdateProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateProductOutput(data, context);
   const response: UpdateProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateProductCommandError = async (
+const deserializeAws_json1_1UpdateProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7844,67 +6710,54 @@ const deserializeAws_json1_1UpdateProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateProvisionedProductCommand = async (
+export const deserializeAws_json1_1UpdateProvisionedProductCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateProvisionedProductCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1UpdateProvisionedProductCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1UpdateProvisionedProductCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1UpdateProvisionedProductOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1UpdateProvisionedProductOutput(data, context);
   const response: UpdateProvisionedProductCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateProvisionedProductOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateProvisionedProductCommandError = async (
+const deserializeAws_json1_1UpdateProvisionedProductCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisionedProductCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -7921,78 +6774,62 @@ const deserializeAws_json1_1UpdateProvisionedProductCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateProvisionedProductPropertiesCommand = async (
+export const deserializeAws_json1_1UpdateProvisionedProductPropertiesCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateProvisionedProductPropertiesCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1UpdateProvisionedProductPropertiesCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1UpdateProvisionedProductPropertiesCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1UpdateProvisionedProductPropertiesOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1UpdateProvisionedProductPropertiesOutput(data, context);
   const response: UpdateProvisionedProductPropertiesCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateProvisionedProductPropertiesOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateProvisionedProductPropertiesCommandError = async (
+const deserializeAws_json1_1UpdateProvisionedProductPropertiesCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisionedProductPropertiesCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidStateException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidStateException":
       response = {
-        ...(await deserializeAws_json1_1InvalidStateExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidStateExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -8009,67 +6846,54 @@ const deserializeAws_json1_1UpdateProvisionedProductPropertiesCommandError = asy
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateProvisioningArtifactCommand = async (
+export const deserializeAws_json1_1UpdateProvisioningArtifactCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateProvisioningArtifactCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1UpdateProvisioningArtifactCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1UpdateProvisioningArtifactCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
-  contents = deserializeAws_json1_1UpdateProvisioningArtifactOutput(
-    data,
-    context
-  );
+  contents = deserializeAws_json1_1UpdateProvisioningArtifactOutput(data, context);
   const response: UpdateProvisioningArtifactCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateProvisioningArtifactOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateProvisioningArtifactCommandError = async (
+const deserializeAws_json1_1UpdateProvisioningArtifactCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateProvisioningArtifactCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -8086,64 +6910,54 @@ const deserializeAws_json1_1UpdateProvisioningArtifactCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateServiceActionCommand = async (
+export const deserializeAws_json1_1UpdateServiceActionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateServiceActionCommandOutput> => {
   if (output.statusCode >= 400) {
-    return deserializeAws_json1_1UpdateServiceActionCommandError(
-      output,
-      context
-    );
+    return deserializeAws_json1_1UpdateServiceActionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateServiceActionOutput(data, context);
   const response: UpdateServiceActionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateServiceActionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateServiceActionCommandError = async (
+const deserializeAws_json1_1UpdateServiceActionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateServiceActionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -8160,83 +6974,70 @@ const deserializeAws_json1_1UpdateServiceActionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
-export const deserializeAws_json1_1UpdateTagOptionCommand = async (
+export const deserializeAws_json1_1UpdateTagOptionCommand = async(
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateTagOptionCommandOutput> => {
   if (output.statusCode >= 400) {
     return deserializeAws_json1_1UpdateTagOptionCommandError(output, context);
   }
-  const data: any = await parseBody(output.body, context);
+  const data: any = await parseBody(output.body, context)
   let contents: any = {};
   contents = deserializeAws_json1_1UpdateTagOptionOutput(data, context);
   const response: UpdateTagOptionCommandOutput = {
     $metadata: deserializeMetadata(output),
     __type: "UpdateTagOptionOutput",
-    ...contents
+    ...contents,
   };
   return Promise.resolve(response);
-};
+}
 
-const deserializeAws_json1_1UpdateTagOptionCommandError = async (
+const deserializeAws_json1_1UpdateTagOptionCommandError = async(
   output: __HttpResponse,
-  context: __SerdeContext
+  context: __SerdeContext,
 ): Promise<UpdateTagOptionCommandOutput> => {
   const parsedOutput: any = {
     ...output,
     body: await parseBody(output.body, context)
   };
-  let response: __SmithyException & __MetadataBearer & { [key: string]: any };
+  let response: __SmithyException & __MetadataBearer & {[key: string]: any};
   let errorCode: string = "UnknownError";
-  const errorTypeParts: String = parsedOutput.body["__type"].split("#");
-  errorCode =
-    errorTypeParts[1] === undefined ? errorTypeParts[0] : errorTypeParts[1];
+  const errorTypeParts: String = parsedOutput.body["__type"].split('#');
+  errorCode = (errorTypeParts[1] === undefined) ? errorTypeParts[0] : errorTypeParts[1];
   switch (errorCode) {
     case "DuplicateResourceException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#DuplicateResourceException":
       response = {
-        ...(await deserializeAws_json1_1DuplicateResourceExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1DuplicateResourceExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "InvalidParametersException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#InvalidParametersException":
       response = {
-        ...(await deserializeAws_json1_1InvalidParametersExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1InvalidParametersExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "ResourceNotFoundException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#ResourceNotFoundException":
       response = {
-        ...(await deserializeAws_json1_1ResourceNotFoundExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1ResourceNotFoundExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     case "TagOptionNotMigratedException":
     case "com.amazonaws.aws242.servicecatalog.v20151210#TagOptionNotMigratedException":
       response = {
-        ...(await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(
-          parsedOutput,
-          context
-        )),
+        ...await deserializeAws_json1_1TagOptionNotMigratedExceptionResponse(parsedOutput, context),
         name: errorCode,
-        $metadata: deserializeMetadata(output)
-      };
+        $metadata: deserializeMetadata(output),
+      }
       break;
     default:
       const parsedBody = parsedOutput.body;
@@ -8253,22 +7054,19 @@ const deserializeAws_json1_1UpdateTagOptionCommandError = async (
   response.message = message;
   delete response.Message;
   return Promise.reject(Object.assign(new Error(message), response));
-};
+}
 
 const deserializeAws_json1_1DuplicateResourceExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<DuplicateResourceException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1DuplicateResourceException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1DuplicateResourceException(body, context);
   const contents: DuplicateResourceException = {
     name: "DuplicateResourceException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8277,16 +7075,13 @@ const deserializeAws_json1_1InvalidParametersExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidParametersException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidParametersException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidParametersException(body, context);
   const contents: InvalidParametersException = {
     name: "InvalidParametersException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8295,16 +7090,13 @@ const deserializeAws_json1_1InvalidStateExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<InvalidStateException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1InvalidStateException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1InvalidStateException(body, context);
   const contents: InvalidStateException = {
     name: "InvalidStateException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8313,16 +7105,13 @@ const deserializeAws_json1_1LimitExceededExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<LimitExceededException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1LimitExceededException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1LimitExceededException(body, context);
   const contents: LimitExceededException = {
     name: "LimitExceededException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8331,16 +7120,13 @@ const deserializeAws_json1_1OperationNotSupportedExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<OperationNotSupportedException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1OperationNotSupportedException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1OperationNotSupportedException(body, context);
   const contents: OperationNotSupportedException = {
     name: "OperationNotSupportedException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8349,16 +7135,13 @@ const deserializeAws_json1_1ResourceInUseExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<ResourceInUseException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1ResourceInUseException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1ResourceInUseException(body, context);
   const contents: ResourceInUseException = {
     name: "ResourceInUseException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8367,16 +7150,13 @@ const deserializeAws_json1_1ResourceNotFoundExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<ResourceNotFoundException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1ResourceNotFoundException(body, context);
   const contents: ResourceNotFoundException = {
     name: "ResourceNotFoundException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8385,16 +7165,13 @@ const deserializeAws_json1_1TagOptionNotMigratedExceptionResponse = async (
   parsedOutput: any,
   context: __SerdeContext
 ): Promise<TagOptionNotMigratedException> => {
-  const body = parsedOutput.body;
-  const deserialized: any = deserializeAws_json1_1TagOptionNotMigratedException(
-    body,
-    context
-  );
+  const body = parsedOutput.body
+  const deserialized: any = deserializeAws_json1_1TagOptionNotMigratedException(body, context);
   const contents: TagOptionNotMigratedException = {
     name: "TagOptionNotMigratedException",
     $fault: "client",
     $metadata: deserializeMetadata(parsedOutput),
-    ...deserialized
+    ...deserialized,
   };
   return contents;
 };
@@ -8403,173 +7180,118 @@ const serializeAws_json1_1AssociateTagOptionWithResourceInput = (
   input: AssociateTagOptionWithResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ResourceId !== undefined) {
-    bodyParams["ResourceId"] = input.ResourceId;
-  }
-  if (input.TagOptionId !== undefined) {
-    bodyParams["TagOptionId"] = input.TagOptionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ResourceId !== undefined && { 'ResourceId': input.ResourceId }),
+    ...(input.TagOptionId !== undefined && { 'TagOptionId': input.TagOptionId }),
+  };
+}
 
 const serializeAws_json1_1CreateTagOptionInput = (
   input: CreateTagOptionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1DeleteTagOptionInput = (
   input: DeleteTagOptionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeTagOptionInput = (
   input: DescribeTagOptionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DisassociateTagOptionFromResourceInput = (
   input: DisassociateTagOptionFromResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ResourceId !== undefined) {
-    bodyParams["ResourceId"] = input.ResourceId;
-  }
-  if (input.TagOptionId !== undefined) {
-    bodyParams["TagOptionId"] = input.TagOptionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ResourceId !== undefined && { 'ResourceId': input.ResourceId }),
+    ...(input.TagOptionId !== undefined && { 'TagOptionId': input.TagOptionId }),
+  };
+}
 
 const serializeAws_json1_1ListResourcesForTagOptionInput = (
   input: ListResourcesForTagOptionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ResourceType !== undefined) {
-    bodyParams["ResourceType"] = input.ResourceType;
-  }
-  if (input.TagOptionId !== undefined) {
-    bodyParams["TagOptionId"] = input.TagOptionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ResourceType !== undefined && { 'ResourceType': input.ResourceType }),
+    ...(input.TagOptionId !== undefined && { 'TagOptionId': input.TagOptionId }),
+  };
+}
 
 const serializeAws_json1_1ListTagOptionsFilters = (
   input: ListTagOptionsFilters,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Active !== undefined) {
-    bodyParams["Active"] = input.Active;
-  }
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Active !== undefined && { 'Active': input.Active }),
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1ListTagOptionsInput = (
   input: ListTagOptionsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Filters !== undefined) {
-    bodyParams["Filters"] = serializeAws_json1_1ListTagOptionsFilters(
-      input.Filters,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Filters !== undefined && { 'Filters': serializeAws_json1_1ListTagOptionsFilters(input.Filters, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+  };
+}
 
 const serializeAws_json1_1UpdateTagOptionInput = (
   input: UpdateTagOptionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Active !== undefined) {
-    bodyParams["Active"] = input.Active;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Active !== undefined && { 'Active': input.Active }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1AcceptPortfolioShareInput = (
   input: AcceptPortfolioShareInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.PortfolioShareType !== undefined) {
-    bodyParams["PortfolioShareType"] = input.PortfolioShareType;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.PortfolioShareType !== undefined && { 'PortfolioShareType': input.PortfolioShareType }),
+  };
+}
 
 const serializeAws_json1_1AccessLevelFilter = (
   input: AccessLevelFilter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1AddTags = (
-  input: Tag[],
+  input: (Tag)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -8577,119 +7299,73 @@ const serializeAws_json1_1AddTags = (
     contents.push(serializeAws_json1_1Tag(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1AssociateBudgetWithResourceInput = (
   input: AssociateBudgetWithResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.BudgetName !== undefined) {
-    bodyParams["BudgetName"] = input.BudgetName;
-  }
-  if (input.ResourceId !== undefined) {
-    bodyParams["ResourceId"] = input.ResourceId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.BudgetName !== undefined && { 'BudgetName': input.BudgetName }),
+    ...(input.ResourceId !== undefined && { 'ResourceId': input.ResourceId }),
+  };
+}
 
 const serializeAws_json1_1AssociatePrincipalWithPortfolioInput = (
   input: AssociatePrincipalWithPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.PrincipalARN !== undefined) {
-    bodyParams["PrincipalARN"] = input.PrincipalARN;
-  }
-  if (input.PrincipalType !== undefined) {
-    bodyParams["PrincipalType"] = input.PrincipalType;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.PrincipalARN !== undefined && { 'PrincipalARN': input.PrincipalARN }),
+    ...(input.PrincipalType !== undefined && { 'PrincipalType': input.PrincipalType }),
+  };
+}
 
 const serializeAws_json1_1AssociateProductWithPortfolioInput = (
   input: AssociateProductWithPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.SourcePortfolioId !== undefined) {
-    bodyParams["SourcePortfolioId"] = input.SourcePortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.SourcePortfolioId !== undefined && { 'SourcePortfolioId': input.SourcePortfolioId }),
+  };
+}
 
 const serializeAws_json1_1AssociateServiceActionWithProvisioningArtifactInput = (
   input: AssociateServiceActionWithProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactInput = (
   input: BatchAssociateServiceActionWithProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ServiceActionAssociations !== undefined) {
-    bodyParams[
-      "ServiceActionAssociations"
-    ] = serializeAws_json1_1ServiceActionAssociations(
-      input.ServiceActionAssociations,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ServiceActionAssociations !== undefined && { 'ServiceActionAssociations': serializeAws_json1_1ServiceActionAssociations(input.ServiceActionAssociations, context) }),
+  };
+}
 
 const serializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactInput = (
   input: BatchDisassociateServiceActionFromProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ServiceActionAssociations !== undefined) {
-    bodyParams[
-      "ServiceActionAssociations"
-    ] = serializeAws_json1_1ServiceActionAssociations(
-      input.ServiceActionAssociations,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ServiceActionAssociations !== undefined && { 'ServiceActionAssociations': serializeAws_json1_1ServiceActionAssociations(input.ServiceActionAssociations, context) }),
+  };
+}
 
 const serializeAws_json1_1CopyOptions = (
   input: (CopyOption | string)[],
@@ -8700,778 +7376,475 @@ const serializeAws_json1_1CopyOptions = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1CopyProductInput = (
   input: CopyProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.CopyOptions !== undefined) {
-    bodyParams["CopyOptions"] = serializeAws_json1_1CopyOptions(
-      input.CopyOptions,
-      context
-    );
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.SourceProductArn !== undefined) {
-    bodyParams["SourceProductArn"] = input.SourceProductArn;
-  }
-  if (input.SourceProvisioningArtifactIdentifiers !== undefined) {
-    bodyParams[
-      "SourceProvisioningArtifactIdentifiers"
-    ] = serializeAws_json1_1SourceProvisioningArtifactProperties(
-      input.SourceProvisioningArtifactIdentifiers,
-      context
-    );
-  }
-  if (input.TargetProductId !== undefined) {
-    bodyParams["TargetProductId"] = input.TargetProductId;
-  }
-  if (input.TargetProductName !== undefined) {
-    bodyParams["TargetProductName"] = input.TargetProductName;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.CopyOptions !== undefined && { 'CopyOptions': serializeAws_json1_1CopyOptions(input.CopyOptions, context) }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.SourceProductArn !== undefined && { 'SourceProductArn': input.SourceProductArn }),
+    ...(input.SourceProvisioningArtifactIdentifiers !== undefined && { 'SourceProvisioningArtifactIdentifiers': serializeAws_json1_1SourceProvisioningArtifactProperties(input.SourceProvisioningArtifactIdentifiers, context) }),
+    ...(input.TargetProductId !== undefined && { 'TargetProductId': input.TargetProductId }),
+    ...(input.TargetProductName !== undefined && { 'TargetProductName': input.TargetProductName }),
+  };
+}
 
 const serializeAws_json1_1CreateConstraintInput = (
   input: CreateConstraintInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.Parameters !== undefined) {
-    bodyParams["Parameters"] = input.Parameters;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.Type !== undefined) {
-    bodyParams["Type"] = input.Type;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.Parameters !== undefined && { 'Parameters': input.Parameters }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.Type !== undefined && { 'Type': input.Type }),
+  };
+}
 
 const serializeAws_json1_1CreatePortfolioInput = (
   input: CreatePortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.DisplayName !== undefined) {
-    bodyParams["DisplayName"] = input.DisplayName;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.ProviderName !== undefined) {
-    bodyParams["ProviderName"] = input.ProviderName;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1AddTags(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.DisplayName !== undefined && { 'DisplayName': input.DisplayName }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.ProviderName !== undefined && { 'ProviderName': input.ProviderName }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1AddTags(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1CreatePortfolioShareInput = (
   input: CreatePortfolioShareInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccountId !== undefined) {
-    bodyParams["AccountId"] = input.AccountId;
-  }
-  if (input.OrganizationNode !== undefined) {
-    bodyParams["OrganizationNode"] = serializeAws_json1_1OrganizationNode(
-      input.OrganizationNode,
-      context
-    );
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccountId !== undefined && { 'AccountId': input.AccountId }),
+    ...(input.OrganizationNode !== undefined && { 'OrganizationNode': serializeAws_json1_1OrganizationNode(input.OrganizationNode, context) }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+  };
+}
 
 const serializeAws_json1_1CreateProductInput = (
   input: CreateProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Distributor !== undefined) {
-    bodyParams["Distributor"] = input.Distributor;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Owner !== undefined) {
-    bodyParams["Owner"] = input.Owner;
-  }
-  if (input.ProductType !== undefined) {
-    bodyParams["ProductType"] = input.ProductType;
-  }
-  if (input.ProvisioningArtifactParameters !== undefined) {
-    bodyParams[
-      "ProvisioningArtifactParameters"
-    ] = serializeAws_json1_1ProvisioningArtifactProperties(
-      input.ProvisioningArtifactParameters,
-      context
-    );
-  }
-  if (input.SupportDescription !== undefined) {
-    bodyParams["SupportDescription"] = input.SupportDescription;
-  }
-  if (input.SupportEmail !== undefined) {
-    bodyParams["SupportEmail"] = input.SupportEmail;
-  }
-  if (input.SupportUrl !== undefined) {
-    bodyParams["SupportUrl"] = input.SupportUrl;
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1AddTags(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Distributor !== undefined && { 'Distributor': input.Distributor }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.Owner !== undefined && { 'Owner': input.Owner }),
+    ...(input.ProductType !== undefined && { 'ProductType': input.ProductType }),
+    ...(input.ProvisioningArtifactParameters !== undefined && { 'ProvisioningArtifactParameters': serializeAws_json1_1ProvisioningArtifactProperties(input.ProvisioningArtifactParameters, context) }),
+    ...(input.SupportDescription !== undefined && { 'SupportDescription': input.SupportDescription }),
+    ...(input.SupportEmail !== undefined && { 'SupportEmail': input.SupportEmail }),
+    ...(input.SupportUrl !== undefined && { 'SupportUrl': input.SupportUrl }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1AddTags(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1CreateProvisionedProductPlanInput = (
   input: CreateProvisionedProductPlanInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.NotificationArns !== undefined) {
-    bodyParams["NotificationArns"] = serializeAws_json1_1NotificationArns(
-      input.NotificationArns,
-      context
-    );
-  }
-  if (input.PathId !== undefined) {
-    bodyParams["PathId"] = input.PathId;
-  }
-  if (input.PlanName !== undefined) {
-    bodyParams["PlanName"] = input.PlanName;
-  }
-  if (input.PlanType !== undefined) {
-    bodyParams["PlanType"] = input.PlanType;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisionedProductName !== undefined) {
-    bodyParams["ProvisionedProductName"] = input.ProvisionedProductName;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ProvisioningParameters !== undefined) {
-    bodyParams[
-      "ProvisioningParameters"
-    ] = serializeAws_json1_1UpdateProvisioningParameters(
-      input.ProvisioningParameters,
-      context
-    );
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1Tags(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.NotificationArns !== undefined && { 'NotificationArns': serializeAws_json1_1NotificationArns(input.NotificationArns, context) }),
+    ...(input.PathId !== undefined && { 'PathId': input.PathId }),
+    ...(input.PlanName !== undefined && { 'PlanName': input.PlanName }),
+    ...(input.PlanType !== undefined && { 'PlanType': input.PlanType }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisionedProductName !== undefined && { 'ProvisionedProductName': input.ProvisionedProductName }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ProvisioningParameters !== undefined && { 'ProvisioningParameters': serializeAws_json1_1UpdateProvisioningParameters(input.ProvisioningParameters, context) }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1Tags(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1CreateProvisioningArtifactInput = (
   input: CreateProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.Parameters !== undefined) {
-    bodyParams[
-      "Parameters"
-    ] = serializeAws_json1_1ProvisioningArtifactProperties(
-      input.Parameters,
-      context
-    );
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.Parameters !== undefined && { 'Parameters': serializeAws_json1_1ProvisioningArtifactProperties(input.Parameters, context) }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1CreateServiceActionInput = (
   input: CreateServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Definition !== undefined) {
-    bodyParams["Definition"] = serializeAws_json1_1ServiceActionDefinitionMap(
-      input.Definition,
-      context
-    );
-  }
-  if (input.DefinitionType !== undefined) {
-    bodyParams["DefinitionType"] = input.DefinitionType;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Definition !== undefined && { 'Definition': serializeAws_json1_1ServiceActionDefinitionMap(input.Definition, context) }),
+    ...(input.DefinitionType !== undefined && { 'DefinitionType': input.DefinitionType }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+  };
+}
 
 const serializeAws_json1_1DeleteConstraintInput = (
   input: DeleteConstraintInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DeletePortfolioInput = (
   input: DeletePortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DeletePortfolioShareInput = (
   input: DeletePortfolioShareInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccountId !== undefined) {
-    bodyParams["AccountId"] = input.AccountId;
-  }
-  if (input.OrganizationNode !== undefined) {
-    bodyParams["OrganizationNode"] = serializeAws_json1_1OrganizationNode(
-      input.OrganizationNode,
-      context
-    );
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccountId !== undefined && { 'AccountId': input.AccountId }),
+    ...(input.OrganizationNode !== undefined && { 'OrganizationNode': serializeAws_json1_1OrganizationNode(input.OrganizationNode, context) }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+  };
+}
 
 const serializeAws_json1_1DeleteProductInput = (
   input: DeleteProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DeleteProvisionedProductPlanInput = (
   input: DeleteProvisionedProductPlanInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IgnoreErrors !== undefined) {
-    bodyParams["IgnoreErrors"] = input.IgnoreErrors;
-  }
-  if (input.PlanId !== undefined) {
-    bodyParams["PlanId"] = input.PlanId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.IgnoreErrors !== undefined && { 'IgnoreErrors': input.IgnoreErrors }),
+    ...(input.PlanId !== undefined && { 'PlanId': input.PlanId }),
+  };
+}
 
 const serializeAws_json1_1DeleteProvisioningArtifactInput = (
   input: DeleteProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+  };
+}
 
 const serializeAws_json1_1DeleteServiceActionInput = (
   input: DeleteServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeConstraintInput = (
   input: DescribeConstraintInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeCopyProductStatusInput = (
   input: DescribeCopyProductStatusInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.CopyProductToken !== undefined) {
-    bodyParams["CopyProductToken"] = input.CopyProductToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.CopyProductToken !== undefined && { 'CopyProductToken': input.CopyProductToken }),
+  };
+}
 
 const serializeAws_json1_1DescribePortfolioInput = (
   input: DescribePortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribePortfolioShareStatusInput = (
   input: DescribePortfolioShareStatusInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.PortfolioShareToken !== undefined) {
-    bodyParams["PortfolioShareToken"] = input.PortfolioShareToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.PortfolioShareToken !== undefined && { 'PortfolioShareToken': input.PortfolioShareToken }),
+  };
+}
 
 const serializeAws_json1_1DescribeProductAsAdminInput = (
   input: DescribeProductAsAdminInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeProductInput = (
   input: DescribeProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeProductViewInput = (
   input: DescribeProductViewInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeProvisionedProductInput = (
   input: DescribeProvisionedProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DescribeProvisionedProductPlanInput = (
   input: DescribeProvisionedProductPlanInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PlanId !== undefined) {
-    bodyParams["PlanId"] = input.PlanId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PlanId !== undefined && { 'PlanId': input.PlanId }),
+  };
+}
 
 const serializeAws_json1_1DescribeProvisioningArtifactInput = (
   input: DescribeProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.Verbose !== undefined) {
-    bodyParams["Verbose"] = input.Verbose;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.Verbose !== undefined && { 'Verbose': input.Verbose }),
+  };
+}
 
 const serializeAws_json1_1DescribeProvisioningParametersInput = (
   input: DescribeProvisioningParametersInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PathId !== undefined) {
-    bodyParams["PathId"] = input.PathId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PathId !== undefined && { 'PathId': input.PathId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+  };
+}
 
 const serializeAws_json1_1DescribeRecordInput = (
   input: DescribeRecordInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+  };
+}
 
 const serializeAws_json1_1DescribeServiceActionExecutionParametersInput = (
   input: DescribeServiceActionExecutionParametersInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1DescribeServiceActionInput = (
   input: DescribeServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+  };
+}
 
 const serializeAws_json1_1DisableAWSOrganizationsAccessInput = (
   input: DisableAWSOrganizationsAccessInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  return bodyParams;
-};
+  return {
+  };
+}
 
 const serializeAws_json1_1DisassociateBudgetFromResourceInput = (
   input: DisassociateBudgetFromResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.BudgetName !== undefined) {
-    bodyParams["BudgetName"] = input.BudgetName;
-  }
-  if (input.ResourceId !== undefined) {
-    bodyParams["ResourceId"] = input.ResourceId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.BudgetName !== undefined && { 'BudgetName': input.BudgetName }),
+    ...(input.ResourceId !== undefined && { 'ResourceId': input.ResourceId }),
+  };
+}
 
 const serializeAws_json1_1DisassociatePrincipalFromPortfolioInput = (
   input: DisassociatePrincipalFromPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.PrincipalARN !== undefined) {
-    bodyParams["PrincipalARN"] = input.PrincipalARN;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.PrincipalARN !== undefined && { 'PrincipalARN': input.PrincipalARN }),
+  };
+}
 
 const serializeAws_json1_1DisassociateProductFromPortfolioInput = (
   input: DisassociateProductFromPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactInput = (
   input: DisassociateServiceActionFromProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1EnableAWSOrganizationsAccessInput = (
   input: EnableAWSOrganizationsAccessInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  return bodyParams;
-};
+  return {
+  };
+}
 
 const serializeAws_json1_1ExecuteProvisionedProductPlanInput = (
   input: ExecuteProvisionedProductPlanInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.PlanId !== undefined) {
-    bodyParams["PlanId"] = input.PlanId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.PlanId !== undefined && { 'PlanId': input.PlanId }),
+  };
+}
 
 const serializeAws_json1_1ExecuteProvisionedProductServiceActionInput = (
   input: ExecuteProvisionedProductServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ExecuteToken === undefined) {
-    input.ExecuteToken = generateIdempotencyToken();
-  }
-  if (input.ExecuteToken !== undefined) {
-    bodyParams["ExecuteToken"] = input.ExecuteToken;
-  }
-  if (input.Parameters !== undefined) {
-    bodyParams["Parameters"] = serializeAws_json1_1ExecutionParameterMap(
-      input.Parameters,
-      context
-    );
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    if (input.ExecuteToken === undefined) {
+      input.ExecuteToken = generateIdempotencyToken();
+    }
+    ...(input.ExecuteToken !== undefined && { 'ExecuteToken': input.ExecuteToken }),
+    ...(input.Parameters !== undefined && { 'Parameters': serializeAws_json1_1ExecutionParameterMap(input.Parameters, context) }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1ExecutionParameterMap = (
-  input: { [key: string]: string[] },
+  input: { [key: string]: (string)[] },
   context: __SerdeContext
 ): any => {
   const mapParams: any = {};
   Object.keys(input).forEach(key => {
-    mapParams[key] = serializeAws_json1_1ExecutionParameterValueList(
-      input[key],
-      context
-    );
+    mapParams[key] = serializeAws_json1_1ExecutionParameterValueList(input[key], context);
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1ExecutionParameterValueList = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -9479,360 +7852,219 @@ const serializeAws_json1_1ExecutionParameterValueList = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1GetAWSOrganizationsAccessStatusInput = (
   input: GetAWSOrganizationsAccessStatusInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  return bodyParams;
-};
+  return {
+  };
+}
 
 const serializeAws_json1_1ListAcceptedPortfolioSharesInput = (
   input: ListAcceptedPortfolioSharesInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PortfolioShareType !== undefined) {
-    bodyParams["PortfolioShareType"] = input.PortfolioShareType;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PortfolioShareType !== undefined && { 'PortfolioShareType': input.PortfolioShareType }),
+  };
+}
 
 const serializeAws_json1_1ListBudgetsForResourceInput = (
   input: ListBudgetsForResourceInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ResourceId !== undefined) {
-    bodyParams["ResourceId"] = input.ResourceId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ResourceId !== undefined && { 'ResourceId': input.ResourceId }),
+  };
+}
 
 const serializeAws_json1_1ListConstraintsForPortfolioInput = (
   input: ListConstraintsForPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1ListLaunchPathsInput = (
   input: ListLaunchPathsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1ListOrganizationPortfolioAccessInput = (
   input: ListOrganizationPortfolioAccessInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.OrganizationNodeType !== undefined) {
-    bodyParams["OrganizationNodeType"] = input.OrganizationNodeType;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.OrganizationNodeType !== undefined && { 'OrganizationNodeType': input.OrganizationNodeType }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+  };
+}
 
 const serializeAws_json1_1ListPortfolioAccessInput = (
   input: ListPortfolioAccessInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+  };
+}
 
 const serializeAws_json1_1ListPortfoliosForProductInput = (
   input: ListPortfoliosForProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1ListPortfoliosInput = (
   input: ListPortfoliosInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+  };
+}
 
 const serializeAws_json1_1ListPrincipalsForPortfolioInput = (
   input: ListPrincipalsForPortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+  };
+}
 
 const serializeAws_json1_1ListProvisionedProductPlansInput = (
   input: ListProvisionedProductPlansInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccessLevelFilter !== undefined) {
-    bodyParams["AccessLevelFilter"] = serializeAws_json1_1AccessLevelFilter(
-      input.AccessLevelFilter,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ProvisionProductId !== undefined) {
-    bodyParams["ProvisionProductId"] = input.ProvisionProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccessLevelFilter !== undefined && { 'AccessLevelFilter': serializeAws_json1_1AccessLevelFilter(input.AccessLevelFilter, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ProvisionProductId !== undefined && { 'ProvisionProductId': input.ProvisionProductId }),
+  };
+}
 
 const serializeAws_json1_1ListProvisioningArtifactsForServiceActionInput = (
   input: ListProvisioningArtifactsForServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1ListProvisioningArtifactsInput = (
   input: ListProvisioningArtifactsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+  };
+}
 
 const serializeAws_json1_1ListRecordHistoryInput = (
   input: ListRecordHistoryInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccessLevelFilter !== undefined) {
-    bodyParams["AccessLevelFilter"] = serializeAws_json1_1AccessLevelFilter(
-      input.AccessLevelFilter,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.SearchFilter !== undefined) {
-    bodyParams[
-      "SearchFilter"
-    ] = serializeAws_json1_1ListRecordHistorySearchFilter(
-      input.SearchFilter,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccessLevelFilter !== undefined && { 'AccessLevelFilter': serializeAws_json1_1AccessLevelFilter(input.AccessLevelFilter, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.SearchFilter !== undefined && { 'SearchFilter': serializeAws_json1_1ListRecordHistorySearchFilter(input.SearchFilter, context) }),
+  };
+}
 
 const serializeAws_json1_1ListRecordHistorySearchFilter = (
   input: ListRecordHistorySearchFilter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1ListServiceActionsForProvisioningArtifactInput = (
   input: ListServiceActionsForProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+  };
+}
 
 const serializeAws_json1_1ListServiceActionsInput = (
   input: ListServiceActionsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+  };
+}
 
 const serializeAws_json1_1ListStackInstancesForProvisionedProductInput = (
   input: ListStackInstancesForProvisionedProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+  };
+}
 
 const serializeAws_json1_1NotificationArns = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -9840,24 +8072,20 @@ const serializeAws_json1_1NotificationArns = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1OrganizationNode = (
   input: OrganizationNode,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Type !== undefined) {
-    bodyParams["Type"] = input.Type;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Type !== undefined && { 'Type': input.Type }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1ProductViewFilterValues = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -9865,89 +8093,50 @@ const serializeAws_json1_1ProductViewFilterValues = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1ProductViewFilters = (
-  input: { [key: string]: string[] },
+  input: { [key: string]: (string)[] },
   context: __SerdeContext
 ): any => {
   const mapParams: any = {};
   Object.keys(input).forEach(key => {
-    mapParams[key] = serializeAws_json1_1ProductViewFilterValues(
-      input[key],
-      context
-    );
+    mapParams[key] = serializeAws_json1_1ProductViewFilterValues(input[key], context);
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1ProvisionProductInput = (
   input: ProvisionProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.NotificationArns !== undefined) {
-    bodyParams["NotificationArns"] = serializeAws_json1_1NotificationArns(
-      input.NotificationArns,
-      context
-    );
-  }
-  if (input.PathId !== undefined) {
-    bodyParams["PathId"] = input.PathId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisionToken === undefined) {
-    input.ProvisionToken = generateIdempotencyToken();
-  }
-  if (input.ProvisionToken !== undefined) {
-    bodyParams["ProvisionToken"] = input.ProvisionToken;
-  }
-  if (input.ProvisionedProductName !== undefined) {
-    bodyParams["ProvisionedProductName"] = input.ProvisionedProductName;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ProvisioningParameters !== undefined) {
-    bodyParams[
-      "ProvisioningParameters"
-    ] = serializeAws_json1_1ProvisioningParameters(
-      input.ProvisioningParameters,
-      context
-    );
-  }
-  if (input.ProvisioningPreferences !== undefined) {
-    bodyParams[
-      "ProvisioningPreferences"
-    ] = serializeAws_json1_1ProvisioningPreferences(
-      input.ProvisioningPreferences,
-      context
-    );
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1Tags(input.Tags, context);
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.NotificationArns !== undefined && { 'NotificationArns': serializeAws_json1_1NotificationArns(input.NotificationArns, context) }),
+    ...(input.PathId !== undefined && { 'PathId': input.PathId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    if (input.ProvisionToken === undefined) {
+      input.ProvisionToken = generateIdempotencyToken();
+    }
+    ...(input.ProvisionToken !== undefined && { 'ProvisionToken': input.ProvisionToken }),
+    ...(input.ProvisionedProductName !== undefined && { 'ProvisionedProductName': input.ProvisionedProductName }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ProvisioningParameters !== undefined && { 'ProvisioningParameters': serializeAws_json1_1ProvisioningParameters(input.ProvisioningParameters, context) }),
+    ...(input.ProvisioningPreferences !== undefined && { 'ProvisioningPreferences': serializeAws_json1_1ProvisioningPreferences(input.ProvisioningPreferences, context) }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1Tags(input.Tags, context) }),
+  };
+}
 
 const serializeAws_json1_1ProvisionedProductFilters = (
-  input: { [key: string]: string[] },
+  input: { [key: string]: (string)[] },
   context: __SerdeContext
 ): any => {
   const mapParams: any = {};
   Object.keys(input).forEach(key => {
-    mapParams[key] = serializeAws_json1_1ProvisionedProductViewFilterValues(
-      input[key],
-      context
-    );
+    mapParams[key] = serializeAws_json1_1ProvisionedProductViewFilterValues(input[key], context);
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1ProvisionedProductProperties = (
   input: { [key: string]: string },
@@ -9958,10 +8147,10 @@ const serializeAws_json1_1ProvisionedProductProperties = (
     mapParams[key] = input[key];
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1ProvisionedProductViewFilterValues = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -9969,7 +8158,7 @@ const serializeAws_json1_1ProvisionedProductViewFilterValues = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1ProvisioningArtifactInfo = (
   input: { [key: string]: string },
@@ -9980,50 +8169,33 @@ const serializeAws_json1_1ProvisioningArtifactInfo = (
     mapParams[key] = input[key];
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1ProvisioningArtifactProperties = (
   input: ProvisioningArtifactProperties,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.DisableTemplateValidation !== undefined) {
-    bodyParams["DisableTemplateValidation"] = input.DisableTemplateValidation;
-  }
-  if (input.Info !== undefined) {
-    bodyParams["Info"] = serializeAws_json1_1ProvisioningArtifactInfo(
-      input.Info,
-      context
-    );
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Type !== undefined) {
-    bodyParams["Type"] = input.Type;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.DisableTemplateValidation !== undefined && { 'DisableTemplateValidation': input.DisableTemplateValidation }),
+    ...(input.Info !== undefined && { 'Info': serializeAws_json1_1ProvisioningArtifactInfo(input.Info, context) }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.Type !== undefined && { 'Type': input.Type }),
+  };
+}
 
 const serializeAws_json1_1ProvisioningParameter = (
   input: ProvisioningParameter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1ProvisioningParameters = (
-  input: ProvisioningParameter[],
+  input: (ProvisioningParameter)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10031,202 +8203,103 @@ const serializeAws_json1_1ProvisioningParameters = (
     contents.push(serializeAws_json1_1ProvisioningParameter(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1ProvisioningPreferences = (
   input: ProvisioningPreferences,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.StackSetAccounts !== undefined) {
-    bodyParams["StackSetAccounts"] = serializeAws_json1_1StackSetAccounts(
-      input.StackSetAccounts,
-      context
-    );
-  }
-  if (input.StackSetFailureToleranceCount !== undefined) {
-    bodyParams["StackSetFailureToleranceCount"] =
-      input.StackSetFailureToleranceCount;
-  }
-  if (input.StackSetFailureTolerancePercentage !== undefined) {
-    bodyParams["StackSetFailureTolerancePercentage"] =
-      input.StackSetFailureTolerancePercentage;
-  }
-  if (input.StackSetMaxConcurrencyCount !== undefined) {
-    bodyParams["StackSetMaxConcurrencyCount"] =
-      input.StackSetMaxConcurrencyCount;
-  }
-  if (input.StackSetMaxConcurrencyPercentage !== undefined) {
-    bodyParams["StackSetMaxConcurrencyPercentage"] =
-      input.StackSetMaxConcurrencyPercentage;
-  }
-  if (input.StackSetRegions !== undefined) {
-    bodyParams["StackSetRegions"] = serializeAws_json1_1StackSetRegions(
-      input.StackSetRegions,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.StackSetAccounts !== undefined && { 'StackSetAccounts': serializeAws_json1_1StackSetAccounts(input.StackSetAccounts, context) }),
+    ...(input.StackSetFailureToleranceCount !== undefined && { 'StackSetFailureToleranceCount': input.StackSetFailureToleranceCount }),
+    ...(input.StackSetFailureTolerancePercentage !== undefined && { 'StackSetFailureTolerancePercentage': input.StackSetFailureTolerancePercentage }),
+    ...(input.StackSetMaxConcurrencyCount !== undefined && { 'StackSetMaxConcurrencyCount': input.StackSetMaxConcurrencyCount }),
+    ...(input.StackSetMaxConcurrencyPercentage !== undefined && { 'StackSetMaxConcurrencyPercentage': input.StackSetMaxConcurrencyPercentage }),
+    ...(input.StackSetRegions !== undefined && { 'StackSetRegions': serializeAws_json1_1StackSetRegions(input.StackSetRegions, context) }),
+  };
+}
 
 const serializeAws_json1_1RejectPortfolioShareInput = (
   input: RejectPortfolioShareInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.PortfolioShareType !== undefined) {
-    bodyParams["PortfolioShareType"] = input.PortfolioShareType;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.PortfolioShareType !== undefined && { 'PortfolioShareType': input.PortfolioShareType }),
+  };
+}
 
 const serializeAws_json1_1ScanProvisionedProductsInput = (
   input: ScanProvisionedProductsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccessLevelFilter !== undefined) {
-    bodyParams["AccessLevelFilter"] = serializeAws_json1_1AccessLevelFilter(
-      input.AccessLevelFilter,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccessLevelFilter !== undefined && { 'AccessLevelFilter': serializeAws_json1_1AccessLevelFilter(input.AccessLevelFilter, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+  };
+}
 
 const serializeAws_json1_1SearchProductsAsAdminInput = (
   input: SearchProductsAsAdminInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Filters !== undefined) {
-    bodyParams["Filters"] = serializeAws_json1_1ProductViewFilters(
-      input.Filters,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.PortfolioId !== undefined) {
-    bodyParams["PortfolioId"] = input.PortfolioId;
-  }
-  if (input.ProductSource !== undefined) {
-    bodyParams["ProductSource"] = input.ProductSource;
-  }
-  if (input.SortBy !== undefined) {
-    bodyParams["SortBy"] = input.SortBy;
-  }
-  if (input.SortOrder !== undefined) {
-    bodyParams["SortOrder"] = input.SortOrder;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Filters !== undefined && { 'Filters': serializeAws_json1_1ProductViewFilters(input.Filters, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.PortfolioId !== undefined && { 'PortfolioId': input.PortfolioId }),
+    ...(input.ProductSource !== undefined && { 'ProductSource': input.ProductSource }),
+    ...(input.SortBy !== undefined && { 'SortBy': input.SortBy }),
+    ...(input.SortOrder !== undefined && { 'SortOrder': input.SortOrder }),
+  };
+}
 
 const serializeAws_json1_1SearchProductsInput = (
   input: SearchProductsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Filters !== undefined) {
-    bodyParams["Filters"] = serializeAws_json1_1ProductViewFilters(
-      input.Filters,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.SortBy !== undefined) {
-    bodyParams["SortBy"] = input.SortBy;
-  }
-  if (input.SortOrder !== undefined) {
-    bodyParams["SortOrder"] = input.SortOrder;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Filters !== undefined && { 'Filters': serializeAws_json1_1ProductViewFilters(input.Filters, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.SortBy !== undefined && { 'SortBy': input.SortBy }),
+    ...(input.SortOrder !== undefined && { 'SortOrder': input.SortOrder }),
+  };
+}
 
 const serializeAws_json1_1SearchProvisionedProductsInput = (
   input: SearchProvisionedProductsInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AccessLevelFilter !== undefined) {
-    bodyParams["AccessLevelFilter"] = serializeAws_json1_1AccessLevelFilter(
-      input.AccessLevelFilter,
-      context
-    );
-  }
-  if (input.Filters !== undefined) {
-    bodyParams["Filters"] = serializeAws_json1_1ProvisionedProductFilters(
-      input.Filters,
-      context
-    );
-  }
-  if (input.PageSize !== undefined) {
-    bodyParams["PageSize"] = input.PageSize;
-  }
-  if (input.PageToken !== undefined) {
-    bodyParams["PageToken"] = input.PageToken;
-  }
-  if (input.SortBy !== undefined) {
-    bodyParams["SortBy"] = input.SortBy;
-  }
-  if (input.SortOrder !== undefined) {
-    bodyParams["SortOrder"] = input.SortOrder;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AccessLevelFilter !== undefined && { 'AccessLevelFilter': serializeAws_json1_1AccessLevelFilter(input.AccessLevelFilter, context) }),
+    ...(input.Filters !== undefined && { 'Filters': serializeAws_json1_1ProvisionedProductFilters(input.Filters, context) }),
+    ...(input.PageSize !== undefined && { 'PageSize': input.PageSize }),
+    ...(input.PageToken !== undefined && { 'PageToken': input.PageToken }),
+    ...(input.SortBy !== undefined && { 'SortBy': input.SortBy }),
+    ...(input.SortOrder !== undefined && { 'SortOrder': input.SortOrder }),
+  };
+}
 
 const serializeAws_json1_1ServiceActionAssociation = (
   input: ServiceActionAssociation,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ServiceActionId !== undefined) {
-    bodyParams["ServiceActionId"] = input.ServiceActionId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ServiceActionId !== undefined && { 'ServiceActionId': input.ServiceActionId }),
+  };
+}
 
 const serializeAws_json1_1ServiceActionAssociations = (
-  input: ServiceActionAssociation[],
+  input: (ServiceActionAssociation)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10234,7 +8307,7 @@ const serializeAws_json1_1ServiceActionAssociations = (
     contents.push(serializeAws_json1_1ServiceActionAssociation(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1ServiceActionDefinitionMap = (
   input: { [key: string]: string },
@@ -10245,23 +8318,18 @@ const serializeAws_json1_1ServiceActionDefinitionMap = (
     mapParams[key] = input[key];
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1SourceProvisioningArtifactProperties = (
-  input: { [key: string]: string }[],
+  input: ({ [key: string]: string })[],
   context: __SerdeContext
 ): any => {
   const contents = [];
   for (let entry of input) {
-    contents.push(
-      serializeAws_json1_1SourceProvisioningArtifactPropertiesMap(
-        entry,
-        context
-      )
-    );
+    contents.push(serializeAws_json1_1SourceProvisioningArtifactPropertiesMap(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1SourceProvisioningArtifactPropertiesMap = (
   input: { [key: string]: string },
@@ -10272,10 +8340,10 @@ const serializeAws_json1_1SourceProvisioningArtifactPropertiesMap = (
     mapParams[key] = input[key];
   });
   return mapParams;
-};
+}
 
 const serializeAws_json1_1StackSetAccounts = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10283,10 +8351,10 @@ const serializeAws_json1_1StackSetAccounts = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1StackSetRegions = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10294,21 +8362,20 @@ const serializeAws_json1_1StackSetRegions = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
-const serializeAws_json1_1Tag = (input: Tag, context: __SerdeContext): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+const serializeAws_json1_1Tag = (
+  input: Tag,
+  context: __SerdeContext
+): any => {
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1TagKeys = (
-  input: string[],
+  input: (string)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10316,10 +8383,10 @@ const serializeAws_json1_1TagKeys = (
     contents.push(entry);
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1Tags = (
-  input: Tag[],
+  input: (Tag)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
@@ -10327,342 +8394,180 @@ const serializeAws_json1_1Tags = (
     contents.push(serializeAws_json1_1Tag(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1TerminateProvisionedProductInput = (
   input: TerminateProvisionedProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IgnoreErrors !== undefined) {
-    bodyParams["IgnoreErrors"] = input.IgnoreErrors;
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  if (input.ProvisionedProductName !== undefined) {
-    bodyParams["ProvisionedProductName"] = input.ProvisionedProductName;
-  }
-  if (input.TerminateToken === undefined) {
-    input.TerminateToken = generateIdempotencyToken();
-  }
-  if (input.TerminateToken !== undefined) {
-    bodyParams["TerminateToken"] = input.TerminateToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.IgnoreErrors !== undefined && { 'IgnoreErrors': input.IgnoreErrors }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+    ...(input.ProvisionedProductName !== undefined && { 'ProvisionedProductName': input.ProvisionedProductName }),
+    if (input.TerminateToken === undefined) {
+      input.TerminateToken = generateIdempotencyToken();
+    }
+    ...(input.TerminateToken !== undefined && { 'TerminateToken': input.TerminateToken }),
+  };
+}
 
 const serializeAws_json1_1UpdateConstraintInput = (
   input: UpdateConstraintInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.Parameters !== undefined) {
-    bodyParams["Parameters"] = input.Parameters;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.Parameters !== undefined && { 'Parameters': input.Parameters }),
+  };
+}
 
 const serializeAws_json1_1UpdatePortfolioInput = (
   input: UpdatePortfolioInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AddTags !== undefined) {
-    bodyParams["AddTags"] = serializeAws_json1_1AddTags(input.AddTags, context);
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.DisplayName !== undefined) {
-    bodyParams["DisplayName"] = input.DisplayName;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.ProviderName !== undefined) {
-    bodyParams["ProviderName"] = input.ProviderName;
-  }
-  if (input.RemoveTags !== undefined) {
-    bodyParams["RemoveTags"] = serializeAws_json1_1TagKeys(
-      input.RemoveTags,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AddTags !== undefined && { 'AddTags': serializeAws_json1_1AddTags(input.AddTags, context) }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.DisplayName !== undefined && { 'DisplayName': input.DisplayName }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.ProviderName !== undefined && { 'ProviderName': input.ProviderName }),
+    ...(input.RemoveTags !== undefined && { 'RemoveTags': serializeAws_json1_1TagKeys(input.RemoveTags, context) }),
+  };
+}
 
 const serializeAws_json1_1UpdateProductInput = (
   input: UpdateProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.AddTags !== undefined) {
-    bodyParams["AddTags"] = serializeAws_json1_1AddTags(input.AddTags, context);
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Distributor !== undefined) {
-    bodyParams["Distributor"] = input.Distributor;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.Owner !== undefined) {
-    bodyParams["Owner"] = input.Owner;
-  }
-  if (input.RemoveTags !== undefined) {
-    bodyParams["RemoveTags"] = serializeAws_json1_1TagKeys(
-      input.RemoveTags,
-      context
-    );
-  }
-  if (input.SupportDescription !== undefined) {
-    bodyParams["SupportDescription"] = input.SupportDescription;
-  }
-  if (input.SupportEmail !== undefined) {
-    bodyParams["SupportEmail"] = input.SupportEmail;
-  }
-  if (input.SupportUrl !== undefined) {
-    bodyParams["SupportUrl"] = input.SupportUrl;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.AddTags !== undefined && { 'AddTags': serializeAws_json1_1AddTags(input.AddTags, context) }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Distributor !== undefined && { 'Distributor': input.Distributor }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.Owner !== undefined && { 'Owner': input.Owner }),
+    ...(input.RemoveTags !== undefined && { 'RemoveTags': serializeAws_json1_1TagKeys(input.RemoveTags, context) }),
+    ...(input.SupportDescription !== undefined && { 'SupportDescription': input.SupportDescription }),
+    ...(input.SupportEmail !== undefined && { 'SupportEmail': input.SupportEmail }),
+    ...(input.SupportUrl !== undefined && { 'SupportUrl': input.SupportUrl }),
+  };
+}
 
 const serializeAws_json1_1UpdateProvisionedProductInput = (
   input: UpdateProvisionedProductInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.PathId !== undefined) {
-    bodyParams["PathId"] = input.PathId;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  if (input.ProvisionedProductName !== undefined) {
-    bodyParams["ProvisionedProductName"] = input.ProvisionedProductName;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  if (input.ProvisioningParameters !== undefined) {
-    bodyParams[
-      "ProvisioningParameters"
-    ] = serializeAws_json1_1UpdateProvisioningParameters(
-      input.ProvisioningParameters,
-      context
-    );
-  }
-  if (input.ProvisioningPreferences !== undefined) {
-    bodyParams[
-      "ProvisioningPreferences"
-    ] = serializeAws_json1_1UpdateProvisioningPreferences(
-      input.ProvisioningPreferences,
-      context
-    );
-  }
-  if (input.Tags !== undefined) {
-    bodyParams["Tags"] = serializeAws_json1_1Tags(input.Tags, context);
-  }
-  if (input.UpdateToken === undefined) {
-    input.UpdateToken = generateIdempotencyToken();
-  }
-  if (input.UpdateToken !== undefined) {
-    bodyParams["UpdateToken"] = input.UpdateToken;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.PathId !== undefined && { 'PathId': input.PathId }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+    ...(input.ProvisionedProductName !== undefined && { 'ProvisionedProductName': input.ProvisionedProductName }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+    ...(input.ProvisioningParameters !== undefined && { 'ProvisioningParameters': serializeAws_json1_1UpdateProvisioningParameters(input.ProvisioningParameters, context) }),
+    ...(input.ProvisioningPreferences !== undefined && { 'ProvisioningPreferences': serializeAws_json1_1UpdateProvisioningPreferences(input.ProvisioningPreferences, context) }),
+    ...(input.Tags !== undefined && { 'Tags': serializeAws_json1_1Tags(input.Tags, context) }),
+    if (input.UpdateToken === undefined) {
+      input.UpdateToken = generateIdempotencyToken();
+    }
+    ...(input.UpdateToken !== undefined && { 'UpdateToken': input.UpdateToken }),
+  };
+}
 
 const serializeAws_json1_1UpdateProvisionedProductPropertiesInput = (
   input: UpdateProvisionedProductPropertiesInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.IdempotencyToken === undefined) {
-    input.IdempotencyToken = generateIdempotencyToken();
-  }
-  if (input.IdempotencyToken !== undefined) {
-    bodyParams["IdempotencyToken"] = input.IdempotencyToken;
-  }
-  if (input.ProvisionedProductId !== undefined) {
-    bodyParams["ProvisionedProductId"] = input.ProvisionedProductId;
-  }
-  if (input.ProvisionedProductProperties !== undefined) {
-    bodyParams[
-      "ProvisionedProductProperties"
-    ] = serializeAws_json1_1ProvisionedProductProperties(
-      input.ProvisionedProductProperties,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    if (input.IdempotencyToken === undefined) {
+      input.IdempotencyToken = generateIdempotencyToken();
+    }
+    ...(input.IdempotencyToken !== undefined && { 'IdempotencyToken': input.IdempotencyToken }),
+    ...(input.ProvisionedProductId !== undefined && { 'ProvisionedProductId': input.ProvisionedProductId }),
+    ...(input.ProvisionedProductProperties !== undefined && { 'ProvisionedProductProperties': serializeAws_json1_1ProvisionedProductProperties(input.ProvisionedProductProperties, context) }),
+  };
+}
 
 const serializeAws_json1_1UpdateProvisioningArtifactInput = (
   input: UpdateProvisioningArtifactInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Active !== undefined) {
-    bodyParams["Active"] = input.Active;
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Guidance !== undefined) {
-    bodyParams["Guidance"] = input.Guidance;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  if (input.ProductId !== undefined) {
-    bodyParams["ProductId"] = input.ProductId;
-  }
-  if (input.ProvisioningArtifactId !== undefined) {
-    bodyParams["ProvisioningArtifactId"] = input.ProvisioningArtifactId;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Active !== undefined && { 'Active': input.Active }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Guidance !== undefined && { 'Guidance': input.Guidance }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+    ...(input.ProductId !== undefined && { 'ProductId': input.ProductId }),
+    ...(input.ProvisioningArtifactId !== undefined && { 'ProvisioningArtifactId': input.ProvisioningArtifactId }),
+  };
+}
 
 const serializeAws_json1_1UpdateProvisioningParameter = (
   input: UpdateProvisioningParameter,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.Key !== undefined) {
-    bodyParams["Key"] = input.Key;
-  }
-  if (input.UsePreviousValue !== undefined) {
-    bodyParams["UsePreviousValue"] = input.UsePreviousValue;
-  }
-  if (input.Value !== undefined) {
-    bodyParams["Value"] = input.Value;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.Key !== undefined && { 'Key': input.Key }),
+    ...(input.UsePreviousValue !== undefined && { 'UsePreviousValue': input.UsePreviousValue }),
+    ...(input.Value !== undefined && { 'Value': input.Value }),
+  };
+}
 
 const serializeAws_json1_1UpdateProvisioningParameters = (
-  input: UpdateProvisioningParameter[],
+  input: (UpdateProvisioningParameter)[],
   context: __SerdeContext
 ): any => {
   const contents = [];
   for (let entry of input) {
-    contents.push(
-      serializeAws_json1_1UpdateProvisioningParameter(entry, context)
-    );
+    contents.push(serializeAws_json1_1UpdateProvisioningParameter(entry, context));
   }
   return contents;
-};
+}
 
 const serializeAws_json1_1UpdateProvisioningPreferences = (
   input: UpdateProvisioningPreferences,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.StackSetAccounts !== undefined) {
-    bodyParams["StackSetAccounts"] = serializeAws_json1_1StackSetAccounts(
-      input.StackSetAccounts,
-      context
-    );
-  }
-  if (input.StackSetFailureToleranceCount !== undefined) {
-    bodyParams["StackSetFailureToleranceCount"] =
-      input.StackSetFailureToleranceCount;
-  }
-  if (input.StackSetFailureTolerancePercentage !== undefined) {
-    bodyParams["StackSetFailureTolerancePercentage"] =
-      input.StackSetFailureTolerancePercentage;
-  }
-  if (input.StackSetMaxConcurrencyCount !== undefined) {
-    bodyParams["StackSetMaxConcurrencyCount"] =
-      input.StackSetMaxConcurrencyCount;
-  }
-  if (input.StackSetMaxConcurrencyPercentage !== undefined) {
-    bodyParams["StackSetMaxConcurrencyPercentage"] =
-      input.StackSetMaxConcurrencyPercentage;
-  }
-  if (input.StackSetOperationType !== undefined) {
-    bodyParams["StackSetOperationType"] = input.StackSetOperationType;
-  }
-  if (input.StackSetRegions !== undefined) {
-    bodyParams["StackSetRegions"] = serializeAws_json1_1StackSetRegions(
-      input.StackSetRegions,
-      context
-    );
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.StackSetAccounts !== undefined && { 'StackSetAccounts': serializeAws_json1_1StackSetAccounts(input.StackSetAccounts, context) }),
+    ...(input.StackSetFailureToleranceCount !== undefined && { 'StackSetFailureToleranceCount': input.StackSetFailureToleranceCount }),
+    ...(input.StackSetFailureTolerancePercentage !== undefined && { 'StackSetFailureTolerancePercentage': input.StackSetFailureTolerancePercentage }),
+    ...(input.StackSetMaxConcurrencyCount !== undefined && { 'StackSetMaxConcurrencyCount': input.StackSetMaxConcurrencyCount }),
+    ...(input.StackSetMaxConcurrencyPercentage !== undefined && { 'StackSetMaxConcurrencyPercentage': input.StackSetMaxConcurrencyPercentage }),
+    ...(input.StackSetOperationType !== undefined && { 'StackSetOperationType': input.StackSetOperationType }),
+    ...(input.StackSetRegions !== undefined && { 'StackSetRegions': serializeAws_json1_1StackSetRegions(input.StackSetRegions, context) }),
+  };
+}
 
 const serializeAws_json1_1UpdateServiceActionInput = (
   input: UpdateServiceActionInput,
   context: __SerdeContext
 ): any => {
-  const bodyParams: any = {};
-  if (input.AcceptLanguage !== undefined) {
-    bodyParams["AcceptLanguage"] = input.AcceptLanguage;
-  }
-  if (input.Definition !== undefined) {
-    bodyParams["Definition"] = serializeAws_json1_1ServiceActionDefinitionMap(
-      input.Definition,
-      context
-    );
-  }
-  if (input.Description !== undefined) {
-    bodyParams["Description"] = input.Description;
-  }
-  if (input.Id !== undefined) {
-    bodyParams["Id"] = input.Id;
-  }
-  if (input.Name !== undefined) {
-    bodyParams["Name"] = input.Name;
-  }
-  return bodyParams;
-};
+  return {
+    ...(input.AcceptLanguage !== undefined && { 'AcceptLanguage': input.AcceptLanguage }),
+    ...(input.Definition !== undefined && { 'Definition': serializeAws_json1_1ServiceActionDefinitionMap(input.Definition, context) }),
+    ...(input.Description !== undefined && { 'Description': input.Description }),
+    ...(input.Id !== undefined && { 'Id': input.Id }),
+    ...(input.Name !== undefined && { 'Name': input.Name }),
+  };
+}
 
 const deserializeAws_json1_1AssociateTagOptionWithResourceOutput = (
   output: any,
   context: __SerdeContext
 ): AssociateTagOptionWithResourceOutput => {
   let contents: any = {
-    __type: "AssociateTagOptionWithResourceOutput"
+    __type: "AssociateTagOptionWithResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateTagOptionOutput = (
   output: any,
@@ -10670,26 +8575,23 @@ const deserializeAws_json1_1CreateTagOptionOutput = (
 ): CreateTagOptionOutput => {
   let contents: any = {
     __type: "CreateTagOptionOutput",
-    TagOptionDetail: undefined
+    TagOptionDetail: undefined,
   };
   if (output.TagOptionDetail !== undefined && output.TagOptionDetail !== null) {
-    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(
-      output.TagOptionDetail,
-      context
-    );
+    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(output.TagOptionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteTagOptionOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteTagOptionOutput => {
   let contents: any = {
-    __type: "DeleteTagOptionOutput"
+    __type: "DeleteTagOptionOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeTagOptionOutput = (
   output: any,
@@ -10697,26 +8599,23 @@ const deserializeAws_json1_1DescribeTagOptionOutput = (
 ): DescribeTagOptionOutput => {
   let contents: any = {
     __type: "DescribeTagOptionOutput",
-    TagOptionDetail: undefined
+    TagOptionDetail: undefined,
   };
   if (output.TagOptionDetail !== undefined && output.TagOptionDetail !== null) {
-    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(
-      output.TagOptionDetail,
-      context
-    );
+    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(output.TagOptionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisassociateTagOptionFromResourceOutput = (
   output: any,
   context: __SerdeContext
 ): DisassociateTagOptionFromResourceOutput => {
   let contents: any = {
-    __type: "DisassociateTagOptionFromResourceOutput"
+    __type: "DisassociateTagOptionFromResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListResourcesForTagOptionOutput = (
   output: any,
@@ -10725,19 +8624,16 @@ const deserializeAws_json1_1ListResourcesForTagOptionOutput = (
   let contents: any = {
     __type: "ListResourcesForTagOptionOutput",
     PageToken: undefined,
-    ResourceDetails: undefined
+    ResourceDetails: undefined,
   };
   if (output.PageToken !== undefined && output.PageToken !== null) {
     contents.PageToken = output.PageToken;
   }
   if (output.ResourceDetails !== undefined && output.ResourceDetails !== null) {
-    contents.ResourceDetails = deserializeAws_json1_1ResourceDetails(
-      output.ResourceDetails,
-      context
-    );
+    contents.ResourceDetails = deserializeAws_json1_1ResourceDetails(output.ResourceDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListTagOptionsOutput = (
   output: any,
@@ -10746,22 +8642,16 @@ const deserializeAws_json1_1ListTagOptionsOutput = (
   let contents: any = {
     __type: "ListTagOptionsOutput",
     PageToken: undefined,
-    TagOptionDetails: undefined
+    TagOptionDetails: undefined,
   };
   if (output.PageToken !== undefined && output.PageToken !== null) {
     contents.PageToken = output.PageToken;
   }
-  if (
-    output.TagOptionDetails !== undefined &&
-    output.TagOptionDetails !== null
-  ) {
-    contents.TagOptionDetails = deserializeAws_json1_1TagOptionDetails(
-      output.TagOptionDetails,
-      context
-    );
+  if (output.TagOptionDetails !== undefined && output.TagOptionDetails !== null) {
+    contents.TagOptionDetails = deserializeAws_json1_1TagOptionDetails(output.TagOptionDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceDetail = (
   output: any,
@@ -10773,7 +8663,7 @@ const deserializeAws_json1_1ResourceDetail = (
     CreatedTime: undefined,
     Description: undefined,
     Id: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -10791,16 +8681,16 @@ const deserializeAws_json1_1ResourceDetail = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceDetails = (
   output: any,
   context: __SerdeContext
-): ResourceDetail[] => {
+): (ResourceDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ResourceDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1TagOptionDetail = (
   output: any,
@@ -10811,7 +8701,7 @@ const deserializeAws_json1_1TagOptionDetail = (
     Active: undefined,
     Id: undefined,
     Key: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Active !== undefined && output.Active !== null) {
     contents.Active = output.Active;
@@ -10826,23 +8716,25 @@ const deserializeAws_json1_1TagOptionDetail = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1TagOptionDetails = (
   output: any,
   context: __SerdeContext
-): TagOptionDetail[] => {
+): (TagOptionDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1TagOptionDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1TagOptionValues = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1UpdateTagOptionOutput = (
   output: any,
@@ -10850,80 +8742,81 @@ const deserializeAws_json1_1UpdateTagOptionOutput = (
 ): UpdateTagOptionOutput => {
   let contents: any = {
     __type: "UpdateTagOptionOutput",
-    TagOptionDetail: undefined
+    TagOptionDetail: undefined,
   };
   if (output.TagOptionDetail !== undefined && output.TagOptionDetail !== null) {
-    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(
-      output.TagOptionDetail,
-      context
-    );
+    contents.TagOptionDetail = deserializeAws_json1_1TagOptionDetail(output.TagOptionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1AcceptPortfolioShareOutput = (
   output: any,
   context: __SerdeContext
 ): AcceptPortfolioShareOutput => {
   let contents: any = {
-    __type: "AcceptPortfolioShareOutput"
+    __type: "AcceptPortfolioShareOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1AccountIds = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1AllowedValues = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1AssociateBudgetWithResourceOutput = (
   output: any,
   context: __SerdeContext
 ): AssociateBudgetWithResourceOutput => {
   let contents: any = {
-    __type: "AssociateBudgetWithResourceOutput"
+    __type: "AssociateBudgetWithResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1AssociatePrincipalWithPortfolioOutput = (
   output: any,
   context: __SerdeContext
 ): AssociatePrincipalWithPortfolioOutput => {
   let contents: any = {
-    __type: "AssociatePrincipalWithPortfolioOutput"
+    __type: "AssociatePrincipalWithPortfolioOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1AssociateProductWithPortfolioOutput = (
   output: any,
   context: __SerdeContext
 ): AssociateProductWithPortfolioOutput => {
   let contents: any = {
-    __type: "AssociateProductWithPortfolioOutput"
+    __type: "AssociateProductWithPortfolioOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1AssociateServiceActionWithProvisioningArtifactOutput = (
   output: any,
   context: __SerdeContext
 ): AssociateServiceActionWithProvisioningArtifactOutput => {
   let contents: any = {
-    __type: "AssociateServiceActionWithProvisioningArtifactOutput"
+    __type: "AssociateServiceActionWithProvisioningArtifactOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactOutput = (
   output: any,
@@ -10931,19 +8824,13 @@ const deserializeAws_json1_1BatchAssociateServiceActionWithProvisioningArtifactO
 ): BatchAssociateServiceActionWithProvisioningArtifactOutput => {
   let contents: any = {
     __type: "BatchAssociateServiceActionWithProvisioningArtifactOutput",
-    FailedServiceActionAssociations: undefined
+    FailedServiceActionAssociations: undefined,
   };
-  if (
-    output.FailedServiceActionAssociations !== undefined &&
-    output.FailedServiceActionAssociations !== null
-  ) {
-    contents.FailedServiceActionAssociations = deserializeAws_json1_1FailedServiceActionAssociations(
-      output.FailedServiceActionAssociations,
-      context
-    );
+  if (output.FailedServiceActionAssociations !== undefined && output.FailedServiceActionAssociations !== null) {
+    contents.FailedServiceActionAssociations = deserializeAws_json1_1FailedServiceActionAssociations(output.FailedServiceActionAssociations, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifactOutput = (
   output: any,
@@ -10951,19 +8838,13 @@ const deserializeAws_json1_1BatchDisassociateServiceActionFromProvisioningArtifa
 ): BatchDisassociateServiceActionFromProvisioningArtifactOutput => {
   let contents: any = {
     __type: "BatchDisassociateServiceActionFromProvisioningArtifactOutput",
-    FailedServiceActionAssociations: undefined
+    FailedServiceActionAssociations: undefined,
   };
-  if (
-    output.FailedServiceActionAssociations !== undefined &&
-    output.FailedServiceActionAssociations !== null
-  ) {
-    contents.FailedServiceActionAssociations = deserializeAws_json1_1FailedServiceActionAssociations(
-      output.FailedServiceActionAssociations,
-      context
-    );
+  if (output.FailedServiceActionAssociations !== undefined && output.FailedServiceActionAssociations !== null) {
+    contents.FailedServiceActionAssociations = deserializeAws_json1_1FailedServiceActionAssociations(output.FailedServiceActionAssociations, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1BudgetDetail = (
   output: any,
@@ -10971,22 +8852,22 @@ const deserializeAws_json1_1BudgetDetail = (
 ): BudgetDetail => {
   let contents: any = {
     __type: "BudgetDetail",
-    BudgetName: undefined
+    BudgetName: undefined,
   };
   if (output.BudgetName !== undefined && output.BudgetName !== null) {
     contents.BudgetName = output.BudgetName;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Budgets = (
   output: any,
   context: __SerdeContext
-): BudgetDetail[] => {
+): (BudgetDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1BudgetDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1CloudWatchDashboard = (
   output: any,
@@ -10994,22 +8875,22 @@ const deserializeAws_json1_1CloudWatchDashboard = (
 ): CloudWatchDashboard => {
   let contents: any = {
     __type: "CloudWatchDashboard",
-    Name: undefined
+    Name: undefined,
   };
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CloudWatchDashboards = (
   output: any,
   context: __SerdeContext
-): CloudWatchDashboard[] => {
+): (CloudWatchDashboard)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1CloudWatchDashboard(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ConstraintDetail = (
   output: any,
@@ -11020,7 +8901,7 @@ const deserializeAws_json1_1ConstraintDetail = (
     ConstraintId: undefined,
     Description: undefined,
     Owner: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.ConstraintId !== undefined && output.ConstraintId !== null) {
     contents.ConstraintId = output.ConstraintId;
@@ -11035,25 +8916,25 @@ const deserializeAws_json1_1ConstraintDetail = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ConstraintDetails = (
   output: any,
   context: __SerdeContext
-): ConstraintDetail[] => {
+): (ConstraintDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ConstraintDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ConstraintSummaries = (
   output: any,
   context: __SerdeContext
-): ConstraintSummary[] => {
+): (ConstraintSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ConstraintSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ConstraintSummary = (
   output: any,
@@ -11062,7 +8943,7 @@ const deserializeAws_json1_1ConstraintSummary = (
   let contents: any = {
     __type: "ConstraintSummary",
     Description: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.Description !== undefined && output.Description !== null) {
     contents.Description = output.Description;
@@ -11071,7 +8952,7 @@ const deserializeAws_json1_1ConstraintSummary = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CopyProductOutput = (
   output: any,
@@ -11079,16 +8960,13 @@ const deserializeAws_json1_1CopyProductOutput = (
 ): CopyProductOutput => {
   let contents: any = {
     __type: "CopyProductOutput",
-    CopyProductToken: undefined
+    CopyProductToken: undefined,
   };
-  if (
-    output.CopyProductToken !== undefined &&
-    output.CopyProductToken !== null
-  ) {
+  if (output.CopyProductToken !== undefined && output.CopyProductToken !== null) {
     contents.CopyProductToken = output.CopyProductToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateConstraintOutput = (
   output: any,
@@ -11098,28 +8976,19 @@ const deserializeAws_json1_1CreateConstraintOutput = (
     __type: "CreateConstraintOutput",
     ConstraintDetail: undefined,
     ConstraintParameters: undefined,
-    Status: undefined
+    Status: undefined,
   };
-  if (
-    output.ConstraintDetail !== undefined &&
-    output.ConstraintDetail !== null
-  ) {
-    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(
-      output.ConstraintDetail,
-      context
-    );
+  if (output.ConstraintDetail !== undefined && output.ConstraintDetail !== null) {
+    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(output.ConstraintDetail, context);
   }
-  if (
-    output.ConstraintParameters !== undefined &&
-    output.ConstraintParameters !== null
-  ) {
+  if (output.ConstraintParameters !== undefined && output.ConstraintParameters !== null) {
     contents.ConstraintParameters = output.ConstraintParameters;
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreatePortfolioOutput = (
   output: any,
@@ -11128,19 +8997,16 @@ const deserializeAws_json1_1CreatePortfolioOutput = (
   let contents: any = {
     __type: "CreatePortfolioOutput",
     PortfolioDetail: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.PortfolioDetail !== undefined && output.PortfolioDetail !== null) {
-    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(
-      output.PortfolioDetail,
-      context
-    );
+    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(output.PortfolioDetail, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreatePortfolioShareOutput = (
   output: any,
@@ -11148,16 +9014,13 @@ const deserializeAws_json1_1CreatePortfolioShareOutput = (
 ): CreatePortfolioShareOutput => {
   let contents: any = {
     __type: "CreatePortfolioShareOutput",
-    PortfolioShareToken: undefined
+    PortfolioShareToken: undefined,
   };
-  if (
-    output.PortfolioShareToken !== undefined &&
-    output.PortfolioShareToken !== null
-  ) {
+  if (output.PortfolioShareToken !== undefined && output.PortfolioShareToken !== null) {
     contents.PortfolioShareToken = output.PortfolioShareToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateProductOutput = (
   output: any,
@@ -11167,31 +9030,19 @@ const deserializeAws_json1_1CreateProductOutput = (
     __type: "CreateProductOutput",
     ProductViewDetail: undefined,
     ProvisioningArtifactDetail: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
-  if (
-    output.ProductViewDetail !== undefined &&
-    output.ProductViewDetail !== null
-  ) {
-    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(
-      output.ProductViewDetail,
-      context
-    );
+  if (output.ProductViewDetail !== undefined && output.ProductViewDetail !== null) {
+    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(output.ProductViewDetail, context);
   }
-  if (
-    output.ProvisioningArtifactDetail !== undefined &&
-    output.ProvisioningArtifactDetail !== null
-  ) {
-    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(
-      output.ProvisioningArtifactDetail,
-      context
-    );
+  if (output.ProvisioningArtifactDetail !== undefined && output.ProvisioningArtifactDetail !== null) {
+    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(output.ProvisioningArtifactDetail, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateProvisionedProductPlanOutput = (
   output: any,
@@ -11203,7 +9054,7 @@ const deserializeAws_json1_1CreateProvisionedProductPlanOutput = (
     PlanName: undefined,
     ProvisionProductId: undefined,
     ProvisionedProductName: undefined,
-    ProvisioningArtifactId: undefined
+    ProvisioningArtifactId: undefined,
   };
   if (output.PlanId !== undefined && output.PlanId !== null) {
     contents.PlanId = output.PlanId;
@@ -11211,26 +9062,17 @@ const deserializeAws_json1_1CreateProvisionedProductPlanOutput = (
   if (output.PlanName !== undefined && output.PlanName !== null) {
     contents.PlanName = output.PlanName;
   }
-  if (
-    output.ProvisionProductId !== undefined &&
-    output.ProvisionProductId !== null
-  ) {
+  if (output.ProvisionProductId !== undefined && output.ProvisionProductId !== null) {
     contents.ProvisionProductId = output.ProvisionProductId;
   }
-  if (
-    output.ProvisionedProductName !== undefined &&
-    output.ProvisionedProductName !== null
-  ) {
+  if (output.ProvisionedProductName !== undefined && output.ProvisionedProductName !== null) {
     contents.ProvisionedProductName = output.ProvisionedProductName;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateProvisioningArtifactOutput = (
   output: any,
@@ -11240,28 +9082,19 @@ const deserializeAws_json1_1CreateProvisioningArtifactOutput = (
     __type: "CreateProvisioningArtifactOutput",
     Info: undefined,
     ProvisioningArtifactDetail: undefined,
-    Status: undefined
+    Status: undefined,
   };
   if (output.Info !== undefined && output.Info !== null) {
-    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(
-      output.Info,
-      context
-    );
+    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(output.Info, context);
   }
-  if (
-    output.ProvisioningArtifactDetail !== undefined &&
-    output.ProvisioningArtifactDetail !== null
-  ) {
-    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(
-      output.ProvisioningArtifactDetail,
-      context
-    );
+  if (output.ProvisioningArtifactDetail !== undefined && output.ProvisioningArtifactDetail !== null) {
+    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(output.ProvisioningArtifactDetail, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1CreateServiceActionOutput = (
   output: any,
@@ -11269,39 +9102,33 @@ const deserializeAws_json1_1CreateServiceActionOutput = (
 ): CreateServiceActionOutput => {
   let contents: any = {
     __type: "CreateServiceActionOutput",
-    ServiceActionDetail: undefined
+    ServiceActionDetail: undefined,
   };
-  if (
-    output.ServiceActionDetail !== undefined &&
-    output.ServiceActionDetail !== null
-  ) {
-    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(
-      output.ServiceActionDetail,
-      context
-    );
+  if (output.ServiceActionDetail !== undefined && output.ServiceActionDetail !== null) {
+    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(output.ServiceActionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteConstraintOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteConstraintOutput => {
   let contents: any = {
-    __type: "DeleteConstraintOutput"
+    __type: "DeleteConstraintOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeletePortfolioOutput = (
   output: any,
   context: __SerdeContext
 ): DeletePortfolioOutput => {
   let contents: any = {
-    __type: "DeletePortfolioOutput"
+    __type: "DeletePortfolioOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeletePortfolioShareOutput = (
   output: any,
@@ -11309,56 +9136,53 @@ const deserializeAws_json1_1DeletePortfolioShareOutput = (
 ): DeletePortfolioShareOutput => {
   let contents: any = {
     __type: "DeletePortfolioShareOutput",
-    PortfolioShareToken: undefined
+    PortfolioShareToken: undefined,
   };
-  if (
-    output.PortfolioShareToken !== undefined &&
-    output.PortfolioShareToken !== null
-  ) {
+  if (output.PortfolioShareToken !== undefined && output.PortfolioShareToken !== null) {
     contents.PortfolioShareToken = output.PortfolioShareToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteProductOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteProductOutput => {
   let contents: any = {
-    __type: "DeleteProductOutput"
+    __type: "DeleteProductOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteProvisionedProductPlanOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteProvisionedProductPlanOutput => {
   let contents: any = {
-    __type: "DeleteProvisionedProductPlanOutput"
+    __type: "DeleteProvisionedProductPlanOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteProvisioningArtifactOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteProvisioningArtifactOutput => {
   let contents: any = {
-    __type: "DeleteProvisioningArtifactOutput"
+    __type: "DeleteProvisioningArtifactOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DeleteServiceActionOutput = (
   output: any,
   context: __SerdeContext
 ): DeleteServiceActionOutput => {
   let contents: any = {
-    __type: "DeleteServiceActionOutput"
+    __type: "DeleteServiceActionOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeConstraintOutput = (
   output: any,
@@ -11368,28 +9192,19 @@ const deserializeAws_json1_1DescribeConstraintOutput = (
     __type: "DescribeConstraintOutput",
     ConstraintDetail: undefined,
     ConstraintParameters: undefined,
-    Status: undefined
+    Status: undefined,
   };
-  if (
-    output.ConstraintDetail !== undefined &&
-    output.ConstraintDetail !== null
-  ) {
-    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(
-      output.ConstraintDetail,
-      context
-    );
+  if (output.ConstraintDetail !== undefined && output.ConstraintDetail !== null) {
+    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(output.ConstraintDetail, context);
   }
-  if (
-    output.ConstraintParameters !== undefined &&
-    output.ConstraintParameters !== null
-  ) {
+  if (output.ConstraintParameters !== undefined && output.ConstraintParameters !== null) {
     contents.ConstraintParameters = output.ConstraintParameters;
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeCopyProductStatusOutput = (
   output: any,
@@ -11399,12 +9214,9 @@ const deserializeAws_json1_1DescribeCopyProductStatusOutput = (
     __type: "DescribeCopyProductStatusOutput",
     CopyProductStatus: undefined,
     StatusDetail: undefined,
-    TargetProductId: undefined
+    TargetProductId: undefined,
   };
-  if (
-    output.CopyProductStatus !== undefined &&
-    output.CopyProductStatus !== null
-  ) {
+  if (output.CopyProductStatus !== undefined && output.CopyProductStatus !== null) {
     contents.CopyProductStatus = output.CopyProductStatus;
   }
   if (output.StatusDetail !== undefined && output.StatusDetail !== null) {
@@ -11414,7 +9226,7 @@ const deserializeAws_json1_1DescribeCopyProductStatusOutput = (
     contents.TargetProductId = output.TargetProductId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribePortfolioOutput = (
   output: any,
@@ -11425,28 +9237,22 @@ const deserializeAws_json1_1DescribePortfolioOutput = (
     Budgets: undefined,
     PortfolioDetail: undefined,
     TagOptions: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.Budgets !== undefined && output.Budgets !== null) {
     contents.Budgets = deserializeAws_json1_1Budgets(output.Budgets, context);
   }
   if (output.PortfolioDetail !== undefined && output.PortfolioDetail !== null) {
-    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(
-      output.PortfolioDetail,
-      context
-    );
+    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(output.PortfolioDetail, context);
   }
   if (output.TagOptions !== undefined && output.TagOptions !== null) {
-    contents.TagOptions = deserializeAws_json1_1TagOptionDetails(
-      output.TagOptions,
-      context
-    );
+    contents.TagOptions = deserializeAws_json1_1TagOptionDetails(output.TagOptions, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribePortfolioShareStatusOutput = (
   output: any,
@@ -11458,34 +9264,25 @@ const deserializeAws_json1_1DescribePortfolioShareStatusOutput = (
     PortfolioId: undefined,
     PortfolioShareToken: undefined,
     ShareDetails: undefined,
-    Status: undefined
+    Status: undefined,
   };
-  if (
-    output.OrganizationNodeValue !== undefined &&
-    output.OrganizationNodeValue !== null
-  ) {
+  if (output.OrganizationNodeValue !== undefined && output.OrganizationNodeValue !== null) {
     contents.OrganizationNodeValue = output.OrganizationNodeValue;
   }
   if (output.PortfolioId !== undefined && output.PortfolioId !== null) {
     contents.PortfolioId = output.PortfolioId;
   }
-  if (
-    output.PortfolioShareToken !== undefined &&
-    output.PortfolioShareToken !== null
-  ) {
+  if (output.PortfolioShareToken !== undefined && output.PortfolioShareToken !== null) {
     contents.PortfolioShareToken = output.PortfolioShareToken;
   }
   if (output.ShareDetails !== undefined && output.ShareDetails !== null) {
-    contents.ShareDetails = deserializeAws_json1_1ShareDetails(
-      output.ShareDetails,
-      context
-    );
+    contents.ShareDetails = deserializeAws_json1_1ShareDetails(output.ShareDetails, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProductAsAdminOutput = (
   output: any,
@@ -11497,40 +9294,25 @@ const deserializeAws_json1_1DescribeProductAsAdminOutput = (
     ProductViewDetail: undefined,
     ProvisioningArtifactSummaries: undefined,
     TagOptions: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.Budgets !== undefined && output.Budgets !== null) {
     contents.Budgets = deserializeAws_json1_1Budgets(output.Budgets, context);
   }
-  if (
-    output.ProductViewDetail !== undefined &&
-    output.ProductViewDetail !== null
-  ) {
-    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(
-      output.ProductViewDetail,
-      context
-    );
+  if (output.ProductViewDetail !== undefined && output.ProductViewDetail !== null) {
+    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(output.ProductViewDetail, context);
   }
-  if (
-    output.ProvisioningArtifactSummaries !== undefined &&
-    output.ProvisioningArtifactSummaries !== null
-  ) {
-    contents.ProvisioningArtifactSummaries = deserializeAws_json1_1ProvisioningArtifactSummaries(
-      output.ProvisioningArtifactSummaries,
-      context
-    );
+  if (output.ProvisioningArtifactSummaries !== undefined && output.ProvisioningArtifactSummaries !== null) {
+    contents.ProvisioningArtifactSummaries = deserializeAws_json1_1ProvisioningArtifactSummaries(output.ProvisioningArtifactSummaries, context);
   }
   if (output.TagOptions !== undefined && output.TagOptions !== null) {
-    contents.TagOptions = deserializeAws_json1_1TagOptionDetails(
-      output.TagOptions,
-      context
-    );
+    contents.TagOptions = deserializeAws_json1_1TagOptionDetails(output.TagOptions, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProductOutput = (
   output: any,
@@ -11540,31 +9322,19 @@ const deserializeAws_json1_1DescribeProductOutput = (
     __type: "DescribeProductOutput",
     Budgets: undefined,
     ProductViewSummary: undefined,
-    ProvisioningArtifacts: undefined
+    ProvisioningArtifacts: undefined,
   };
   if (output.Budgets !== undefined && output.Budgets !== null) {
     contents.Budgets = deserializeAws_json1_1Budgets(output.Budgets, context);
   }
-  if (
-    output.ProductViewSummary !== undefined &&
-    output.ProductViewSummary !== null
-  ) {
-    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(
-      output.ProductViewSummary,
-      context
-    );
+  if (output.ProductViewSummary !== undefined && output.ProductViewSummary !== null) {
+    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(output.ProductViewSummary, context);
   }
-  if (
-    output.ProvisioningArtifacts !== undefined &&
-    output.ProvisioningArtifacts !== null
-  ) {
-    contents.ProvisioningArtifacts = deserializeAws_json1_1ProvisioningArtifacts(
-      output.ProvisioningArtifacts,
-      context
-    );
+  if (output.ProvisioningArtifacts !== undefined && output.ProvisioningArtifacts !== null) {
+    contents.ProvisioningArtifacts = deserializeAws_json1_1ProvisioningArtifacts(output.ProvisioningArtifacts, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProductViewOutput = (
   output: any,
@@ -11573,28 +9343,16 @@ const deserializeAws_json1_1DescribeProductViewOutput = (
   let contents: any = {
     __type: "DescribeProductViewOutput",
     ProductViewSummary: undefined,
-    ProvisioningArtifacts: undefined
+    ProvisioningArtifacts: undefined,
   };
-  if (
-    output.ProductViewSummary !== undefined &&
-    output.ProductViewSummary !== null
-  ) {
-    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(
-      output.ProductViewSummary,
-      context
-    );
+  if (output.ProductViewSummary !== undefined && output.ProductViewSummary !== null) {
+    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(output.ProductViewSummary, context);
   }
-  if (
-    output.ProvisioningArtifacts !== undefined &&
-    output.ProvisioningArtifacts !== null
-  ) {
-    contents.ProvisioningArtifacts = deserializeAws_json1_1ProvisioningArtifacts(
-      output.ProvisioningArtifacts,
-      context
-    );
+  if (output.ProvisioningArtifacts !== undefined && output.ProvisioningArtifacts !== null) {
+    contents.ProvisioningArtifacts = deserializeAws_json1_1ProvisioningArtifacts(output.ProvisioningArtifacts, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProvisionedProductOutput = (
   output: any,
@@ -11603,28 +9361,16 @@ const deserializeAws_json1_1DescribeProvisionedProductOutput = (
   let contents: any = {
     __type: "DescribeProvisionedProductOutput",
     CloudWatchDashboards: undefined,
-    ProvisionedProductDetail: undefined
+    ProvisionedProductDetail: undefined,
   };
-  if (
-    output.CloudWatchDashboards !== undefined &&
-    output.CloudWatchDashboards !== null
-  ) {
-    contents.CloudWatchDashboards = deserializeAws_json1_1CloudWatchDashboards(
-      output.CloudWatchDashboards,
-      context
-    );
+  if (output.CloudWatchDashboards !== undefined && output.CloudWatchDashboards !== null) {
+    contents.CloudWatchDashboards = deserializeAws_json1_1CloudWatchDashboards(output.CloudWatchDashboards, context);
   }
-  if (
-    output.ProvisionedProductDetail !== undefined &&
-    output.ProvisionedProductDetail !== null
-  ) {
-    contents.ProvisionedProductDetail = deserializeAws_json1_1ProvisionedProductDetail(
-      output.ProvisionedProductDetail,
-      context
-    );
+  if (output.ProvisionedProductDetail !== undefined && output.ProvisionedProductDetail !== null) {
+    contents.ProvisionedProductDetail = deserializeAws_json1_1ProvisionedProductDetail(output.ProvisionedProductDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProvisionedProductPlanOutput = (
   output: any,
@@ -11634,28 +9380,19 @@ const deserializeAws_json1_1DescribeProvisionedProductPlanOutput = (
     __type: "DescribeProvisionedProductPlanOutput",
     NextPageToken: undefined,
     ProvisionedProductPlanDetails: undefined,
-    ResourceChanges: undefined
+    ResourceChanges: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisionedProductPlanDetails !== undefined &&
-    output.ProvisionedProductPlanDetails !== null
-  ) {
-    contents.ProvisionedProductPlanDetails = deserializeAws_json1_1ProvisionedProductPlanDetails(
-      output.ProvisionedProductPlanDetails,
-      context
-    );
+  if (output.ProvisionedProductPlanDetails !== undefined && output.ProvisionedProductPlanDetails !== null) {
+    contents.ProvisionedProductPlanDetails = deserializeAws_json1_1ProvisionedProductPlanDetails(output.ProvisionedProductPlanDetails, context);
   }
   if (output.ResourceChanges !== undefined && output.ResourceChanges !== null) {
-    contents.ResourceChanges = deserializeAws_json1_1ResourceChanges(
-      output.ResourceChanges,
-      context
-    );
+    contents.ResourceChanges = deserializeAws_json1_1ResourceChanges(output.ResourceChanges, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProvisioningArtifactOutput = (
   output: any,
@@ -11665,28 +9402,19 @@ const deserializeAws_json1_1DescribeProvisioningArtifactOutput = (
     __type: "DescribeProvisioningArtifactOutput",
     Info: undefined,
     ProvisioningArtifactDetail: undefined,
-    Status: undefined
+    Status: undefined,
   };
   if (output.Info !== undefined && output.Info !== null) {
-    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(
-      output.Info,
-      context
-    );
+    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(output.Info, context);
   }
-  if (
-    output.ProvisioningArtifactDetail !== undefined &&
-    output.ProvisioningArtifactDetail !== null
-  ) {
-    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(
-      output.ProvisioningArtifactDetail,
-      context
-    );
+  if (output.ProvisioningArtifactDetail !== undefined && output.ProvisioningArtifactDetail !== null) {
+    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(output.ProvisioningArtifactDetail, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeProvisioningParametersOutput = (
   output: any,
@@ -11698,52 +9426,25 @@ const deserializeAws_json1_1DescribeProvisioningParametersOutput = (
     ProvisioningArtifactParameters: undefined,
     ProvisioningArtifactPreferences: undefined,
     TagOptions: undefined,
-    UsageInstructions: undefined
+    UsageInstructions: undefined,
   };
-  if (
-    output.ConstraintSummaries !== undefined &&
-    output.ConstraintSummaries !== null
-  ) {
-    contents.ConstraintSummaries = deserializeAws_json1_1ConstraintSummaries(
-      output.ConstraintSummaries,
-      context
-    );
+  if (output.ConstraintSummaries !== undefined && output.ConstraintSummaries !== null) {
+    contents.ConstraintSummaries = deserializeAws_json1_1ConstraintSummaries(output.ConstraintSummaries, context);
   }
-  if (
-    output.ProvisioningArtifactParameters !== undefined &&
-    output.ProvisioningArtifactParameters !== null
-  ) {
-    contents.ProvisioningArtifactParameters = deserializeAws_json1_1ProvisioningArtifactParameters(
-      output.ProvisioningArtifactParameters,
-      context
-    );
+  if (output.ProvisioningArtifactParameters !== undefined && output.ProvisioningArtifactParameters !== null) {
+    contents.ProvisioningArtifactParameters = deserializeAws_json1_1ProvisioningArtifactParameters(output.ProvisioningArtifactParameters, context);
   }
-  if (
-    output.ProvisioningArtifactPreferences !== undefined &&
-    output.ProvisioningArtifactPreferences !== null
-  ) {
-    contents.ProvisioningArtifactPreferences = deserializeAws_json1_1ProvisioningArtifactPreferences(
-      output.ProvisioningArtifactPreferences,
-      context
-    );
+  if (output.ProvisioningArtifactPreferences !== undefined && output.ProvisioningArtifactPreferences !== null) {
+    contents.ProvisioningArtifactPreferences = deserializeAws_json1_1ProvisioningArtifactPreferences(output.ProvisioningArtifactPreferences, context);
   }
   if (output.TagOptions !== undefined && output.TagOptions !== null) {
-    contents.TagOptions = deserializeAws_json1_1TagOptionSummaries(
-      output.TagOptions,
-      context
-    );
+    contents.TagOptions = deserializeAws_json1_1TagOptionSummaries(output.TagOptions, context);
   }
-  if (
-    output.UsageInstructions !== undefined &&
-    output.UsageInstructions !== null
-  ) {
-    contents.UsageInstructions = deserializeAws_json1_1UsageInstructions(
-      output.UsageInstructions,
-      context
-    );
+  if (output.UsageInstructions !== undefined && output.UsageInstructions !== null) {
+    contents.UsageInstructions = deserializeAws_json1_1UsageInstructions(output.UsageInstructions, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeRecordOutput = (
   output: any,
@@ -11753,25 +9454,19 @@ const deserializeAws_json1_1DescribeRecordOutput = (
     __type: "DescribeRecordOutput",
     NextPageToken: undefined,
     RecordDetail: undefined,
-    RecordOutputs: undefined
+    RecordOutputs: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   if (output.RecordOutputs !== undefined && output.RecordOutputs !== null) {
-    contents.RecordOutputs = deserializeAws_json1_1RecordOutputs(
-      output.RecordOutputs,
-      context
-    );
+    contents.RecordOutputs = deserializeAws_json1_1RecordOutputs(output.RecordOutputs, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeServiceActionExecutionParametersOutput = (
   output: any,
@@ -11779,19 +9474,13 @@ const deserializeAws_json1_1DescribeServiceActionExecutionParametersOutput = (
 ): DescribeServiceActionExecutionParametersOutput => {
   let contents: any = {
     __type: "DescribeServiceActionExecutionParametersOutput",
-    ServiceActionParameters: undefined
+    ServiceActionParameters: undefined,
   };
-  if (
-    output.ServiceActionParameters !== undefined &&
-    output.ServiceActionParameters !== null
-  ) {
-    contents.ServiceActionParameters = deserializeAws_json1_1ExecutionParameters(
-      output.ServiceActionParameters,
-      context
-    );
+  if (output.ServiceActionParameters !== undefined && output.ServiceActionParameters !== null) {
+    contents.ServiceActionParameters = deserializeAws_json1_1ExecutionParameters(output.ServiceActionParameters, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DescribeServiceActionOutput = (
   output: any,
@@ -11799,69 +9488,63 @@ const deserializeAws_json1_1DescribeServiceActionOutput = (
 ): DescribeServiceActionOutput => {
   let contents: any = {
     __type: "DescribeServiceActionOutput",
-    ServiceActionDetail: undefined
+    ServiceActionDetail: undefined,
   };
-  if (
-    output.ServiceActionDetail !== undefined &&
-    output.ServiceActionDetail !== null
-  ) {
-    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(
-      output.ServiceActionDetail,
-      context
-    );
+  if (output.ServiceActionDetail !== undefined && output.ServiceActionDetail !== null) {
+    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(output.ServiceActionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisableAWSOrganizationsAccessOutput = (
   output: any,
   context: __SerdeContext
 ): DisableAWSOrganizationsAccessOutput => {
   let contents: any = {
-    __type: "DisableAWSOrganizationsAccessOutput"
+    __type: "DisableAWSOrganizationsAccessOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisassociateBudgetFromResourceOutput = (
   output: any,
   context: __SerdeContext
 ): DisassociateBudgetFromResourceOutput => {
   let contents: any = {
-    __type: "DisassociateBudgetFromResourceOutput"
+    __type: "DisassociateBudgetFromResourceOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisassociatePrincipalFromPortfolioOutput = (
   output: any,
   context: __SerdeContext
 ): DisassociatePrincipalFromPortfolioOutput => {
   let contents: any = {
-    __type: "DisassociatePrincipalFromPortfolioOutput"
+    __type: "DisassociatePrincipalFromPortfolioOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisassociateProductFromPortfolioOutput = (
   output: any,
   context: __SerdeContext
 ): DisassociateProductFromPortfolioOutput => {
   let contents: any = {
-    __type: "DisassociateProductFromPortfolioOutput"
+    __type: "DisassociateProductFromPortfolioOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DisassociateServiceActionFromProvisioningArtifactOutput = (
   output: any,
   context: __SerdeContext
 ): DisassociateServiceActionFromProvisioningArtifactOutput => {
   let contents: any = {
-    __type: "DisassociateServiceActionFromProvisioningArtifactOutput"
+    __type: "DisassociateServiceActionFromProvisioningArtifactOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1DuplicateResourceException = (
   output: any,
@@ -11869,23 +9552,23 @@ const deserializeAws_json1_1DuplicateResourceException = (
 ): DuplicateResourceException => {
   let contents: any = {
     __type: "DuplicateResourceException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1EnableAWSOrganizationsAccessOutput = (
   output: any,
   context: __SerdeContext
 ): EnableAWSOrganizationsAccessOutput => {
   let contents: any = {
-    __type: "EnableAWSOrganizationsAccessOutput"
+    __type: "EnableAWSOrganizationsAccessOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1ExecuteProvisionedProductPlanOutput = (
   output: any,
@@ -11893,16 +9576,13 @@ const deserializeAws_json1_1ExecuteProvisionedProductPlanOutput = (
 ): ExecuteProvisionedProductPlanOutput => {
   let contents: any = {
     __type: "ExecuteProvisionedProductPlanOutput",
-    RecordDetail: undefined
+    RecordDetail: undefined,
   };
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ExecuteProvisionedProductServiceActionOutput = (
   output: any,
@@ -11910,16 +9590,13 @@ const deserializeAws_json1_1ExecuteProvisionedProductServiceActionOutput = (
 ): ExecuteProvisionedProductServiceActionOutput => {
   let contents: any = {
     __type: "ExecuteProvisionedProductServiceActionOutput",
-    RecordDetail: undefined
+    RecordDetail: undefined,
   };
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ExecutionParameter = (
   output: any,
@@ -11929,13 +9606,10 @@ const deserializeAws_json1_1ExecutionParameter = (
     __type: "ExecutionParameter",
     DefaultValues: undefined,
     Name: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.DefaultValues !== undefined && output.DefaultValues !== null) {
-    contents.DefaultValues = deserializeAws_json1_1ExecutionParameterValueList(
-      output.DefaultValues,
-      context
-    );
+    contents.DefaultValues = deserializeAws_json1_1ExecutionParameterValueList(output.DefaultValues, context);
   }
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
@@ -11944,23 +9618,25 @@ const deserializeAws_json1_1ExecutionParameter = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ExecutionParameterValueList = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1ExecutionParameters = (
   output: any,
   context: __SerdeContext
-): ExecutionParameter[] => {
+): (ExecutionParameter)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ExecutionParameter(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1FailedServiceActionAssociation = (
   output: any,
@@ -11972,7 +9648,7 @@ const deserializeAws_json1_1FailedServiceActionAssociation = (
     ErrorMessage: undefined,
     ProductId: undefined,
     ProvisioningArtifactId: undefined,
-    ServiceActionId: undefined
+    ServiceActionId: undefined,
   };
   if (output.ErrorCode !== undefined && output.ErrorCode !== null) {
     contents.ErrorCode = output.ErrorCode;
@@ -11983,26 +9659,23 @@ const deserializeAws_json1_1FailedServiceActionAssociation = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   if (output.ServiceActionId !== undefined && output.ServiceActionId !== null) {
     contents.ServiceActionId = output.ServiceActionId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1FailedServiceActionAssociations = (
   output: any,
   context: __SerdeContext
-): FailedServiceActionAssociation[] => {
+): (FailedServiceActionAssociation)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1FailedServiceActionAssociation(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1GetAWSOrganizationsAccessStatusOutput = (
   output: any,
@@ -12010,13 +9683,13 @@ const deserializeAws_json1_1GetAWSOrganizationsAccessStatusOutput = (
 ): GetAWSOrganizationsAccessStatusOutput => {
   let contents: any = {
     __type: "GetAWSOrganizationsAccessStatusOutput",
-    AccessStatus: undefined
+    AccessStatus: undefined,
   };
   if (output.AccessStatus !== undefined && output.AccessStatus !== null) {
     contents.AccessStatus = output.AccessStatus;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidParametersException = (
   output: any,
@@ -12024,13 +9697,13 @@ const deserializeAws_json1_1InvalidParametersException = (
 ): InvalidParametersException => {
   let contents: any = {
     __type: "InvalidParametersException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1InvalidStateException = (
   output: any,
@@ -12038,22 +9711,22 @@ const deserializeAws_json1_1InvalidStateException = (
 ): InvalidStateException => {
   let contents: any = {
     __type: "InvalidStateException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1LaunchPathSummaries = (
   output: any,
   context: __SerdeContext
-): LaunchPathSummary[] => {
+): (LaunchPathSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1LaunchPathSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1LaunchPathSummary = (
   output: any,
@@ -12064,16 +9737,10 @@ const deserializeAws_json1_1LaunchPathSummary = (
     ConstraintSummaries: undefined,
     Id: undefined,
     Name: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
-  if (
-    output.ConstraintSummaries !== undefined &&
-    output.ConstraintSummaries !== null
-  ) {
-    contents.ConstraintSummaries = deserializeAws_json1_1ConstraintSummaries(
-      output.ConstraintSummaries,
-      context
-    );
+  if (output.ConstraintSummaries !== undefined && output.ConstraintSummaries !== null) {
+    contents.ConstraintSummaries = deserializeAws_json1_1ConstraintSummaries(output.ConstraintSummaries, context);
   }
   if (output.Id !== undefined && output.Id !== null) {
     contents.Id = output.Id;
@@ -12085,7 +9752,7 @@ const deserializeAws_json1_1LaunchPathSummary = (
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1LimitExceededException = (
   output: any,
@@ -12093,13 +9760,13 @@ const deserializeAws_json1_1LimitExceededException = (
 ): LimitExceededException => {
   let contents: any = {
     __type: "LimitExceededException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListAcceptedPortfolioSharesOutput = (
   output: any,
@@ -12108,22 +9775,16 @@ const deserializeAws_json1_1ListAcceptedPortfolioSharesOutput = (
   let contents: any = {
     __type: "ListAcceptedPortfolioSharesOutput",
     NextPageToken: undefined,
-    PortfolioDetails: undefined
+    PortfolioDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.PortfolioDetails !== undefined &&
-    output.PortfolioDetails !== null
-  ) {
-    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(
-      output.PortfolioDetails,
-      context
-    );
+  if (output.PortfolioDetails !== undefined && output.PortfolioDetails !== null) {
+    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(output.PortfolioDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListBudgetsForResourceOutput = (
   output: any,
@@ -12132,7 +9793,7 @@ const deserializeAws_json1_1ListBudgetsForResourceOutput = (
   let contents: any = {
     __type: "ListBudgetsForResourceOutput",
     Budgets: undefined,
-    NextPageToken: undefined
+    NextPageToken: undefined,
   };
   if (output.Budgets !== undefined && output.Budgets !== null) {
     contents.Budgets = deserializeAws_json1_1Budgets(output.Budgets, context);
@@ -12141,7 +9802,7 @@ const deserializeAws_json1_1ListBudgetsForResourceOutput = (
     contents.NextPageToken = output.NextPageToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListConstraintsForPortfolioOutput = (
   output: any,
@@ -12150,22 +9811,16 @@ const deserializeAws_json1_1ListConstraintsForPortfolioOutput = (
   let contents: any = {
     __type: "ListConstraintsForPortfolioOutput",
     ConstraintDetails: undefined,
-    NextPageToken: undefined
+    NextPageToken: undefined,
   };
-  if (
-    output.ConstraintDetails !== undefined &&
-    output.ConstraintDetails !== null
-  ) {
-    contents.ConstraintDetails = deserializeAws_json1_1ConstraintDetails(
-      output.ConstraintDetails,
-      context
-    );
+  if (output.ConstraintDetails !== undefined && output.ConstraintDetails !== null) {
+    contents.ConstraintDetails = deserializeAws_json1_1ConstraintDetails(output.ConstraintDetails, context);
   }
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListLaunchPathsOutput = (
   output: any,
@@ -12174,22 +9829,16 @@ const deserializeAws_json1_1ListLaunchPathsOutput = (
   let contents: any = {
     __type: "ListLaunchPathsOutput",
     LaunchPathSummaries: undefined,
-    NextPageToken: undefined
+    NextPageToken: undefined,
   };
-  if (
-    output.LaunchPathSummaries !== undefined &&
-    output.LaunchPathSummaries !== null
-  ) {
-    contents.LaunchPathSummaries = deserializeAws_json1_1LaunchPathSummaries(
-      output.LaunchPathSummaries,
-      context
-    );
+  if (output.LaunchPathSummaries !== undefined && output.LaunchPathSummaries !== null) {
+    contents.LaunchPathSummaries = deserializeAws_json1_1LaunchPathSummaries(output.LaunchPathSummaries, context);
   }
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListOrganizationPortfolioAccessOutput = (
   output: any,
@@ -12198,22 +9847,16 @@ const deserializeAws_json1_1ListOrganizationPortfolioAccessOutput = (
   let contents: any = {
     __type: "ListOrganizationPortfolioAccessOutput",
     NextPageToken: undefined,
-    OrganizationNodes: undefined
+    OrganizationNodes: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.OrganizationNodes !== undefined &&
-    output.OrganizationNodes !== null
-  ) {
-    contents.OrganizationNodes = deserializeAws_json1_1OrganizationNodes(
-      output.OrganizationNodes,
-      context
-    );
+  if (output.OrganizationNodes !== undefined && output.OrganizationNodes !== null) {
+    contents.OrganizationNodes = deserializeAws_json1_1OrganizationNodes(output.OrganizationNodes, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListPortfolioAccessOutput = (
   output: any,
@@ -12222,19 +9865,16 @@ const deserializeAws_json1_1ListPortfolioAccessOutput = (
   let contents: any = {
     __type: "ListPortfolioAccessOutput",
     AccountIds: undefined,
-    NextPageToken: undefined
+    NextPageToken: undefined,
   };
   if (output.AccountIds !== undefined && output.AccountIds !== null) {
-    contents.AccountIds = deserializeAws_json1_1AccountIds(
-      output.AccountIds,
-      context
-    );
+    contents.AccountIds = deserializeAws_json1_1AccountIds(output.AccountIds, context);
   }
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListPortfoliosForProductOutput = (
   output: any,
@@ -12243,22 +9883,16 @@ const deserializeAws_json1_1ListPortfoliosForProductOutput = (
   let contents: any = {
     __type: "ListPortfoliosForProductOutput",
     NextPageToken: undefined,
-    PortfolioDetails: undefined
+    PortfolioDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.PortfolioDetails !== undefined &&
-    output.PortfolioDetails !== null
-  ) {
-    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(
-      output.PortfolioDetails,
-      context
-    );
+  if (output.PortfolioDetails !== undefined && output.PortfolioDetails !== null) {
+    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(output.PortfolioDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListPortfoliosOutput = (
   output: any,
@@ -12267,22 +9901,16 @@ const deserializeAws_json1_1ListPortfoliosOutput = (
   let contents: any = {
     __type: "ListPortfoliosOutput",
     NextPageToken: undefined,
-    PortfolioDetails: undefined
+    PortfolioDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.PortfolioDetails !== undefined &&
-    output.PortfolioDetails !== null
-  ) {
-    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(
-      output.PortfolioDetails,
-      context
-    );
+  if (output.PortfolioDetails !== undefined && output.PortfolioDetails !== null) {
+    contents.PortfolioDetails = deserializeAws_json1_1PortfolioDetails(output.PortfolioDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListPrincipalsForPortfolioOutput = (
   output: any,
@@ -12291,19 +9919,16 @@ const deserializeAws_json1_1ListPrincipalsForPortfolioOutput = (
   let contents: any = {
     __type: "ListPrincipalsForPortfolioOutput",
     NextPageToken: undefined,
-    Principals: undefined
+    Principals: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   if (output.Principals !== undefined && output.Principals !== null) {
-    contents.Principals = deserializeAws_json1_1Principals(
-      output.Principals,
-      context
-    );
+    contents.Principals = deserializeAws_json1_1Principals(output.Principals, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListProvisionedProductPlansOutput = (
   output: any,
@@ -12312,22 +9937,16 @@ const deserializeAws_json1_1ListProvisionedProductPlansOutput = (
   let contents: any = {
     __type: "ListProvisionedProductPlansOutput",
     NextPageToken: undefined,
-    ProvisionedProductPlans: undefined
+    ProvisionedProductPlans: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisionedProductPlans !== undefined &&
-    output.ProvisionedProductPlans !== null
-  ) {
-    contents.ProvisionedProductPlans = deserializeAws_json1_1ProvisionedProductPlans(
-      output.ProvisionedProductPlans,
-      context
-    );
+  if (output.ProvisionedProductPlans !== undefined && output.ProvisionedProductPlans !== null) {
+    contents.ProvisionedProductPlans = deserializeAws_json1_1ProvisionedProductPlans(output.ProvisionedProductPlans, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionOutput = (
   output: any,
@@ -12336,22 +9955,16 @@ const deserializeAws_json1_1ListProvisioningArtifactsForServiceActionOutput = (
   let contents: any = {
     __type: "ListProvisioningArtifactsForServiceActionOutput",
     NextPageToken: undefined,
-    ProvisioningArtifactViews: undefined
+    ProvisioningArtifactViews: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisioningArtifactViews !== undefined &&
-    output.ProvisioningArtifactViews !== null
-  ) {
-    contents.ProvisioningArtifactViews = deserializeAws_json1_1ProvisioningArtifactViews(
-      output.ProvisioningArtifactViews,
-      context
-    );
+  if (output.ProvisioningArtifactViews !== undefined && output.ProvisioningArtifactViews !== null) {
+    contents.ProvisioningArtifactViews = deserializeAws_json1_1ProvisioningArtifactViews(output.ProvisioningArtifactViews, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListProvisioningArtifactsOutput = (
   output: any,
@@ -12360,22 +9973,16 @@ const deserializeAws_json1_1ListProvisioningArtifactsOutput = (
   let contents: any = {
     __type: "ListProvisioningArtifactsOutput",
     NextPageToken: undefined,
-    ProvisioningArtifactDetails: undefined
+    ProvisioningArtifactDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisioningArtifactDetails !== undefined &&
-    output.ProvisioningArtifactDetails !== null
-  ) {
-    contents.ProvisioningArtifactDetails = deserializeAws_json1_1ProvisioningArtifactDetails(
-      output.ProvisioningArtifactDetails,
-      context
-    );
+  if (output.ProvisioningArtifactDetails !== undefined && output.ProvisioningArtifactDetails !== null) {
+    contents.ProvisioningArtifactDetails = deserializeAws_json1_1ProvisioningArtifactDetails(output.ProvisioningArtifactDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListRecordHistoryOutput = (
   output: any,
@@ -12384,19 +9991,16 @@ const deserializeAws_json1_1ListRecordHistoryOutput = (
   let contents: any = {
     __type: "ListRecordHistoryOutput",
     NextPageToken: undefined,
-    RecordDetails: undefined
+    RecordDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   if (output.RecordDetails !== undefined && output.RecordDetails !== null) {
-    contents.RecordDetails = deserializeAws_json1_1RecordDetails(
-      output.RecordDetails,
-      context
-    );
+    contents.RecordDetails = deserializeAws_json1_1RecordDetails(output.RecordDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactOutput = (
   output: any,
@@ -12405,22 +10009,16 @@ const deserializeAws_json1_1ListServiceActionsForProvisioningArtifactOutput = (
   let contents: any = {
     __type: "ListServiceActionsForProvisioningArtifactOutput",
     NextPageToken: undefined,
-    ServiceActionSummaries: undefined
+    ServiceActionSummaries: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ServiceActionSummaries !== undefined &&
-    output.ServiceActionSummaries !== null
-  ) {
-    contents.ServiceActionSummaries = deserializeAws_json1_1ServiceActionSummaries(
-      output.ServiceActionSummaries,
-      context
-    );
+  if (output.ServiceActionSummaries !== undefined && output.ServiceActionSummaries !== null) {
+    contents.ServiceActionSummaries = deserializeAws_json1_1ServiceActionSummaries(output.ServiceActionSummaries, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListServiceActionsOutput = (
   output: any,
@@ -12429,22 +10027,16 @@ const deserializeAws_json1_1ListServiceActionsOutput = (
   let contents: any = {
     __type: "ListServiceActionsOutput",
     NextPageToken: undefined,
-    ServiceActionSummaries: undefined
+    ServiceActionSummaries: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ServiceActionSummaries !== undefined &&
-    output.ServiceActionSummaries !== null
-  ) {
-    contents.ServiceActionSummaries = deserializeAws_json1_1ServiceActionSummaries(
-      output.ServiceActionSummaries,
-      context
-    );
+  if (output.ServiceActionSummaries !== undefined && output.ServiceActionSummaries !== null) {
+    contents.ServiceActionSummaries = deserializeAws_json1_1ServiceActionSummaries(output.ServiceActionSummaries, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ListStackInstancesForProvisionedProductOutput = (
   output: any,
@@ -12453,33 +10045,34 @@ const deserializeAws_json1_1ListStackInstancesForProvisionedProductOutput = (
   let contents: any = {
     __type: "ListStackInstancesForProvisionedProductOutput",
     NextPageToken: undefined,
-    StackInstances: undefined
+    StackInstances: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
   if (output.StackInstances !== undefined && output.StackInstances !== null) {
-    contents.StackInstances = deserializeAws_json1_1StackInstances(
-      output.StackInstances,
-      context
-    );
+    contents.StackInstances = deserializeAws_json1_1StackInstances(output.StackInstances, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Namespaces = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1NotificationArns = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1OperationNotSupportedException = (
   output: any,
@@ -12487,13 +10080,13 @@ const deserializeAws_json1_1OperationNotSupportedException = (
 ): OperationNotSupportedException => {
   let contents: any = {
     __type: "OperationNotSupportedException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1OrganizationNode = (
   output: any,
@@ -12502,7 +10095,7 @@ const deserializeAws_json1_1OrganizationNode = (
   let contents: any = {
     __type: "OrganizationNode",
     Type: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Type !== undefined && output.Type !== null) {
     contents.Type = output.Type;
@@ -12511,16 +10104,16 @@ const deserializeAws_json1_1OrganizationNode = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1OrganizationNodes = (
   output: any,
   context: __SerdeContext
-): OrganizationNode[] => {
+): (OrganizationNode)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1OrganizationNode(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ParameterConstraints = (
   output: any,
@@ -12528,16 +10121,13 @@ const deserializeAws_json1_1ParameterConstraints = (
 ): ParameterConstraints => {
   let contents: any = {
     __type: "ParameterConstraints",
-    AllowedValues: undefined
+    AllowedValues: undefined,
   };
   if (output.AllowedValues !== undefined && output.AllowedValues !== null) {
-    contents.AllowedValues = deserializeAws_json1_1AllowedValues(
-      output.AllowedValues,
-      context
-    );
+    contents.AllowedValues = deserializeAws_json1_1AllowedValues(output.AllowedValues, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1PortfolioDetail = (
   output: any,
@@ -12550,7 +10140,7 @@ const deserializeAws_json1_1PortfolioDetail = (
     Description: undefined,
     DisplayName: undefined,
     Id: undefined,
-    ProviderName: undefined
+    ProviderName: undefined,
   };
   if (output.ARN !== undefined && output.ARN !== null) {
     contents.ARN = output.ARN;
@@ -12571,16 +10161,16 @@ const deserializeAws_json1_1PortfolioDetail = (
     contents.ProviderName = output.ProviderName;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1PortfolioDetails = (
   output: any,
   context: __SerdeContext
-): PortfolioDetail[] => {
+): (PortfolioDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1PortfolioDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1Principal = (
   output: any,
@@ -12589,7 +10179,7 @@ const deserializeAws_json1_1Principal = (
   let contents: any = {
     __type: "Principal",
     PrincipalARN: undefined,
-    PrincipalType: undefined
+    PrincipalType: undefined,
   };
   if (output.PrincipalARN !== undefined && output.PrincipalARN !== null) {
     contents.PrincipalARN = output.PrincipalARN;
@@ -12598,16 +10188,16 @@ const deserializeAws_json1_1Principal = (
     contents.PrincipalType = output.PrincipalType;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Principals = (
   output: any,
   context: __SerdeContext
-): Principal[] => {
+): (Principal)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Principal(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProductViewAggregationValue = (
   output: any,
@@ -12616,42 +10206,36 @@ const deserializeAws_json1_1ProductViewAggregationValue = (
   let contents: any = {
     __type: "ProductViewAggregationValue",
     ApproximateCount: undefined,
-    Value: undefined
+    Value: undefined,
   };
-  if (
-    output.ApproximateCount !== undefined &&
-    output.ApproximateCount !== null
-  ) {
+  if (output.ApproximateCount !== undefined && output.ApproximateCount !== null) {
     contents.ApproximateCount = output.ApproximateCount;
   }
   if (output.Value !== undefined && output.Value !== null) {
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProductViewAggregationValues = (
   output: any,
   context: __SerdeContext
-): ProductViewAggregationValue[] => {
+): (ProductViewAggregationValue)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProductViewAggregationValue(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProductViewAggregations = (
   output: any,
   context: __SerdeContext
-): { [key: string]: ProductViewAggregationValue[] } => {
+): { [key: string]: (ProductViewAggregationValue)[] } => {
   const mapParams: any = {};
   Object.keys(output).forEach(key => {
-    mapParams[key] = deserializeAws_json1_1ProductViewAggregationValues(
-      output[key],
-      context
-    );
+    mapParams[key] = deserializeAws_json1_1ProductViewAggregationValues(output[key], context);
   });
   return mapParams;
-};
+}
 
 const deserializeAws_json1_1ProductViewDetail = (
   output: any,
@@ -12662,7 +10246,7 @@ const deserializeAws_json1_1ProductViewDetail = (
     CreatedTime: undefined,
     ProductARN: undefined,
     ProductViewSummary: undefined,
-    Status: undefined
+    Status: undefined,
   };
   if (output.CreatedTime !== undefined && output.CreatedTime !== null) {
     contents.CreatedTime = new Date(Math.round(output.CreatedTime * 1000));
@@ -12670,38 +10254,32 @@ const deserializeAws_json1_1ProductViewDetail = (
   if (output.ProductARN !== undefined && output.ProductARN !== null) {
     contents.ProductARN = output.ProductARN;
   }
-  if (
-    output.ProductViewSummary !== undefined &&
-    output.ProductViewSummary !== null
-  ) {
-    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(
-      output.ProductViewSummary,
-      context
-    );
+  if (output.ProductViewSummary !== undefined && output.ProductViewSummary !== null) {
+    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(output.ProductViewSummary, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProductViewDetails = (
   output: any,
   context: __SerdeContext
-): ProductViewDetail[] => {
+): (ProductViewDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProductViewDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProductViewSummaries = (
   output: any,
   context: __SerdeContext
-): ProductViewSummary[] => {
+): (ProductViewSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProductViewSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProductViewSummary = (
   output: any,
@@ -12719,7 +10297,7 @@ const deserializeAws_json1_1ProductViewSummary = (
     SupportDescription: undefined,
     SupportEmail: undefined,
     SupportUrl: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.Distributor !== undefined && output.Distributor !== null) {
     contents.Distributor = output.Distributor;
@@ -12739,16 +10317,10 @@ const deserializeAws_json1_1ProductViewSummary = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ShortDescription !== undefined &&
-    output.ShortDescription !== null
-  ) {
+  if (output.ShortDescription !== undefined && output.ShortDescription !== null) {
     contents.ShortDescription = output.ShortDescription;
   }
-  if (
-    output.SupportDescription !== undefined &&
-    output.SupportDescription !== null
-  ) {
+  if (output.SupportDescription !== undefined && output.SupportDescription !== null) {
     contents.SupportDescription = output.SupportDescription;
   }
   if (output.SupportEmail !== undefined && output.SupportEmail !== null) {
@@ -12761,7 +10333,7 @@ const deserializeAws_json1_1ProductViewSummary = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionProductOutput = (
   output: any,
@@ -12769,16 +10341,13 @@ const deserializeAws_json1_1ProvisionProductOutput = (
 ): ProvisionProductOutput => {
   let contents: any = {
     __type: "ProvisionProductOutput",
-    RecordDetail: undefined
+    RecordDetail: undefined,
   };
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductAttribute = (
   output: any,
@@ -12800,7 +10369,7 @@ const deserializeAws_json1_1ProvisionedProductAttribute = (
     Tags: undefined,
     Type: undefined,
     UserArn: undefined,
-    UserArnSession: undefined
+    UserArnSession: undefined,
   };
   if (output.Arn !== undefined && output.Arn !== null) {
     contents.Arn = output.Arn;
@@ -12811,10 +10380,7 @@ const deserializeAws_json1_1ProvisionedProductAttribute = (
   if (output.Id !== undefined && output.Id !== null) {
     contents.Id = output.Id;
   }
-  if (
-    output.IdempotencyToken !== undefined &&
-    output.IdempotencyToken !== null
-  ) {
+  if (output.IdempotencyToken !== undefined && output.IdempotencyToken !== null) {
     contents.IdempotencyToken = output.IdempotencyToken;
   }
   if (output.LastRecordId !== undefined && output.LastRecordId !== null) {
@@ -12829,10 +10395,7 @@ const deserializeAws_json1_1ProvisionedProductAttribute = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   if (output.Status !== undefined && output.Status !== null) {
@@ -12854,16 +10417,16 @@ const deserializeAws_json1_1ProvisionedProductAttribute = (
     contents.UserArnSession = output.UserArnSession;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductAttributes = (
   output: any,
   context: __SerdeContext
-): ProvisionedProductAttribute[] => {
+): (ProvisionedProductAttribute)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisionedProductAttribute(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductDetail = (
   output: any,
@@ -12881,7 +10444,7 @@ const deserializeAws_json1_1ProvisionedProductDetail = (
     ProvisioningArtifactId: undefined,
     Status: undefined,
     StatusMessage: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.Arn !== undefined && output.Arn !== null) {
     contents.Arn = output.Arn;
@@ -12892,10 +10455,7 @@ const deserializeAws_json1_1ProvisionedProductDetail = (
   if (output.Id !== undefined && output.Id !== null) {
     contents.Id = output.Id;
   }
-  if (
-    output.IdempotencyToken !== undefined &&
-    output.IdempotencyToken !== null
-  ) {
+  if (output.IdempotencyToken !== undefined && output.IdempotencyToken !== null) {
     contents.IdempotencyToken = output.IdempotencyToken;
   }
   if (output.LastRecordId !== undefined && output.LastRecordId !== null) {
@@ -12907,10 +10467,7 @@ const deserializeAws_json1_1ProvisionedProductDetail = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   if (output.Status !== undefined && output.Status !== null) {
@@ -12923,16 +10480,16 @@ const deserializeAws_json1_1ProvisionedProductDetail = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductDetails = (
   output: any,
   context: __SerdeContext
-): ProvisionedProductDetail[] => {
+): (ProvisionedProductDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisionedProductDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductPlanDetails = (
   output: any,
@@ -12954,19 +10511,13 @@ const deserializeAws_json1_1ProvisionedProductPlanDetails = (
     Status: undefined,
     StatusMessage: undefined,
     Tags: undefined,
-    UpdatedTime: undefined
+    UpdatedTime: undefined,
   };
   if (output.CreatedTime !== undefined && output.CreatedTime !== null) {
     contents.CreatedTime = new Date(Math.round(output.CreatedTime * 1000));
   }
-  if (
-    output.NotificationArns !== undefined &&
-    output.NotificationArns !== null
-  ) {
-    contents.NotificationArns = deserializeAws_json1_1NotificationArns(
-      output.NotificationArns,
-      context
-    );
+  if (output.NotificationArns !== undefined && output.NotificationArns !== null) {
+    contents.NotificationArns = deserializeAws_json1_1NotificationArns(output.NotificationArns, context);
   }
   if (output.PathId !== undefined && output.PathId !== null) {
     contents.PathId = output.PathId;
@@ -12983,32 +10534,17 @@ const deserializeAws_json1_1ProvisionedProductPlanDetails = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ProvisionProductId !== undefined &&
-    output.ProvisionProductId !== null
-  ) {
+  if (output.ProvisionProductId !== undefined && output.ProvisionProductId !== null) {
     contents.ProvisionProductId = output.ProvisionProductId;
   }
-  if (
-    output.ProvisionProductName !== undefined &&
-    output.ProvisionProductName !== null
-  ) {
+  if (output.ProvisionProductName !== undefined && output.ProvisionProductName !== null) {
     contents.ProvisionProductName = output.ProvisionProductName;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
-  if (
-    output.ProvisioningParameters !== undefined &&
-    output.ProvisioningParameters !== null
-  ) {
-    contents.ProvisioningParameters = deserializeAws_json1_1UpdateProvisioningParameters(
-      output.ProvisioningParameters,
-      context
-    );
+  if (output.ProvisioningParameters !== undefined && output.ProvisioningParameters !== null) {
+    contents.ProvisioningParameters = deserializeAws_json1_1UpdateProvisioningParameters(output.ProvisioningParameters, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
@@ -13023,7 +10559,7 @@ const deserializeAws_json1_1ProvisionedProductPlanDetails = (
     contents.UpdatedTime = new Date(Math.round(output.UpdatedTime * 1000));
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductPlanSummary = (
   output: any,
@@ -13036,7 +10572,7 @@ const deserializeAws_json1_1ProvisionedProductPlanSummary = (
     PlanType: undefined,
     ProvisionProductId: undefined,
     ProvisionProductName: undefined,
-    ProvisioningArtifactId: undefined
+    ProvisioningArtifactId: undefined,
   };
   if (output.PlanId !== undefined && output.PlanId !== null) {
     contents.PlanId = output.PlanId;
@@ -13047,35 +10583,26 @@ const deserializeAws_json1_1ProvisionedProductPlanSummary = (
   if (output.PlanType !== undefined && output.PlanType !== null) {
     contents.PlanType = output.PlanType;
   }
-  if (
-    output.ProvisionProductId !== undefined &&
-    output.ProvisionProductId !== null
-  ) {
+  if (output.ProvisionProductId !== undefined && output.ProvisionProductId !== null) {
     contents.ProvisionProductId = output.ProvisionProductId;
   }
-  if (
-    output.ProvisionProductName !== undefined &&
-    output.ProvisionProductName !== null
-  ) {
+  if (output.ProvisionProductName !== undefined && output.ProvisionProductName !== null) {
     contents.ProvisionProductName = output.ProvisionProductName;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductPlans = (
   output: any,
   context: __SerdeContext
-): ProvisionedProductPlanSummary[] => {
+): (ProvisionedProductPlanSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisionedProductPlanSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisionedProductProperties = (
   output: any,
@@ -13086,7 +10613,7 @@ const deserializeAws_json1_1ProvisionedProductProperties = (
     mapParams[key] = output[key];
   });
   return mapParams;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifact = (
   output: any,
@@ -13098,7 +10625,7 @@ const deserializeAws_json1_1ProvisioningArtifact = (
     Description: undefined,
     Guidance: undefined,
     Id: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.CreatedTime !== undefined && output.CreatedTime !== null) {
     contents.CreatedTime = new Date(Math.round(output.CreatedTime * 1000));
@@ -13116,7 +10643,7 @@ const deserializeAws_json1_1ProvisioningArtifact = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactDetail = (
   output: any,
@@ -13130,7 +10657,7 @@ const deserializeAws_json1_1ProvisioningArtifactDetail = (
     Guidance: undefined,
     Id: undefined,
     Name: undefined,
-    Type: undefined
+    Type: undefined,
   };
   if (output.Active !== undefined && output.Active !== null) {
     contents.Active = output.Active;
@@ -13154,16 +10681,16 @@ const deserializeAws_json1_1ProvisioningArtifactDetail = (
     contents.Type = output.Type;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactDetails = (
   output: any,
   context: __SerdeContext
-): ProvisioningArtifactDetail[] => {
+): (ProvisioningArtifactDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisioningArtifactDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactInfo = (
   output: any,
@@ -13174,7 +10701,7 @@ const deserializeAws_json1_1ProvisioningArtifactInfo = (
     mapParams[key] = output[key];
   });
   return mapParams;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactParameter = (
   output: any,
@@ -13187,7 +10714,7 @@ const deserializeAws_json1_1ProvisioningArtifactParameter = (
     IsNoEcho: undefined,
     ParameterConstraints: undefined,
     ParameterKey: undefined,
-    ParameterType: undefined
+    ParameterType: undefined,
   };
   if (output.DefaultValue !== undefined && output.DefaultValue !== null) {
     contents.DefaultValue = output.DefaultValue;
@@ -13198,14 +10725,8 @@ const deserializeAws_json1_1ProvisioningArtifactParameter = (
   if (output.IsNoEcho !== undefined && output.IsNoEcho !== null) {
     contents.IsNoEcho = output.IsNoEcho;
   }
-  if (
-    output.ParameterConstraints !== undefined &&
-    output.ParameterConstraints !== null
-  ) {
-    contents.ParameterConstraints = deserializeAws_json1_1ParameterConstraints(
-      output.ParameterConstraints,
-      context
-    );
+  if (output.ParameterConstraints !== undefined && output.ParameterConstraints !== null) {
+    contents.ParameterConstraints = deserializeAws_json1_1ParameterConstraints(output.ParameterConstraints, context);
   }
   if (output.ParameterKey !== undefined && output.ParameterKey !== null) {
     contents.ParameterKey = output.ParameterKey;
@@ -13214,16 +10735,16 @@ const deserializeAws_json1_1ProvisioningArtifactParameter = (
     contents.ParameterType = output.ParameterType;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactParameters = (
   output: any,
   context: __SerdeContext
-): ProvisioningArtifactParameter[] => {
+): (ProvisioningArtifactParameter)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisioningArtifactParameter(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactPreferences = (
   output: any,
@@ -13232,34 +10753,25 @@ const deserializeAws_json1_1ProvisioningArtifactPreferences = (
   let contents: any = {
     __type: "ProvisioningArtifactPreferences",
     StackSetAccounts: undefined,
-    StackSetRegions: undefined
+    StackSetRegions: undefined,
   };
-  if (
-    output.StackSetAccounts !== undefined &&
-    output.StackSetAccounts !== null
-  ) {
-    contents.StackSetAccounts = deserializeAws_json1_1StackSetAccounts(
-      output.StackSetAccounts,
-      context
-    );
+  if (output.StackSetAccounts !== undefined && output.StackSetAccounts !== null) {
+    contents.StackSetAccounts = deserializeAws_json1_1StackSetAccounts(output.StackSetAccounts, context);
   }
   if (output.StackSetRegions !== undefined && output.StackSetRegions !== null) {
-    contents.StackSetRegions = deserializeAws_json1_1StackSetRegions(
-      output.StackSetRegions,
-      context
-    );
+    contents.StackSetRegions = deserializeAws_json1_1StackSetRegions(output.StackSetRegions, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactSummaries = (
   output: any,
   context: __SerdeContext
-): ProvisioningArtifactSummary[] => {
+): (ProvisioningArtifactSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisioningArtifactSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactSummary = (
   output: any,
@@ -13271,7 +10783,7 @@ const deserializeAws_json1_1ProvisioningArtifactSummary = (
     Description: undefined,
     Id: undefined,
     Name: undefined,
-    ProvisioningArtifactMetadata: undefined
+    ProvisioningArtifactMetadata: undefined,
   };
   if (output.CreatedTime !== undefined && output.CreatedTime !== null) {
     contents.CreatedTime = new Date(Math.round(output.CreatedTime * 1000));
@@ -13285,17 +10797,11 @@ const deserializeAws_json1_1ProvisioningArtifactSummary = (
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
   }
-  if (
-    output.ProvisioningArtifactMetadata !== undefined &&
-    output.ProvisioningArtifactMetadata !== null
-  ) {
-    contents.ProvisioningArtifactMetadata = deserializeAws_json1_1ProvisioningArtifactInfo(
-      output.ProvisioningArtifactMetadata,
-      context
-    );
+  if (output.ProvisioningArtifactMetadata !== undefined && output.ProvisioningArtifactMetadata !== null) {
+    contents.ProvisioningArtifactMetadata = deserializeAws_json1_1ProvisioningArtifactInfo(output.ProvisioningArtifactMetadata, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactView = (
   output: any,
@@ -13304,46 +10810,34 @@ const deserializeAws_json1_1ProvisioningArtifactView = (
   let contents: any = {
     __type: "ProvisioningArtifactView",
     ProductViewSummary: undefined,
-    ProvisioningArtifact: undefined
+    ProvisioningArtifact: undefined,
   };
-  if (
-    output.ProductViewSummary !== undefined &&
-    output.ProductViewSummary !== null
-  ) {
-    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(
-      output.ProductViewSummary,
-      context
-    );
+  if (output.ProductViewSummary !== undefined && output.ProductViewSummary !== null) {
+    contents.ProductViewSummary = deserializeAws_json1_1ProductViewSummary(output.ProductViewSummary, context);
   }
-  if (
-    output.ProvisioningArtifact !== undefined &&
-    output.ProvisioningArtifact !== null
-  ) {
-    contents.ProvisioningArtifact = deserializeAws_json1_1ProvisioningArtifact(
-      output.ProvisioningArtifact,
-      context
-    );
+  if (output.ProvisioningArtifact !== undefined && output.ProvisioningArtifact !== null) {
+    contents.ProvisioningArtifact = deserializeAws_json1_1ProvisioningArtifact(output.ProvisioningArtifact, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifactViews = (
   output: any,
   context: __SerdeContext
-): ProvisioningArtifactView[] => {
+): (ProvisioningArtifactView)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisioningArtifactView(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ProvisioningArtifacts = (
   output: any,
   context: __SerdeContext
-): ProvisioningArtifact[] => {
+): (ProvisioningArtifact)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ProvisioningArtifact(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1RecordDetail = (
   output: any,
@@ -13363,7 +10857,7 @@ const deserializeAws_json1_1RecordDetail = (
     RecordTags: undefined,
     RecordType: undefined,
     Status: undefined,
-    UpdatedTime: undefined
+    UpdatedTime: undefined,
   };
   if (output.CreatedTime !== undefined && output.CreatedTime !== null) {
     contents.CreatedTime = new Date(Math.round(output.CreatedTime * 1000));
@@ -13374,44 +10868,26 @@ const deserializeAws_json1_1RecordDetail = (
   if (output.ProductId !== undefined && output.ProductId !== null) {
     contents.ProductId = output.ProductId;
   }
-  if (
-    output.ProvisionedProductId !== undefined &&
-    output.ProvisionedProductId !== null
-  ) {
+  if (output.ProvisionedProductId !== undefined && output.ProvisionedProductId !== null) {
     contents.ProvisionedProductId = output.ProvisionedProductId;
   }
-  if (
-    output.ProvisionedProductName !== undefined &&
-    output.ProvisionedProductName !== null
-  ) {
+  if (output.ProvisionedProductName !== undefined && output.ProvisionedProductName !== null) {
     contents.ProvisionedProductName = output.ProvisionedProductName;
   }
-  if (
-    output.ProvisionedProductType !== undefined &&
-    output.ProvisionedProductType !== null
-  ) {
+  if (output.ProvisionedProductType !== undefined && output.ProvisionedProductType !== null) {
     contents.ProvisionedProductType = output.ProvisionedProductType;
   }
-  if (
-    output.ProvisioningArtifactId !== undefined &&
-    output.ProvisioningArtifactId !== null
-  ) {
+  if (output.ProvisioningArtifactId !== undefined && output.ProvisioningArtifactId !== null) {
     contents.ProvisioningArtifactId = output.ProvisioningArtifactId;
   }
   if (output.RecordErrors !== undefined && output.RecordErrors !== null) {
-    contents.RecordErrors = deserializeAws_json1_1RecordErrors(
-      output.RecordErrors,
-      context
-    );
+    contents.RecordErrors = deserializeAws_json1_1RecordErrors(output.RecordErrors, context);
   }
   if (output.RecordId !== undefined && output.RecordId !== null) {
     contents.RecordId = output.RecordId;
   }
   if (output.RecordTags !== undefined && output.RecordTags !== null) {
-    contents.RecordTags = deserializeAws_json1_1RecordTags(
-      output.RecordTags,
-      context
-    );
+    contents.RecordTags = deserializeAws_json1_1RecordTags(output.RecordTags, context);
   }
   if (output.RecordType !== undefined && output.RecordType !== null) {
     contents.RecordType = output.RecordType;
@@ -13423,16 +10899,16 @@ const deserializeAws_json1_1RecordDetail = (
     contents.UpdatedTime = new Date(Math.round(output.UpdatedTime * 1000));
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RecordDetails = (
   output: any,
   context: __SerdeContext
-): RecordDetail[] => {
+): (RecordDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1RecordDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1RecordError = (
   output: any,
@@ -13441,7 +10917,7 @@ const deserializeAws_json1_1RecordError = (
   let contents: any = {
     __type: "RecordError",
     Code: undefined,
-    Description: undefined
+    Description: undefined,
   };
   if (output.Code !== undefined && output.Code !== null) {
     contents.Code = output.Code;
@@ -13450,16 +10926,16 @@ const deserializeAws_json1_1RecordError = (
     contents.Description = output.Description;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RecordErrors = (
   output: any,
   context: __SerdeContext
-): RecordError[] => {
+): (RecordError)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1RecordError(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1RecordOutput = (
   output: any,
@@ -13469,7 +10945,7 @@ const deserializeAws_json1_1RecordOutput = (
     __type: "RecordOutput",
     Description: undefined,
     OutputKey: undefined,
-    OutputValue: undefined
+    OutputValue: undefined,
   };
   if (output.Description !== undefined && output.Description !== null) {
     contents.Description = output.Description;
@@ -13481,16 +10957,16 @@ const deserializeAws_json1_1RecordOutput = (
     contents.OutputValue = output.OutputValue;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RecordOutputs = (
   output: any,
   context: __SerdeContext
-): RecordOutput[] => {
+): (RecordOutput)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1RecordOutput(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1RecordTag = (
   output: any,
@@ -13499,7 +10975,7 @@ const deserializeAws_json1_1RecordTag = (
   let contents: any = {
     __type: "RecordTag",
     Key: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
@@ -13508,26 +10984,26 @@ const deserializeAws_json1_1RecordTag = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1RecordTags = (
   output: any,
   context: __SerdeContext
-): RecordTag[] => {
+): (RecordTag)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1RecordTag(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1RejectPortfolioShareOutput = (
   output: any,
   context: __SerdeContext
 ): RejectPortfolioShareOutput => {
   let contents: any = {
-    __type: "RejectPortfolioShareOutput"
+    __type: "RejectPortfolioShareOutput",
   };
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceChange = (
   output: any,
@@ -13541,27 +11017,18 @@ const deserializeAws_json1_1ResourceChange = (
     PhysicalResourceId: undefined,
     Replacement: undefined,
     ResourceType: undefined,
-    Scope: undefined
+    Scope: undefined,
   };
   if (output.Action !== undefined && output.Action !== null) {
     contents.Action = output.Action;
   }
   if (output.Details !== undefined && output.Details !== null) {
-    contents.Details = deserializeAws_json1_1ResourceChangeDetails(
-      output.Details,
-      context
-    );
+    contents.Details = deserializeAws_json1_1ResourceChangeDetails(output.Details, context);
   }
-  if (
-    output.LogicalResourceId !== undefined &&
-    output.LogicalResourceId !== null
-  ) {
+  if (output.LogicalResourceId !== undefined && output.LogicalResourceId !== null) {
     contents.LogicalResourceId = output.LogicalResourceId;
   }
-  if (
-    output.PhysicalResourceId !== undefined &&
-    output.PhysicalResourceId !== null
-  ) {
+  if (output.PhysicalResourceId !== undefined && output.PhysicalResourceId !== null) {
     contents.PhysicalResourceId = output.PhysicalResourceId;
   }
   if (output.Replacement !== undefined && output.Replacement !== null) {
@@ -13574,7 +11041,7 @@ const deserializeAws_json1_1ResourceChange = (
     contents.Scope = deserializeAws_json1_1Scope(output.Scope, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceChangeDetail = (
   output: any,
@@ -13584,7 +11051,7 @@ const deserializeAws_json1_1ResourceChangeDetail = (
     __type: "ResourceChangeDetail",
     CausingEntity: undefined,
     Evaluation: undefined,
-    Target: undefined
+    Target: undefined,
   };
   if (output.CausingEntity !== undefined && output.CausingEntity !== null) {
     contents.CausingEntity = output.CausingEntity;
@@ -13593,31 +11060,28 @@ const deserializeAws_json1_1ResourceChangeDetail = (
     contents.Evaluation = output.Evaluation;
   }
   if (output.Target !== undefined && output.Target !== null) {
-    contents.Target = deserializeAws_json1_1ResourceTargetDefinition(
-      output.Target,
-      context
-    );
+    contents.Target = deserializeAws_json1_1ResourceTargetDefinition(output.Target, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceChangeDetails = (
   output: any,
   context: __SerdeContext
-): ResourceChangeDetail[] => {
+): (ResourceChangeDetail)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ResourceChangeDetail(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ResourceChanges = (
   output: any,
   context: __SerdeContext
-): ResourceChange[] => {
+): (ResourceChange)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ResourceChange(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ResourceInUseException = (
   output: any,
@@ -13625,13 +11089,13 @@ const deserializeAws_json1_1ResourceInUseException = (
 ): ResourceInUseException => {
   let contents: any = {
     __type: "ResourceInUseException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceNotFoundException = (
   output: any,
@@ -13639,13 +11103,13 @@ const deserializeAws_json1_1ResourceNotFoundException = (
 ): ResourceNotFoundException => {
   let contents: any = {
     __type: "ResourceNotFoundException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ResourceTargetDefinition = (
   output: any,
@@ -13655,7 +11119,7 @@ const deserializeAws_json1_1ResourceTargetDefinition = (
     __type: "ResourceTargetDefinition",
     Attribute: undefined,
     Name: undefined,
-    RequiresRecreation: undefined
+    RequiresRecreation: undefined,
   };
   if (output.Attribute !== undefined && output.Attribute !== null) {
     contents.Attribute = output.Attribute;
@@ -13663,14 +11127,11 @@ const deserializeAws_json1_1ResourceTargetDefinition = (
   if (output.Name !== undefined && output.Name !== null) {
     contents.Name = output.Name;
   }
-  if (
-    output.RequiresRecreation !== undefined &&
-    output.RequiresRecreation !== null
-  ) {
+  if (output.RequiresRecreation !== undefined && output.RequiresRecreation !== null) {
     contents.RequiresRecreation = output.RequiresRecreation;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ScanProvisionedProductsOutput = (
   output: any,
@@ -13679,29 +11140,25 @@ const deserializeAws_json1_1ScanProvisionedProductsOutput = (
   let contents: any = {
     __type: "ScanProvisionedProductsOutput",
     NextPageToken: undefined,
-    ProvisionedProducts: undefined
+    ProvisionedProducts: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisionedProducts !== undefined &&
-    output.ProvisionedProducts !== null
-  ) {
-    contents.ProvisionedProducts = deserializeAws_json1_1ProvisionedProductDetails(
-      output.ProvisionedProducts,
-      context
-    );
+  if (output.ProvisionedProducts !== undefined && output.ProvisionedProducts !== null) {
+    contents.ProvisionedProducts = deserializeAws_json1_1ProvisionedProductDetails(output.ProvisionedProducts, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Scope = (
   output: any,
   context: __SerdeContext
 ): (ResourceAttribute | string)[] => {
-  return (output || []).map((entry: any) => entry);
-};
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1SearchProductsAsAdminOutput = (
   output: any,
@@ -13710,22 +11167,16 @@ const deserializeAws_json1_1SearchProductsAsAdminOutput = (
   let contents: any = {
     __type: "SearchProductsAsAdminOutput",
     NextPageToken: undefined,
-    ProductViewDetails: undefined
+    ProductViewDetails: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProductViewDetails !== undefined &&
-    output.ProductViewDetails !== null
-  ) {
-    contents.ProductViewDetails = deserializeAws_json1_1ProductViewDetails(
-      output.ProductViewDetails,
-      context
-    );
+  if (output.ProductViewDetails !== undefined && output.ProductViewDetails !== null) {
+    contents.ProductViewDetails = deserializeAws_json1_1ProductViewDetails(output.ProductViewDetails, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1SearchProductsOutput = (
   output: any,
@@ -13735,31 +11186,19 @@ const deserializeAws_json1_1SearchProductsOutput = (
     __type: "SearchProductsOutput",
     NextPageToken: undefined,
     ProductViewAggregations: undefined,
-    ProductViewSummaries: undefined
+    ProductViewSummaries: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProductViewAggregations !== undefined &&
-    output.ProductViewAggregations !== null
-  ) {
-    contents.ProductViewAggregations = deserializeAws_json1_1ProductViewAggregations(
-      output.ProductViewAggregations,
-      context
-    );
+  if (output.ProductViewAggregations !== undefined && output.ProductViewAggregations !== null) {
+    contents.ProductViewAggregations = deserializeAws_json1_1ProductViewAggregations(output.ProductViewAggregations, context);
   }
-  if (
-    output.ProductViewSummaries !== undefined &&
-    output.ProductViewSummaries !== null
-  ) {
-    contents.ProductViewSummaries = deserializeAws_json1_1ProductViewSummaries(
-      output.ProductViewSummaries,
-      context
-    );
+  if (output.ProductViewSummaries !== undefined && output.ProductViewSummaries !== null) {
+    contents.ProductViewSummaries = deserializeAws_json1_1ProductViewSummaries(output.ProductViewSummaries, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1SearchProvisionedProductsOutput = (
   output: any,
@@ -13769,28 +11208,19 @@ const deserializeAws_json1_1SearchProvisionedProductsOutput = (
     __type: "SearchProvisionedProductsOutput",
     NextPageToken: undefined,
     ProvisionedProducts: undefined,
-    TotalResultsCount: undefined
+    TotalResultsCount: undefined,
   };
   if (output.NextPageToken !== undefined && output.NextPageToken !== null) {
     contents.NextPageToken = output.NextPageToken;
   }
-  if (
-    output.ProvisionedProducts !== undefined &&
-    output.ProvisionedProducts !== null
-  ) {
-    contents.ProvisionedProducts = deserializeAws_json1_1ProvisionedProductAttributes(
-      output.ProvisionedProducts,
-      context
-    );
+  if (output.ProvisionedProducts !== undefined && output.ProvisionedProducts !== null) {
+    contents.ProvisionedProducts = deserializeAws_json1_1ProvisionedProductAttributes(output.ProvisionedProducts, context);
   }
-  if (
-    output.TotalResultsCount !== undefined &&
-    output.TotalResultsCount !== null
-  ) {
+  if (output.TotalResultsCount !== undefined && output.TotalResultsCount !== null) {
     contents.TotalResultsCount = output.TotalResultsCount;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ServiceActionDefinitionMap = (
   output: any,
@@ -13801,7 +11231,7 @@ const deserializeAws_json1_1ServiceActionDefinitionMap = (
     mapParams[key] = output[key];
   });
   return mapParams;
-};
+}
 
 const deserializeAws_json1_1ServiceActionDetail = (
   output: any,
@@ -13810,34 +11240,25 @@ const deserializeAws_json1_1ServiceActionDetail = (
   let contents: any = {
     __type: "ServiceActionDetail",
     Definition: undefined,
-    ServiceActionSummary: undefined
+    ServiceActionSummary: undefined,
   };
   if (output.Definition !== undefined && output.Definition !== null) {
-    contents.Definition = deserializeAws_json1_1ServiceActionDefinitionMap(
-      output.Definition,
-      context
-    );
+    contents.Definition = deserializeAws_json1_1ServiceActionDefinitionMap(output.Definition, context);
   }
-  if (
-    output.ServiceActionSummary !== undefined &&
-    output.ServiceActionSummary !== null
-  ) {
-    contents.ServiceActionSummary = deserializeAws_json1_1ServiceActionSummary(
-      output.ServiceActionSummary,
-      context
-    );
+  if (output.ServiceActionSummary !== undefined && output.ServiceActionSummary !== null) {
+    contents.ServiceActionSummary = deserializeAws_json1_1ServiceActionSummary(output.ServiceActionSummary, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ServiceActionSummaries = (
   output: any,
   context: __SerdeContext
-): ServiceActionSummary[] => {
+): (ServiceActionSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ServiceActionSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1ServiceActionSummary = (
   output: any,
@@ -13848,7 +11269,7 @@ const deserializeAws_json1_1ServiceActionSummary = (
     DefinitionType: undefined,
     Description: undefined,
     Id: undefined,
-    Name: undefined
+    Name: undefined,
   };
   if (output.DefinitionType !== undefined && output.DefinitionType !== null) {
     contents.DefinitionType = output.DefinitionType;
@@ -13863,7 +11284,7 @@ const deserializeAws_json1_1ServiceActionSummary = (
     contents.Name = output.Name;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ShareDetails = (
   output: any,
@@ -13872,25 +11293,16 @@ const deserializeAws_json1_1ShareDetails = (
   let contents: any = {
     __type: "ShareDetails",
     ShareErrors: undefined,
-    SuccessfulShares: undefined
+    SuccessfulShares: undefined,
   };
   if (output.ShareErrors !== undefined && output.ShareErrors !== null) {
-    contents.ShareErrors = deserializeAws_json1_1ShareErrors(
-      output.ShareErrors,
-      context
-    );
+    contents.ShareErrors = deserializeAws_json1_1ShareErrors(output.ShareErrors, context);
   }
-  if (
-    output.SuccessfulShares !== undefined &&
-    output.SuccessfulShares !== null
-  ) {
-    contents.SuccessfulShares = deserializeAws_json1_1SuccessfulShares(
-      output.SuccessfulShares,
-      context
-    );
+  if (output.SuccessfulShares !== undefined && output.SuccessfulShares !== null) {
+    contents.SuccessfulShares = deserializeAws_json1_1SuccessfulShares(output.SuccessfulShares, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ShareError = (
   output: any,
@@ -13900,13 +11312,10 @@ const deserializeAws_json1_1ShareError = (
     __type: "ShareError",
     Accounts: undefined,
     Error: undefined,
-    Message: undefined
+    Message: undefined,
   };
   if (output.Accounts !== undefined && output.Accounts !== null) {
-    contents.Accounts = deserializeAws_json1_1Namespaces(
-      output.Accounts,
-      context
-    );
+    contents.Accounts = deserializeAws_json1_1Namespaces(output.Accounts, context);
   }
   if (output.Error !== undefined && output.Error !== null) {
     contents.Error = output.Error;
@@ -13915,16 +11324,16 @@ const deserializeAws_json1_1ShareError = (
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1ShareErrors = (
   output: any,
   context: __SerdeContext
-): ShareError[] => {
+): (ShareError)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1ShareError(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1StackInstance = (
   output: any,
@@ -13934,7 +11343,7 @@ const deserializeAws_json1_1StackInstance = (
     __type: "StackInstance",
     Account: undefined,
     Region: undefined,
-    StackInstanceStatus: undefined
+    StackInstanceStatus: undefined,
   };
   if (output.Account !== undefined && output.Account !== null) {
     contents.Account = output.Account;
@@ -13942,44 +11351,47 @@ const deserializeAws_json1_1StackInstance = (
   if (output.Region !== undefined && output.Region !== null) {
     contents.Region = output.Region;
   }
-  if (
-    output.StackInstanceStatus !== undefined &&
-    output.StackInstanceStatus !== null
-  ) {
+  if (output.StackInstanceStatus !== undefined && output.StackInstanceStatus !== null) {
     contents.StackInstanceStatus = output.StackInstanceStatus;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1StackInstances = (
   output: any,
   context: __SerdeContext
-): StackInstance[] => {
+): (StackInstance)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1StackInstance(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1StackSetAccounts = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1StackSetRegions = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1SuccessfulShares = (
   output: any,
   context: __SerdeContext
-): string[] => {
-  return (output || []).map((entry: any) => entry);
-};
+): (string)[] => {
+  return (output || []).map((entry: any) =>
+    entry
+  );
+}
 
 const deserializeAws_json1_1Tag = (
   output: any,
@@ -13988,7 +11400,7 @@ const deserializeAws_json1_1Tag = (
   let contents: any = {
     __type: "Tag",
     Key: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
@@ -13997,7 +11409,7 @@ const deserializeAws_json1_1Tag = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1TagOptionNotMigratedException = (
   output: any,
@@ -14005,22 +11417,22 @@ const deserializeAws_json1_1TagOptionNotMigratedException = (
 ): TagOptionNotMigratedException => {
   let contents: any = {
     __type: "TagOptionNotMigratedException",
-    Message: undefined
+    Message: undefined,
   };
   if (output.Message !== undefined && output.Message !== null) {
     contents.Message = output.Message;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1TagOptionSummaries = (
   output: any,
   context: __SerdeContext
-): TagOptionSummary[] => {
+): (TagOptionSummary)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1TagOptionSummary(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1TagOptionSummary = (
   output: any,
@@ -14029,28 +11441,25 @@ const deserializeAws_json1_1TagOptionSummary = (
   let contents: any = {
     __type: "TagOptionSummary",
     Key: undefined,
-    Values: undefined
+    Values: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
   }
   if (output.Values !== undefined && output.Values !== null) {
-    contents.Values = deserializeAws_json1_1TagOptionValues(
-      output.Values,
-      context
-    );
+    contents.Values = deserializeAws_json1_1TagOptionValues(output.Values, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1Tags = (
   output: any,
   context: __SerdeContext
-): Tag[] => {
+): (Tag)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1Tag(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1TerminateProvisionedProductOutput = (
   output: any,
@@ -14058,16 +11467,13 @@ const deserializeAws_json1_1TerminateProvisionedProductOutput = (
 ): TerminateProvisionedProductOutput => {
   let contents: any = {
     __type: "TerminateProvisionedProductOutput",
-    RecordDetail: undefined
+    RecordDetail: undefined,
   };
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateConstraintOutput = (
   output: any,
@@ -14077,28 +11483,19 @@ const deserializeAws_json1_1UpdateConstraintOutput = (
     __type: "UpdateConstraintOutput",
     ConstraintDetail: undefined,
     ConstraintParameters: undefined,
-    Status: undefined
+    Status: undefined,
   };
-  if (
-    output.ConstraintDetail !== undefined &&
-    output.ConstraintDetail !== null
-  ) {
-    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(
-      output.ConstraintDetail,
-      context
-    );
+  if (output.ConstraintDetail !== undefined && output.ConstraintDetail !== null) {
+    contents.ConstraintDetail = deserializeAws_json1_1ConstraintDetail(output.ConstraintDetail, context);
   }
-  if (
-    output.ConstraintParameters !== undefined &&
-    output.ConstraintParameters !== null
-  ) {
+  if (output.ConstraintParameters !== undefined && output.ConstraintParameters !== null) {
     contents.ConstraintParameters = output.ConstraintParameters;
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdatePortfolioOutput = (
   output: any,
@@ -14107,19 +11504,16 @@ const deserializeAws_json1_1UpdatePortfolioOutput = (
   let contents: any = {
     __type: "UpdatePortfolioOutput",
     PortfolioDetail: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
   if (output.PortfolioDetail !== undefined && output.PortfolioDetail !== null) {
-    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(
-      output.PortfolioDetail,
-      context
-    );
+    contents.PortfolioDetail = deserializeAws_json1_1PortfolioDetail(output.PortfolioDetail, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProductOutput = (
   output: any,
@@ -14128,22 +11522,16 @@ const deserializeAws_json1_1UpdateProductOutput = (
   let contents: any = {
     __type: "UpdateProductOutput",
     ProductViewDetail: undefined,
-    Tags: undefined
+    Tags: undefined,
   };
-  if (
-    output.ProductViewDetail !== undefined &&
-    output.ProductViewDetail !== null
-  ) {
-    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(
-      output.ProductViewDetail,
-      context
-    );
+  if (output.ProductViewDetail !== undefined && output.ProductViewDetail !== null) {
+    contents.ProductViewDetail = deserializeAws_json1_1ProductViewDetail(output.ProductViewDetail, context);
   }
   if (output.Tags !== undefined && output.Tags !== null) {
     contents.Tags = deserializeAws_json1_1Tags(output.Tags, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProvisionedProductOutput = (
   output: any,
@@ -14151,16 +11539,13 @@ const deserializeAws_json1_1UpdateProvisionedProductOutput = (
 ): UpdateProvisionedProductOutput => {
   let contents: any = {
     __type: "UpdateProvisionedProductOutput",
-    RecordDetail: undefined
+    RecordDetail: undefined,
   };
   if (output.RecordDetail !== undefined && output.RecordDetail !== null) {
-    contents.RecordDetail = deserializeAws_json1_1RecordDetail(
-      output.RecordDetail,
-      context
-    );
+    contents.RecordDetail = deserializeAws_json1_1RecordDetail(output.RecordDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProvisionedProductPropertiesOutput = (
   output: any,
@@ -14171,22 +11556,13 @@ const deserializeAws_json1_1UpdateProvisionedProductPropertiesOutput = (
     ProvisionedProductId: undefined,
     ProvisionedProductProperties: undefined,
     RecordId: undefined,
-    Status: undefined
+    Status: undefined,
   };
-  if (
-    output.ProvisionedProductId !== undefined &&
-    output.ProvisionedProductId !== null
-  ) {
+  if (output.ProvisionedProductId !== undefined && output.ProvisionedProductId !== null) {
     contents.ProvisionedProductId = output.ProvisionedProductId;
   }
-  if (
-    output.ProvisionedProductProperties !== undefined &&
-    output.ProvisionedProductProperties !== null
-  ) {
-    contents.ProvisionedProductProperties = deserializeAws_json1_1ProvisionedProductProperties(
-      output.ProvisionedProductProperties,
-      context
-    );
+  if (output.ProvisionedProductProperties !== undefined && output.ProvisionedProductProperties !== null) {
+    contents.ProvisionedProductProperties = deserializeAws_json1_1ProvisionedProductProperties(output.ProvisionedProductProperties, context);
   }
   if (output.RecordId !== undefined && output.RecordId !== null) {
     contents.RecordId = output.RecordId;
@@ -14195,7 +11571,7 @@ const deserializeAws_json1_1UpdateProvisionedProductPropertiesOutput = (
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProvisioningArtifactOutput = (
   output: any,
@@ -14205,28 +11581,19 @@ const deserializeAws_json1_1UpdateProvisioningArtifactOutput = (
     __type: "UpdateProvisioningArtifactOutput",
     Info: undefined,
     ProvisioningArtifactDetail: undefined,
-    Status: undefined
+    Status: undefined,
   };
   if (output.Info !== undefined && output.Info !== null) {
-    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(
-      output.Info,
-      context
-    );
+    contents.Info = deserializeAws_json1_1ProvisioningArtifactInfo(output.Info, context);
   }
-  if (
-    output.ProvisioningArtifactDetail !== undefined &&
-    output.ProvisioningArtifactDetail !== null
-  ) {
-    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(
-      output.ProvisioningArtifactDetail,
-      context
-    );
+  if (output.ProvisioningArtifactDetail !== undefined && output.ProvisioningArtifactDetail !== null) {
+    contents.ProvisioningArtifactDetail = deserializeAws_json1_1ProvisioningArtifactDetail(output.ProvisioningArtifactDetail, context);
   }
   if (output.Status !== undefined && output.Status !== null) {
     contents.Status = output.Status;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProvisioningParameter = (
   output: any,
@@ -14236,31 +11603,28 @@ const deserializeAws_json1_1UpdateProvisioningParameter = (
     __type: "UpdateProvisioningParameter",
     Key: undefined,
     UsePreviousValue: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Key !== undefined && output.Key !== null) {
     contents.Key = output.Key;
   }
-  if (
-    output.UsePreviousValue !== undefined &&
-    output.UsePreviousValue !== null
-  ) {
+  if (output.UsePreviousValue !== undefined && output.UsePreviousValue !== null) {
     contents.UsePreviousValue = output.UsePreviousValue;
   }
   if (output.Value !== undefined && output.Value !== null) {
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UpdateProvisioningParameters = (
   output: any,
   context: __SerdeContext
-): UpdateProvisioningParameter[] => {
+): (UpdateProvisioningParameter)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1UpdateProvisioningParameter(entry, context)
   );
-};
+}
 
 const deserializeAws_json1_1UpdateServiceActionOutput = (
   output: any,
@@ -14268,19 +11632,13 @@ const deserializeAws_json1_1UpdateServiceActionOutput = (
 ): UpdateServiceActionOutput => {
   let contents: any = {
     __type: "UpdateServiceActionOutput",
-    ServiceActionDetail: undefined
+    ServiceActionDetail: undefined,
   };
-  if (
-    output.ServiceActionDetail !== undefined &&
-    output.ServiceActionDetail !== null
-  ) {
-    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(
-      output.ServiceActionDetail,
-      context
-    );
+  if (output.ServiceActionDetail !== undefined && output.ServiceActionDetail !== null) {
+    contents.ServiceActionDetail = deserializeAws_json1_1ServiceActionDetail(output.ServiceActionDetail, context);
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UsageInstruction = (
   output: any,
@@ -14289,7 +11647,7 @@ const deserializeAws_json1_1UsageInstruction = (
   let contents: any = {
     __type: "UsageInstruction",
     Type: undefined,
-    Value: undefined
+    Value: undefined,
   };
   if (output.Type !== undefined && output.Type !== null) {
     contents.Type = output.Type;
@@ -14298,16 +11656,16 @@ const deserializeAws_json1_1UsageInstruction = (
     contents.Value = output.Value;
   }
   return contents;
-};
+}
 
 const deserializeAws_json1_1UsageInstructions = (
   output: any,
   context: __SerdeContext
-): UsageInstruction[] => {
+): (UsageInstruction)[] => {
   return (output || []).map((entry: any) =>
     deserializeAws_json1_1UsageInstruction(entry, context)
   );
-};
+}
 
 const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
   httpStatusCode: output.statusCode,
@@ -14316,40 +11674,31 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 });
 
 // Collect low-level response body stream to Uint8Array.
-const collectBody = (
-  streamBody: any = new Uint8Array(),
-  context: __SerdeContext
-): Promise<Uint8Array> => {
+const collectBody = (streamBody: any = new Uint8Array(), context: __SerdeContext): Promise<Uint8Array> => {
   if (streamBody instanceof Uint8Array) {
     return Promise.resolve(streamBody);
   }
-  return (
-    context.streamCollector(streamBody) || Promise.resolve(new Uint8Array())
-  );
+  return context.streamCollector(streamBody) || Promise.resolve(new Uint8Array());
 };
 
 // Encode Uint8Array data into string with utf-8.
-const collectBodyString = (
-  streamBody: any,
-  context: __SerdeContext
-): Promise<string> =>
-  collectBody(streamBody, context).then(body => context.utf8Encoder(body));
+const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> => collectBody(streamBody, context).then(body => context.utf8Encoder(body))
 
 const buildHttpRpcRequest = async (
   context: __SerdeContext,
   headers: __HeaderBag,
   path: string,
   resolvedHostname: string | undefined,
-  body: any
+  body: any,
 ): Promise<__HttpRequest> => {
-  const { hostname, protocol = "https", port } = await context.endpoint();
+  const {hostname, protocol = "https", port} = await context.endpoint();
   const contents: any = {
     protocol,
     hostname,
     port,
     method: "POST",
     path,
-    headers
+    headers,
   };
   if (resolvedHostname !== undefined) {
     contents.hostname = resolvedHostname;
@@ -14360,10 +11709,9 @@ const buildHttpRpcRequest = async (
   return new __HttpRequest(contents);
 };
 
-const parseBody = (streamBody: any, context: __SerdeContext): any =>
-  collectBodyString(streamBody, context).then(encoded => {
-    if (encoded.length) {
-      return JSON.parse(encoded);
-    }
-    return {};
-  });
+const parseBody = (streamBody: any, context: __SerdeContext): any => collectBodyString(streamBody, context).then(encoded => {
+  if (encoded.length) {
+    return JSON.parse(encoded);
+  }
+  return {};
+});
