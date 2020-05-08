@@ -107,10 +107,8 @@ final class XmlShapeSerVisitor extends DocumentShapeSerVisitor {
         Model model = context.getModel();
         writer.addImport("XmlNode", "__XmlNode", "@aws-sdk/xml-builder");
 
-        // Set up a location to store all of the child node(s).
-        writer.write("const collectedNodes: any = [];");
         // Use the keys as an iteration point to dispatch to the input value providers.
-        writer.openBlock("Object.keys(input).forEach(key => {", "});", () -> {
+        writer.openBlock("return Object.keys(input).map(key => {", "});", () -> {
             // Prepare a containing node for each entry's k/v pair.
             writer.write("const entryNode = new __XmlNode(\"entry\");");
 
@@ -152,10 +150,8 @@ final class XmlShapeSerVisitor extends DocumentShapeSerVisitor {
             }
 
             // Add the entry to the collection.
-            writer.write("collectedNodes.push(entryNode);");
+            writer.write("return entryNode;");
         });
-
-        writer.write("return collectedNodes;");
     }
 
     @Override
