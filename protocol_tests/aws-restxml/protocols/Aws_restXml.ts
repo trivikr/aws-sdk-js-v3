@@ -4239,24 +4239,20 @@ const serializeAws_restXmlRenamedListMembers = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("String").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("item"));
-  }
-  return collectedNodes;
+    return node.withName("item");
+  });
 };
 
 const serializeAws_restXmlStructureList = (
   input: StructureListMember[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlStructureListMember(entry, context);
-    collectedNodes.push(node.withName("item"));
-  }
-  return collectedNodes;
+    return node.withName("item");
+  });
 };
 
 const serializeAws_restXmlStructureListMember = (
@@ -4356,39 +4352,33 @@ const serializeAws_restXmlXmlNamespacedList = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("String").addChildNode(new __XmlText(entry));
     node.addAttribute("xmlns", "http://bux.com");
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlBooleanList = (
   input: boolean[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("PrimitiveBoolean").addChildNode(
       new __XmlText(String(entry))
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlFooEnumList = (
   input: (FooEnum | string)[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("FooEnum").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlFooEnumMap = (
@@ -4413,12 +4403,10 @@ const serializeAws_restXmlFooEnumSet = (
   input: Set<FooEnum | string>,
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("FooEnum").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlGreetingStruct = (
@@ -4439,69 +4427,59 @@ const serializeAws_restXmlIntegerList = (
   input: number[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("Integer").addChildNode(
       new __XmlText(String(entry))
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlNestedStringList = (
   input: string[][],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlStringList(entry, context);
     const container = new __XmlNode("member");
     for (let index in node) {
       const workingNode = node[index];
       container.addChildNode(workingNode);
     }
-    collectedNodes.push(container);
-  }
-  return collectedNodes;
+    return container;
+  });
 };
 
 const serializeAws_restXmlStringList = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("String").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlStringSet = (
   input: Set<string>,
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("String").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlTimestampList = (
   input: Date[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("Timestamp").addChildNode(
       new __XmlText(entry.toISOString().split(".")[0] + "Z")
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const deserializeAws_restXmlComplexNestedErrorData = (

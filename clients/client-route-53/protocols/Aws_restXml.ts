@@ -8918,26 +8918,22 @@ const serializeAws_restXmlChanges = (
   input: Change[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlChange(entry, context);
-    collectedNodes.push(node.withName("Change"));
-  }
-  return collectedNodes;
+    return node.withName("Change");
+  });
 };
 
 const serializeAws_restXmlChildHealthCheckList = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("HealthCheckId").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("ChildHealthCheck"));
-  }
-  return collectedNodes;
+    return node.withName("ChildHealthCheck");
+  });
 };
 
 const serializeAws_restXmlGeoLocation = (
@@ -9091,14 +9087,12 @@ const serializeAws_restXmlHealthCheckRegionList = (
   input: (HealthCheckRegion | string)[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("HealthCheckRegion").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("Region"));
-  }
-  return collectedNodes;
+    return node.withName("Region");
+  });
 };
 
 const serializeAws_restXmlHostedZoneConfig = (
@@ -9125,14 +9119,12 @@ const serializeAws_restXmlResettableElementNameList = (
   input: (ResettableElementName | string)[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("ResettableElementName").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("ResettableElementName"));
-  }
-  return collectedNodes;
+    return node.withName("ResettableElementName");
+  });
 };
 
 const serializeAws_restXmlResourceRecord = (
@@ -9246,12 +9238,10 @@ const serializeAws_restXmlResourceRecords = (
   input: ResourceRecord[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlResourceRecord(entry, context);
-    collectedNodes.push(node.withName("ResourceRecord"));
-  }
-  return collectedNodes;
+    return node.withName("ResourceRecord");
+  });
 };
 
 const serializeAws_restXmlTag = (input: Tag, context: __SerdeContext): any => {
@@ -9275,38 +9265,32 @@ const serializeAws_restXmlTagKeyList = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("TagKey").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("Key"));
-  }
-  return collectedNodes;
+    return node.withName("Key");
+  });
 };
 
 const serializeAws_restXmlTagList = (
   input: Tag[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlTag(entry, context);
-    collectedNodes.push(node.withName("Tag"));
-  }
-  return collectedNodes;
+    return node.withName("Tag");
+  });
 };
 
 const serializeAws_restXmlTagResourceIdList = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("TagResourceId").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("ResourceId"));
-  }
-  return collectedNodes;
+    return node.withName("ResourceId");
+  });
 };
 
 const serializeAws_restXmlVPC = (input: VPC, context: __SerdeContext): any => {

@@ -10458,42 +10458,36 @@ const serializeAws_restXmlAllowedHeaders = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("AllowedHeader").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlAllowedMethods = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("AllowedMethod").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlAllowedOrigins = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("AllowedOrigin").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlAnalyticsAndOperator = (
@@ -10720,12 +10714,10 @@ const serializeAws_restXmlCORSRules = (
   input: CORSRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlCORSRule(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlCSVInput = (
@@ -10855,12 +10847,10 @@ const serializeAws_restXmlCompletedPartList = (
   input: CompletedPart[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlCompletedPart(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlCondition = (
@@ -11072,12 +11062,10 @@ const serializeAws_restXmlEventList = (
   input: (Event | string)[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("Event").addChildNode(new __XmlText(entry));
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlExistingObjectReplication = (
@@ -11098,14 +11086,12 @@ const serializeAws_restXmlExposeHeaders = (
   input: string[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("ExposeHeader").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlFilterRule = (
@@ -11132,12 +11118,10 @@ const serializeAws_restXmlFilterRuleList = (
   input: FilterRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlFilterRule(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlGlacierJobParameters = (
@@ -11213,12 +11197,10 @@ const serializeAws_restXmlGrants = (
   input: Grant[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlGrant(entry, context);
-    collectedNodes.push(node.withName("Grant"));
-  }
-  return collectedNodes;
+    return node.withName("Grant");
+  });
 };
 
 const serializeAws_restXmlIndexDocument = (
@@ -11379,14 +11361,12 @@ const serializeAws_restXmlInventoryOptionalFields = (
   input: (InventoryOptionalField | string)[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = new __XmlNode("InventoryOptionalField").addChildNode(
       new __XmlText(entry)
     );
-    collectedNodes.push(node.withName("Field"));
-  }
-  return collectedNodes;
+    return node.withName("Field");
+  });
 };
 
 const serializeAws_restXmlInventoryS3BucketDestination = (
@@ -11508,15 +11488,13 @@ const serializeAws_restXmlLambdaFunctionConfigurationList = (
   input: LambdaFunctionConfiguration[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlLambdaFunctionConfiguration(
       entry,
       context
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlLifecycleExpiration = (
@@ -11669,12 +11647,10 @@ const serializeAws_restXmlLifecycleRules = (
   input: LifecycleRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlLifecycleRule(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlLoggingEnabled = (
@@ -11851,15 +11827,13 @@ const serializeAws_restXmlNoncurrentVersionTransitionList = (
   input: NoncurrentVersionTransition[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlNoncurrentVersionTransition(
       entry,
       context
     );
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlNotificationConfiguration = (
@@ -11938,12 +11912,10 @@ const serializeAws_restXmlObjectIdentifierList = (
   input: ObjectIdentifier[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlObjectIdentifier(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlObjectLockConfiguration = (
@@ -12150,12 +12122,10 @@ const serializeAws_restXmlQueueConfigurationList = (
   input: QueueConfiguration[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlQueueConfiguration(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlRedirect = (
@@ -12354,12 +12324,10 @@ const serializeAws_restXmlReplicationRules = (
   input: ReplicationRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlReplicationRule(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlReplicationTime = (
@@ -12503,12 +12471,10 @@ const serializeAws_restXmlRoutingRules = (
   input: RoutingRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlRoutingRule(entry, context);
-    collectedNodes.push(node.withName("RoutingRule"));
-  }
-  return collectedNodes;
+    return node.withName("RoutingRule");
+  });
 };
 
 const serializeAws_restXmlS3KeyFilter = (
@@ -12723,12 +12689,10 @@ const serializeAws_restXmlServerSideEncryptionRules = (
   input: ServerSideEncryptionRule[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlServerSideEncryptionRule(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlSourceSelectionCriteria = (
@@ -12817,12 +12781,10 @@ const serializeAws_restXmlTagSet = (
   input: Tag[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlTag(entry, context);
-    collectedNodes.push(node.withName("Tag"));
-  }
-  return collectedNodes;
+    return node.withName("Tag");
+  });
 };
 
 const serializeAws_restXmlTagging = (
@@ -12865,12 +12827,10 @@ const serializeAws_restXmlTargetGrants = (
   input: TargetGrant[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlTargetGrant(entry, context);
-    collectedNodes.push(node.withName("Grant"));
-  }
-  return collectedNodes;
+    return node.withName("Grant");
+  });
 };
 
 const serializeAws_restXmlTopicConfiguration = (
@@ -12911,12 +12871,10 @@ const serializeAws_restXmlTopicConfigurationList = (
   input: TopicConfiguration[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlTopicConfiguration(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlTransition = (
@@ -12949,24 +12907,20 @@ const serializeAws_restXmlTransitionList = (
   input: Transition[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlTransition(entry, context);
-    collectedNodes.push(node.withName("member"));
-  }
-  return collectedNodes;
+    return node.withName("member");
+  });
 };
 
 const serializeAws_restXmlUserMetadata = (
   input: MetadataEntry[],
   context: __SerdeContext
 ): any => {
-  const collectedNodes: any = [];
-  for (let entry of input) {
+  return input.map(entry => {
     const node = serializeAws_restXmlMetadataEntry(entry, context);
-    collectedNodes.push(node.withName("MetadataEntry"));
-  }
-  return collectedNodes;
+    return node.withName("MetadataEntry");
+  });
 };
 
 const serializeAws_restXmlVersioningConfiguration = (
