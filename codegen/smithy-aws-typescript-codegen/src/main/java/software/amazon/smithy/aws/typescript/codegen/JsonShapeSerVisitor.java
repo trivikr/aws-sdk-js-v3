@@ -90,25 +90,21 @@ final class JsonShapeSerVisitor extends DocumentShapeSerVisitor {
     @Override
     public void serializeStructure(GenerationContext context, StructureShape shape) {
         TypeScriptWriter writer = context.getWriter();
-
-        writer.write("const bodyParams: any = {};");
-        // Use a TreeMap to sort the members.
-        Map<String, MemberShape> members = new TreeMap<>(shape.getAllMembers());
-        members.forEach((memberName, memberShape) -> {
-            // Use the jsonName trait value if present, otherwise use the member name.
-            String locationName = memberShape.getTrait(JsonNameTrait.class)
-                    .map(JsonNameTrait::getValue)
-                    .orElse(memberName);
-            Shape target = context.getModel().expectShape(memberShape.getTarget());
-            String inputLocation = "input." + memberName;
-
-            // Handle if the member is an idempotency token that should be auto-filled.
-            AwsProtocolUtils.writeIdempotencyAutofill(context, memberShape, inputLocation);
-
-            // Generate an if statement to set the bodyParam if the member is set.
-            writer.openBlock("if ($L !== undefined) {", "}", inputLocation, () -> {
+        writer.openBlock("return {", "};", () -> {
+            // Use a TreeMap to sort the members.
+            Map<String, MemberShape> members = new TreeMap<>(shape.getAllMembers());
+            members.forEach((memberName, memberShape) -> {
+                // Use the jsonName trait value if present, otherwise use the member name.
+                String locationName = memberShape.getTrait(JsonNameTrait.class)
+                        .map(JsonNameTrait::getValue)
+                        .orElse(memberName);
+                Shape target = context.getModel().expectShape(memberShape.getTarget());
+                String inputLocation = "input." + memberName;
+    
+                // Handle if the member is an idempotency token that should be auto-filled.
+                AwsProtocolUtils.writeIdempotencyAutofill(context, memberShape, inputLocation);
+    
                 String dataSource = "input." + memberName;
-
                 // Handle @timestampFormat on members not just the targeted shape.
                 String valueProvider = memberShape.hasTrait(TimestampFormatTrait.class)
                         ? AwsProtocolUtils.getInputTimestampValueProvider(context, memberShape,
@@ -116,10 +112,10 @@ final class JsonShapeSerVisitor extends DocumentShapeSerVisitor {
                         : target.accept(getMemberVisitor(dataSource));
 
                 // Dispatch to the input value provider for any additional handling.
-                writer.write("bodyParams['$L'] = $L;", locationName, valueProvider);
+                writer.write("...($L !== undefined && { '$L': $L }),", inputLocation, locationName, valueProvider);
             });
+
         });
-        writer.write("return bodyParams;");
     }
 
     @Override
