@@ -172,7 +172,7 @@ abstract class RestJsonProtocolGenerator extends HttpBindingProtocolGenerator {
         TypeScriptWriter writer = context.getWriter();
         SymbolProvider symbolProvider = context.getSymbolProvider();
 
-        writer.openBlock("const contents = {", "};", () -> {
+        writer.openBlock("...{", "},", () -> {
             for (HttpBinding binding : documentBindings) {
                 Shape target = context.getModel().expectShape(binding.getMember().getTarget());
                 // The name of the member to get from the input shape.

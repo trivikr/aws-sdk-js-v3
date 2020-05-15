@@ -124,7 +124,7 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
                 // Grab the target shape so we can use a member deserializer on it.
                 Shape target = context.getModel().expectShape(memberShape.getTarget());
                 deserializeNamedMember(context, memberName, memberShape, "output", (dataSource, visitor) -> {
-                    writer.write("$L: $L", memberName, target.accept(visitor));
+                    writer.write("$L", target.accept(visitor));
                 });
             });
         });
@@ -198,7 +198,7 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
         String validationStatement = locationsToValidate.stream()
                 .map(location -> location + " !== undefined")
                 .collect(Collectors.joining(" && "));
-        writer.openBlock("...($L && {", "}),", validationStatement, () -> {
+        writer.openBlock("$L: ($L) ? ", " : undefined,", memberName, validationStatement, () -> {
             String dataSource = getNamedTargetWrapper(context, target, source);
             statementBodyGenerator.accept(dataSource, getMemberVisitor(dataSource));
         });
@@ -238,7 +238,7 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
             Shape target = context.getModel().expectShape(memberShape.getTarget());
             deserializeNamedMember(context, memberName, memberShape, "output", (dataSource, visitor) -> {
                 // Dispatch to the output value provider for any additional handling.
-                writer.write("$L: $L", memberName, target.accept(visitor));
+                writer.write("$L", target.accept(visitor));
             });
         });
 

@@ -154,7 +154,7 @@ final class AwsQuery extends HttpRpcProtocolGenerator {
         TypeScriptWriter writer = context.getWriter();
 
         String dataSource = "data." + operation.getId().getName() + "Result";
-        writer.write("const contents = $L;",
+        writer.write("...$L,",
                 outputStructure.accept(new XmlMemberDeserVisitor(context, dataSource, Format.DATE_TIME)));
     }
 }

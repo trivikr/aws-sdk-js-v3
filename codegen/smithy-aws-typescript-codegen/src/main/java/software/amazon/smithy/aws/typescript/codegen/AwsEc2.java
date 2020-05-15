@@ -153,7 +153,7 @@ final class AwsEc2 extends HttpRpcProtocolGenerator {
     ) {
         TypeScriptWriter writer = context.getWriter();
 
-        writer.write("const contents = $L;",
+        writer.write("...$L,",
                 outputStructure.accept(new XmlMemberDeserVisitor(context, "data", Format.DATE_TIME)));
     }
 }
