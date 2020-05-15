@@ -172,20 +172,20 @@ abstract class RestJsonProtocolGenerator extends HttpBindingProtocolGenerator {
         TypeScriptWriter writer = context.getWriter();
         SymbolProvider symbolProvider = context.getSymbolProvider();
 
-        for (HttpBinding binding : documentBindings) {
-            Shape target = context.getModel().expectShape(binding.getMember().getTarget());
-            // The name of the member to get from the input shape.
-            String memberName = symbolProvider.toMemberName(binding.getMember());
-            // Use the jsonName trait value if present, otherwise use the member name.
-            String locationName = binding.getMember().getTrait(JsonNameTrait.class)
-                    .map(JsonNameTrait::getValue)
-                    .orElseGet(binding::getLocationName);
-            writer.openBlock("if (data.$L !== undefined && data.$L !== null) {", "}", locationName, locationName,
-                    () -> {
-                writer.write("contents.$L = $L;", memberName,
+        writer.openBlock("const contents = {", "};", () -> {
+            for (HttpBinding binding : documentBindings) {
+                Shape target = context.getModel().expectShape(binding.getMember().getTarget());
+                // The name of the member to get from the input shape.
+                String memberName = symbolProvider.toMemberName(binding.getMember());
+                // Use the jsonName trait value if present, otherwise use the member name.
+                String locationName = binding.getMember().getTrait(JsonNameTrait.class)
+                        .map(JsonNameTrait::getValue)
+                        .orElseGet(binding::getLocationName);
+                writer.write("...(data.$1L !== undefined && data.$1L !== null && { $2L: $3L }),",
+                        locationName, memberName,
                         target.accept(getMemberDeserVisitor(context, "data." + locationName)));
-            });
-        }
+            }
+        });
     }
 
     private DocumentMemberDeserVisitor getMemberDeserVisitor(GenerationContext context, String dataSource) {
