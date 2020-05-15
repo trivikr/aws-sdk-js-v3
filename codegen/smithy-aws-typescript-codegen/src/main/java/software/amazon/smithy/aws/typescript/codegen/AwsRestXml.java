@@ -241,20 +241,22 @@ final class AwsRestXml extends HttpBindingProtocolGenerator {
             Shape operationOrError,
             List<HttpBinding> documentBindings
     ) {
+        TypeScriptWriter writer = context.getWriter();
         SymbolProvider symbolProvider = context.getSymbolProvider();
         XmlShapeDeserVisitor shapeVisitor = new XmlShapeDeserVisitor(context);
 
-        for (HttpBinding binding : documentBindings) {
-            MemberShape memberShape = binding.getMember();
-            // Grab the target shape so we can use a member deserializer on it.
-            Shape target = context.getModel().expectShape(memberShape.getTarget());
-            // The name of the member to get from the output shape.
-            String memberName = symbolProvider.toMemberName(memberShape);
-
-            shapeVisitor.deserializeNamedMember(context, memberName, memberShape, "data", (dataSource, visitor) -> {
-                TypeScriptWriter writer = context.getWriter();
-                writer.write("contents.$L = $L;", memberName, target.accept(visitor));
-            });
-        }
+        writer.openBlock("const contents = {", "};", () -> {
+            for (HttpBinding binding : documentBindings) {
+                MemberShape memberShape = binding.getMember();
+                // Grab the target shape so we can use a member deserializer on it.
+                Shape target = context.getModel().expectShape(memberShape.getTarget());
+                // The name of the member to get from the output shape.
+                String memberName = symbolProvider.toMemberName(memberShape);
+    
+                shapeVisitor.deserializeNamedMember(context, memberName, memberShape, "data", (dataSource, visitor) -> {
+                    writer.write("$L: $L", memberName, target.accept(visitor));
+                });
+            }
+        });
     }
 }

@@ -118,21 +118,16 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
 
         // Prepare the document contents structure.
         Map<String, MemberShape> members = shape.getAllMembers();
-        writer.openBlock("let contents: any = {", "};", () -> {
+        writer.openBlock("return {", "};", () -> {
             writer.write("__type: $S,", shape.getId().getName());
-            // Set all the members to undefined to meet type constraints.
-            members.forEach((memberName, memberShape) -> writer.write("$L: undefined,", memberName));
-        });
-
-        members.forEach((memberName, memberShape) -> {
-            // Grab the target shape so we can use a member deserializer on it.
-            Shape target = context.getModel().expectShape(memberShape.getTarget());
-            deserializeNamedMember(context, memberName, memberShape, "output", (dataSource, visitor) -> {
-                writer.write("contents.$L = $L;", memberName, target.accept(visitor));
+            members.forEach((memberName, memberShape) -> {
+                // Grab the target shape so we can use a member deserializer on it.
+                Shape target = context.getModel().expectShape(memberShape.getTarget());
+                deserializeNamedMember(context, memberName, memberShape, "output", (dataSource, visitor) -> {
+                    writer.write("$L: $L", memberName, target.accept(visitor));
+                });
             });
         });
-
-        writer.write("return contents;");
     }
 
     /**
@@ -186,11 +181,11 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
 
         // Handle self-closed xml parsed as an empty string.
         if (deserializationReturnsArray) {
-            writer.openBlock("if ($L.$L === \"\") {", "}", inputLocation, locationName, () -> {
+            writer.openBlock("...($L.$L === \"\" && {", "}),", inputLocation, locationName, () -> {
                 if (target instanceof MapShape) {
-                    writer.write("contents.$L = {};", memberName);
+                    writer.write("$L: {}", memberName);
                 } else if (target instanceof CollectionShape) {
-                    writer.write("contents.$L = [];", memberName);
+                    writer.write("$L: []", memberName);
                 }
             });
         }
@@ -203,7 +198,7 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
         String validationStatement = locationsToValidate.stream()
                 .map(location -> location + " !== undefined")
                 .collect(Collectors.joining(" && "));
-        writer.openBlock("if ($L) {", "}", validationStatement, () -> {
+        writer.openBlock("...($L && {", "}),", validationStatement, () -> {
             String dataSource = getNamedTargetWrapper(context, target, source);
             statementBodyGenerator.accept(dataSource, getMemberVisitor(dataSource));
         });
@@ -242,10 +237,8 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
             // Grab the target shape so we can use a member deserializer on it.
             Shape target = context.getModel().expectShape(memberShape.getTarget());
             deserializeNamedMember(context, memberName, memberShape, "output", (dataSource, visitor) -> {
-                writer.openBlock("return {", "};", () -> {
-                    // Dispatch to the output value provider for any additional handling.
-                    writer.write("$L: $L", memberName, target.accept(visitor));
-                });
+                // Dispatch to the output value provider for any additional handling.
+                writer.write("$L: $L", memberName, target.accept(visitor));
             });
         });
 
