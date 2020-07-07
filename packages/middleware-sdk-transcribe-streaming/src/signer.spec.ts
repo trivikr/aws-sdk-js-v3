@@ -1,50 +1,40 @@
 import { HttpRequest } from "@aws-sdk/protocol-http";
 import { SignatureV4 } from "./signer";
 
-jest.mock("@aws-sdk/protocol-http");
+describe("signer", () => {
+  const mockPresignedRequest = "mockPresignedRequest";
+  const mockSignedRequest = "mockSignedRequest";
 
-describe("transcribe streaming", () => {
-  describe("WebSocket request signer", () => {
-    const toSign = new HttpRequest({
-      headers: {
-        "x-amz-foo": "foo",
-        bar: "bar",
-        "amz-sdk-invocation-id": "123",
-        "amz-sdk-request": "attempt=1",
-        host: "aws.amazon.com"
-      },
-      body: "hello world",
-      query: {
-        prop1: "A",
-        prop2: "B"
-      }
+  const presign = jest.fn().mockResolvedValue(mockPresignedRequest);
+  const sign = jest.fn().mockResolvedValue(mockSignedRequest);
+  const signer = jest.fn().mockReturnValue({ sign, presign });
+
+  const headers = {
+    "x-amz-foo": "foo",
+    bar: "bar",
+    host: "aws.amazon.com"
+  };
+  const body = "body";
+  const method = "method";
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe("presign", () => {
+    it("without options", async () => {
+      const request = { headers, body, method };
+      const sigV4 = new SignatureV4({ signer: signer as any });
+      const result = await sigV4.presign(request as any);
+      expect(result).toStrictEqual(mockPresignedRequest);
     });
 
-    beforeEach(() => {
-      ((HttpRequest as unknown) as jest.Mock).mockReturnValue({
-        isInstance: () => true
-      });
-    });
+    it("with options", () => {});
+  });
 
-    it("should invoke base SigV4 signer correctly", async () => {
-      expect.assertions(5);
-      const mockBaseSigner = {
-        presign: jest.fn().mockResolvedValue(toSign)
-      };
-      const signer = new SignatureV4({ signer: mockBaseSigner as any });
-      const signed = await signer.sign(toSign);
-      expect(toSign).toMatchObject(signed);
-      expect(mockBaseSigner.presign).toBeCalled();
-      // The request's body should not be presigned
-      expect(mockBaseSigner.presign.mock.calls[0][0].body).toEqual("");
-      expect(
-        mockBaseSigner.presign.mock.calls[0][1]!.unsignableHeaders
-      ).toBeDefined();
-      const unsignableHeaders: Set<string> = mockBaseSigner.presign.mock
-        .calls[0][1]!.unsignableHeaders;
-      expect([...unsignableHeaders.entries()].map(([value]) => value)).toEqual(
-        Object.keys(toSign.headers).filter(a => a !== "host")
-      );
-    });
+  describe("sign", () => {
+    it("calls presign when HttpRequest.isInstance returns true", () => {});
+
+    it("calls sign when HttpRequest.isInstance returns false", () => {});
   });
 });
