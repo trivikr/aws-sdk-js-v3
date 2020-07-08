@@ -1,6 +1,8 @@
 import { HttpRequest } from "@aws-sdk/protocol-http";
 import { SignatureV4 } from "./signer";
 
+jest.mock("@aws-sdk/protocol-http");
+
 describe("signer", () => {
   const mockPresignedRequest = "mockPresignedRequest";
   const mockSignedRequest = "mockSignedRequest";
@@ -16,14 +18,14 @@ describe("signer", () => {
   const body = "body";
   const method = "method";
 
+  const request = { headers, body, method };
+  const sigV4 = new SignatureV4({ signer: { sign, presign } as any });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   describe("presign", () => {
-    const request = { headers, body, method };
-    const sigV4 = new SignatureV4({ signer: { sign, presign } as any });
-
     const expectPresignArgs = (result: any) => {
       expect(result).toStrictEqual(mockPresignedRequest);
       expect(sign).not.toHaveBeenCalled();
@@ -32,7 +34,6 @@ describe("signer", () => {
 
     it("without options", async () => {
       const result = await sigV4.presign(request as any);
-
       expectPresignArgs(result);
       expect(presign).toHaveBeenCalledWith(request, {});
     });
@@ -42,7 +43,6 @@ describe("signer", () => {
         expiresIn: 300
       };
       const result = await sigV4.presign(request as any, options);
-
       expectPresignArgs(result);
       expect(presign).toHaveBeenCalledWith(request, options);
     });
@@ -51,6 +51,32 @@ describe("signer", () => {
   describe("sign", () => {
     it("calls presign when HttpRequest.isInstance returns true", () => {});
 
-    it("calls sign when HttpRequest.isInstance returns false", () => {});
+    describe("calls sign when HttpRequest.isInstance returns false", () => {
+      beforeEach(() => {
+        const { isInstance } = HttpRequest;
+        ((isInstance as unknown) as jest.Mock).mockReturnValueOnce(false);
+      });
+
+      const expectSignArgs = (result: any) => {
+        expect(result).toStrictEqual(mockSignedRequest);
+        expect(sign).toHaveBeenCalledTimes(1);
+        expect(presign).not.toHaveBeenCalled();
+      };
+
+      it("without options", async () => {
+        const result = await sigV4.sign(request as any);
+        expectSignArgs(result);
+        expect(sign).toHaveBeenCalledWith(request, undefined);
+      });
+
+      it("with options", async () => {
+        const options = {
+          unsignableHeaders: new Set(Object.keys(headers))
+        };
+        const result = await sigV4.sign(request as any, options);
+        expectSignArgs(result);
+        expect(sign).toHaveBeenCalledWith(request, options);
+      });
+    });
   });
 });
