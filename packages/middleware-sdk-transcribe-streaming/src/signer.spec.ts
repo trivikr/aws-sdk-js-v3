@@ -7,7 +7,6 @@ describe("signer", () => {
 
   const presign = jest.fn().mockResolvedValue(mockPresignedRequest);
   const sign = jest.fn().mockResolvedValue(mockSignedRequest);
-  const signer = jest.fn().mockReturnValue({ sign, presign });
 
   const headers = {
     "x-amz-foo": "foo",
@@ -24,9 +23,13 @@ describe("signer", () => {
   describe("presign", () => {
     it("without options", async () => {
       const request = { headers, body, method };
-      const sigV4 = new SignatureV4({ signer: signer as any });
+      const sigV4 = new SignatureV4({ signer: { sign, presign } as any });
       const result = await sigV4.presign(request as any);
+
       expect(result).toStrictEqual(mockPresignedRequest);
+      expect(sign).not.toHaveBeenCalled();
+      expect(presign).toHaveBeenCalledTimes(1);
+      expect(presign).toHaveBeenCalledWith(request, {});
     });
 
     it("with options", () => {});
