@@ -260,4 +260,23 @@ describe("fromInstanceMetadata", () => {
     await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
     await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
   });
+
+  it("uses insecure data flow once, if error statusCode is not 400, 403, 404, 405", async () => {
+    const tokenError = Object.assign(new Error("Error"), { statusCode: 406 });
+
+    (httpRequest as jest.Mock)
+      .mockRejectedValueOnce(tokenError)
+      .mockResolvedValueOnce(mockProfile)
+      .mockResolvedValueOnce(JSON.stringify(mockImdsCreds))
+      .mockResolvedValueOnce(mockToken)
+      .mockResolvedValueOnce(mockProfile)
+      .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+    (retry as jest.Mock).mockImplementation((fn: any) => fn());
+    (fromImdsCredentials as jest.Mock).mockReturnValue(mockCreds);
+
+    const fromInstanceMetadataFunc = fromInstanceMetadata();
+    await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+    await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+  });
 });
