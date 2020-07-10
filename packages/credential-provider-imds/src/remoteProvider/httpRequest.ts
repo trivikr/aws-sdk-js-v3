@@ -17,8 +17,8 @@ export function httpRequest(options: RequestOptions): Promise<Buffer> {
       );
     });
 
-    req.on("timeout", err => {
-      reject(Object.assign(err, { message: "TimeoutError" }));
+    req.on("timeout", () => {
+      reject(new Error("TimeoutError"));
     });
 
     req.on("response", (res: IncomingMessage) => {
