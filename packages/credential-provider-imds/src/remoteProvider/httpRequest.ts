@@ -10,18 +10,28 @@ export function httpRequest(options: RequestOptions): Promise<Buffer> {
     const req = request({ method: "GET", ...options });
     req.on("error", err => {
       reject(
-        new ProviderError("Unable to connect to instance metadata service")
+        Object.assign(
+          new ProviderError("Unable to connect to instance metadata service"),
+          err
+        )
       );
+    });
+
+    req.on("timeout", err => {
+      reject(Object.assign(err, { message: "TimeoutError" }));
     });
 
     req.on("response", (res: IncomingMessage) => {
       const { statusCode = 400 } = res;
       if (statusCode < 200 || 300 <= statusCode) {
-        const error = new ProviderError(
-          "Error response received from instance metadata service"
+        reject(
+          Object.assign(
+            new ProviderError(
+              "Error response received from instance metadata service"
+            ),
+            { statusCode }
+          )
         );
-        (error as any).statusCode = statusCode;
-        reject(error);
       }
 
       const chunks: Array<Buffer> = [];
