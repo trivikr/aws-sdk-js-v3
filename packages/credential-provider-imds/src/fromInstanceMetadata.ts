@@ -24,11 +24,19 @@ export const fromInstanceMetadata = (
 ): CredentialProvider => {
   const { timeout, maxRetries } = providerConfigFromInit(init);
   return async () => {
-    const profile = (
-      await retry<string>(async () => getProfile({ timeout }), maxRetries)
-    ).trim();
-    return retry(async () => getCredentials(profile, { timeout }), maxRetries);
+    return getCredentials(maxRetries, { timeout });
   };
+};
+
+const getCredentials = async (maxRetries: number, options: RequestOptions) => {
+  const profile = (
+    await retry<string>(async () => getProfile(options), maxRetries)
+  ).trim();
+
+  return retry(
+    async () => getCredentialsFromProfile(profile, options),
+    maxRetries
+  );
 };
 
 const getProfile = async (options: RequestOptions) =>
@@ -36,7 +44,10 @@ const getProfile = async (options: RequestOptions) =>
     await httpRequest({ ...options, host: IMDS_IP, path: IMDS_PATH })
   ).toString();
 
-const getCredentials = async (profile: string, options: RequestOptions) => {
+const getCredentialsFromProfile = async (
+  profile: string,
+  options: RequestOptions
+) => {
   const credsResponse = JSON.parse(
     (
       await httpRequest({
@@ -46,6 +57,7 @@ const getCredentials = async (profile: string, options: RequestOptions) => {
       })
     ).toString()
   );
+
   if (!isImdsCredentials(credsResponse)) {
     throw new ProviderError(
       "Invalid response received from instance metadata service."
