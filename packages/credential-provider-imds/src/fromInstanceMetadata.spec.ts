@@ -193,4 +193,13 @@ describe("fromInstanceMetadata", () => {
     expect(httpRequest).toHaveBeenCalledTimes(3);
     expect(fromImdsCredentials).not.toHaveBeenCalled();
   });
+
+  it("throws error if metadata token errors with statusCode 400", async () => {
+    const tokenError = Object.assign(new Error("token not found"), {
+      statusCode: 400
+    });
+    (httpRequest as jest.Mock).mockRejectedValueOnce(tokenError);
+
+    await expect(fromInstanceMetadata()()).rejects.toEqual(tokenError);
+  });
 });
