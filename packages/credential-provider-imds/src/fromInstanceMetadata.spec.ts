@@ -279,4 +279,47 @@ describe("fromInstanceMetadata", () => {
     await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
     await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
   });
+
+  describe("re-enables fetching of token", () => {
+    const error401 = Object.assign(new Error("error"), { statusCode: 401 });
+
+    beforeEach(() => {
+      const tokenError = new Error("TimeoutError");
+
+      (httpRequest as jest.Mock)
+        .mockRejectedValueOnce(tokenError)
+        .mockResolvedValueOnce(mockProfile)
+        .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+      (retry as jest.Mock).mockImplementation((fn: any) => fn());
+      (fromImdsCredentials as jest.Mock).mockReturnValue(mockCreds);
+    });
+
+    it("when profile error with 401", async () => {
+      (httpRequest as jest.Mock)
+        .mockRejectedValueOnce(error401)
+        .mockResolvedValueOnce(mockToken)
+        .mockResolvedValueOnce(mockProfile)
+        .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+      const fromInstanceMetadataFunc = fromInstanceMetadata();
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+      await expect(fromInstanceMetadataFunc()).rejects.toEqual(error401);
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+    });
+
+    it("when creds error with 401", async () => {
+      (httpRequest as jest.Mock)
+        .mockResolvedValueOnce(mockProfile)
+        .mockRejectedValueOnce(error401)
+        .mockResolvedValueOnce(mockToken)
+        .mockResolvedValueOnce(mockProfile)
+        .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+      const fromInstanceMetadataFunc = fromInstanceMetadata();
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+      await expect(fromInstanceMetadataFunc()).rejects.toEqual(error401);
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+    });
+  });
 });
