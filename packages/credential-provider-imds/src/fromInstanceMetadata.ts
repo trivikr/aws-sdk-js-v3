@@ -24,21 +24,17 @@ export const fromInstanceMetadata = (
 ): CredentialProvider => {
   const { timeout, maxRetries } = providerConfigFromInit(init);
   return async () => {
-    const profile = await getProfile(maxRetries, { timeout });
+    const profile = (
+      await retry<string>(async () => getProfile({ timeout }), maxRetries)
+    ).trim();
     return retry(async () => getCredentials(profile, { timeout }), maxRetries);
   };
 };
 
-const getProfile = async (maxRetries: number, options: RequestOptions) =>
+const getProfile = async (options: RequestOptions) =>
   (
-    await retry<string>(
-      async () =>
-        (
-          await httpRequest({ ...options, host: IMDS_IP, path: IMDS_PATH })
-        ).toString(),
-      maxRetries
-    )
-  ).trim();
+    await httpRequest({ ...options, host: IMDS_IP, path: IMDS_PATH })
+  ).toString();
 
 const getCredentials = async (profile: string, options: RequestOptions) => {
   const credsResponse = JSON.parse(
