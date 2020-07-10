@@ -68,7 +68,7 @@ export const fromInstanceMetadata = (
       try {
         token = (await getMetadataToken({ timeout })).toString();
       } catch (error) {
-        if (error.statusCode === 400) {
+        if (error?.statusCode === 400) {
           throw Object.assign(error, {
             message: "EC2 Metadata token request returned error"
           });

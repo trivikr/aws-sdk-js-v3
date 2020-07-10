@@ -202,4 +202,43 @@ describe("fromInstanceMetadata", () => {
 
     await expect(fromInstanceMetadata()()).rejects.toEqual(tokenError);
   });
+
+  describe("disables fetching of token", () => {
+    beforeEach(() => {
+      (retry as jest.Mock).mockImplementation((fn: any) => fn());
+      (fromImdsCredentials as jest.Mock).mockReturnValue(mockCreds);
+    });
+
+    it("when token fetch returns with TimeoutError", async () => {
+      const tokenError = new Error("TimeoutError");
+
+      (httpRequest as jest.Mock)
+        .mockRejectedValueOnce(tokenError)
+        .mockResolvedValueOnce(mockProfile)
+        .mockResolvedValueOnce(JSON.stringify(mockImdsCreds))
+        .mockResolvedValueOnce(mockProfile)
+        .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+      const fromInstanceMetadataFunc = fromInstanceMetadata();
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+      await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+    });
+
+    [403, 404, 405].forEach(statusCode => {
+      it(`when token fetch errors with statusCode ${statusCode}`, async () => {
+        const tokenError = Object.assign(new Error(), { statusCode });
+
+        (httpRequest as jest.Mock)
+          .mockRejectedValueOnce(tokenError)
+          .mockResolvedValueOnce(mockProfile)
+          .mockResolvedValueOnce(JSON.stringify(mockImdsCreds))
+          .mockResolvedValueOnce(mockProfile)
+          .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+        const fromInstanceMetadataFunc = fromInstanceMetadata();
+        await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+        await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+      });
+    });
+  });
 });
