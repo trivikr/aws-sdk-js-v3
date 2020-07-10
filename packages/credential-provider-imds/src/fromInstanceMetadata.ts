@@ -27,16 +27,6 @@ export const fromInstanceMetadata = (
   let disableFetchToken = false;
   const { timeout, maxRetries } = providerConfigFromInit(init);
 
-  const getMetadataToken = async () =>
-    httpRequest({
-      host: IMDS_IP,
-      path: IMDS_TOKEN_PATH,
-      method: "PUT",
-      headers: {
-        "x-aws-ec2-metadata-token-ttl-seconds": "21600"
-      }
-    });
-
   const getCredentials = async (
     maxRetries: number,
     options: RequestOptions
@@ -76,7 +66,7 @@ export const fromInstanceMetadata = (
     } else {
       let token: string;
       try {
-        token = (await getMetadataToken()).toString();
+        token = (await getMetadataToken({ timeout })).toString();
       } catch (error) {
         if (error.statusCode === 400) {
           throw Object.assign(error, {
@@ -99,6 +89,17 @@ export const fromInstanceMetadata = (
     }
   };
 };
+
+const getMetadataToken = async (options: RequestOptions) =>
+  httpRequest({
+    ...options,
+    host: IMDS_IP,
+    path: IMDS_TOKEN_PATH,
+    method: "PUT",
+    headers: {
+      "x-aws-ec2-metadata-token-ttl-seconds": "21600"
+    }
+  });
 
 const getProfile = async (options: RequestOptions) =>
   (
