@@ -241,4 +241,23 @@ describe("fromInstanceMetadata", () => {
       });
     });
   });
+
+  it("uses insecure data flow once, if error is not TimeoutError", async () => {
+    const tokenError = new Error("Error");
+
+    (httpRequest as jest.Mock)
+      .mockRejectedValueOnce(tokenError)
+      .mockResolvedValueOnce(mockProfile)
+      .mockResolvedValueOnce(JSON.stringify(mockImdsCreds))
+      .mockResolvedValueOnce(mockToken)
+      .mockResolvedValueOnce(mockProfile)
+      .mockResolvedValueOnce(JSON.stringify(mockImdsCreds));
+
+    (retry as jest.Mock).mockImplementation((fn: any) => fn());
+    (fromImdsCredentials as jest.Mock).mockReturnValue(mockCreds);
+
+    const fromInstanceMetadataFunc = fromInstanceMetadata();
+    await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+    await expect(fromInstanceMetadataFunc()).resolves.toEqual(mockCreds);
+  });
 });
