@@ -24,25 +24,7 @@ export const fromInstanceMetadata = (
   const { timeout, maxRetries } = providerConfigFromInit(init);
   return async () => {
     const profile = await getProfile(timeout, maxRetries);
-
-    return retry(async () => {
-      const credsResponse = JSON.parse(
-        (
-          await httpRequest({
-            host: IMDS_IP,
-            path: IMDS_PATH + profile,
-            timeout
-          })
-        ).toString()
-      );
-      if (!isImdsCredentials(credsResponse)) {
-        throw new ProviderError(
-          "Invalid response received from instance metadata service."
-        );
-      }
-
-      return fromImdsCredentials(credsResponse);
-    }, maxRetries);
+    return retry(async () => getCredentials(timeout, profile), maxRetries);
   };
 };
 
@@ -56,3 +38,22 @@ const getProfile = async (timeout: number, maxRetries: number) =>
       maxRetries
     )
   ).trim();
+
+const getCredentials = async (timeout: number, profile: string) => {
+  const credsResponse = JSON.parse(
+    (
+      await httpRequest({
+        host: IMDS_IP,
+        path: IMDS_PATH + profile,
+        timeout
+      })
+    ).toString()
+  );
+  if (!isImdsCredentials(credsResponse)) {
+    throw new ProviderError(
+      "Invalid response received from instance metadata service."
+    );
+  }
+
+  return fromImdsCredentials(credsResponse);
+};
