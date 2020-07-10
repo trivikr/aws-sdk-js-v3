@@ -10,6 +10,7 @@ import {
 } from "./remoteProvider/ImdsCredentials";
 import { retry } from "./remoteProvider/retry";
 import { ProviderError } from "@aws-sdk/property-provider";
+import { RequestOptions } from "http";
 
 const IMDS_IP = "169.254.169.254";
 const IMDS_PATH = "/latest/meta-data/iam/security-credentials/";
@@ -23,29 +24,29 @@ export const fromInstanceMetadata = (
 ): CredentialProvider => {
   const { timeout, maxRetries } = providerConfigFromInit(init);
   return async () => {
-    const profile = await getProfile(timeout, maxRetries);
-    return retry(async () => getCredentials(timeout, profile), maxRetries);
+    const profile = await getProfile(maxRetries, { timeout });
+    return retry(async () => getCredentials(profile, { timeout }), maxRetries);
   };
 };
 
-const getProfile = async (timeout: number, maxRetries: number) =>
+const getProfile = async (maxRetries: number, options: RequestOptions) =>
   (
     await retry<string>(
       async () =>
         (
-          await httpRequest({ host: IMDS_IP, path: IMDS_PATH, timeout })
+          await httpRequest({ ...options, host: IMDS_IP, path: IMDS_PATH })
         ).toString(),
       maxRetries
     )
   ).trim();
 
-const getCredentials = async (timeout: number, profile: string) => {
+const getCredentials = async (profile: string, options: RequestOptions) => {
   const credsResponse = JSON.parse(
     (
       await httpRequest({
+        ...options,
         host: IMDS_IP,
-        path: IMDS_PATH + profile,
-        timeout
+        path: IMDS_PATH + profile
       })
     ).toString()
   );
