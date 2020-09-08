@@ -117,7 +117,6 @@ abstract class JsonRpcProtocolGenerator extends HttpRpcProtocolGenerator {
             StructureShape outputStructure
     ) {
         TypeScriptWriter writer = context.getWriter();
-
         writer.write("contents = $L;", outputStructure.accept(getMemberDeserVisitor(context, "data")));
     }
 
