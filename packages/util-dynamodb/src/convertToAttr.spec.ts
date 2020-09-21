@@ -1,6 +1,17 @@
 import { convertToAttr } from "./convertToAttr";
+import { isBinary } from "./isBinary";
+
+jest.mock("./isBinary");
 
 describe("convertToAttr", () => {
+  beforeEach(() => {
+    (isBinary as jest.Mock).mockReturnValue(false);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe("null", () => {
     it(`returns for null`, () => {
       expect(convertToAttr(null)).toEqual({ NULL: true });
@@ -73,29 +84,10 @@ describe("convertToAttr", () => {
   });
 
   describe("binary", () => {
-    const buffer = new ArrayBuffer(64);
-    const arr = [...Array(64).keys()];
-    const addPointOne = (num: number) => num + 0.1;
-    [
-      buffer,
-      new Blob([new Uint8Array(buffer)]),
-      Buffer.from(buffer),
-      new DataView(buffer),
-      new Int8Array(arr),
-      new Uint8Array(arr),
-      new Uint8ClampedArray(arr),
-      new Int16Array(arr),
-      new Uint16Array(arr),
-      new Int32Array(arr),
-      new Uint32Array(arr),
-      new Float32Array(arr.map(addPointOne)),
-      new Float64Array(arr.map(addPointOne)),
-      new BigInt64Array(arr.map(BigInt)),
-      new BigUint64Array(arr.map(BigInt)),
-    ].forEach((data) => {
-      it(`returns for binary: ${data.constructor.name}`, () => {
-        expect(convertToAttr(data)).toEqual({ B: data });
-      });
+    const data = new Uint8Array([...Array(64).keys()]);
+    it(`returns for binary`, () => {
+      (isBinary as jest.Mock).mockReturnValue(true);
+      expect(convertToAttr(data)).toEqual({ B: data });
     });
   });
 
@@ -103,6 +95,8 @@ describe("convertToAttr", () => {
     const arr = [...Array(4).keys()];
     const uint8Arr = new Uint32Array(arr);
     const biguintArr = new BigUint64Array(arr.map(BigInt));
+
+    // List without binary
     [
       [
         [null, false],
@@ -112,12 +106,22 @@ describe("convertToAttr", () => {
         [1.01, BigInt(1), "one"],
         [{ N: "1.01" }, { N: "1" }, { S: "one" }],
       ],
+    ].forEach(([input, output]) => {
+      it(`testing list: ${input}`, () => {
+        // @ts-ignore
+        expect(convertToAttr(input)).toEqual({ L: output });
+      });
+    });
+
+    // List with binary
+    [
       [
         [uint8Arr, biguintArr],
         [{ B: uint8Arr }, { B: biguintArr }],
       ],
     ].forEach(([input, output]) => {
       it(`testing list: ${input}`, () => {
+        (isBinary as jest.Mock).mockReturnValue(true);
         // @ts-ignore
         expect(convertToAttr(input)).toEqual({ L: output });
       });
@@ -137,6 +141,7 @@ describe("convertToAttr", () => {
     });
 
     it("binary set", () => {
+      (isBinary as jest.Mock).mockReturnValue(true);
       const set = new Set([new ArrayBuffer(4), new ArrayBuffer(8), new ArrayBuffer(16)]);
       expect(convertToAttr(set)).toEqual({ BS: Array.from(set) });
     });
@@ -163,6 +168,8 @@ describe("convertToAttr", () => {
     const arr = [...Array(4).keys()];
     const uint8Arr = new Uint32Array(arr);
     const biguintArr = new BigUint64Array(arr.map(BigInt));
+
+    // Map without binary
     [
       [
         { a: null, b: false },
@@ -172,12 +179,21 @@ describe("convertToAttr", () => {
         { a: 1.01, b: BigInt(1), c: "one" },
         { a: { N: "1.01" }, b: { N: "1" }, c: { S: "one" } },
       ],
+    ].forEach(([input, output]) => {
+      it(`testing map: ${input}`, () => {
+        expect(convertToAttr(input)).toEqual({ M: output });
+      });
+    });
+
+    // Map with binary
+    [
       [
         { a: uint8Arr, b: biguintArr },
         { a: { B: uint8Arr }, b: { B: biguintArr } },
       ],
     ].forEach(([input, output]) => {
       it(`testing map: ${input}`, () => {
+        (isBinary as jest.Mock).mockReturnValue(true);
         expect(convertToAttr(input)).toEqual({ M: output });
       });
     });
@@ -222,6 +238,7 @@ describe("convertToAttr", () => {
     });
 
     it(`returns null for Binary`, () => {
+      (isBinary as jest.Mock).mockReturnValue(true);
       expect(convertToAttr(new Uint8Array(), { convertEmptyValues })).toEqual({ NULL: true });
     });
   });

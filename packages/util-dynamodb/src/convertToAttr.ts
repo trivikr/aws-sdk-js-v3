@@ -1,5 +1,6 @@
 import { AttributeValue } from "@aws-sdk/client-dynamodb";
 
+import { isBinary } from "./isBinary";
 import { NativeAttributeValue } from "./models";
 
 /**
@@ -65,32 +66,6 @@ const convertToNumberAttr = (num: number): { N: string } => {
     throw new Error(`Number ${num} is lesser than Number.MIN_SAFE_INTEGER. Use BigInt.`);
   }
   return { N: num.toString() };
-};
-
-const isBinary = (data: any): boolean => {
-  const binaryTypes = [
-    "ArrayBuffer",
-    "Blob",
-    "Buffer",
-    "DataView",
-    "File",
-    "Int8Array",
-    "Uint8Array",
-    "Uint8ClampedArray",
-    "Int16Array",
-    "Uint16Array",
-    "Int32Array",
-    "Uint32Array",
-    "Float32Array",
-    "Float64Array",
-    "BigInt64Array",
-    "BigUint64Array",
-  ];
-
-  if (data?.constructor) {
-    return binaryTypes.includes(data.constructor.name);
-  }
-  return false;
 };
 
 const convertToSetAttr = (
