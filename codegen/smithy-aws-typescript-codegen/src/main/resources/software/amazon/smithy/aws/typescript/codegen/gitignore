@@ -12,3 +12,4 @@ package-lock.json
 *.d.ts
 *.js
 *.js.map
+!typings.d.ts
