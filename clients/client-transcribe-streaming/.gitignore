@@ -13,3 +13,4 @@ package-lock.json
 *.js
 !jest*.config.js
 *.js.map
+!typings.d.ts

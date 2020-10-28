@@ -13,4 +13,4 @@ package-lock.json
 *.js
 *.js.map
 
-!rollup.*.js
+!rollup.*.js!typings.d.ts

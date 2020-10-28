@@ -13,3 +13,4 @@ package-lock.json
 *.js
 !karma.conf.js
 *.js.map
+!typings.d.ts
