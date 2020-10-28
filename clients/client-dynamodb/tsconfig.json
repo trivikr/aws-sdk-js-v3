@@ -13,9 +13,11 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "declarationDir": "./types",
-    "rootDir": "src",
-    "outDir": "dist/cjs"
+    "composite": true,
+    "rootDir": ".",
+    "outDir": "."
   },
+  "files": ["package.json"],
   "typedocOptions": {
     "exclude": "**/node_modules/**",
     "excludedNotExported": true,
