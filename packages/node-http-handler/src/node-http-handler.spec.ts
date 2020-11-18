@@ -1,4 +1,5 @@
 import { HttpRequest } from "@aws-sdk/protocol-http";
+import { buildQueryString } from "@aws-sdk/querystring-builder";
 import { Agent as hAgent, request as hRequest } from "http";
 import { Agent as hsAgent, request as hsRequest } from "https";
 
@@ -8,6 +9,7 @@ import { setConnectionTimeout } from "./set-connection-timeout";
 import { setSocketTimeout } from "./set-socket-timeout";
 import { writeRequestBody } from "./write-request-body";
 
+jest.mock("@aws-sdk/querystring-builder");
 jest.mock("http");
 jest.mock("https");
 jest.mock("./get-transformed-headers");
@@ -45,6 +47,7 @@ describe("NodeHttpHandler", () => {
       destroy: hsRequestDestroy,
     });
     (getTransformedHeaders as jest.Mock).mockImplementation((headers) => headers);
+    (buildQueryString as jest.Mock).mockImplementation((query) => query);
   });
 
   afterEach(() => {
@@ -133,10 +136,6 @@ describe("NodeHttpHandler", () => {
     describe("abortSignal", () => {
       const mockResponse = getMockResponse();
 
-      beforeEach(() => {
-        (getTransformedHeaders as jest.Mock).mockImplementation((headers) => headers);
-      });
-
       it("throws error if already aborted, and prevents additional work", async () => {
         const httpHandler = new NodeHttpHandler();
         // Mock already aborted abortSignal from AbortController.
@@ -215,9 +214,38 @@ describe("NodeHttpHandler", () => {
     });
 
     describe("buildQueryString", () => {
-      it("passes request.query if present", () => {});
+      const mockResponse = getMockResponse();
 
-      it("passes empty hash if request.query not present", () => {});
+      it("passes request.query if present", async () => {
+        const httpHandler = new NodeHttpHandler();
+        const requestOptions = {
+          ...getMockRequestOptions(),
+          query: { key: "value" },
+        };
+
+        const handlePromise = httpHandler.handle(new HttpRequest(requestOptions), {});
+        // Callback to resolve the response.
+        (hRequest as jest.Mock).mock.calls[0][1](mockResponse);
+
+        await expect(handlePromise).resolves.toEqual({
+          response: { statusCode: mockResponse.statusCode, headers: mockResponse.headers, body: mockResponse },
+        });
+        expect(buildQueryString).toHaveBeenCalled();
+        expect(buildQueryString).toHaveBeenCalledWith(requestOptions.query);
+      });
+
+      it("passes empty hash if request.query not present", async () => {
+        const httpHandler = new NodeHttpHandler();
+        const handlePromise = httpHandler.handle(new HttpRequest(getMockRequestOptions()), {});
+        // Callback to resolve the response.
+        (hRequest as jest.Mock).mock.calls[0][1](mockResponse);
+
+        await expect(handlePromise).resolves.toEqual({
+          response: { statusCode: mockResponse.statusCode, headers: mockResponse.headers, body: mockResponse },
+        });
+        expect(buildQueryString).toHaveBeenCalled();
+        expect(buildQueryString).toHaveBeenCalledWith({});
+      });
     });
 
     describe("request", () => {
