@@ -20,12 +20,12 @@
   "module": "./dist/es/index.js",
   "types": "./dist/cjs/index.d.ts",
   "dependencies": {
-    "@aws-sdk/abort-controller": "1.0.0-rc.5",
     "@aws-sdk/protocol-http": "1.0.0-rc.5",
     "@aws-sdk/querystring-builder": "1.0.0-rc.5",
     "tslib": "^1.8.0"
   },
   "devDependencies": {
+    "@aws-sdk/abort-controller": "1.0.0-rc.5",
     "@aws-sdk/types": "1.0.0-rc.3",
     "@types/jest": "^26.0.4",
     "@types/node": "^10.0.0",

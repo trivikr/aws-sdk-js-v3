@@ -54,9 +54,7 @@ export class NodeHttpHandler implements HttpHandler {
     return new Promise((resolve, reject) => {
       // if the request was already aborted, prevent doing extra work
       if (abortSignal?.aborted) {
-        const abortError = new Error("Request aborted");
-        abortError.name = "AbortError";
-        reject(abortError);
+        reject(Object.assign(new Error("Request aborted"), { name: "AbortError" }));
         return;
       }
 
@@ -92,11 +90,8 @@ export class NodeHttpHandler implements HttpHandler {
       // wire-up abort logic
       if (abortSignal) {
         abortSignal.onabort = () => {
-          // ensure request is destroyed
-          req.abort();
-          const abortError = new Error("Request aborted");
-          abortError.name = "AbortError";
-          reject(abortError);
+          req.destroy();
+          reject(Object.assign(new Error("Request aborted"), { name: "AbortError" }));
         };
       }
 

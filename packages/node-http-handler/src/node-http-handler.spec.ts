@@ -1,12 +1,52 @@
-import { Agent as hAgent } from "http";
-import { Agent as hsAgent } from "https";
+import { HttpRequest } from "@aws-sdk/protocol-http";
+import { Agent as hAgent, request as hRequest } from "http";
+import { Agent as hsAgent, request as hsRequest } from "https";
 
+import { getTransformedHeaders } from "./get-transformed-headers";
 import { NodeHttpHandler, NodeHttpOptions } from "./node-http-handler";
+import { setConnectionTimeout } from "./set-connection-timeout";
+import { setSocketTimeout } from "./set-socket-timeout";
+import { writeRequestBody } from "./write-request-body";
 
 jest.mock("http");
 jest.mock("https");
+jest.mock("./get-transformed-headers");
+jest.mock("./set-connection-timeout");
+jest.mock("./set-socket-timeout");
+jest.mock("./write-request-body");
 
 describe("NodeHttpHandler", () => {
+  const hRequestOn = jest.fn();
+  const hRequestDestroy = jest.fn();
+  const hsRequestOn = jest.fn();
+  const hsRequestDestroy = jest.fn();
+
+  const getMockResponse = () => ({
+    statusCode: 200,
+    headers: {},
+    body: "body",
+  });
+
+  const getMockRequestOptions = () => ({
+    method: "GET",
+    protocol: "http:",
+    hostname: "localhost",
+    path: "/",
+    headers: {},
+  });
+
+  beforeEach(() => {
+    (hRequest as jest.Mock).mockReturnValue({
+      on: hRequestOn,
+      destroy: hRequestDestroy,
+    });
+    (hsRequest as jest.Mock).mockReturnValue({
+      on: hsRequestOn,
+      destroy: hsRequestDestroy,
+    });
+    (getTransformedHeaders as jest.Mock).mockImplementation((headers) => headers);
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -46,8 +86,8 @@ describe("NodeHttpHandler", () => {
       };
 
       beforeEach(() => {
-        (hAgent as any).mockImplementation((params: any) => params);
-        (hsAgent as any).mockImplementation((params: any) => params);
+        (hAgent as jest.Mock).mockImplementation((params: any) => params);
+        (hsAgent as jest.Mock).mockImplementation((params: any) => params);
       });
 
       it("sets if passed", () => {
@@ -91,9 +131,87 @@ describe("NodeHttpHandler", () => {
 
   describe("handle", () => {
     describe("abortSignal", () => {
-      it("throws error if already aborted", () => {});
+      const mockResponse = getMockResponse();
 
-      it("destroys request and throws error in onabort", () => {});
+      beforeEach(() => {
+        (getTransformedHeaders as jest.Mock).mockImplementation((headers) => headers);
+      });
+
+      it("throws error if already aborted, and prevents additional work", async () => {
+        const httpHandler = new NodeHttpHandler();
+        // Mock already aborted abortSignal from AbortController.
+        const abortSignal = { aborted: true, onabort: jest.fn() };
+
+        await expect(httpHandler.handle(new HttpRequest(getMockRequestOptions()), { abortSignal })).rejects.toEqual(
+          Object.assign(new Error("Request aborted"), { name: "AbortError" })
+        );
+
+        expect(hRequest).not.toHaveBeenCalled();
+        expect(abortSignal.onabort).not.toHaveBeenCalled();
+      });
+
+      describe("onabort", () => {
+        it("throws error if onabort called before response", async () => {
+          const httpHandler = new NodeHttpHandler();
+          // Mock abortSignal from AbortController.
+          const abortSignal = { aborted: false, onabort: () => {} };
+
+          const handlePromise = httpHandler.handle(new HttpRequest(getMockRequestOptions()), { abortSignal });
+
+          // Mock abort called before request returned a response.
+          abortSignal.onabort();
+          abortSignal.aborted = true;
+          // Callback to resolve the response after abort.
+          (hRequest as jest.Mock).mock.calls[0][1](mockResponse);
+
+          await expect(handlePromise).rejects.toEqual(
+            Object.assign(new Error("Request aborted"), { name: "AbortError" })
+          );
+
+          expect(hRequest).toHaveBeenCalled();
+          expect(hRequestOn).toHaveBeenCalled();
+          expect(hRequestDestroy).toHaveBeenCalled();
+        });
+
+        it("returns if onabort called after response", async () => {
+          const httpHandler = new NodeHttpHandler();
+          // Mock abortSignal from AbortController.
+          const abortSignal = { aborted: false, onabort: () => {} };
+
+          const handlePromise = httpHandler.handle(new HttpRequest(getMockRequestOptions()), { abortSignal });
+          // Callback to resolve the response before abort.
+          (hRequest as jest.Mock).mock.calls[0][1](mockResponse);
+          // Mock abort called after request returned a response.
+          abortSignal.onabort();
+          abortSignal.aborted = true;
+
+          await expect(handlePromise).resolves.toEqual({
+            response: { statusCode: mockResponse.statusCode, headers: mockResponse.headers, body: mockResponse },
+          });
+
+          expect(hRequest).toHaveBeenCalled();
+          expect(hRequestOn).toHaveBeenCalled();
+          expect(hRequestDestroy).toHaveBeenCalled();
+        });
+
+        it("doesn't get called if request if abortSignal is not aborted", async () => {
+          const httpHandler = new NodeHttpHandler();
+          // Mock abortSignal from AbortController.
+          const abortSignal = { aborted: false, onabort: () => {} };
+
+          const handlePromise = httpHandler.handle(new HttpRequest(getMockRequestOptions()), { abortSignal });
+          // Callback to resolve the response.
+          (hRequest as jest.Mock).mock.calls[0][1](mockResponse);
+
+          await expect(handlePromise).resolves.toEqual({
+            response: { statusCode: mockResponse.statusCode, headers: mockResponse.headers, body: mockResponse },
+          });
+
+          expect(hRequest).toHaveBeenCalled();
+          expect(hRequestOn).toHaveBeenCalled();
+          expect(hRequestDestroy).not.toHaveBeenCalled();
+        });
+      });
     });
 
     describe("buildQueryString", () => {
