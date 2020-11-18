@@ -1,7 +1,76 @@
+import { Agent as hAgent } from "http";
+import { Agent as hsAgent } from "https";
+
+import { NodeHttpHandler, NodeHttpOptions } from "./node-http-handler";
+
+jest.mock("http");
+jest.mock("https");
+
 describe("NodeHttpHandler", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe("constructor", () => {
-    it("sets agents if passed", () => {});
-    it("creates new agents if not passed", () => {});
+    describe("timeouts", () => {
+      const verifyTimeouts = (httpHandler: NodeHttpHandler, httpOptions: NodeHttpOptions) => {
+        expect((httpHandler as any).connectionTimeout).toStrictEqual(httpOptions.connectionTimeout);
+        expect((httpHandler as any).socketTimeout).toStrictEqual(httpOptions.socketTimeout);
+      };
+
+      it("sets if passed", () => {
+        const httpOptions = {
+          connectionTimeout: 100,
+          socketTimeout: 100,
+        };
+        verifyTimeouts(new NodeHttpHandler(httpOptions), httpOptions);
+      });
+
+      it("doesn't set if not passed", () => {
+        const httpOptions = {};
+        verifyTimeouts(new NodeHttpHandler(httpOptions), httpOptions);
+      });
+    });
+
+    describe("agents", () => {
+      const verifyAgents = (httpHandler: NodeHttpHandler, httpOptions: NodeHttpOptions) => {
+        expect((httpHandler as any).httpAgent).toStrictEqual(httpOptions.httpAgent);
+        expect((httpHandler as any).httpsAgent).toStrictEqual(httpOptions.httpsAgent);
+      };
+
+      const verifyAgentMockCalls = (agentOptions: any) => {
+        expect(hAgent).toHaveBeenCalledTimes(1);
+        expect(hAgent).toHaveBeenCalledWith(agentOptions);
+        expect(hsAgent).toHaveBeenCalledTimes(1);
+        expect(hsAgent).toHaveBeenCalledWith(agentOptions);
+      };
+
+      beforeEach(() => {
+        (hAgent as any).mockImplementation((params: any) => params);
+        (hsAgent as any).mockImplementation((params: any) => params);
+      });
+
+      it("sets if passed", () => {
+        const agentOptions = { timeout: 100 };
+        const httpOptions = {
+          httpAgent: new hAgent(agentOptions),
+          httpsAgent: new hsAgent(agentOptions),
+        };
+        verifyAgentMockCalls(agentOptions);
+        verifyAgents(new NodeHttpHandler(httpOptions), httpOptions);
+        verifyAgentMockCalls(agentOptions);
+      });
+
+      it("creates new agents if not passed", () => {
+        const agentOptions = { keepAlive: true };
+        const httpHandler = new NodeHttpHandler({});
+        verifyAgentMockCalls(agentOptions);
+        verifyAgents(httpHandler, {
+          httpAgent: new hAgent(agentOptions),
+          httpsAgent: new hsAgent(agentOptions),
+        });
+      });
+    });
   });
 
   describe("destroy", () => {
