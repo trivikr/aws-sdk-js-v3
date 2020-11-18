@@ -74,7 +74,19 @@ describe("NodeHttpHandler", () => {
   });
 
   describe("destroy", () => {
-    it("destroys httpAgent and httpsAgent", () => {});
+    it("destroys httpAgent and httpsAgent", () => {
+      const hAgentDestroy = jest.fn();
+      const hsAgentDestroy = jest.fn();
+      (hAgent as jest.Mock).mockImplementation(() => ({ destroy: hAgentDestroy }));
+      (hsAgent as jest.Mock).mockImplementation(() => ({ destroy: hsAgentDestroy }));
+
+      const httpHandler = new NodeHttpHandler();
+      expect(hAgentDestroy).not.toHaveBeenCalled();
+      expect(hsAgentDestroy).not.toHaveBeenCalled();
+      httpHandler.destroy();
+      expect(hAgentDestroy).toHaveBeenCalledTimes(1);
+      expect(hsAgentDestroy).toHaveBeenCalledTimes(1);
+    });
   });
 
   describe("handle", () => {
