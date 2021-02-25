@@ -29,6 +29,7 @@ import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
 import software.amazon.smithy.model.shapes.Shape;
 import software.amazon.smithy.model.shapes.StructureShape;
+import software.amazon.smithy.model.traits.IdempotencyTokenTrait;
 import software.amazon.smithy.model.traits.StreamingTrait;
 import software.amazon.smithy.typescript.codegen.integration.ProtocolGenerator;
 import software.amazon.smithy.typescript.codegen.integration.RuntimeClientPlugin;
@@ -204,8 +205,7 @@ final class DocumentClientCommandGenerator implements Runnable {
                 writer.openBlock("export type $L = Omit<__$L, $L> & {", "};", modifiedTypeName,
                     typeName, memberUnionToOmit, () -> {
                         for(MemberShape member: membersWithAttr) {
-                            writer.writeInline("'$L': ", symbolProvider.toMemberName(member));
-                            writeModifiedType(member);
+                            writeTypeForMemberWithAttributeValue(member);
                         }
                     }
                 );
@@ -216,7 +216,23 @@ final class DocumentClientCommandGenerator implements Runnable {
         }
     }
 
-    private void writeModifiedType(MemberShape member) {
-        writer.write("number;");
+    private void writeTypeForMemberWithAttributeValue(MemberShape member) {
+        String optionalSuffix = isRequiredMember(member) ? "" : "?";
+        String typeSuffix = isRequiredMember(member) ? " | undefined" : "";
+        writer.writeInline("${L}${L}: ", symbolProvider.toMemberName(member), optionalSuffix);
+        writer.write("number");
+        writer.writeInline("${L};", typeSuffix);
+    }
+
+    /**
+     * Identifies if a member should be required on the generated interface.
+     *
+     * @param member The member being generated for.
+     * @return If the interface member should be treated as required.
+     *
+     * @see <a href="https://awslabs.github.io/smithy/spec/core.html#idempotencytoken-trait">Smithy idempotencyToken trait.</a>
+     */
+    private boolean isRequiredMember(MemberShape member) {
+        return member.isRequired() && !member.hasTrait(IdempotencyTokenTrait.class);
     }
 }
