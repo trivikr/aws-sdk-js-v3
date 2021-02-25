@@ -24,6 +24,7 @@ import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.knowledge.OperationIndex;
+import software.amazon.smithy.model.shapes.CollectionShape;
 import software.amazon.smithy.model.shapes.MemberShape;
 import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
@@ -86,7 +87,6 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.addImport("Handler", "Handler", "@aws-sdk/types");
         writer.addImport("MiddlewareStack", "MiddlewareStack", "@aws-sdk/types");
         writer.addImport("marshall", "marshall", "@aws-sdk/util-dynamodb");
-        writer.addImport("NativeAttributeValue", "NativeAttributeValue", "@aws-sdk/util-dynamodb");
         writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
 
         addInputAndOutputTypes();
@@ -205,7 +205,7 @@ final class DocumentClientCommandGenerator implements Runnable {
                 writer.openBlock("export type $L = Omit<__$L, $L> & {", "};", modifiedTypeName,
                     typeName, memberUnionToOmit, () -> {
                         for(MemberShape member: membersWithAttr) {
-                            writeTypeForMemberWithAttributeValue(member);
+                            writeStructureMemberOmitType(member);
                         }
                     }
                 );
@@ -216,12 +216,36 @@ final class DocumentClientCommandGenerator implements Runnable {
         }
     }
 
-    private void writeTypeForMemberWithAttributeValue(MemberShape member) {
+    private void writeStructureMemberOmitType(MemberShape member) {
         String optionalSuffix = isRequiredMember(member) ? "" : "?";
+        writer.openBlock("${L}${L}: ", ";", symbolProvider.toMemberName(member),
+            optionalSuffix, () -> {
+                writeMemberOmitType(member);
+            });
+    }
+
+    private void writeMemberOmitType(MemberShape member) {
+        Shape memberTarget = model.expectShape(member.getTarget());
+        if (memberTarget.isStructureShape()) {
+            writer.writeInline("structure");
+        } else if (memberTarget.isUnionShape()) {
+            if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
+                writeNativeAttributeValue();
+            } else {
+                writer.writeInline("union");
+            }
+        } else if (memberTarget.isMapShape()) {
+            writer.writeInline("map");
+        } else if (memberTarget instanceof CollectionShape) {
+            writer.write("collection");
+        }
         String typeSuffix = isRequiredMember(member) ? " | undefined" : "";
-        writer.writeInline("${L}${L}: ", symbolProvider.toMemberName(member), optionalSuffix);
-        writer.write("number");
-        writer.writeInline("${L};", typeSuffix);
+        writer.write("${L}", typeSuffix);
+    }
+
+    private void writeNativeAttributeValue() {
+        writer.addImport("NativeAttributeValue", "NativeAttributeValue", "@aws-sdk/util-dynamodb");
+        writer.write("NativeAttributeValue");
     }
 
     /**
