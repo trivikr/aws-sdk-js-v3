@@ -167,30 +167,23 @@ final class DocumentClientCommandGenerator implements Runnable {
 
     private void addInputAndOutputTypes() {
         writer.write("");
-        writeInputType(inputType.getName(), operationIndex.getInput(operation));
-        writeOutputType(outputType.getName(), operationIndex.getOutput(operation));
+        writeType(inputType.getName(), operationIndex.getInput(operation));
+        writeType(outputType.getName(), operationIndex.getOutput(operation));
         writer.write("");
     }
 
-    private void writeInputType(String typeName, Optional<StructureShape> inputShape) {
-        if (inputShape.isPresent()) {
-            // StructureShape input = inputShape.get();
+    private void writeType(String typeName, Optional<StructureShape> optionalShape) {
+        if (optionalShape.isPresent()) {
+            // StructureShape shape = optionalShape.get();
             writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
             String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
-            writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+            if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, optionalShape)) {
+                writer.write("export type $L = Omit<__$L, 'BLAH'>;", modifiedTypeName, typeName);
+            } else {
+                writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+            }
         } else {
             // If the input is non-existent, then use an empty object.
-            writer.write("export type $L = {}", typeName);
-        }
-    }
-
-    private void writeOutputType(String typeName, Optional<StructureShape> outputShape) {
-        if (outputShape.isPresent()) {
-            // StructureShape output = outputShape.get();
-            writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
-            String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
-            writer.write("export type $L = __$L;", modifiedTypeName, typeName);
-        } else {
             writer.write("export type $L = {}", typeName);
         }
     }
