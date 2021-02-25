@@ -15,6 +15,8 @@
 
 package software.amazon.smithy.aws.typescript.codegen;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -44,7 +46,9 @@ final class DocumentClientCommandGenerator implements Runnable {
     private final Symbol symbol;
     private final OperationIndex operationIndex;
     private final Symbol inputType;
+    private final List<MemberShape> inputMembersWithAttr;
     private final Symbol outputType;
+    private final List<MemberShape> outputMembersWithAttr;
 
     DocumentClientCommandGenerator(
             TypeScriptSettings settings,
@@ -63,7 +67,9 @@ final class DocumentClientCommandGenerator implements Runnable {
         symbol = symbolProvider.toSymbol(operation);
         operationIndex = OperationIndex.of(model);
         inputType = symbol.expectProperty("inputType", Symbol.class);
+        inputMembersWithAttr = getMembersWithAttr(operationIndex.getInput(operation));
         outputType = symbol.expectProperty("outputType", Symbol.class);
+        outputMembersWithAttr = getMembersWithAttr(operationIndex.getOutput(operation));
     }
 
     @Override
@@ -167,20 +173,35 @@ final class DocumentClientCommandGenerator implements Runnable {
 
     private void addInputAndOutputTypes() {
         writer.write("");
-        writeType(inputType.getName(), operationIndex.getInput(operation));
-        writeType(outputType.getName(), operationIndex.getOutput(operation));
+        writeType(inputType.getName(), operationIndex.getInput(operation), inputMembersWithAttr);
+        writeType(outputType.getName(), operationIndex.getOutput(operation), outputMembersWithAttr);
         writer.write("");
     }
 
-    private void writeType(String typeName, Optional<StructureShape> optionalShape) {
+    private List<MemberShape> getMembersWithAttr(Optional<StructureShape> optionalShape) {
+        List<MemberShape> membersWithAttr = new ArrayList<>();
+        if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, optionalShape)) {
+            StructureShape shape = optionalShape.get();
+            for (MemberShape member : shape.getAllMembers().values()) {
+                if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, member, new HashSet<String>())) {
+                    membersWithAttr.add(member);
+                }
+            }
+        }
+        return membersWithAttr;
+    }
+
+    private void writeType(String typeName, Optional<StructureShape> optionalShape, List<MemberShape> membersWithAttr) {
         if (optionalShape.isPresent()) {
-            // StructureShape shape = optionalShape.get();
             writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
             String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
-            if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, optionalShape)) {
-                writer.write("export type $L = Omit<__$L, 'BLAH'>;", modifiedTypeName, typeName);
-            } else {
+            if (membersWithAttr.isEmpty()) {
                 writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+            } else {
+                String memberUnionToOmit = membersWithAttr.stream()
+                    .map(member -> "'" + symbolProvider.toMemberName(member) + "'")
+                    .collect(Collectors.joining(" | "));
+                writer.write("export type $L = Omit<__$L, $L>;", modifiedTypeName, typeName, memberUnionToOmit);
             }
         } else {
             // If the input is non-existent, then use an empty object.
