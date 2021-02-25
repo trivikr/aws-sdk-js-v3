@@ -57,9 +57,9 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
         for (OperationShape operation : containedOperations) {
           String operationName = operation.getId().getName();
           if (containsAttributeValue(model, symbolProvider, operation)) {
-            writerFactory.accept("document-client/commands/" + operationName + ".ts", writer -> {
-              writer.write("// Hello!");
-            });
+            writerFactory.accept("document-client/commands/" + operationName + "Command.ts", 
+                writer -> new DocumentClientCommandGenerator(settings, model, operation, symbolProvider, writer).run()
+            );
           }
         }
       }
