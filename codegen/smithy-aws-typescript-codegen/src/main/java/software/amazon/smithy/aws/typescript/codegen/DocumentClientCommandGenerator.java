@@ -201,11 +201,22 @@ final class DocumentClientCommandGenerator implements Runnable {
                 String memberUnionToOmit = membersWithAttr.stream()
                     .map(member -> "'" + symbolProvider.toMemberName(member) + "'")
                     .collect(Collectors.joining(" | "));
-                writer.write("export type $L = Omit<__$L, $L>;", modifiedTypeName, typeName, memberUnionToOmit);
+                writer.openBlock("export type $L = Omit<__$L, $L> & {", "};", modifiedTypeName,
+                    typeName, memberUnionToOmit, () -> {
+                        for(MemberShape member: membersWithAttr) {
+                            writer.writeInline("'$L': ", symbolProvider.toMemberName(member));
+                            writeModifiedType(member);
+                        }
+                    }
+                );
             }
         } else {
             // If the input is non-existent, then use an empty object.
             writer.write("export type $L = {}", typeName);
         }
+    }
+
+    private void writeModifiedType(MemberShape member) {
+        writer.write("number;");
     }
 }
