@@ -25,6 +25,7 @@ import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.knowledge.OperationIndex;
 import software.amazon.smithy.model.shapes.CollectionShape;
+import software.amazon.smithy.model.shapes.MapShape;
 import software.amazon.smithy.model.shapes.MemberShape;
 import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
@@ -235,7 +236,10 @@ final class DocumentClientCommandGenerator implements Runnable {
                 writer.writeInline("union");
             }
         } else if (memberTarget.isMapShape()) {
-            writer.writeInline("map");
+            MemberShape mapMember = ((MapShape) memberTarget).getValue();
+            writer.openBlock("{ [key: string]: ", "}", () -> {
+                writeMemberOmitType(mapMember);
+            });
         } else if (memberTarget instanceof CollectionShape) {
             writer.write("collection");
         }
