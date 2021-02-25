@@ -71,69 +71,9 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
 
   private boolean containsAttributeValue(Model model, SymbolProvider symbolProvider, OperationShape operation) {
       OperationIndex operationIndex = OperationIndex.of(model);
-      if (containsAttributeValue(model, symbolProvider, operationIndex.getInput(operation))
-              || containsAttributeValue(model, symbolProvider, operationIndex.getOutput(operation))) {
+      if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, operationIndex.getInput(operation))
+              || DocumentClientUtils.containsAttributeValue(model, symbolProvider, operationIndex.getOutput(operation))) {
           return true;
-      }
-      return false;
-  }
-
-  private boolean containsAttributeValue(
-        Model model,
-        SymbolProvider symbolProvider,
-        Optional<StructureShape> optionalShape
-  ) {
-      if (optionalShape.isPresent()) {
-        StructureShape structureShape = optionalShape.get();
-        for (MemberShape member : structureShape.getAllMembers().values()) {
-          if (containsAttributeValue(model, symbolProvider, member, new HashSet<String>())) {
-            return true;
-          }
-        }
-      }
-      return false;
-  }
-
-  private boolean containsAttributeValue(
-          Model model,
-          SymbolProvider symbolProvider,
-          MemberShape member,
-          Set<String> parents
-  ) {
-      Shape memberTarget = model.expectShape(member.getTarget());
-      parents.add(symbolProvider.toMemberName(member));
-      if (memberTarget.isStructureShape()) {
-          Collection<MemberShape> structureMemberList = ((StructureShape) memberTarget).getAllMembers().values();
-          for (MemberShape structureMember : structureMemberList) {
-              if (!parents.contains(symbolProvider.toMemberName(structureMember))
-                      && containsAttributeValue(model, symbolProvider, structureMember, parents)) {
-                  return true;
-              }
-          }
-      } else if (memberTarget.isUnionShape()) {
-          if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
-            return true;
-          } else {
-            Collection<MemberShape> unionMemberList = ((UnionShape) memberTarget).getAllMembers().values();
-            for (MemberShape unionMember : unionMemberList) {
-                if (!parents.contains(symbolProvider.toMemberName(unionMember))
-                        && containsAttributeValue(model, symbolProvider, unionMember, parents)) {
-                    return true;
-                }
-            }
-          }
-      } else if (memberTarget.isMapShape()) {
-          MemberShape mapMember = ((MapShape) memberTarget).getValue();
-          if (!parents.contains(symbolProvider.toMemberName(mapMember))
-                  && containsAttributeValue(model, symbolProvider, mapMember, parents)) {
-              return true;
-          }
-      } else if (memberTarget instanceof CollectionShape) {
-          MemberShape collectionMember = ((CollectionShape) memberTarget).getMember();
-          if (!parents.contains(symbolProvider.toMemberName(collectionMember))
-                  && containsAttributeValue(model, symbolProvider, collectionMember, parents)) {
-              return true;
-          }
       }
       return false;
   }

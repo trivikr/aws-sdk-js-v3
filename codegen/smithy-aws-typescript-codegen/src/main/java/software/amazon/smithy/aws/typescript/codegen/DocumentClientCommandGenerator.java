@@ -72,7 +72,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         String configType = serviceName + "ResolvedConfig";
 
         // Add required imports.
-        writer.addImport(configType, configType, "../" + serviceName);
+        writer.addImport(configType, configType, serviceName);
         writer.addImport("ServiceInputTypes", "ServiceInputTypes", "@aws-sdk/client-dynamodb");
         writer.addImport("ServiceOutputTypes", "ServiceOutputTypes", "@aws-sdk/client-dynamodb");
         writer.addImport("Command", "$Command", "@aws-sdk/smithy-client");
@@ -82,7 +82,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.addImport("NativeAttributeValue", "NativeAttributeValue", "@aws-sdk/util-dynamodb");
         writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
 
-        // addInputAndOutputTypes();
+        addInputAndOutputTypes();
 
         // String name = symbol.getName();
         // writer.writeShapeDocs(operation);
@@ -166,35 +166,32 @@ final class DocumentClientCommandGenerator implements Runnable {
     }
 
     private void addInputAndOutputTypes() {
-        // writeInputType(inputType.getName(), operationIndex.getInput(operation));
-        // writeOutputType(outputType.getName(), operationIndex.getOutput(operation));
-        // writer.write("");
+        writer.write("");
+        writeInputType(inputType.getName(), operationIndex.getInput(operation));
+        writeOutputType(outputType.getName(), operationIndex.getOutput(operation));
+        writer.write("");
     }
 
     private void writeInputType(String typeName, Optional<StructureShape> inputShape) {
-        // if (inputShape.isPresent()) {
-        //     StructureShape input = inputShape.get();
-        //     List<MemberShape> blobStreamingMembers = getBlobStreamingMembers(input);
-        //     if (blobStreamingMembers.isEmpty()) {
-        //         writer.write("export type $L = $T;", typeName, symbolProvider.toSymbol(input));
-        //     } else {
-        //         writeStreamingInputType(typeName, input, blobStreamingMembers.get(0));
-        //     }
-        // } else {
-        //     // If the input is non-existent, then use an empty object.
-        //     writer.write("export type $L = {}", typeName);
-        // }
+        if (inputShape.isPresent()) {
+            // StructureShape input = inputShape.get();
+            writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
+            String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
+            writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+        } else {
+            // If the input is non-existent, then use an empty object.
+            writer.write("export type $L = {}", typeName);
+        }
     }
 
     private void writeOutputType(String typeName, Optional<StructureShape> outputShape) {
-        // Output types should always be MetadataBearers, possibly in addition
-        // to a defined output shape.
-        // writer.addImport("MetadataBearer", "__MetadataBearer", TypeScriptDependency.AWS_SDK_TYPES.packageName);
-        // if (outputShape.isPresent()) {
-        //     writer.write("export type $L = $T & __MetadataBearer;",
-        //             typeName, symbolProvider.toSymbol(outputShape.get()));
-        // } else {
-        //     writer.write("export type $L = __MetadataBearer", typeName);
-        // }
+        if (outputShape.isPresent()) {
+            // StructureShape output = outputShape.get();
+            writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
+            String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
+            writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+        } else {
+            writer.write("export type $L = {}", typeName);
+        }
     }
 }
