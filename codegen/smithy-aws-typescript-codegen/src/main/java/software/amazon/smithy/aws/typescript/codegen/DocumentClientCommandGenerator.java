@@ -70,9 +70,9 @@ final class DocumentClientCommandGenerator implements Runnable {
         symbol = symbolProvider.toSymbol(operation);
         operationIndex = OperationIndex.of(model);
         inputType = symbol.expectProperty("inputType", Symbol.class);
-        inputMembersWithAttr = getMembersWithAttr(operationIndex.getInput(operation));
+        inputMembersWithAttr = getStructureMembersWithAttr(operationIndex.getInput(operation));
         outputType = symbol.expectProperty("outputType", Symbol.class);
-        outputMembersWithAttr = getMembersWithAttr(operationIndex.getOutput(operation));
+        outputMembersWithAttr = getStructureMembersWithAttr(operationIndex.getOutput(operation));
     }
 
     @Override
@@ -180,7 +180,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.write("");
     }
 
-    private List<MemberShape> getMembersWithAttr(Optional<StructureShape> optionalShape) {
+    private List<MemberShape> getStructureMembersWithAttr(Optional<StructureShape> optionalShape) {
         List<MemberShape> membersWithAttr = new ArrayList<>();
         if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, optionalShape)) {
             StructureShape shape = optionalShape.get();
@@ -217,6 +217,19 @@ final class DocumentClientCommandGenerator implements Runnable {
         }
     }
 
+    private void writeStructureOmitType(Shape structureTarget) {
+        List<MemberShape> membersWithAttr = getStructureMembersWithAttr(Optional.of((StructureShape) structureTarget));
+        String memberUnionToOmit = membersWithAttr.stream()
+            .map(memberWithAttr -> "'" + symbolProvider.toMemberName(memberWithAttr) + "'")
+            .collect(Collectors.joining(" | "));
+        writer.openBlock("Omit<$L, $L> & {", "}", symbolProvider.toSymbol(structureTarget).getName(),
+            memberUnionToOmit, () -> {
+                for(MemberShape memberWithAttr: membersWithAttr) {
+                    writeStructureMemberOmitType(memberWithAttr);
+                }
+            });
+    }
+
     private void writeStructureMemberOmitType(MemberShape member) {
         String optionalSuffix = isRequiredMember(member) ? "" : "?";
         writer.openBlock("${L}${L}: ", ";", symbolProvider.toMemberName(member),
@@ -228,7 +241,7 @@ final class DocumentClientCommandGenerator implements Runnable {
     private void writeMemberOmitType(MemberShape member) {
         Shape memberTarget = model.expectShape(member.getTarget());
         if (memberTarget.isStructureShape()) {
-            writer.writeInline("structure");
+            writeStructureOmitType(memberTarget);
         } else if (memberTarget.isUnionShape()) {
             if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
                 writeNativeAttributeValue();
