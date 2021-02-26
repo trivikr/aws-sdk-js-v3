@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.logging.Logger;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.shapes.CollectionShape;
@@ -29,6 +30,8 @@ import software.amazon.smithy.model.shapes.StructureShape;
 import software.amazon.smithy.model.shapes.UnionShape;
 
 final class DocumentClientUtils {
+    private static final Logger LOGGER = Logger.getLogger(AddAwsRuntimeConfig.class.getName());
+
     private DocumentClientUtils() {}
 
     static String getModifiedName(String name) {
@@ -58,8 +61,8 @@ final class DocumentClientUtils {
           Set<String> parents
     ) {
       Shape memberTarget = model.expectShape(member.getTarget());
-      parents.add(symbolProvider.toMemberName(member));
       if (memberTarget.isStructureShape()) {
+          parents.add(symbolProvider.toMemberName(member));
           Collection<MemberShape> structureMemberList = ((StructureShape) memberTarget).getAllMembers().values();
           for (MemberShape structureMember : structureMemberList) {
               if (!parents.contains(symbolProvider.toMemberName(structureMember))
@@ -68,6 +71,7 @@ final class DocumentClientUtils {
               }
           }
       } else if (memberTarget.isUnionShape()) {
+          parents.add(symbolProvider.toMemberName(member));
           if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
             return true;
           } else {
