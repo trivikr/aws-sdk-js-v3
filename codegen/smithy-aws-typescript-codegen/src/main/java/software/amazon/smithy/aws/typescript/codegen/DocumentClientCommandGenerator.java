@@ -254,7 +254,10 @@ final class DocumentClientCommandGenerator implements Runnable {
                 writeMemberOmitType(mapMember);
             });
         } else if (memberTarget instanceof CollectionShape) {
-            writer.write("collection");
+            MemberShape collectionMember = ((CollectionShape) memberTarget).getMember();
+            writer.openBlock("(", ")[]", () -> {
+                writeMemberOmitType(collectionMember);
+            });
         }
         String typeSuffix = isRequiredMember(member) ? " | undefined" : "";
         writer.write("${L}", typeSuffix);
