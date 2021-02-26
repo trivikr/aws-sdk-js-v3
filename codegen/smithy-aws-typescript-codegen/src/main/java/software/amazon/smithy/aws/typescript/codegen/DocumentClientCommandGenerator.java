@@ -20,6 +20,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import software.amazon.smithy.codegen.core.CodegenException;
 import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
@@ -246,7 +247,11 @@ final class DocumentClientCommandGenerator implements Runnable {
             if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
                 writeNativeAttributeValue();
             } else {
-                writer.writeInline("union");
+                // An AttributeValue inside Union is not present as of Q1 2021, and is less
+                // likely to appear in future. Writing Omit for it is not straightforward, skipping.
+                throw new CodegenException(String.format(
+                    "AttributeValue inside Union is not supported, attempted for %s", memberTarget.getType()
+                ));
             }
         } else if (memberTarget.isMapShape()) {
             MemberShape mapMember = ((MapShape) memberTarget).getValue();
