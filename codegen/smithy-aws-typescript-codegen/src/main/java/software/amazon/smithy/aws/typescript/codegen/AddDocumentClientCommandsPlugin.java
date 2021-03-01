@@ -56,13 +56,13 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
   ) {
       ServiceShape service = settings.getService(model);
       if (testServiceId(service, "DynamoDB")) {
-          String docClientFolderName = "document-client/";
+          String docClientPrefix = "doc-client-";
           Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
           List<OperationShape> overridenOperationsList = new ArrayList<>();
 
           for (OperationShape operation : containedOperations) {
               String operationName = operation.getId().getName();
-              String commandFileName = docClientFolderName
+              String commandFileName = docClientPrefix + "commands/"
                   + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
               
               if (containsAttributeValue(model, symbolProvider, operation)) {
@@ -73,20 +73,20 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
               }
           }
 
-          writerFactory.accept(docClientFolderName + "DynamoDBDocumentClient.ts", 
+          writerFactory.accept(docClientPrefix + "DynamoDBDocumentClient.ts", 
               writer -> new DocumentClientGenerator(settings, model, symbolProvider, writer).run());
 
-          writerFactory.accept(docClientFolderName + "index.ts", writer -> {
+          writerFactory.accept(docClientPrefix + "index.ts", writer -> {
               for (OperationShape operationOverriden: overridenOperationsList) {
                   String operationFileName = DocumentClientUtils.getModifiedName(
                       symbolProvider.toSymbol(operationOverriden).getName()
                   );
-                  writer.write("export * from './$L';", operationFileName);
+                  writer.write("export * from './commands/$L';", operationFileName);
               }
               writer.write("export * from './DynamoDBDocumentClient';");
           });
           
-          writerFactory.accept(docClientFolderName + "utils.ts", writer -> {
+          writerFactory.accept(docClientPrefix + "commands/utils.ts", writer -> {
               writer.write(IoUtils.readUtf8Resource(AddDocumentClientCommandsPlugin.class, "doc-client-utils.ts"));
           });
       }

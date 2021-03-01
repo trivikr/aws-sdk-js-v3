@@ -109,10 +109,15 @@ const copyToClients = async (sourceDir, destinationDir) => {
     // artifactPath contains "typescript-codegen" dir which contains generated code.
     // destinationDir contains clients folder in aws-sdk-js-v3.
     if (clientName === "client-dynamodb") {
-      const docClientArtifactPath = join(artifactPath, "document-client");
-      const docClientDestPath = join(destinationDir, "..", "lib", "lib-dynamodb", "src");
-      copySync(docClientArtifactPath, docClientDestPath, { overwrite: true });
-      removeSync(docClientArtifactPath);
+      for (const packageSub of readdirSync(artifactPath)) {
+        if (packageSub.startsWith("doc-client-")) {
+          const destinationFileName = packageSub.replace("doc-client-", "");
+          const docClientArtifactPath = join(artifactPath, packageSub);
+          const docClientDestPath = join(destinationDir, "..", "lib", "lib-dynamodb", "src", destinationFileName);
+          copySync(docClientArtifactPath, docClientDestPath, { overwrite: true });
+          removeSync(docClientArtifactPath);
+        }
+      }
     }
 
     for (const packageSub of readdirSync(artifactPath)) {
