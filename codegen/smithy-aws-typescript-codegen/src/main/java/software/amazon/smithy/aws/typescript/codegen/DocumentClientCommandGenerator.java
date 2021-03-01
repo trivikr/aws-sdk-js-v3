@@ -149,9 +149,28 @@ final class DocumentClientCommandGenerator implements Runnable {
 
             writer.openBlock("const command = new $L({", "})", symbol.getName(),
                 () -> {
-
+                    writer.write("...this.input,");
+                    for(MemberShape memberWithAttr: inputMembersWithAttr) {
+                        writeStructureMemberInputMarshall(memberWithAttr);
+                    }
                 });
         });
+    }
+
+    private void writeStructureMemberInputMarshall(MemberShape member) {
+        String keyTemplateStart, keyTemplateEnd;
+        if (isRequiredMember(member)) {
+            keyTemplateStart = "${L}: ";
+            keyTemplateEnd = ",";
+        } else {
+            keyTemplateStart = "...(this.input.${1L} && { ${1L}: ";
+            keyTemplateEnd = "}),";
+        }
+        writer.openBlock(keyTemplateStart, keyTemplateEnd, symbolProvider.toMemberName(member),
+            () -> {
+                // writeMemberOmitType(member);
+                writer.write("number");
+            });
     }
 
     private void addInputAndOutputTypes() {
