@@ -56,8 +56,10 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
         Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
         for (OperationShape operation : containedOperations) {
           String operationName = operation.getId().getName();
+          String commandFileName = "document-client/"
+              + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
           if (containsAttributeValue(model, symbolProvider, operation)) {
-            writerFactory.accept("document-client/commands/" + operationName + "Command.ts", 
+            writerFactory.accept(commandFileName,
                 writer -> new DocumentClientCommandGenerator(settings, model, operation, symbolProvider, writer).run()
             );
           }
