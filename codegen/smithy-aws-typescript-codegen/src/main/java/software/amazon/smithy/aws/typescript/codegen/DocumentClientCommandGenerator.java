@@ -34,6 +34,7 @@ import software.amazon.smithy.model.shapes.Shape;
 import software.amazon.smithy.model.shapes.StructureShape;
 import software.amazon.smithy.model.traits.IdempotencyTokenTrait;
 import software.amazon.smithy.model.traits.StreamingTrait;
+import software.amazon.smithy.typescript.codegen.ApplicationProtocol;
 import software.amazon.smithy.typescript.codegen.integration.ProtocolGenerator;
 import software.amazon.smithy.typescript.codegen.integration.RuntimeClientPlugin;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
@@ -113,15 +114,14 @@ final class DocumentClientCommandGenerator implements Runnable {
             writer.write("");
 
             generateCommandConstructor();
-            // writer.write("");
-            // generateCommandMiddlewareResolver(configType);
-            // writeSerde();
+            writer.write("");
+            generateCommandMiddlewareResolver(configType);
 
-            // // Hook for adding more methods to the command.
-            // writer.write("// Start section: $L", COMMAND_BODY_EXTRA_SECTION)
-            //         .pushState(COMMAND_BODY_EXTRA_SECTION)
-            //         .popState()
-            //         .write("// End section: $L", COMMAND_BODY_EXTRA_SECTION);
+            // Hook for adding more methods to the command.
+            writer.write("// Start section: $L", COMMAND_BODY_EXTRA_SECTION)
+                    .pushState(COMMAND_BODY_EXTRA_SECTION)
+                    .popState()
+                    .write("// End section: $L", COMMAND_BODY_EXTRA_SECTION);
         });
     }
 
@@ -137,15 +137,14 @@ final class DocumentClientCommandGenerator implements Runnable {
     }
 
     private void generateCommandMiddlewareResolver(String configType) {
-        // Symbol serde = TypeScriptDependency.MIDDLEWARE_SERDE.createSymbol("getSerdePlugin");
-        // writer.writeDocs("@internal");
-        // writer.write("resolveMiddleware(")
-        //         .indent()
-        //         .write("clientStack: MiddlewareStack<$L, $L>,", "ServiceInputTypes", "ServiceOutputTypes")
-        //         .write("configuration: $L,", configType)
-        //         .write("options?: $T", applicationProtocol.getOptionsType())
-        //         .dedent();
-        // writer.openBlock("): Handler<$T, $T> {", "}", inputType, outputType, () -> {
+        writer.writeDocs("@internal");
+        writer.write("resolveMiddleware(")
+                .indent()
+                .write("clientStack: MiddlewareStack<$L, $L>,", "ServiceInputTypes", "ServiceOutputTypes")
+                .write("configuration: $L,", configType)
+                .write("options?: $T", ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType())
+                .dedent();
+        writer.openBlock("): Handler<$L, $L> {", "}", inputTypeName, outputTypeName, () -> {
         //     // Add serialization and deserialization plugin.
         //     writer.write("this.middlewareStack.use($T(configuration, this.serialize, this.deserialize));", serde);
 
@@ -179,7 +178,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         //                      applicationProtocol.getRequestType());
         //         writer.write("handlerExecutionContext");
         //     });
-        // });
+        });
     }
 
     private void addInputAndOutputTypes() {
