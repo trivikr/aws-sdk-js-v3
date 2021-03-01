@@ -41,6 +41,10 @@ import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
 import software.amazon.smithy.utils.OptionalUtils;
 
 final class DocumentClientCommandGenerator implements Runnable {
+    static final String COMMAND_PROPERTIES_SECTION = "command_properties";
+    static final String COMMAND_BODY_EXTRA_SECTION = "command_body_extra";
+    static final String COMMAND_CONSTRUCTOR_SECTION = "command_constructor";
+
     private final TypeScriptSettings settings;
     private final Model model;
     private final ServiceShape service;
@@ -103,12 +107,12 @@ final class DocumentClientCommandGenerator implements Runnable {
                 configType, () -> {
 
             // Section for adding custom command properties.
-            // writer.write("// Start section: $L", COMMAND_PROPERTIES_SECTION);
-            // writer.pushState(COMMAND_PROPERTIES_SECTION).popState();
-            // writer.write("// End section: $L", COMMAND_PROPERTIES_SECTION);
-            // writer.write("");
+            writer.write("// Start section: $L", COMMAND_PROPERTIES_SECTION);
+            writer.pushState(COMMAND_PROPERTIES_SECTION).popState();
+            writer.write("// End section: $L", COMMAND_PROPERTIES_SECTION);
+            writer.write("");
 
-            // generateCommandConstructor();
+            generateCommandConstructor();
             // writer.write("");
             // generateCommandMiddlewareResolver(configType);
             // writeSerde();
@@ -122,14 +126,14 @@ final class DocumentClientCommandGenerator implements Runnable {
     }
 
     private void generateCommandConstructor() {
-        // writer.openBlock("constructor(readonly input: $T) {", "}", inputType, () -> {
-        //     // The constructor can be intercepted and changed.
-        //     writer.write("// Start section: $L", COMMAND_CONSTRUCTOR_SECTION)
-        //             .pushState(COMMAND_CONSTRUCTOR_SECTION)
-        //             .write("super();")
-        //             .popState()
-        //             .write("// End section: $L", COMMAND_CONSTRUCTOR_SECTION);
-        // });
+        writer.openBlock("constructor(readonly input: $L) {", "}", inputTypeName, () -> {
+            // The constructor can be intercepted and changed.
+            writer.write("// Start section: $L", COMMAND_CONSTRUCTOR_SECTION)
+                    .pushState(COMMAND_CONSTRUCTOR_SECTION)
+                    .write("super();")
+                    .popState()
+                    .write("// End section: $L", COMMAND_CONSTRUCTOR_SECTION);
+        });
     }
 
     private void generateCommandMiddlewareResolver(String configType) {
