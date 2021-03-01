@@ -228,7 +228,9 @@ final class DocumentClientCommandGenerator implements Runnable {
         String memberUnionToOmit = membersWithAttr.stream()
             .map(memberWithAttr -> "'" + symbolProvider.toMemberName(memberWithAttr) + "'")
             .collect(Collectors.joining(" | "));
-        writer.openBlock("Omit<$L, $L> & {", "}", symbolProvider.toSymbol(structureTarget).getName(),
+        String typeNameToOmit = symbolProvider.toSymbol(structureTarget).getName();
+        writer.addImport(typeNameToOmit, typeNameToOmit, "@aws-sdk/client-dynamodb");
+        writer.openBlock("Omit<$L, $L> & {", "}", typeNameToOmit,
             memberUnionToOmit, () -> {
                 for(MemberShape memberWithAttr: membersWithAttr) {
                     writeStructureMemberOmitType(memberWithAttr);
