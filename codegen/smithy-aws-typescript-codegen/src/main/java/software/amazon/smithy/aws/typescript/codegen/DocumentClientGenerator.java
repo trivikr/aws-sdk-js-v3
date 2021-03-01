@@ -90,7 +90,7 @@ final class DocumentClientGenerator implements Runnable {
         
         writer.addImport("unmarshallOptions", "unmarshallOptions", "@aws-sdk/util-dynamodb");
 
-        addTranslateConfiguration();
+        addConfiguration(configType, originalConfigType);
 
         writer.openBlock("export class $L extends __Client<$T, $L, $L, $L> {", "}",
             serviceName, ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType(),
@@ -103,10 +103,14 @@ final class DocumentClientGenerator implements Runnable {
         });
     }
 
-	private void addTranslateConfiguration() {
+	private void addConfiguration(String configType, String originalConfigType) {
         writer.openBlock("export type TranslateConfiguration = {", "}", () -> {
             addTranslateConfigurationOption("marshallOptions");
             addTranslateConfigurationOption("unmarshallOptions");
+        });
+        writer.write("");
+        writer.openBlock("export type $L = $L & {", "};", configType, originalConfigType, () -> {
+            writer.write("translateConfiguration?: TranslateConfiguration;");
         });
         writer.write("");
 	}
