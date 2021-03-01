@@ -91,7 +91,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         String configType = serviceName + "ResolvedConfig";
 
         // Add required imports.
-        writer.addImport(configType, configType, serviceName);
+        writer.addImport(configType, configType, "./" + serviceName);
         writer.addImport("ServiceInputTypes", "ServiceInputTypes", "@aws-sdk/client-dynamodb");
         writer.addImport("ServiceOutputTypes", "ServiceOutputTypes", "@aws-sdk/client-dynamodb");
         writer.addImport("Command", "$Command", "@aws-sdk/smithy-client");
@@ -147,36 +147,25 @@ final class DocumentClientCommandGenerator implements Runnable {
             writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
             writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfig || {};");
 
-            writer.openBlock("const command = new $L({", "})", symbol.getName(),
+            writer.write("const inputKeyNodes = [];");
+            writer.write("const outputKeyNodes = [];");
+            
+            writer.addImport(symbol.getName(), symbol.getName(), "@aws-sdk/client-dynamodb");
+            writer.addImport("marshallInput", "marshallInput", "./utils");
+            writer.openBlock("const command = new $L(marshallInput(", "));", symbol.getName(),
                 () -> {
-                    writer.write("...this.input,");
-                    for(MemberShape memberWithAttr: inputMembersWithAttr) {
-                        writeStructureMemberInputMarshall(memberWithAttr);
-                    }
+                   writer.write("this.input,");
+                   writer.write("inputKeyNodes,");
+                   writer.write("marshallOptions,");
                 });
         });
-    }
-
-    private void writeStructureMemberInputMarshall(MemberShape member) {
-        String keyTemplateStart, keyTemplateEnd;
-        if (isRequiredMember(member)) {
-            keyTemplateStart = "${L}: ";
-            keyTemplateEnd = ",";
-        } else {
-            keyTemplateStart = "...(this.input.${1L} && { ${1L}: ";
-            keyTemplateEnd = "}),";
-        }
-        writer.openBlock(keyTemplateStart, keyTemplateEnd, symbolProvider.toMemberName(member),
-            () -> {
-                // writeMemberOmitType(member);
-                writer.write("number");
-            });
     }
 
     private void addInputAndOutputTypes() {
         writer.write("");
         String originalInputTypeName = symbol.expectProperty("inputType", Symbol.class).getName();
         writeType(inputTypeName, originalInputTypeName, operationIndex.getInput(operation), inputMembersWithAttr);
+        writer.write("");
         String originalOutputTypeName = symbol.expectProperty("outputType", Symbol.class).getName();
         writeType(outputTypeName, originalOutputTypeName, operationIndex.getOutput(operation), outputMembersWithAttr);
         writer.write("");
