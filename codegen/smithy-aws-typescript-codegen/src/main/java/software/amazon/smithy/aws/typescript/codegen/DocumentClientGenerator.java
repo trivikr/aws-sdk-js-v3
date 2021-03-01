@@ -87,8 +87,10 @@ final class DocumentClientGenerator implements Runnable {
         writer.addImport(serviceInputTypes, serviceInputTypes, "@aws-sdk/client-dynamodb");
         writer.addImport(serviceOutputTypes, serviceOutputTypes, "@aws-sdk/client-dynamodb");
         writer.addImport("Client", "__Client", "@aws-sdk/smithy-client");
-        writer.addImport("marshallOptions", "marshallOptions", "@aws-sdk/util-dynamodb");
+        
         writer.addImport("unmarshallOptions", "unmarshallOptions", "@aws-sdk/util-dynamodb");
+
+        addTranslateConfiguration();
 
         writer.openBlock("export class $L extends __Client<$T, $L, $L, $L> {", "}",
             serviceName, ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType(),
@@ -100,4 +102,19 @@ final class DocumentClientGenerator implements Runnable {
             // generateDestroy();
         });
     }
+
+	private void addTranslateConfiguration() {
+        writer.openBlock("export type TranslateConfiguration = {", "}", () -> {
+            addTranslateConfigurationOption("marshallOptions");
+            addTranslateConfigurationOption("unmarshallOptions");
+        });
+        writer.write("");
+	}
+
+	private void addTranslateConfigurationOption(String translateOption) {
+        writer.addImport(translateOption, translateOption, "@aws-sdk/util-dynamodb");
+        writer.write("${1L}?: ${1L};", translateOption);
+	}
+
+    
 }
