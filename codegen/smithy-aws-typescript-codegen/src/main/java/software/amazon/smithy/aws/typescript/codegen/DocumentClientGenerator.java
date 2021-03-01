@@ -102,14 +102,24 @@ final class DocumentClientGenerator implements Runnable {
             serviceInputTypes, serviceOutputTypes, configType, () -> {
 
             addClientProperties();
+            writer.write("");
             addClientConstructor();
             writer.write("");
-            generateStaticFactoryFrom();
-            // generateDestroy();
+            addStaticFactoryFrom();
+            writer.write("");
+            addDestroy();
         });
     }
 
-	private void generateStaticFactoryFrom() {
+	private void addDestroy() {
+        writer.pushState(CLIENT_DESTROY_SECTION);
+        writer.openBlock("destroy(): void {", "}", () -> {
+            writer.write("// A no-op, since client is passed in constructor");
+        });
+        writer.popState();
+	}
+
+	private void addStaticFactoryFrom() {
         writer.openBlock("static from(client: $L, translateConfig?: TranslateConfig) {", "}",
             originalServiceName, () -> {
                 writer.write("return new $L(client, translateConfig);", serviceName);
