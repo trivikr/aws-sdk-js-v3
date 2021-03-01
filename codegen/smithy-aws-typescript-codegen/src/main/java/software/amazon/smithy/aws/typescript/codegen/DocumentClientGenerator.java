@@ -42,9 +42,10 @@ import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
 import software.amazon.smithy.utils.OptionalUtils;
 
 final class DocumentClientGenerator implements Runnable {
-    static final String COMMAND_PROPERTIES_SECTION = "command_properties";
-    static final String COMMAND_BODY_EXTRA_SECTION = "command_body_extra";
-    static final String COMMAND_CONSTRUCTOR_SECTION = "command_constructor";
+    static final String CLIENT_CONFIG_SECTION = "client_config";
+    static final String CLIENT_PROPERTIES_SECTION = "client_properties";
+    static final String CLIENT_CONSTRUCTOR_SECTION = "client_constructor";
+    static final String CLIENT_DESTROY_SECTION = "client_destroy";
 
     private final TypeScriptSettings settings;
     private final Model model;
@@ -96,14 +97,34 @@ final class DocumentClientGenerator implements Runnable {
             serviceName, ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType(),
             serviceInputTypes, serviceOutputTypes, configType, () -> {
 
-            // generateClientConstructor();
+            addClientProperties(configType);
+            addClientConstructor();
             writer.write("");
             // generateStaticFactoryFrom();
             // generateDestroy();
         });
     }
 
+	private void addClientProperties(String configType) {
+        writer.pushState(CLIENT_PROPERTIES_SECTION);
+        writer.write("readonly config: $L;\n", configType);
+        writer.popState();
+	}
+
+	private void addClientConstructor() {
+        writer.openBlock("protected constructor(client: $L, translateConfig?: TranslateConfig){", "}",
+            symbol.getName(), () -> {
+                writer.pushState(CLIENT_CONSTRUCTOR_SECTION);
+                writer.write("super(client.config);");
+                writer.write("this.config = client.config;");
+                writer.write("this.config.translateConfig = translateConfig;");
+                writer.write("this.middlewareStack = client.middlewareStack;");
+                writer.popState();
+            });
+	}
+
 	private void addConfiguration(String configType, String originalConfigType) {
+        writer.pushState(CLIENT_CONFIG_SECTION);
         writer.openBlock("export type TranslateConfig = {", "}", () -> {
             addTranslateConfigOption("marshallOptions");
             addTranslateConfigOption("unmarshallOptions");
@@ -113,6 +134,7 @@ final class DocumentClientGenerator implements Runnable {
             writer.write("translateConfig?: TranslateConfig;");
         });
         writer.write("");
+        writer.popState();
 	}
 
 	private void addTranslateConfigOption(String translateOption) {
