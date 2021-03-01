@@ -73,6 +73,9 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
               }
           }
 
+          writerFactory.accept(docClientFolderName + "DynamoDBDocumentClient.ts", 
+              writer -> new DocumentClientGenerator(settings, model, symbolProvider, writer).run());
+
           writerFactory.accept(docClientFolderName + "index.ts", writer -> {
               for (OperationShape operationOverriden: overridenOperationsList) {
                   String operationFileName = DocumentClientUtils.getModifiedName(
