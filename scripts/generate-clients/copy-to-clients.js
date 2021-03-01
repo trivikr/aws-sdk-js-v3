@@ -110,7 +110,7 @@ const copyToClients = async (sourceDir, destinationDir) => {
     // destinationDir contains clients folder in aws-sdk-js-v3.
     if (clientName === "client-dynamodb") {
       const docClientArtifactPath = join(artifactPath, "document-client");
-      const docClientDestPath = join(destinationDir, "..", "lib", "lib-dynamodb");
+      const docClientDestPath = join(destinationDir, "..", "lib", "lib-dynamodb", "src");
       copySync(docClientArtifactPath, docClientDestPath, { overwrite: true });
       removeSync(docClientArtifactPath);
     }
