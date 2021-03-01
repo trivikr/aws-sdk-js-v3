@@ -49,9 +49,9 @@ final class DocumentClientCommandGenerator implements Runnable {
     private final TypeScriptWriter writer;
     private final Symbol symbol;
     private final OperationIndex operationIndex;
-    private final Symbol inputType;
+    private final String inputTypeName;
     private final List<MemberShape> inputMembersWithAttr;
-    private final Symbol outputType;
+    private final String outputTypeName;
     private final List<MemberShape> outputMembersWithAttr;
 
     DocumentClientCommandGenerator(
@@ -70,9 +70,13 @@ final class DocumentClientCommandGenerator implements Runnable {
 
         symbol = symbolProvider.toSymbol(operation);
         operationIndex = OperationIndex.of(model);
-        inputType = symbol.expectProperty("inputType", Symbol.class);
+        inputTypeName = DocumentClientUtils.getModifiedName(
+            symbol.expectProperty("inputType", Symbol.class).getName()
+        );
         inputMembersWithAttr = getStructureMembersWithAttr(operationIndex.getInput(operation));
-        outputType = symbol.expectProperty("outputType", Symbol.class);
+        outputTypeName = DocumentClientUtils.getModifiedName(
+            symbol.expectProperty("outputType", Symbol.class).getName()
+        );
         outputMembersWithAttr = getStructureMembersWithAttr(operationIndex.getOutput(operation));
     }
 
@@ -95,25 +99,25 @@ final class DocumentClientCommandGenerator implements Runnable {
 
         // String name = symbol.getName();
         // writer.writeShapeDocs(operation);
-        // writer.openBlock("export class $L extends $$Command<$T, $T, $L> {", "}", name, inputType, outputType,
+        // writer.openBlock("export class $L extends $$Command<$T, $T, $L> {", "}", name, inputTypeName, outputTypeName,
         //         configType, () -> {
 
-        //     // Section for adding custom command properties.
-        //     writer.write("// Start section: $L", COMMAND_PROPERTIES_SECTION);
-        //     writer.pushState(COMMAND_PROPERTIES_SECTION).popState();
-        //     writer.write("// End section: $L", COMMAND_PROPERTIES_SECTION);
-        //     writer.write("");
+            // Section for adding custom command properties.
+            // writer.write("// Start section: $L", COMMAND_PROPERTIES_SECTION);
+            // writer.pushState(COMMAND_PROPERTIES_SECTION).popState();
+            // writer.write("// End section: $L", COMMAND_PROPERTIES_SECTION);
+            // writer.write("");
 
-        //     generateCommandConstructor();
-        //     writer.write("");
-        //     generateCommandMiddlewareResolver(configType);
-        //     writeSerde();
+            // generateCommandConstructor();
+            // writer.write("");
+            // generateCommandMiddlewareResolver(configType);
+            // writeSerde();
 
-        //     // Hook for adding more methods to the command.
-        //     writer.write("// Start section: $L", COMMAND_BODY_EXTRA_SECTION)
-        //             .pushState(COMMAND_BODY_EXTRA_SECTION)
-        //             .popState()
-        //             .write("// End section: $L", COMMAND_BODY_EXTRA_SECTION);
+            // // Hook for adding more methods to the command.
+            // writer.write("// Start section: $L", COMMAND_BODY_EXTRA_SECTION)
+            //         .pushState(COMMAND_BODY_EXTRA_SECTION)
+            //         .popState()
+            //         .write("// End section: $L", COMMAND_BODY_EXTRA_SECTION);
         // });
     }
 
@@ -176,8 +180,10 @@ final class DocumentClientCommandGenerator implements Runnable {
 
     private void addInputAndOutputTypes() {
         writer.write("");
-        writeType(inputType.getName(), operationIndex.getInput(operation), inputMembersWithAttr);
-        writeType(outputType.getName(), operationIndex.getOutput(operation), outputMembersWithAttr);
+        String originalInputTypeName = symbol.expectProperty("inputType", Symbol.class).getName();
+        writeType(inputTypeName, originalInputTypeName, operationIndex.getInput(operation), inputMembersWithAttr);
+        String originalOutputTypeName = symbol.expectProperty("outputType", Symbol.class).getName();
+        writeType(outputTypeName, originalOutputTypeName, operationIndex.getOutput(operation), outputMembersWithAttr);
         writer.write("");
     }
 
@@ -194,18 +200,22 @@ final class DocumentClientCommandGenerator implements Runnable {
         return membersWithAttr;
     }
 
-    private void writeType(String typeName, Optional<StructureShape> optionalShape, List<MemberShape> membersWithAttr) {
+    private void writeType(
+            String typeName,
+            String originalTypeName,
+            Optional<StructureShape> optionalShape,
+            List<MemberShape> membersWithAttr
+    ) {
         if (optionalShape.isPresent()) {
-            writer.addImport(typeName, "__" + typeName, "@aws-sdk/client-dynamodb");
-            String modifiedTypeName = DocumentClientUtils.getModifiedName(typeName);
+            writer.addImport(originalTypeName, "__" + originalTypeName, "@aws-sdk/client-dynamodb");
             if (membersWithAttr.isEmpty()) {
-                writer.write("export type $L = __$L;", modifiedTypeName, typeName);
+                writer.write("export type $L = __$L;", typeName, originalTypeName);
             } else {
                 String memberUnionToOmit = membersWithAttr.stream()
                     .map(member -> "'" + symbolProvider.toMemberName(member) + "'")
                     .collect(Collectors.joining(" | "));
-                writer.openBlock("export type $L = Omit<__$L, $L> & {", "};", modifiedTypeName,
-                    typeName, memberUnionToOmit, () -> {
+                writer.openBlock("export type $L = Omit<__$L, $L> & {", "};", typeName,
+                    originalTypeName, memberUnionToOmit, () -> {
                         for(MemberShape member: membersWithAttr) {
                             writeStructureMemberOmitType(member);
                         }
