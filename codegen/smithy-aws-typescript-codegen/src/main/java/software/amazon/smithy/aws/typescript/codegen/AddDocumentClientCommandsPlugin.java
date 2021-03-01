@@ -15,8 +15,10 @@
 
 package software.amazon.smithy.aws.typescript.codegen;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
@@ -53,17 +55,31 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
   ) {
       ServiceShape service = settings.getService(model);
       if (testServiceId(service, "DynamoDB")) {
-        Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
-        for (OperationShape operation : containedOperations) {
-          String operationName = operation.getId().getName();
-          String commandFileName = "document-client/"
-              + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
-          if (containsAttributeValue(model, symbolProvider, operation)) {
-            writerFactory.accept(commandFileName,
-                writer -> new DocumentClientCommandGenerator(settings, model, operation, symbolProvider, writer).run()
-            );
+          String docClientFolderName = "document-client/";
+          Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
+          List<OperationShape> overridenOperationsList = new ArrayList<>();
+          
+          for (OperationShape operation : containedOperations) {
+              String operationName = operation.getId().getName();
+              String commandFileName = docClientFolderName
+                  + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
+              
+              if (containsAttributeValue(model, symbolProvider, operation)) {
+                  overridenOperationsList.add(operation);
+                  writerFactory.accept(commandFileName,
+                      writer -> new DocumentClientCommandGenerator(settings, model, operation, symbolProvider, writer).run()
+                  );
+              }
           }
-        }
+
+          writerFactory.accept(docClientFolderName + "index.ts", writer -> {
+              for (OperationShape operationOverriden: overridenOperationsList) {
+                  String operationFileName = DocumentClientUtils.getModifiedName(
+                      symbolProvider.toSymbol(operationOverriden).getName()
+                  );
+                  writer.write("export * from './$L';", operationFileName);
+              }
+          });
       }
   }
 
