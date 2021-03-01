@@ -53,6 +53,10 @@ final class DocumentClientGenerator implements Runnable {
     private final SymbolProvider symbolProvider;
     private final TypeScriptWriter writer;
     private final Symbol symbol;
+    private final String serviceName;
+    private final String originalServiceName;
+    private final String configType;
+    private final String originalConfigType;
 
     DocumentClientGenerator(
             TypeScriptSettings settings,
@@ -67,6 +71,10 @@ final class DocumentClientGenerator implements Runnable {
         this.writer = writer;
 
         symbol = symbolProvider.toSymbol(service);
+        serviceName = "DynamoDBDocumentClient";
+        originalServiceName = symbol.getName();
+        configType = serviceName + "ResolvedConfig";
+        originalConfigType = getResolvedConfigTypeName(symbol);
     }
 
     static String getResolvedConfigTypeName(Symbol symbol) {
@@ -75,12 +83,8 @@ final class DocumentClientGenerator implements Runnable {
 
     @Override
     public void run() {
-        String serviceName = "DynamoDBDocumentClient";
-        String configType = serviceName + "ResolvedConfig";
-        String originalServiceName = symbol.getName();
-        String originalConfigType = getResolvedConfigTypeName(symbol);
-        String serviceInputTypes= "ServiceInputTypes";
-        String serviceOutputTypes= "ServiceOutputTypes";
+        String serviceInputTypes = "ServiceInputTypes";
+        String serviceOutputTypes = "ServiceOutputTypes";
 
         // Add required imports.
         writer.addImport(originalServiceName, originalServiceName, "@aws-sdk/client-dynamodb");
@@ -91,21 +95,28 @@ final class DocumentClientGenerator implements Runnable {
         
         writer.addImport("unmarshallOptions", "unmarshallOptions", "@aws-sdk/util-dynamodb");
 
-        addConfiguration(configType, originalConfigType);
+        addConfiguration();
 
         writer.openBlock("export class $L extends __Client<$T, $L, $L, $L> {", "}",
             serviceName, ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType(),
             serviceInputTypes, serviceOutputTypes, configType, () -> {
 
-            addClientProperties(configType);
+            addClientProperties();
             addClientConstructor();
             writer.write("");
-            // generateStaticFactoryFrom();
+            generateStaticFactoryFrom();
             // generateDestroy();
         });
     }
 
-	private void addClientProperties(String configType) {
+	private void generateStaticFactoryFrom() {
+        writer.openBlock("static from(client: $L, translateConfig?: TranslateConfig) {", "}",
+            originalServiceName, () -> {
+                writer.write("return new $L(client, translateConfig);", serviceName);
+            });
+	}
+
+	private void addClientProperties() {
         writer.pushState(CLIENT_PROPERTIES_SECTION);
         writer.write("readonly config: $L;\n", configType);
         writer.popState();
@@ -123,7 +134,7 @@ final class DocumentClientGenerator implements Runnable {
             });
 	}
 
-	private void addConfiguration(String configType, String originalConfigType) {
+	private void addConfiguration() {
         writer.pushState(CLIENT_CONFIG_SECTION);
         writer.openBlock("export type TranslateConfig = {", "}", () -> {
             addTranslateConfigOption("marshallOptions");
