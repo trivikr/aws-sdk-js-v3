@@ -83,6 +83,7 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
                   );
                   writer.write("export * from './$L';", operationFileName);
               }
+              writer.write("export * from './DynamoDBDocumentClient';");
           });
           
           writerFactory.accept(docClientFolderName + "utils.ts", writer -> {
