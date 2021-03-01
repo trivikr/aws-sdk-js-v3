@@ -97,8 +97,6 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.addImport("Command", "$Command", "@aws-sdk/smithy-client");
         writer.addImport("Handler", "Handler", "@aws-sdk/types");
         writer.addImport("MiddlewareStack", "MiddlewareStack", "@aws-sdk/types");
-        writer.addImport("marshall", "marshall", "@aws-sdk/util-dynamodb");
-        writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
 
         addInputAndOutputTypes();
 
@@ -145,39 +143,14 @@ final class DocumentClientCommandGenerator implements Runnable {
                 .write("options?: $T", ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType())
                 .dedent();
         writer.openBlock("): Handler<$L, $L> {", "}", inputTypeName, outputTypeName, () -> {
-        //     // Add serialization and deserialization plugin.
-        //     writer.write("this.middlewareStack.use($T(configuration, this.serialize, this.deserialize));", serde);
+            writer.addImport("marshall", "marshall", "@aws-sdk/util-dynamodb");
+            writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
+            writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfiguration || {};");
 
-        //     // Add customizations.
-        //     addCommandSpecificPlugins();
+            writer.openBlock("const command = new $L({", "})", symbol.getName(),
+                () -> {
 
-        //     // Resolve the middleware stack.
-        //     writer.write("\nconst stack = clientStack.concat(this.middlewareStack);\n");
-        //     writer.write("const { logger } = configuration;");
-        //     writer.write("const clientName = $S;", symbolProvider.toSymbol(service).getName());
-        //     writer.write("const commandName = $S;", symbolProvider.toSymbol(operation).getName());
-        //     writer.openBlock("const handlerExecutionContext: HandlerExecutionContext = {", "}", () -> {
-        //         writer.write("logger,");
-        //         writer.write("clientName,");
-        //         writer.write("commandName,");
-        //         writer.openBlock("inputFilterSensitiveLog: ", ",", () -> {
-        //             OptionalUtils.ifPresentOrElse(operationIndex.getInput(operation),
-        //                 input -> writer.writeInline("$T.filterSensitiveLog", symbolProvider.toSymbol(input)),
-        //                 () -> writer.writeInline("(input: any) => input"));
-        //         });
-        //         writer.openBlock("outputFilterSensitiveLog: ", ",", () -> {
-        //             OptionalUtils.ifPresentOrElse(operationIndex.getOutput(operation),
-        //                 output -> writer.writeInline("$T.filterSensitiveLog", symbolProvider.toSymbol(output)),
-        //                 () -> writer.writeInline("(output: any) => output"));
-        //         });
-        //     });
-        //     writer.write("const { requestHandler } = configuration;");
-        //     writer.openBlock("return stack.resolve(", ");", () -> {
-        //         writer.write("(request: FinalizeHandlerArguments<any>) => ");
-        //         writer.write("  requestHandler.handle(request.request as $T, options || {}),",
-        //                      applicationProtocol.getRequestType());
-        //         writer.write("handlerExecutionContext");
-        //     });
+                });
         });
     }
 
