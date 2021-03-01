@@ -40,6 +40,7 @@ import software.amazon.smithy.model.shapes.UnionShape;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
 import software.amazon.smithy.typescript.codegen.integration.TypeScriptIntegration;
+import software.amazon.smithy.utils.IoUtils;
 
 /**
  * Generates Commands for DynamoDB Document Client.
@@ -58,7 +59,7 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
           String docClientFolderName = "document-client/";
           Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
           List<OperationShape> overridenOperationsList = new ArrayList<>();
-          
+
           for (OperationShape operation : containedOperations) {
               String operationName = operation.getId().getName();
               String commandFileName = docClientFolderName
@@ -79,6 +80,10 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
                   );
                   writer.write("export * from './$L';", operationFileName);
               }
+          });
+          
+          writerFactory.accept(docClientFolderName + "utils.ts", writer -> {
+              writer.write(IoUtils.readUtf8Resource(AddDocumentClientCommandsPlugin.class, "doc-client-utils.ts"));
           });
       }
   }
