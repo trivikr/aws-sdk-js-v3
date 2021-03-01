@@ -97,10 +97,10 @@ final class DocumentClientCommandGenerator implements Runnable {
 
         addInputAndOutputTypes();
 
-        // String name = symbol.getName();
+        String name = DocumentClientUtils.getModifiedName(symbol.getName());
         // writer.writeShapeDocs(operation);
-        // writer.openBlock("export class $L extends $$Command<$T, $T, $L> {", "}", name, inputTypeName, outputTypeName,
-        //         configType, () -> {
+        writer.openBlock("export class $L extends $$Command<$L, $L, $L> {", "}", name, inputTypeName, outputTypeName,
+                configType, () -> {
 
             // Section for adding custom command properties.
             // writer.write("// Start section: $L", COMMAND_PROPERTIES_SECTION);
@@ -118,7 +118,7 @@ final class DocumentClientCommandGenerator implements Runnable {
             //         .pushState(COMMAND_BODY_EXTRA_SECTION)
             //         .popState()
             //         .write("// End section: $L", COMMAND_BODY_EXTRA_SECTION);
-        // });
+        });
     }
 
     private void generateCommandConstructor() {
