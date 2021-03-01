@@ -145,7 +145,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.openBlock("): Handler<$L, $L> {", "}", inputTypeName, outputTypeName, () -> {
             writer.addImport("marshall", "marshall", "@aws-sdk/util-dynamodb");
             writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
-            writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfiguration || {};");
+            writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfig || {};");
 
             writer.openBlock("const command = new $L({", "})", symbol.getName(),
                 () -> {

@@ -104,18 +104,18 @@ final class DocumentClientGenerator implements Runnable {
     }
 
 	private void addConfiguration(String configType, String originalConfigType) {
-        writer.openBlock("export type TranslateConfiguration = {", "}", () -> {
-            addTranslateConfigurationOption("marshallOptions");
-            addTranslateConfigurationOption("unmarshallOptions");
+        writer.openBlock("export type TranslateConfig = {", "}", () -> {
+            addTranslateConfigOption("marshallOptions");
+            addTranslateConfigOption("unmarshallOptions");
         });
         writer.write("");
         writer.openBlock("export type $L = $L & {", "};", configType, originalConfigType, () -> {
-            writer.write("translateConfiguration?: TranslateConfiguration;");
+            writer.write("translateConfig?: TranslateConfig;");
         });
         writer.write("");
 	}
 
-	private void addTranslateConfigurationOption(String translateOption) {
+	private void addTranslateConfigOption(String translateOption) {
         writer.addImport(translateOption, translateOption, "@aws-sdk/util-dynamodb");
         writer.write("${1L}?: ${1L};", translateOption);
 	}
