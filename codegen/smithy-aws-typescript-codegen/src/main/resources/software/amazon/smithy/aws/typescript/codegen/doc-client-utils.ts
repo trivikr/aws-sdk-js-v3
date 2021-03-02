@@ -11,7 +11,10 @@ export type AllNodes = {
 
 const processKeyInObj = (obj: any, keyNode: KeyNode, processFunc: Function) => {
   const { key, children } = keyNode;
-  if (obj[key]) {
+  if (Array.isArray(obj)) {
+    // Process key for each element of the array.
+    obj = obj.map((item: any) => processKeyInObj(item, keyNode, processFunc));
+  } else if (obj[key]) {
     if (!children || (Array.isArray(children) && children.length === 0)) {
       // Leaf of KeyNode, process the key.
       if (Array.isArray(obj[key])) {
@@ -20,17 +23,19 @@ const processKeyInObj = (obj: any, keyNode: KeyNode, processFunc: Function) => {
         obj[key] = processFunc(obj[key]);
       }
     } else {
-      // KeyNode has children
+      // Not leaf node, process the children.
       if (Array.isArray(children)) {
+        // Specific keys of children need to be processed.
         for (const keyNodeChild of children) {
           if (Array.isArray(obj[key])) {
+            // Each element of array needs to be processed.
             obj[key] = obj[key].map((item: any) => processKeyInObj(item, keyNodeChild, processFunc));
           } else {
             obj[key] = processKeyInObj(obj[key], keyNodeChild, processFunc);
           }
         }
       } else {
-        // All children need processing.
+        // All children require processing.
         obj[key] = processAllKeysInObj(obj[key], children, processFunc);
       }
     }
@@ -49,6 +54,7 @@ const processAllKeysInObj = (obj: any, allNodes: AllNodes, processFunc: Function
   const { children } = allNodes;
   for (const key in obj) {
     if (!children) {
+      // Leaf, process key without children.
       obj = processKeyInObj(obj, { key }, processFunc);
     } else if (Array.isArray(children)) {
       for (const keyNode of children) {
