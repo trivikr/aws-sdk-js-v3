@@ -85,14 +85,12 @@ final class DocumentClientUtils {
           }
       } else if (memberTarget.isMapShape()) {
           MemberShape mapMember = ((MapShape) memberTarget).getValue();
-          if (!parents.contains(symbolProvider.toMemberName(mapMember))
-                  && containsAttributeValue(model, symbolProvider, mapMember, parents)) {
+          if (containsAttributeValue(model, symbolProvider, mapMember, parents)) {
               return true;
           }
       } else if (memberTarget instanceof CollectionShape) {
           MemberShape collectionMember = ((CollectionShape) memberTarget).getMember();
-          if (!parents.contains(symbolProvider.toMemberName(collectionMember))
-                  && containsAttributeValue(model, symbolProvider, collectionMember, parents)) {
+          if (containsAttributeValue(model, symbolProvider, collectionMember, parents)) {
               return true;
           }
       }
