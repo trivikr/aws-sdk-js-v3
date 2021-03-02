@@ -143,21 +143,33 @@ final class DocumentClientCommandGenerator implements Runnable {
                 .write("options?: $T", ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType())
                 .dedent();
         writer.openBlock("): Handler<$L, $L> {", "}", inputTypeName, outputTypeName, () -> {
-            writer.addImport("marshall", "marshall", "@aws-sdk/util-dynamodb");
-            writer.addImport("unmarshall", "unmarshall", "@aws-sdk/util-dynamodb");
             writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfig || {};");
 
             writer.write("const inputKeyNodes = [];");
             writer.write("const outputKeyNodes = [];");
             
             writer.addImport(symbol.getName(), symbol.getName(), "@aws-sdk/client-dynamodb");
-            writer.addImport("marshallInput", "marshallInput", "./commands/utils");
-            writer.openBlock("const command = new $L(marshallInput(", "));", symbol.getName(),
+            
+            String marshallInput = "marshallInput";
+            String unmarshallOutput = "unmarshallOutput";
+            writer.addImport(marshallInput, marshallInput, "./commands/utils");
+            writer.addImport(unmarshallOutput, unmarshallOutput, "./commands/utils");
+
+            writer.openBlock("const command = new $L($L(", "));", symbol.getName(), marshallInput,
                 () -> {
                    writer.write("this.input,");
                    writer.write("inputKeyNodes,");
                    writer.write("marshallOptions,");
                 });
+            writer.write("const handler = command.resolveMiddleware(clientStack, configuration, options);");
+
+            writer.openBlock("return async () => {", "};", () -> {
+                writer.write("const data = await handler(command);");
+                writer.openBlock("return {", "};", () -> {
+                    writer.write("...data,");
+                    writer.write("output: $L(data.output, outputKeyNodes, unmarshallOptions),", unmarshallOutput);
+                });
+            });
         });
     }
 
