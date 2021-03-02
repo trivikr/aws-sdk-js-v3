@@ -31,11 +31,7 @@ const processKeyInObj = (obj: any, keyNode: KeyNode, processFunc: Function) => {
         }
       } else {
         // All children need processing.
-        if (Array.isArray(obj[key])) {
-          obj[key] = obj[key].map((item: any) => processAllKeysInObj(item, children, processFunc));
-        } else {
-          obj[key] = processAllKeysInObj(obj[key], children, processFunc);
-        }
+        obj[key] = processAllKeysInObj(obj[key], children, processFunc);
       }
     }
   }
@@ -49,9 +45,18 @@ const processKeysInObj = (obj: any, keyNodes: KeyNode[], processFunc: Function) 
   return obj;
 };
 
-const processAllKeysInObj = (obj: any, children: KeyNode[] | AllNodes, processFunc: Function) => {
-  for (const key of obj) {
-    obj = processKeyInObj(obj, { key, children }, processFunc);
+const processAllKeysInObj = (obj: any, allNodes: AllNodes, processFunc: Function) => {
+  const { children } = allNodes;
+  for (const key in obj) {
+    if (!children) {
+      obj = processKeyInObj(obj, { key }, processFunc);
+    } else if (Array.isArray(children)) {
+      for (const keyNode of children) {
+        obj[key] = processKeyInObj(obj[key], keyNode, processFunc);
+      }
+    } else {
+      obj[key] = processAllKeysInObj(obj[key], children, processFunc);
+    }
   }
   return obj;
 };
