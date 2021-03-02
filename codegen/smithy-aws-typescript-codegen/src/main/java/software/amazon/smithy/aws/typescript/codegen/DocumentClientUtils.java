@@ -62,26 +62,29 @@ final class DocumentClientUtils {
     ) {
       Shape memberTarget = model.expectShape(member.getTarget());
       if (memberTarget.isStructureShape()) {
-          parents.add(symbolProvider.toMemberName(member));
-          Collection<MemberShape> structureMemberList = ((StructureShape) memberTarget).getAllMembers().values();
-          for (MemberShape structureMember : structureMemberList) {
-              if (!parents.contains(symbolProvider.toMemberName(structureMember))
-                      && containsAttributeValue(model, symbolProvider, structureMember, parents)) {
-                  return true;
+          if (!parents.contains(symbolProvider.toMemberName(member))) {
+              parents.add(symbolProvider.toMemberName(member));
+              Collection<MemberShape> structureMemberList = ((StructureShape) memberTarget).getAllMembers().values();
+              for (MemberShape structureMember : structureMemberList) {
+                  if (!parents.contains(symbolProvider.toMemberName(structureMember))
+                          && containsAttributeValue(model, symbolProvider, structureMember, parents)) {
+                      return true;
+                  }
               }
+
           }
       } else if (memberTarget.isUnionShape()) {
-          parents.add(symbolProvider.toMemberName(member));
           if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
-            return true;
-          } else {
-            Collection<MemberShape> unionMemberList = ((UnionShape) memberTarget).getAllMembers().values();
-            for (MemberShape unionMember : unionMemberList) {
-                if (!parents.contains(symbolProvider.toMemberName(unionMember))
-                        && containsAttributeValue(model, symbolProvider, unionMember, parents)) {
-                    return true;
-                }
-            }
+              return true;
+          } else if (!parents.contains(symbolProvider.toMemberName(member))) {
+              parents.add(symbolProvider.toMemberName(member));
+              Collection<MemberShape> unionMemberList = ((UnionShape) memberTarget).getAllMembers().values();
+              for (MemberShape unionMember : unionMemberList) {
+                  if (!parents.contains(symbolProvider.toMemberName(unionMember))
+                          && containsAttributeValue(model, symbolProvider, unionMember, parents)) {
+                      return true;
+                  }
+              }
           }
       } else if (memberTarget.isMapShape()) {
           MemberShape mapMember = ((MapShape) memberTarget).getValue();
