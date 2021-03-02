@@ -145,8 +145,13 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.openBlock("): Handler<$L, $L> {", "}", inputTypeName, outputTypeName, () -> {
             writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfig || {};");
 
-            writer.write("const inputKeyNodes = [];");
-            writer.write("const outputKeyNodes = [];");
+            if (!inputMembersWithAttr.isEmpty()) {
+                writer.write("const inputKeyNodes = [];");
+            }
+            if (!outputMembersWithAttr.isEmpty()) {
+                writer.write("const outputKeyNodes = [];");
+            }
+            writer.write("");
             
             writer.addImport(symbol.getName(), "__" + symbol.getName(), "@aws-sdk/client-dynamodb");
             
@@ -155,21 +160,32 @@ final class DocumentClientCommandGenerator implements Runnable {
             writer.addImport(marshallInput, marshallInput, "./commands/utils");
             writer.addImport(unmarshallOutput, unmarshallOutput, "./commands/utils");
 
-            writer.openBlock("const command = new $L($L(", "));", "__" + symbol.getName(), marshallInput,
+            writer.openBlock("const command = new $L(", ");", "__" + symbol.getName(),
                 () -> {
-                   writer.write("this.input,");
-                   writer.write("inputKeyNodes,");
-                   writer.write("marshallOptions,");
+                    if (inputMembersWithAttr.isEmpty()) {
+                        writer.write("this.input,");     
+                    } else {
+                        writer.openBlock("$L(", ")", marshallInput, () -> {
+                            writer.write("this.input,");
+                            writer.write("inputKeyNodes,");
+                            writer.write("marshallOptions,");
+                        }); 
+                    }
                 });
             writer.write("const handler = command.resolveMiddleware(clientStack, configuration, options);");
+            writer.write("");
 
-            writer.openBlock("return async () => {", "};", () -> {
-                writer.write("const data = await handler(command);");
-                writer.openBlock("return {", "};", () -> {
-                    writer.write("...data,");
-                    writer.write("output: $L(data.output, outputKeyNodes, unmarshallOptions),", unmarshallOutput);
+            if (outputMembersWithAttr.isEmpty()) {
+                writer.write("return handler;");
+            } else {
+                writer.openBlock("return async () => {", "};", () -> {
+                    writer.write("const data = await handler(command);");
+                    writer.openBlock("return {", "};", () -> {
+                        writer.write("...data,");
+                        writer.write("output: $L(data.output, outputKeyNodes, unmarshallOptions),", unmarshallOutput);
+                    });
                 });
-            });
+            }
         });
     }
 
