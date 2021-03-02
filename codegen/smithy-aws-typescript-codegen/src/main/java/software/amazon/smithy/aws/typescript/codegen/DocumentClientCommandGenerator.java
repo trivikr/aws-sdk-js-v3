@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import software.amazon.smithy.codegen.core.CodegenException;
 import software.amazon.smithy.codegen.core.Symbol;
@@ -45,6 +46,8 @@ final class DocumentClientCommandGenerator implements Runnable {
     static final String COMMAND_PROPERTIES_SECTION = "command_properties";
     static final String COMMAND_BODY_EXTRA_SECTION = "command_body_extra";
     static final String COMMAND_CONSTRUCTOR_SECTION = "command_constructor";
+
+    private static final Logger LOGGER = Logger.getLogger(DocumentClientCommandGenerator.class.getName());
 
     private final TypeScriptSettings settings;
     private final Model model;
@@ -146,10 +149,14 @@ final class DocumentClientCommandGenerator implements Runnable {
             writer.write("const { marshallOptions, unmarshallOptions } = configuration.translateConfig || {};");
 
             if (!inputMembersWithAttr.isEmpty()) {
-                writer.write("const inputKeyNodes = [];");
+                writer.openBlock("const inputKeyNodes = [", "];", () -> {
+                    writeKeyNodes(inputMembersWithAttr);
+                });
             }
             if (!outputMembersWithAttr.isEmpty()) {
-                writer.write("const outputKeyNodes = [];");
+                writer.openBlock("const outputKeyNodes = [", "];", () -> {
+                    writeKeyNodes(outputMembersWithAttr);
+                });
             }
             writer.write("");
             
@@ -189,7 +196,59 @@ final class DocumentClientCommandGenerator implements Runnable {
         });
     }
 
-    private void addInputAndOutputTypes() {
+    private void writeKeyNodes(List<MemberShape> membersWithAttr) {
+        for(MemberShape member: membersWithAttr) {
+            writer.openBlock("{key: '$L', ", "},", symbolProvider.toMemberName(member), () -> {
+                writeKeyNode(member);
+            });
+        }
+	}
+
+	private void writeKeyNode(MemberShape member) {
+        Shape memberTarget = model.expectShape(member.getTarget());
+        if (memberTarget instanceof CollectionShape) {
+            MemberShape collectionMember = ((CollectionShape) memberTarget).getMember();
+            writeKeyNode(collectionMember);
+        } else if (memberTarget.isUnionShape()) {
+            if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
+                return;
+            } else {
+                // An AttributeValue inside Union is not present as of Q1 2021, and is less
+                // likely to appear in future. Writing Omit for it is not straightforward, skipping.
+                throw new CodegenException(String.format(
+                    "AttributeValue inside Union is not supported, attempted for %s", memberTarget.getType()
+                ));
+            }
+        } else {                    
+            if (memberTarget.isMapShape()) {
+                MemberShape mapMember = ((MapShape) memberTarget).getValue();
+                Shape mapMemberTarget = model.expectShape(mapMember.getTarget());
+                if (mapMemberTarget.isUnionShape() &&
+                    symbolProvider.toSymbol(mapMemberTarget).getName().equals("AttributeValue")) {
+                    return;
+                } else {
+                    writer.openBlock("children: {", "},", () -> {
+                        writeKeyNode(mapMember);
+                    });
+                }
+            } else if (memberTarget.isStructureShape()) {
+                writeStructureKeyNode((StructureShape) memberTarget);
+            }
+        }
+	}
+
+	private void writeStructureKeyNode(StructureShape structureTarget) {
+        List<MemberShape> membersWithAttr = getStructureMembersWithAttr(Optional.of(structureTarget));
+        writer.openBlock("children: [", "],", () -> {
+            for(MemberShape member: membersWithAttr) {
+                writer.openBlock("{key: '$L', ", "},", symbolProvider.toMemberName(member), () -> {
+                    writeKeyNode(member);
+                });
+            }
+        });
+	}
+
+	private void addInputAndOutputTypes() {
         writer.write("");
         String originalInputTypeName = symbol.expectProperty("inputType", Symbol.class).getName();
         writeType(inputTypeName, originalInputTypeName, operationIndex.getInput(operation), inputMembersWithAttr);
@@ -240,8 +299,8 @@ final class DocumentClientCommandGenerator implements Runnable {
         }
     }
 
-    private void writeStructureOmitType(Shape structureTarget) {
-        List<MemberShape> membersWithAttr = getStructureMembersWithAttr(Optional.of((StructureShape) structureTarget));
+    private void writeStructureOmitType(StructureShape structureTarget) {
+        List<MemberShape> membersWithAttr = getStructureMembersWithAttr(Optional.of(structureTarget));
         String memberUnionToOmit = membersWithAttr.stream()
             .map(memberWithAttr -> "'" + symbolProvider.toMemberName(memberWithAttr) + "'")
             .collect(Collectors.joining(" | "));
@@ -266,7 +325,7 @@ final class DocumentClientCommandGenerator implements Runnable {
     private void writeMemberOmitType(MemberShape member) {
         Shape memberTarget = model.expectShape(member.getTarget());
         if (memberTarget.isStructureShape()) {
-            writeStructureOmitType(memberTarget);
+            writeStructureOmitType((StructureShape) memberTarget);
         } else if (memberTarget.isUnionShape()) {
             if (symbolProvider.toSymbol(memberTarget).getName().equals("AttributeValue")) {
                 writeNativeAttributeValue();

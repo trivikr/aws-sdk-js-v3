@@ -30,7 +30,7 @@ import software.amazon.smithy.model.shapes.StructureShape;
 import software.amazon.smithy.model.shapes.UnionShape;
 
 final class DocumentClientUtils {
-    private static final Logger LOGGER = Logger.getLogger(AddAwsRuntimeConfig.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(DocumentClientUtils.class.getName());
 
     private DocumentClientUtils() {}
 
