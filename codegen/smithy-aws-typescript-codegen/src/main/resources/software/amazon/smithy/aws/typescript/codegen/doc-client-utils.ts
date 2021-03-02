@@ -11,31 +11,31 @@ export type AllNodes = {
 
 const processKeyInObj = (obj: any, keyNode: KeyNode, processFunc: Function) => {
   const { key, children } = keyNode;
-  if (!children || (Array.isArray(children) && children.length === 0)) {
-    // Leaf of KeyNode, process the key.
-    if (obj[key]) {
+  if (obj[key]) {
+    if (!children || (Array.isArray(children) && children.length === 0)) {
+      // Leaf of KeyNode, process the key.
       if (Array.isArray(obj[key])) {
         obj[key] = obj[key].map(processFunc);
       } else {
         obj[key] = processFunc(obj[key]);
       }
-    }
-  } else {
-    // KeyNode has children
-    if (Array.isArray(children)) {
-      for (const keyNodeChild of children) {
-        if (Array.isArray(obj[key])) {
-          obj[key] = obj[key].map((item: any) => processKeyInObj(item, keyNodeChild, processFunc));
-        } else {
-          obj[key] = processKeyInObj(obj[key], keyNodeChild, processFunc);
-        }
-      }
     } else {
-      // All children need processing.
-      if (Array.isArray(obj[key])) {
-        obj[key] = obj[key].map((item: any) => processAllKeysInObj(item, children, processFunc));
+      // KeyNode has children
+      if (Array.isArray(children)) {
+        for (const keyNodeChild of children) {
+          if (Array.isArray(obj[key])) {
+            obj[key] = obj[key].map((item: any) => processKeyInObj(item, keyNodeChild, processFunc));
+          } else {
+            obj[key] = processKeyInObj(obj[key], keyNodeChild, processFunc);
+          }
+        }
       } else {
-        obj[key] = processAllKeysInObj(obj[key], children, processFunc);
+        // All children need processing.
+        if (Array.isArray(obj[key])) {
+          obj[key] = obj[key].map((item: any) => processAllKeysInObj(item, children, processFunc));
+        } else {
+          obj[key] = processAllKeysInObj(obj[key], children, processFunc);
+        }
       }
     }
   }
@@ -44,14 +44,14 @@ const processKeyInObj = (obj: any, keyNode: KeyNode, processFunc: Function) => {
 
 const processKeysInObj = (obj: any, keyNodes: KeyNode[], processFunc: Function) => {
   for (const keyNode of keyNodes) {
-    obj[keyNode.key] = processKeyInObj(obj, keyNode, processFunc);
+    obj = processKeyInObj(obj, keyNode, processFunc);
   }
   return obj;
 };
 
 const processAllKeysInObj = (obj: any, children: KeyNode[] | AllNodes, processFunc: Function) => {
   for (const key of obj) {
-    obj[key] = processKeyInObj(obj, { key, children }, processFunc);
+    obj = processKeyInObj(obj, { key, children }, processFunc);
   }
   return obj;
 };
