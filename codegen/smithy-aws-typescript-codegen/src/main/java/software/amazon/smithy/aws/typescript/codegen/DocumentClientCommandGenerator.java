@@ -101,7 +101,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         writer.addImport("Handler", "Handler", "@aws-sdk/types");
         writer.addImport("MiddlewareStack", "MiddlewareStack", "@aws-sdk/types");
 
-        addInputAndOutputTypes();
+        generateInputAndOutputTypes();
 
         String name = DocumentClientUtils.getModifiedName(symbol.getName());
         // writer.writeShapeDocs(operation);
@@ -248,7 +248,7 @@ final class DocumentClientCommandGenerator implements Runnable {
         });
 	}
 
-	private void addInputAndOutputTypes() {
+	private void generateInputAndOutputTypes() {
         writer.write("");
         String originalInputTypeName = symbol.expectProperty("inputType", Symbol.class).getName();
         writeType(inputTypeName, originalInputTypeName, operationIndex.getInput(operation), inputMembersWithAttr);

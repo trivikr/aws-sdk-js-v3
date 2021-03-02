@@ -95,23 +95,23 @@ final class DocumentClientGenerator implements Runnable {
         
         writer.addImport("unmarshallOptions", "unmarshallOptions", "@aws-sdk/util-dynamodb");
 
-        addConfiguration();
+        generateConfiguration();
 
         writer.openBlock("export class $L extends __Client<$T, $L, $L, $L> {", "}",
             serviceName, ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType(),
             serviceInputTypes, serviceOutputTypes, configType, () -> {
 
-            addClientProperties();
+            generateClientProperties();
             writer.write("");
-            addClientConstructor();
+            generateClientConstructor();
             writer.write("");
-            addStaticFactoryFrom();
+            generateStaticFactoryFrom();
             writer.write("");
-            addDestroy();
+            generateDestroy();
         });
     }
 
-	private void addDestroy() {
+	private void generateDestroy() {
         writer.pushState(CLIENT_DESTROY_SECTION);
         writer.openBlock("destroy(): void {", "}", () -> {
             writer.write("// A no-op, since client is passed in constructor");
@@ -119,20 +119,20 @@ final class DocumentClientGenerator implements Runnable {
         writer.popState();
 	}
 
-	private void addStaticFactoryFrom() {
+	private void generateStaticFactoryFrom() {
         writer.openBlock("static from(client: $L, translateConfig?: TranslateConfig) {", "}",
             originalServiceName, () -> {
                 writer.write("return new $L(client, translateConfig);", serviceName);
             });
 	}
 
-	private void addClientProperties() {
+	private void generateClientProperties() {
         writer.pushState(CLIENT_PROPERTIES_SECTION);
         writer.write("readonly config: $L;\n", configType);
         writer.popState();
 	}
 
-	private void addClientConstructor() {
+	private void generateClientConstructor() {
         writer.openBlock("protected constructor(client: $L, translateConfig?: TranslateConfig){", "}",
             symbol.getName(), () -> {
                 writer.pushState(CLIENT_CONSTRUCTOR_SECTION);
@@ -144,11 +144,11 @@ final class DocumentClientGenerator implements Runnable {
             });
 	}
 
-	private void addConfiguration() {
+	private void generateConfiguration() {
         writer.pushState(CLIENT_CONFIG_SECTION);
         writer.openBlock("export type TranslateConfig = {", "}", () -> {
-            addTranslateConfigOption("marshallOptions");
-            addTranslateConfigOption("unmarshallOptions");
+            generateTranslateConfigOption("marshallOptions");
+            generateTranslateConfigOption("unmarshallOptions");
         });
         writer.write("");
         writer.openBlock("export type $L = $L & {", "};", configType, originalConfigType, () -> {
@@ -158,7 +158,7 @@ final class DocumentClientGenerator implements Runnable {
         writer.popState();
 	}
 
-	private void addTranslateConfigOption(String translateOption) {
+	private void generateTranslateConfigOption(String translateOption) {
         writer.addImport(translateOption, translateOption, "@aws-sdk/util-dynamodb");
         writer.write("${1L}?: ${1L};", translateOption);
 	}
