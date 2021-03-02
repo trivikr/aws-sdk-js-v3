@@ -148,14 +148,14 @@ final class DocumentClientCommandGenerator implements Runnable {
             writer.write("const inputKeyNodes = [];");
             writer.write("const outputKeyNodes = [];");
             
-            writer.addImport(symbol.getName(), symbol.getName(), "@aws-sdk/client-dynamodb");
+            writer.addImport(symbol.getName(), "__" + symbol.getName(), "@aws-sdk/client-dynamodb");
             
             String marshallInput = "marshallInput";
             String unmarshallOutput = "unmarshallOutput";
             writer.addImport(marshallInput, marshallInput, "./commands/utils");
             writer.addImport(unmarshallOutput, unmarshallOutput, "./commands/utils");
 
-            writer.openBlock("const command = new $L($L(", "));", symbol.getName(), marshallInput,
+            writer.openBlock("const command = new $L($L(", "));", "__" + symbol.getName(), marshallInput,
                 () -> {
                    writer.write("this.input,");
                    writer.write("inputKeyNodes,");
