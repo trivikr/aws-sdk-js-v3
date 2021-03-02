@@ -15,31 +15,13 @@
 
 package software.amazon.smithy.aws.typescript.codegen;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-import software.amazon.smithy.codegen.core.CodegenException;
 import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
-import software.amazon.smithy.model.knowledge.OperationIndex;
-import software.amazon.smithy.model.shapes.CollectionShape;
-import software.amazon.smithy.model.shapes.MapShape;
-import software.amazon.smithy.model.shapes.MemberShape;
-import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
-import software.amazon.smithy.model.shapes.Shape;
-import software.amazon.smithy.model.shapes.StructureShape;
-import software.amazon.smithy.model.traits.IdempotencyTokenTrait;
-import software.amazon.smithy.model.traits.StreamingTrait;
 import software.amazon.smithy.typescript.codegen.ApplicationProtocol;
-import software.amazon.smithy.typescript.codegen.integration.ProtocolGenerator;
-import software.amazon.smithy.typescript.codegen.integration.RuntimeClientPlugin;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
-import software.amazon.smithy.utils.OptionalUtils;
 
 final class DocumentClientGenerator implements Runnable {
     static final String CLIENT_CONFIG_SECTION = "client_config";
@@ -47,10 +29,7 @@ final class DocumentClientGenerator implements Runnable {
     static final String CLIENT_CONSTRUCTOR_SECTION = "client_constructor";
     static final String CLIENT_DESTROY_SECTION = "client_destroy";
 
-    private final TypeScriptSettings settings;
-    private final Model model;
     private final ServiceShape service;
-    private final SymbolProvider symbolProvider;
     private final TypeScriptWriter writer;
     private final Symbol symbol;
     private final String serviceName;
@@ -64,10 +43,7 @@ final class DocumentClientGenerator implements Runnable {
             SymbolProvider symbolProvider,
             TypeScriptWriter writer
     ) {
-        this.settings = settings;
-        this.model = model;
         this.service = settings.getService(model);
-        this.symbolProvider = symbolProvider;
         this.writer = writer;
 
         symbol = symbolProvider.toSymbol(service);
@@ -92,7 +68,7 @@ final class DocumentClientGenerator implements Runnable {
         writer.addImport(serviceInputTypes, serviceInputTypes, "@aws-sdk/client-dynamodb");
         writer.addImport(serviceOutputTypes, serviceOutputTypes, "@aws-sdk/client-dynamodb");
         writer.addImport("Client", "__Client", "@aws-sdk/smithy-client");
-        
+
         writer.addImport("unmarshallOptions", "unmarshallOptions", "@aws-sdk/util-dynamodb");
 
         generateConfiguration();
@@ -111,28 +87,28 @@ final class DocumentClientGenerator implements Runnable {
         });
     }
 
-	private void generateDestroy() {
+    private void generateDestroy() {
         writer.pushState(CLIENT_DESTROY_SECTION);
         writer.openBlock("destroy(): void {", "}", () -> {
             writer.write("// A no-op, since client is passed in constructor");
         });
         writer.popState();
-	}
+    }
 
-	private void generateStaticFactoryFrom() {
+    private void generateStaticFactoryFrom() {
         writer.openBlock("static from(client: $L, translateConfig?: TranslateConfig) {", "}",
             originalServiceName, () -> {
                 writer.write("return new $L(client, translateConfig);", serviceName);
             });
-	}
+    }
 
-	private void generateClientProperties() {
+    private void generateClientProperties() {
         writer.pushState(CLIENT_PROPERTIES_SECTION);
         writer.write("readonly config: $L;\n", configType);
         writer.popState();
-	}
+    }
 
-	private void generateClientConstructor() {
+    private void generateClientConstructor() {
         writer.openBlock("protected constructor(client: $L, translateConfig?: TranslateConfig){", "}",
             symbol.getName(), () -> {
                 writer.pushState(CLIENT_CONSTRUCTOR_SECTION);
@@ -142,9 +118,9 @@ final class DocumentClientGenerator implements Runnable {
                 writer.write("this.middlewareStack = client.middlewareStack;");
                 writer.popState();
             });
-	}
+    }
 
-	private void generateConfiguration() {
+    private void generateConfiguration() {
         writer.pushState(CLIENT_CONFIG_SECTION);
         writer.openBlock("export type TranslateConfig = {", "}", () -> {
             generateTranslateConfigOption("marshallOptions");
@@ -156,12 +132,10 @@ final class DocumentClientGenerator implements Runnable {
         });
         writer.write("");
         writer.popState();
-	}
+    }
 
-	private void generateTranslateConfigOption(String translateOption) {
+    private void generateTranslateConfigOption(String translateOption) {
         writer.addImport(translateOption, translateOption, "@aws-sdk/util-dynamodb");
         writer.write("${1L}?: ${1L};", translateOption);
-	}
-
-    
+    }
 }

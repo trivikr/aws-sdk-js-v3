@@ -16,10 +16,7 @@
 package software.amazon.smithy.aws.typescript.codegen;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.BiConsumer;
@@ -29,14 +26,9 @@ import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.knowledge.OperationIndex;
 import software.amazon.smithy.model.knowledge.TopDownIndex;
-import software.amazon.smithy.model.shapes.CollectionShape;
-import software.amazon.smithy.model.shapes.MapShape;
-import software.amazon.smithy.model.shapes.MemberShape;
 import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
 import software.amazon.smithy.model.shapes.Shape;
-import software.amazon.smithy.model.shapes.StructureShape;
-import software.amazon.smithy.model.shapes.UnionShape;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
 import software.amazon.smithy.typescript.codegen.integration.TypeScriptIntegration;
@@ -47,61 +39,65 @@ import software.amazon.smithy.utils.IoUtils;
  */
 public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
 
-  @Override
-  public void writeAdditionalFiles(
-      TypeScriptSettings settings,
-      Model model,
-      SymbolProvider symbolProvider,
-      BiConsumer<String, Consumer<TypeScriptWriter>> writerFactory
-  ) {
-      ServiceShape service = settings.getService(model);
-      if (testServiceId(service, "DynamoDB")) {
-          String docClientPrefix = "doc-client-";
-          Set<OperationShape> containedOperations = new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
-          List<OperationShape> overridenOperationsList = new ArrayList<>();
+    @Override
+    public void writeAdditionalFiles(
+        TypeScriptSettings settings,
+        Model model,
+        SymbolProvider symbolProvider,
+        BiConsumer<String, Consumer<TypeScriptWriter>> writerFactory
+    ) {
+        ServiceShape service = settings.getService(model);
+        if (testServiceId(service, "DynamoDB")) {
+            String docClientPrefix = "doc-client-";
+            Set<OperationShape> containedOperations =
+                new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
+            List<OperationShape> overridenOperationsList = new ArrayList<>();
 
-          for (OperationShape operation : containedOperations) {
-              String operationName = operation.getId().getName();
-              String commandFileName = docClientPrefix + "commands/"
-                  + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
-              
-              if (containsAttributeValue(model, symbolProvider, operation)) {
-                  overridenOperationsList.add(operation);
-                  writerFactory.accept(commandFileName,
-                      writer -> new DocumentClientCommandGenerator(settings, model, operation, symbolProvider, writer).run()
-                  );
-              }
-          }
+            for (OperationShape operation : containedOperations) {
+                String operationName = operation.getId().getName();
+                String commandFileName = docClientPrefix + "commands/"
+                    + DocumentClientUtils.getModifiedName(operationName) + "Command.ts";
 
-          writerFactory.accept(docClientPrefix + "DynamoDBDocumentClient.ts", 
-              writer -> new DocumentClientGenerator(settings, model, symbolProvider, writer).run());
+                if (containsAttributeValue(model, symbolProvider, operation)) {
+                    overridenOperationsList.add(operation);
+                    writerFactory.accept(commandFileName,
+                        writer -> new DocumentClientCommandGenerator(
+                            settings, model, operation, symbolProvider, writer).run()
+                    );
+                }
+            }
 
-          writerFactory.accept(docClientPrefix + "index.ts", writer -> {
-              for (OperationShape operationOverriden: overridenOperationsList) {
-                  String operationFileName = DocumentClientUtils.getModifiedName(
-                      symbolProvider.toSymbol(operationOverriden).getName()
-                  );
-                  writer.write("export * from './commands/$L';", operationFileName);
-              }
-              writer.write("export * from './DynamoDBDocumentClient';");
-          });
-          
-          writerFactory.accept(docClientPrefix + "commands/utils.ts", writer -> {
-              writer.write(IoUtils.readUtf8Resource(AddDocumentClientCommandsPlugin.class, "doc-client-utils.ts"));
-          });
-      }
-  }
+            writerFactory.accept(docClientPrefix + "DynamoDBDocumentClient.ts",
+                writer -> new DocumentClientGenerator(settings, model, symbolProvider, writer).run());
 
-  private boolean testServiceId(Shape serviceShape, String expectedId) {
-      return serviceShape.getTrait(ServiceTrait.class).map(ServiceTrait::getSdkId).orElse("").equals(expectedId);
-  }
+            writerFactory.accept(docClientPrefix + "index.ts", writer -> {
+                for (OperationShape operationOverriden: overridenOperationsList) {
+                    String operationFileName = DocumentClientUtils.getModifiedName(
+                        symbolProvider.toSymbol(operationOverriden).getName()
+                    );
+                    writer.write("export * from './commands/$L';", operationFileName);
+                }
+                writer.write("export * from './DynamoDBDocumentClient';");
+            });
 
-  private boolean containsAttributeValue(Model model, SymbolProvider symbolProvider, OperationShape operation) {
-      OperationIndex operationIndex = OperationIndex.of(model);
-      if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, operationIndex.getInput(operation))
-              || DocumentClientUtils.containsAttributeValue(model, symbolProvider, operationIndex.getOutput(operation))) {
-          return true;
-      }
-      return false;
-  }
+            writerFactory.accept(docClientPrefix + "commands/utils.ts", writer -> {
+                writer.write(IoUtils.readUtf8Resource(AddDocumentClientCommandsPlugin.class, "doc-client-utils.ts"));
+            });
+        }
+    }
+
+    private boolean testServiceId(Shape serviceShape, String expectedId) {
+        return serviceShape.getTrait(ServiceTrait.class).map(ServiceTrait::getSdkId).orElse("").equals(expectedId);
+    }
+
+    private boolean containsAttributeValue(Model model, SymbolProvider symbolProvider, OperationShape operation) {
+        OperationIndex operationIndex = OperationIndex.of(model);
+        if (DocumentClientUtils.containsAttributeValue(
+                model, symbolProvider, operationIndex.getInput(operation))
+                || DocumentClientUtils.containsAttributeValue(
+                    model, symbolProvider, operationIndex.getOutput(operation))) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -19,7 +19,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
-import java.util.logging.Logger;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.shapes.CollectionShape;
@@ -30,8 +29,6 @@ import software.amazon.smithy.model.shapes.StructureShape;
 import software.amazon.smithy.model.shapes.UnionShape;
 
 final class DocumentClientUtils {
-    private static final Logger LOGGER = Logger.getLogger(DocumentClientUtils.class.getName());
-
     private DocumentClientUtils() {}
 
     static String getModifiedName(String name) {
