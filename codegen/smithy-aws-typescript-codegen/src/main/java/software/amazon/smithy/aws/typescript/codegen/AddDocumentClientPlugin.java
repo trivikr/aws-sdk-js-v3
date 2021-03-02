@@ -37,7 +37,7 @@ import software.amazon.smithy.utils.IoUtils;
 /**
  * Generates Commands for DynamoDB Document Client.
  */
-public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
+public class AddDocumentClientPlugin implements TypeScriptIntegration {
 
     @Override
     public void writeAdditionalFiles(
@@ -81,7 +81,7 @@ public class AddDocumentClientCommandsPlugin implements TypeScriptIntegration {
             });
 
             writerFactory.accept(docClientPrefix + "commands/utils.ts", writer -> {
-                writer.write(IoUtils.readUtf8Resource(AddDocumentClientCommandsPlugin.class, "doc-client-utils.ts"));
+                writer.write(IoUtils.readUtf8Resource(AddDocumentClientPlugin.class, "doc-client-utils.ts"));
             });
         }
     }
