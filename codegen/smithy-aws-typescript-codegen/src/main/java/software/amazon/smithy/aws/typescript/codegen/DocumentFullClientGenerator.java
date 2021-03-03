@@ -70,7 +70,7 @@ final class DocumentFullClientGenerator implements Runnable {
         });
     }
 
-	private void generateStaticFactoryFrom() {
+    private void generateStaticFactoryFrom() {
         String translateConfig = DocumentClientUtils.CLIENT_TRANSLATE_CONFIG_TYPE;
         writer.addImport(serviceName, serviceName, "@aws-sdk/client-dynamodb");
         writer.addImport(translateConfig, translateConfig, "./" + DocumentClientUtils.CLIENT_NAME);
@@ -81,13 +81,13 @@ final class DocumentFullClientGenerator implements Runnable {
     }
 
     private void generateOperations() {
-        Set<OperationShape> containedOperations = 
+        Set<OperationShape> containedOperations =
                 new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
-        
+
         for (OperationShape operation : containedOperations) {
             if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, operation)) {
                 Symbol operationSymbol = symbolProvider.toSymbol(operation);
-                
+
                 String name = DocumentClientUtils.getModifiedName(operationSymbol.getName());
                 String input = DocumentClientUtils.getModifiedName(
                     operationSymbol.expectProperty("inputType", Symbol.class).getName()
@@ -96,7 +96,7 @@ final class DocumentFullClientGenerator implements Runnable {
                     operationSymbol.expectProperty("outputType", Symbol.class).getName()
                 );
                 SymbolReference options = ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType();
-                
+
                 String commandFileLocation = String.format("./%s/%s",
                     DocumentClientUtils.CLIENT_COMMANDS_FOLDER, name);
                 writer.addImport(name, name, commandFileLocation);
@@ -145,5 +145,5 @@ final class DocumentFullClientGenerator implements Runnable {
                 writer.write("");
             }
         }
-	}
+    }
 }
