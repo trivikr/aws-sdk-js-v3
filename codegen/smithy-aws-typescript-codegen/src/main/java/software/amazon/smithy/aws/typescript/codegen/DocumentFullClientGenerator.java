@@ -15,9 +15,13 @@
 
 package software.amazon.smithy.aws.typescript.codegen;
 
+import java.util.Set;
+import java.util.TreeSet;
 import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
 import software.amazon.smithy.model.Model;
+import software.amazon.smithy.model.knowledge.TopDownIndex;
+import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
@@ -28,6 +32,8 @@ final class DocumentFullClientGenerator implements Runnable {
     static final String CLIENT_CONSTRUCTOR_SECTION = "client_constructor";
     static final String CLIENT_DESTROY_SECTION = "client_destroy";
 
+    private final Model model;
+    private final SymbolProvider symbolProvider;
     private final ServiceShape service;
     private final TypeScriptWriter writer;
     private final Symbol symbol;
@@ -39,6 +45,8 @@ final class DocumentFullClientGenerator implements Runnable {
             SymbolProvider symbolProvider,
             TypeScriptWriter writer
     ) {
+        this.model = model;
+        this.symbolProvider = symbolProvider;
         this.service = settings.getService(model);
         this.writer = writer;
 
@@ -70,5 +78,27 @@ final class DocumentFullClientGenerator implements Runnable {
     }
 
     private void generateOperations() {
+        Set<OperationShape> containedOperations = 
+                new TreeSet<>(TopDownIndex.of(model).getContainedOperations(service));
+        
+        for (OperationShape operation : containedOperations) {
+            if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, operation)) {
+                Symbol operationSymbol = symbolProvider.toSymbol(operation);
+                
+                String name = DocumentClientUtils.getModifiedName(operationSymbol.getName());
+                String inputTypeName = DocumentClientUtils.getModifiedName(
+                    operationSymbol.expectProperty("inputType", Symbol.class).getName()
+                );
+                String outputTypeName = DocumentClientUtils.getModifiedName(
+                    operationSymbol.expectProperty("outputType", Symbol.class).getName()
+                );
+                
+                String commandFileLocation = String.format("./%s/%s",
+                    DocumentClientUtils.CLIENT_COMMANDS_FOLDER, name);
+                writer.addImport(name, name, commandFileLocation);
+                writer.addImport(inputTypeName, inputTypeName, commandFileLocation);
+                writer.addImport(outputTypeName, outputTypeName, commandFileLocation);
+            }
+        }
 	}
 }
