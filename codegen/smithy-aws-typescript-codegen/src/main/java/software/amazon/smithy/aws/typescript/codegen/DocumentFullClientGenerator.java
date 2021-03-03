@@ -76,7 +76,7 @@ final class DocumentFullClientGenerator implements Runnable {
         writer.addImport(translateConfig, translateConfig, "./" + DocumentClientUtils.CLIENT_NAME);
         writer.openBlock("static from(client: $L, translateConfig?: $L) {", "}",
             serviceName, translateConfig, () -> {
-                writer.write("return new $L(client, translateConfig);", DocumentClientUtils.CLIENT_NAME);
+                writer.write("return new $L(client, translateConfig);", DocumentClientUtils.CLIENT_FULL_NAME);
             });
     }
 
