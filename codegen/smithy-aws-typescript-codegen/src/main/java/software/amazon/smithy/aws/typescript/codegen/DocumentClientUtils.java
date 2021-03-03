@@ -30,6 +30,7 @@ import software.amazon.smithy.model.shapes.UnionShape;
 
 final class DocumentClientUtils {
     static final String CLIENT_NAME = "DynamoDBDocumentClient";
+    static final String CLIENT_FULL_NAME = "DynamoDBDocument";
     static final String CLIENT_CONFIG_NAME = getResolvedConfigTypeName(CLIENT_NAME);
     static final String CLIENT_COMMANDS_FOLDER = "commands";
     static final String CLIENT_UTILS_FILE = "utils";

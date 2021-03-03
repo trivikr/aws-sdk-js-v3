@@ -70,6 +70,9 @@ public class AddDocumentClientPlugin implements TypeScriptIntegration {
             writerFactory.accept(String.format("%s%s.ts", docClientPrefix, DocumentClientUtils.CLIENT_NAME),
                 writer -> new DocumentClientGenerator(settings, model, symbolProvider, writer).run());
 
+            writerFactory.accept(String.format("%s%s.ts", docClientPrefix, DocumentClientUtils.CLIENT_FULL_NAME),
+                writer -> new DocumentFullClientGenerator(settings, model, symbolProvider, writer).run());
+
             writerFactory.accept(String.format("%sindex.ts", docClientPrefix), writer -> {
                 for (OperationShape operationOverriden: overridenOperationsList) {
                     String operationFileName = DocumentClientUtils.getModifiedName(
@@ -79,6 +82,7 @@ public class AddDocumentClientPlugin implements TypeScriptIntegration {
                         DocumentClientUtils.CLIENT_COMMANDS_FOLDER, operationFileName);
                 }
                 writer.write("export * from './$L';", DocumentClientUtils.CLIENT_NAME);
+                writer.write("export * from './$L';", DocumentClientUtils.CLIENT_FULL_NAME);
             });
 
             writerFactory.accept(String.format("%s%s/%s.ts", docClientPrefix,
