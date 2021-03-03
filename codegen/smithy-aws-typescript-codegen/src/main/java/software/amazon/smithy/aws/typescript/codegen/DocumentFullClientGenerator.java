@@ -19,12 +19,15 @@ import java.util.Set;
 import java.util.TreeSet;
 import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
+import software.amazon.smithy.codegen.core.SymbolReference;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.knowledge.TopDownIndex;
 import software.amazon.smithy.model.shapes.OperationShape;
 import software.amazon.smithy.model.shapes.ServiceShape;
+import software.amazon.smithy.typescript.codegen.ApplicationProtocol;
 import software.amazon.smithy.typescript.codegen.TypeScriptSettings;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
+import software.amazon.smithy.utils.StringUtils;
 
 final class DocumentFullClientGenerator implements Runnable {
     static final String CLIENT_CONFIG_SECTION = "client_config";
@@ -86,18 +89,60 @@ final class DocumentFullClientGenerator implements Runnable {
                 Symbol operationSymbol = symbolProvider.toSymbol(operation);
                 
                 String name = DocumentClientUtils.getModifiedName(operationSymbol.getName());
-                String inputTypeName = DocumentClientUtils.getModifiedName(
+                String input = DocumentClientUtils.getModifiedName(
                     operationSymbol.expectProperty("inputType", Symbol.class).getName()
                 );
-                String outputTypeName = DocumentClientUtils.getModifiedName(
+                String output = DocumentClientUtils.getModifiedName(
                     operationSymbol.expectProperty("outputType", Symbol.class).getName()
                 );
+                SymbolReference options = ApplicationProtocol.createDefaultHttpApplicationProtocol().getOptionsType();
                 
                 String commandFileLocation = String.format("./%s/%s",
                     DocumentClientUtils.CLIENT_COMMANDS_FOLDER, name);
                 writer.addImport(name, name, commandFileLocation);
-                writer.addImport(inputTypeName, inputTypeName, commandFileLocation);
-                writer.addImport(outputTypeName, outputTypeName, commandFileLocation);
+                writer.addImport(input, input, commandFileLocation);
+                writer.addImport(output, output, commandFileLocation);
+
+                String methodName = StringUtils.uncapitalize(
+                    DocumentClientUtils.getModifiedName(operationSymbol.getName().replaceAll("Command$", ""))
+                );
+
+                // Generate a multiple overloaded methods for each command.
+                writer.write("public $L(\n"
+                            + "  args: $L,\n"
+                            + "  options?: $T,\n"
+                            + "): Promise<$L>;", methodName, input, options, output);
+                writer.write("public $L(\n"
+                             + "  args: $L,\n"
+                             + "  cb: (err: any, data?: $L) => void\n"
+                             + "): void;", methodName, input, output);
+                writer.write("public $L(\n"
+                            + "  args: $L,\n"
+                            + "  options: $T,\n"
+                            + "  cb: (err: any, data?: $L) => void\n"
+                            + "): void;", methodName, input, options, output);
+                writer.openBlock("public $1L(\n"
+                                 + "  args: $2L,\n"
+                                 + "  optionsOrCb?: $3T | ((err: any, data?: $4L) => void),\n"
+                                 + "  cb?: (err: any, data?: $4L) => void\n"
+                                 + "): Promise<$4L> | void { ", "}",
+                        methodName,
+                        input,
+                        options,
+                        output,
+                        () -> {
+                    writer.write("const command = new $L(args);\n"
+                                 + "if (typeof optionsOrCb === \"function\") {\n"
+                                 + "  this.send(command, optionsOrCb)\n"
+                                 + "} else if (typeof cb === \"function\") {\n"
+                                 + "  if (typeof optionsOrCb !== \"object\")\n"
+                                 + "    throw new Error(`Expect http options but get $${typeof optionsOrCb}`)\n"
+                                 + "  this.send(command, optionsOrCb || {}, cb)\n"
+                                 + "} else {\n"
+                                 + "  return this.send(command, optionsOrCb);\n"
+                                 + "}", name);
+                });
+                writer.write("");
             }
         }
 	}
