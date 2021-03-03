@@ -58,7 +58,7 @@ public class AddDocumentClientPlugin implements TypeScriptIntegration {
                 String commandFileName = String.format("%s%s/%s.ts", docClientPrefix,
                     DocumentClientUtils.CLIENT_COMMANDS_FOLDER, DocumentClientUtils.getModifiedName(operationName));
 
-                if (containsAttributeValue(model, symbolProvider, operation)) {
+                if (DocumentClientUtils.containsAttributeValue(model, symbolProvider, operation)) {
                     overridenOperationsList.add(operation);
                     writerFactory.accept(commandFileName,
                         writer -> new DocumentClientCommandGenerator(
@@ -94,16 +94,5 @@ public class AddDocumentClientPlugin implements TypeScriptIntegration {
 
     private boolean testServiceId(Shape serviceShape, String expectedId) {
         return serviceShape.getTrait(ServiceTrait.class).map(ServiceTrait::getSdkId).orElse("").equals(expectedId);
-    }
-
-    private boolean containsAttributeValue(Model model, SymbolProvider symbolProvider, OperationShape operation) {
-        OperationIndex operationIndex = OperationIndex.of(model);
-        if (DocumentClientUtils.containsAttributeValue(
-                model, symbolProvider, operationIndex.getInput(operation))
-                || DocumentClientUtils.containsAttributeValue(
-                    model, symbolProvider, operationIndex.getOutput(operation))) {
-            return true;
-        }
-        return false;
     }
 }
