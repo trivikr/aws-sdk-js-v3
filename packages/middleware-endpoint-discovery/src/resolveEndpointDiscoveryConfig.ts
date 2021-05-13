@@ -25,16 +25,18 @@ interface PreviouslyResolved {
 export interface EndpointDiscoveryResolvedConfig {
   isCustomEndpoint: boolean;
   credentials: Provider<Credentials>;
-  endpointDiscoveryCommandCtor?: new (comandConfig: any) => Command<any, any, any, any, any>;
+  endpointDiscoveryCommandCtor: new (comandConfig: any) => Command<any, any, any, any, any>;
   endpointCache: EndpointCache;
   endpointDiscoveryEnabled: Provider<boolean | undefined>;
   isClientEndpointDiscoveryEnabled: boolean;
 }
 
 export const resolveEndpointDiscoveryConfig = <T>(
-  input: T & PreviouslyResolved & EndpointDiscoveryInputConfig
+  input: T & PreviouslyResolved & EndpointDiscoveryInputConfig,
+  endpointDiscoveryCommandCtor: new (comandConfig: any) => Command<any, any, any, any, any>
 ): T & EndpointDiscoveryResolvedConfig => ({
   ...input,
+  endpointDiscoveryCommandCtor,
   endpointCache: new EndpointCache(input.endpointCacheSize ?? 1000),
   endpointDiscoveryEnabled:
     input.endpointDiscoveryEnabled !== undefined
