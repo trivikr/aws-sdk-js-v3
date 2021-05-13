@@ -25,7 +25,6 @@ interface PreviouslyResolved {
 export interface EndpointDiscoveryResolvedConfig {
   isCustomEndpoint: boolean;
   credentials: Provider<Credentials>;
-  client?: Client<any, any, any>;
   endpointDiscoveryCommandCtor?: new (comandConfig: any) => Command<any, any, any, any, any>;
   endpointCache: EndpointCache;
   endpointDiscoveryEnabled: Provider<boolean | undefined>;
