@@ -81,9 +81,7 @@ export class EndpointCache {
    * @param {string} key
    */
   delete(key: string) {
-    // Replace with remove/delete call once support is added upstream
-    // Refs: https://github.com/Yomguithereal/mnemonist/issues/143
-    this.cache.set(key, []);
+    this.cache.delete(key);
   }
 
   /**
@@ -93,17 +91,7 @@ export class EndpointCache {
    * @returns {boolean}
    */
   has(key: string): boolean {
-    if (!this.cache.has(key)) {
-      return false;
-    }
-
-    // Remove call for peek, once remove/delete support is added upstream
-    // Refs: https://github.com/Yomguithereal/mnemonist/issues/143
-    const endpoints = this.cache.peek(key);
-    if (!endpoints) {
-      return false;
-    }
-    return endpoints.length > 0;
+    return this.cache.has(key);
   }
 
   /**

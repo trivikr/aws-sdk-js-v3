@@ -11,11 +11,11 @@ describe(EndpointCache.name, () => {
   const key = "key";
 
   const now = Date.now();
-  const set = jest.fn();
-  const get = jest.fn();
-  const peek = jest.fn();
-  const has = jest.fn();
-  const clear = jest.fn();
+  const mockSet = jest.fn();
+  const mockDelete = jest.fn();
+  const mockGet = jest.fn();
+  const mockHas = jest.fn();
+  const mockClear = jest.fn();
 
   const mockEndpoints = [
     { Address: "addressA", CachePeriodInMinutes: 1 },
@@ -33,11 +33,11 @@ describe(EndpointCache.name, () => {
 
   beforeEach(() => {
     ((LRUCache as unknown) as jest.Mock).mockReturnValueOnce({
-      set,
-      get,
-      peek,
-      has,
-      clear,
+      set: mockSet,
+      get: mockGet,
+      delete: mockDelete,
+      has: mockHas,
+      clear: mockClear,
     });
     endpointCache = new EndpointCache(capacity);
   });
@@ -53,45 +53,41 @@ describe(EndpointCache.name, () => {
 
   describe("get", () => {
     beforeEach(() => {
-      has.mockReturnValue(true);
+      mockHas.mockReturnValue(true);
       const endpointsWithExpiry = getEndpointsWithExpiry(mockEndpoints);
-      peek.mockReturnValue(endpointsWithExpiry);
-      get.mockReturnValue(endpointsWithExpiry);
+      mockGet.mockReturnValue(endpointsWithExpiry);
       jest.spyOn(Date, "now").mockImplementation(() => now);
     });
 
     const verifyHasAndGetCalls = () => {
-      expect(has).toHaveBeenCalledTimes(1);
-      expect(has).toHaveBeenCalledWith(key);
-      expect(get).toHaveBeenCalledTimes(1);
-      expect(get).toHaveBeenCalledWith(key);
+      expect(mockHas).toHaveBeenCalledTimes(1);
+      expect(mockHas).toHaveBeenCalledWith(key);
+      expect(mockGet).toHaveBeenCalledTimes(1);
+      expect(mockGet).toHaveBeenCalledWith(key);
     };
 
     it("returns undefined if cache doesn't have key", () => {
-      has.mockReturnValueOnce(false);
+      mockHas.mockReturnValueOnce(false);
       expect(endpointCache.get(key)).toBeUndefined();
-      expect(has).toHaveBeenCalledTimes(1);
-      expect(has).toHaveBeenCalledWith(key);
-      expect(peek).not.toHaveBeenCalled();
-      expect(get).not.toHaveBeenCalled();
+      expect(mockHas).toHaveBeenCalledTimes(1);
+      expect(mockHas).toHaveBeenCalledWith(key);
+      expect(mockGet).not.toHaveBeenCalled();
     });
 
     it("returns undefined if cache has empty array", () => {
-      has.mockReturnValueOnce(true);
-      peek.mockReturnValueOnce([]);
+      mockHas.mockReturnValueOnce(true);
+      mockGet.mockReturnValue([]);
       expect(endpointCache.get(key)).toBeUndefined();
-      expect(has).toHaveBeenCalledTimes(1);
-      expect(has).toHaveBeenCalledWith(key);
-      expect(peek).toHaveBeenCalledTimes(1);
-      expect(peek).toHaveBeenCalledWith(key);
-      expect(get).not.toHaveBeenCalled();
+      verifyHasAndGetCalls();
+      expect(mockDelete).toHaveBeenCalledTimes(1);
+      expect(mockDelete).toHaveBeenCalledWith(key);
     });
 
     it("returns undefined if cache returns undefined for key", () => {
-      get.mockReturnValueOnce(undefined);
+      mockGet.mockReturnValueOnce(undefined);
       expect(endpointCache.get(key)).toBeUndefined();
       verifyHasAndGetCalls();
-      expect(set).not.toHaveBeenCalled();
+      expect(mockSet).not.toHaveBeenCalled();
     });
 
     it("returns undefined if endpoints have expired", () => {
@@ -99,22 +95,22 @@ describe(EndpointCache.name, () => {
       jest.spyOn(Date, "now").mockImplementation(() => now + (maxCachePeriod + 1) * 60 * 1000);
       expect(endpointCache.get(key)).toBeUndefined();
       verifyHasAndGetCalls();
-      expect(set).toHaveBeenCalledTimes(1);
-      expect(set).toHaveBeenCalledWith(key, []);
+      expect(mockDelete).toHaveBeenCalledTimes(1);
+      expect(mockDelete).toHaveBeenCalledWith(key);
     });
 
     describe("getEndpoint", () => {
       it("returns one of the un-expired endpoints", () => {
         expect(mockEndpoints.map((endpoint) => endpoint.Address)).toContain(endpointCache.getEndpoint(key));
         verifyHasAndGetCalls();
-        expect(set).not.toHaveBeenCalled();
+        expect(mockSet).not.toHaveBeenCalled();
       });
 
       it("returns un-expired endpoint", () => {
         jest.spyOn(Date, "now").mockImplementation(() => now + 90 * 1000);
         expect(endpointCache.getEndpoint(key)).toEqual(mockEndpoints[1].Address);
         verifyHasAndGetCalls();
-        expect(set).not.toHaveBeenCalled();
+        expect(mockSet).not.toHaveBeenCalled();
       });
 
       [0, 1].forEach((index) => {
@@ -122,7 +118,7 @@ describe(EndpointCache.name, () => {
           jest.spyOn(Math, "floor").mockImplementation(() => index);
           expect(mockEndpoints.map((endpoint) => endpoint.Address)).toContain(endpointCache.getEndpoint(key));
           verifyHasAndGetCalls();
-          expect(set).not.toHaveBeenCalled();
+          expect(mockSet).not.toHaveBeenCalled();
         });
       });
     });
@@ -135,8 +131,8 @@ describe(EndpointCache.name, () => {
 
     it("converts CachePeriodInMinutes to Expires before caching", () => {
       endpointCache.set(key, mockEndpoints);
-      expect(set).toHaveBeenCalledTimes(1);
-      expect(set).toHaveBeenCalledWith(
+      expect(mockSet).toHaveBeenCalledTimes(1);
+      expect(mockSet).toHaveBeenCalledWith(
         key,
         mockEndpoints.map(({ Address, CachePeriodInMinutes }) => ({
           Address,
@@ -148,47 +144,21 @@ describe(EndpointCache.name, () => {
 
   it("delete", () => {
     endpointCache.delete(key);
-    expect(set).toHaveBeenCalledTimes(1);
-    expect(set).toHaveBeenCalledWith(key, []);
+    expect(mockDelete).toHaveBeenCalledTimes(1);
+    expect(mockDelete).toHaveBeenCalledWith(key);
   });
 
   describe("has", () => {
-    describe("returns false", () => {
-      it("when key is not present", () => {
-        has.mockReturnValueOnce(false);
-        expect(endpointCache.has(key)).toEqual(false);
-        expect(has).toHaveBeenCalledTimes(1);
-        expect(has).toHaveBeenCalledWith(key);
-      });
-
-      it("when key is present and value is empty", () => {
-        has.mockReturnValueOnce(true);
-        peek.mockReturnValueOnce([]);
-        expect(endpointCache.has(key)).toEqual(false);
-        expect(has).toHaveBeenCalledTimes(1);
-        expect(has).toHaveBeenCalledWith(key);
-      });
-
-      it("when key is present and value is undefined", () => {
-        has.mockReturnValueOnce(true);
-        peek.mockReturnValueOnce(undefined);
-        expect(endpointCache.has(key)).toEqual(false);
-        expect(has).toHaveBeenCalledTimes(1);
-        expect(has).toHaveBeenCalledWith(key);
-      });
-    });
-
-    it("returns true when key is present and value is non-empty", () => {
-      has.mockReturnValueOnce(true);
-      peek.mockReturnValueOnce(getEndpointsWithExpiry(mockEndpoints));
-      expect(endpointCache.has(key)).toEqual(true);
-      expect(has).toHaveBeenCalledTimes(1);
-      expect(has).toHaveBeenCalledWith(key);
+    it.each([false, true])("returns value cache.has call: %p", (expected) => {
+      mockHas.mockReturnValueOnce(expected);
+      expect(endpointCache.has(key)).toEqual(expected);
+      expect(mockHas).toHaveBeenCalledTimes(1);
+      expect(mockHas).toHaveBeenCalledWith(key);
     });
   });
 
   it("clear", () => {
     endpointCache.clear();
-    expect(clear).toHaveBeenCalledTimes(1);
+    expect(mockClear).toHaveBeenCalledTimes(1);
   });
 });
