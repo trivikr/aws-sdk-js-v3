@@ -1,9 +1,9 @@
-import LRUCache from "mnemonist/lru-cache";
+import { LRUCache } from "@aws-sdk/lru-cache";
 
 import { Endpoint } from "./Endpoint";
 import { EndpointCache } from "./EndpointCache";
 
-jest.mock("mnemonist/lru-cache");
+jest.mock("@aws-sdk/lru-cache");
 
 describe(EndpointCache.name, () => {
   let endpointCache;

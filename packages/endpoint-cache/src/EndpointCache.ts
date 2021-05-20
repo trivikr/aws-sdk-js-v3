@@ -1,4 +1,4 @@
-import LRUCache from "mnemonist/lru-cache";
+import { LRUCache } from "@aws-sdk/lru-cache";
 
 import { Endpoint } from "./Endpoint";
 
