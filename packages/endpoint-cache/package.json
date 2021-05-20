@@ -17,7 +17,7 @@
   "module": "./dist/es/index.js",
   "types": "./dist/types/index.d.ts",
   "dependencies": {
-    "mnemonist": "0.38.3",
+    "@aws-sdk/lru-cache": "3.0.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
