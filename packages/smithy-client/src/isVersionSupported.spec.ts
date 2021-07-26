@@ -37,4 +37,18 @@ describe(isVersionSupported.name, () => {
       });
     });
   });
+
+  describe.each(["11", "12", "13"])("version: %s", (supportedVersion) => {
+    describe(`returns false for Node.js <${supportedVersion}`, () => {
+      it.each([(Number(supportedVersion) - 1).toString()])(`%s`, (version) => {
+        expect(isVersionSupported(version, supportedVersion)).toEqual(false);
+      });
+    });
+
+    describe(`returns true for Node.js >=${supportedVersion}`, () => {
+      it.each([supportedVersion, (Number(supportedVersion) + 1).toString()])(`%s`, (version) => {
+        expect(isVersionSupported(version, supportedVersion)).toEqual(true);
+      });
+    });
+  });
 });
