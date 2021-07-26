@@ -1,8 +1,8 @@
 import { isVersionSupported } from "./isVersionSupported";
 
 describe(isVersionSupported.name, () => {
-  describe.each(["12.0.0", "12.1.0", "12.1.1"])("version: %s", (supportedVersion) => {
-    describe(`returns false for Node.js <${supportedVersion}`, () => {
+  describe.each(["v12.0.0", "v12.1.0", "v12.1.1"])("version: %s", (nodeVersion) => {
+    describe(`returns true for version ${nodeVersion}`, () => {
       const getPreviousMajorVersion = (major: number) => (major === 0 ? 0 : major - 1);
 
       const getPreviousMinorVersion = ([major, minor]: [number, number]) =>
@@ -11,47 +11,42 @@ describe(isVersionSupported.name, () => {
       const getPreviousPatchVersion = ([major, minor, patch]: [number, number, number]) =>
         patch === 0 ? [...getPreviousMinorVersion([major, minor]), 9] : [major, minor, patch - 1];
 
-      const [major, minor, patch] = supportedVersion.split(".").map(Number);
-      it.each(
-        [
+      const [major, minor, patch] = nodeVersion.replace(/^v/, "").split(".").map(Number);
+      it.each([
+        ...(minor > 0 && [getPreviousMajorVersion(major) + ".x"]),
+        ...(patch > 0 &&
+          [[...getPreviousMinorVersion([major, minor])], [getPreviousMajorVersion(major), 0]].map((arr) =>
+            arr.join(".").concat(".x")
+          )),
+        ...[
+          [major, minor, patch],
           getPreviousPatchVersion([major, minor, patch]),
           [...getPreviousMinorVersion([major, minor]), 0],
           [getPreviousMajorVersion(major), 0, 0],
-        ].map((arr) => `v${arr.join(".")}`)
-      )(`%s`, (version) => {
-        expect(isVersionSupported(version, supportedVersion)).toEqual(false);
-        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(false);
+        ].map((arr) => arr.join(".")),
+      ])(`supported version: %s`, (supportedVersion) => {
+        expect(isVersionSupported(nodeVersion, supportedVersion)).toEqual(true);
+        expect(isVersionSupported(nodeVersion, `v${supportedVersion}`)).toEqual(true);
       });
     });
 
-    describe(`returns true for Node.js >=${supportedVersion}`, () => {
-      const [major, minor, patch] = supportedVersion.split(".").map(Number);
-      it.each(
-        [
-          [major, minor, patch],
+    describe(`returns false for version ${nodeVersion}`, () => {
+      const [major, minor, patch] = nodeVersion.replace(/^v/, "").split(".").map(Number);
+      it.each([
+        ...(minor === 0 && [major, major + 1].map((version) => version.toString().concat(".x"))),
+        ...(patch === 0 && [[major, minor].join(".").concat(".x")]),
+        ...[
+          [major, minor + 1],
+          [major + 1, 0],
+        ].map((arr) => arr.join(".").concat(".x")),
+        ...[
           [major, minor, patch + 1],
           [major, minor + 1, 0],
           [major + 1, 0, 0],
-        ].map((arr) => `v${arr.join(".")}`)
-      )(`%s`, async (version) => {
-        expect(isVersionSupported(version, supportedVersion)).toEqual(true);
-        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(true);
-      });
-    });
-  });
-
-  describe.each(["11", "12", "13"])("version: %s", (supportedVersion) => {
-    describe(`returns false for Node.js <${supportedVersion}`, () => {
-      it.each([(Number(supportedVersion) - 1).toString()])(`%s`, (version) => {
-        expect(isVersionSupported(version, supportedVersion)).toEqual(false);
-        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(false);
-      });
-    });
-
-    describe(`returns true for Node.js >=${supportedVersion}`, () => {
-      it.each([supportedVersion, (Number(supportedVersion) + 1).toString()])(`%s`, (version) => {
-        expect(isVersionSupported(version, supportedVersion)).toEqual(true);
-        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(true);
+        ].map((arr) => arr.join(".")),
+      ])(`supported version: %s`, async (supportedVersion) => {
+        expect(isVersionSupported(nodeVersion, supportedVersion)).toEqual(false);
+        expect(isVersionSupported(nodeVersion, `v${supportedVersion}`)).toEqual(false);
       });
     });
   });
