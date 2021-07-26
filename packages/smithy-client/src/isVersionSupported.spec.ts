@@ -20,6 +20,7 @@ describe(isVersionSupported.name, () => {
         ].map((arr) => `v${arr.join(".")}`)
       )(`%s`, (version) => {
         expect(isVersionSupported(version, supportedVersion)).toEqual(false);
+        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(false);
       });
     });
 
@@ -34,6 +35,7 @@ describe(isVersionSupported.name, () => {
         ].map((arr) => `v${arr.join(".")}`)
       )(`%s`, async (version) => {
         expect(isVersionSupported(version, supportedVersion)).toEqual(true);
+        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(true);
       });
     });
   });
@@ -42,12 +44,14 @@ describe(isVersionSupported.name, () => {
     describe(`returns false for Node.js <${supportedVersion}`, () => {
       it.each([(Number(supportedVersion) - 1).toString()])(`%s`, (version) => {
         expect(isVersionSupported(version, supportedVersion)).toEqual(false);
+        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(false);
       });
     });
 
     describe(`returns true for Node.js >=${supportedVersion}`, () => {
       it.each([supportedVersion, (Number(supportedVersion) + 1).toString()])(`%s`, (version) => {
         expect(isVersionSupported(version, supportedVersion)).toEqual(true);
+        expect(isVersionSupported(version, `v${supportedVersion}`)).toEqual(true);
       });
     });
   });
