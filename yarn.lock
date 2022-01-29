@@ -62,38 +62,38 @@
   dependencies:
     "@aws-crypto/sha256-browser" "2.0.0"
     "@aws-crypto/sha256-js" "2.0.0"
-    "@aws-sdk/config-resolver" "3.49.0"
-    "@aws-sdk/credential-provider-node" "3.49.0"
-    "@aws-sdk/fetch-http-handler" "3.49.0"
-    "@aws-sdk/hash-node" "3.49.0"
-    "@aws-sdk/invalid-dependency" "3.49.0"
-    "@aws-sdk/middleware-content-length" "3.49.0"
-    "@aws-sdk/middleware-host-header" "3.49.0"
-    "@aws-sdk/middleware-logger" "3.49.0"
-    "@aws-sdk/middleware-retry" "3.49.0"
-    "@aws-sdk/middleware-sdk-sts" "3.49.0"
-    "@aws-sdk/middleware-serde" "3.49.0"
-    "@aws-sdk/middleware-signing" "3.49.0"
-    "@aws-sdk/middleware-stack" "3.49.0"
-    "@aws-sdk/middleware-user-agent" "3.49.0"
-    "@aws-sdk/node-config-provider" "3.49.0"
-    "@aws-sdk/node-http-handler" "3.49.0"
-    "@aws-sdk/protocol-http" "3.49.0"
-    "@aws-sdk/smithy-client" "3.49.0"
-    "@aws-sdk/types" "3.49.0"
-    "@aws-sdk/url-parser" "3.49.0"
-    "@aws-sdk/util-base64-browser" "3.49.0"
-    "@aws-sdk/util-base64-node" "3.49.0"
-    "@aws-sdk/util-body-length-browser" "3.49.0"
-    "@aws-sdk/util-body-length-node" "3.49.0"
-    "@aws-sdk/util-defaults-mode-browser" "3.49.0"
-    "@aws-sdk/util-defaults-mode-node" "3.49.0"
-    "@aws-sdk/util-user-agent-browser" "3.49.0"
-    "@aws-sdk/util-user-agent-node" "3.49.0"
-    "@aws-sdk/util-utf8-browser" "3.49.0"
-    "@aws-sdk/util-utf8-node" "3.49.0"
+    "@aws-sdk/config-resolver" "*"
+    "@aws-sdk/credential-provider-node" "*"
+    "@aws-sdk/fetch-http-handler" "*"
+    "@aws-sdk/hash-node" "*"
+    "@aws-sdk/invalid-dependency" "*"
+    "@aws-sdk/middleware-content-length" "*"
+    "@aws-sdk/middleware-host-header" "*"
+    "@aws-sdk/middleware-logger" "*"
+    "@aws-sdk/middleware-retry" "*"
+    "@aws-sdk/middleware-sdk-sts" "*"
+    "@aws-sdk/middleware-serde" "*"
+    "@aws-sdk/middleware-signing" "*"
+    "@aws-sdk/middleware-stack" "*"
+    "@aws-sdk/middleware-user-agent" "*"
+    "@aws-sdk/node-config-provider" "*"
+    "@aws-sdk/node-http-handler" "*"
+    "@aws-sdk/protocol-http" "*"
+    "@aws-sdk/smithy-client" "*"
+    "@aws-sdk/types" "*"
+    "@aws-sdk/url-parser" "*"
+    "@aws-sdk/util-base64-browser" "*"
+    "@aws-sdk/util-base64-node" "*"
+    "@aws-sdk/util-body-length-browser" "*"
+    "@aws-sdk/util-body-length-node" "*"
+    "@aws-sdk/util-defaults-mode-browser" "*"
+    "@aws-sdk/util-defaults-mode-node" "*"
+    "@aws-sdk/util-user-agent-browser" "*"
+    "@aws-sdk/util-user-agent-node" "*"
+    "@aws-sdk/util-utf8-browser" "*"
+    "@aws-sdk/util-utf8-node" "*"
     entities "2.2.0"
-    fast-xml-parser "3.19.0"
+    fast-xml-parser "4.0.1"
     tslib "^2.3.0"
 
 "@babel/code-frame@7.12.11":
@@ -5724,10 +5724,12 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fast-xml-parser@3.19.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
-  integrity sha512-4pXwmBplsCPv8FOY1WRakF970TjNGnGnfbOnLqjlYvMiF1SR3yOHyxMR/YCXpPTOspNF5gwudqktIP4VsWkvBg==
+fast-xml-parser@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.1.tgz#bea0d20ca1d7ad1a5963d609096e8e83e526a7d9"
+  integrity sha512-EN1yOXDmMqpHrqkwTlCJDvFjepJBoBxjLRDtDxFmqrBILGV3NyFWpmcsofSKCCzc+YxhvNreB5rcKzG+TlyWpg==
+  dependencies:
+    strnum "^1.0.5"
 
 fastestsmallesttextencoderdecoder@^1.0.22:
   version "1.0.22"
@@ -11945,6 +11947,11 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 strong-log-transformer@^2.0.0:
   version "2.1.0"
