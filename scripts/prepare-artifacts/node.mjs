@@ -3,6 +3,7 @@ import { getWorkspacePaths } from "../update-versions/getWorkspacePaths.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.mjs";
 import { addPreReleaseVersionSuffix } from "./addPreReleaseVersionSuffix.mjs";
+import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
 import { updatePackageJsonVersion } from "./updatePackageJsonVersion.mjs";
 
 const workspacePaths = getWorkspacePaths();
@@ -21,3 +22,5 @@ await addPreReleaseVersionSuffix(workspacePaths, prereleaseTag);
 await addBuildMetadataVersionSuffix(workspacePaths, buildMetadata);
 
 updateVersions(getDepToCurrentVersionHash());
+
+await deleteNotNodeEntriesInPackageJson(workspacePaths);
