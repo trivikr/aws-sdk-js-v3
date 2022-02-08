@@ -1,9 +1,9 @@
 import { CredentialsProviderError } from "@aws-sdk/property-provider";
 import { getMasterProfileName } from "@aws-sdk/util-credentials";
 
+import { resolveCredentialSource } from "../credentialSource";
+import { resolveProfileData } from "../profileData";
 import { isAssumeRoleProfile, resolveAssumeRoleCredentials } from "./resolveAssumeRoleCredentials";
-import { resolveCredentialSource } from "./resolveCredentialSource";
-import { resolveProfileData } from "./resolveProfileData";
 
 jest.mock("@aws-sdk/util-credentials");
 jest.mock("./resolveCredentialSource");

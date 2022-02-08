@@ -2,11 +2,11 @@ import { CredentialsProviderError } from "@aws-sdk/property-provider";
 import { ParsedIniData } from "@aws-sdk/shared-ini-file-loader";
 import { Credentials } from "@aws-sdk/types";
 
-import { FromIniInit } from "./fromIni";
-import { isAssumeRoleProfile, resolveAssumeRoleCredentials } from "./resolveAssumeRoleCredentials";
-import { isSsoProfile, resolveSsoCredentials } from "./resolveSsoCredentials";
-import { isStaticCredsProfile, resolveStaticCredentials } from "./resolveStaticCredentials";
-import { isWebIdentityProfile, resolveWebIdentityCredentials } from "./resolveWebIdentityCredentials";
+import { isAssumeRoleProfile, resolveAssumeRoleCredentials } from "../assumeRole";
+import { FromIniInit } from "../fromIni";
+import { isSsoProfile, resolveSsoCredentials } from "../sso";
+import { isStaticCredsProfile, resolveStaticCredentials } from "../staticCreds";
+import { isWebIdentityProfile, resolveWebIdentityCredentials } from "../webIdentity";
 
 export const resolveProfileData = async (
   profileName: string,

@@ -2,9 +2,9 @@ import { CredentialsProviderError } from "@aws-sdk/property-provider";
 import { ParsedIniData, Profile } from "@aws-sdk/shared-ini-file-loader";
 import { getMasterProfileName } from "@aws-sdk/util-credentials";
 
-import { FromIniInit } from "./fromIni";
-import { resolveCredentialSource } from "./resolveCredentialSource";
-import { resolveProfileData } from "./resolveProfileData";
+import { resolveCredentialSource } from "../credentialSource";
+import { FromIniInit } from "../fromIni";
+import { resolveProfileData } from "../profileData";
 
 /**
  * @see http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property

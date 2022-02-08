@@ -2,8 +2,8 @@ import { AssumeRoleWithWebIdentityParams } from "@aws-sdk/credential-provider-we
 import { CredentialProvider, Credentials } from "@aws-sdk/types";
 import { getMasterProfileName, parseKnownFiles, SourceProfileInit } from "@aws-sdk/util-credentials";
 
-import { AssumeRoleParams } from "./resolveAssumeRoleCredentials";
-import { resolveProfileData } from "./resolveProfileData";
+import { AssumeRoleParams } from "./assumeRole";
+import { resolveProfileData } from "./profileData";
 
 export interface FromIniInit extends SourceProfileInit {
   /**

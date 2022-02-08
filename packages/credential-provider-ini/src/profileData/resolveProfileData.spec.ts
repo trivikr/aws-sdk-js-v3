@@ -1,10 +1,10 @@
 import { CredentialsProviderError } from "@aws-sdk/property-provider";
 
-import { isAssumeRoleProfile, resolveAssumeRoleCredentials } from "./resolveAssumeRoleCredentials";
+import { isAssumeRoleProfile, resolveAssumeRoleCredentials } from "../assumeRole";
+import { isSsoProfile, resolveSsoCredentials } from "../sso";
+import { isStaticCredsProfile, resolveStaticCredentials } from "../staticCreds";
+import { isWebIdentityProfile, resolveWebIdentityCredentials } from "../webIdentity";
 import { resolveProfileData } from "./resolveProfileData";
-import { isSsoProfile, resolveSsoCredentials } from "./resolveSsoCredentials";
-import { isStaticCredsProfile, resolveStaticCredentials } from "./resolveStaticCredentials";
-import { isWebIdentityProfile, resolveWebIdentityCredentials } from "./resolveWebIdentityCredentials";
 
 jest.mock("./resolveAssumeRoleCredentials");
 jest.mock("./resolveSsoCredentials");
