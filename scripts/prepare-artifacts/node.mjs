@@ -3,6 +3,7 @@ import { getWorkspacePaths } from "../update-versions/getWorkspacePaths.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.mjs";
 import { addPreReleaseVersionSuffix } from "./addPreReleaseVersionSuffix.mjs";
+import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
 import { updatePackageJsonVersion } from "./updatePackageJsonVersion.mjs";
 
@@ -24,3 +25,6 @@ await addBuildMetadataVersionSuffix(workspacePaths, buildMetadata);
 updateVersions(getDepToCurrentVersionHash());
 
 await deleteNotNodeEntriesInPackageJson(workspacePaths);
+
+await deleteFilesWithExtension(workspacePaths, "dist-cjs", "*.browser.js");
+await deleteFilesWithExtension(workspacePaths, "dist-cjs", "*.native.js");
