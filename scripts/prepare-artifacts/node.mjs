@@ -1,4 +1,6 @@
+import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { getWorkspacePaths } from "../update-versions/getWorkspacePaths.mjs";
+import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.mjs";
 import { addPreReleaseVersionSuffix } from "./addPreReleaseVersionSuffix.mjs";
 import { updatePackageJsonVersion } from "./updatePackageJsonVersion.mjs";
@@ -17,3 +19,5 @@ await updatePackageJsonVersion(workspacePaths, version);
 await addPreReleaseVersionSuffix(workspacePaths, prereleaseTag);
 
 await addBuildMetadataVersionSuffix(workspacePaths, buildMetadata);
+
+updateVersions(getDepToCurrentVersionHash());
