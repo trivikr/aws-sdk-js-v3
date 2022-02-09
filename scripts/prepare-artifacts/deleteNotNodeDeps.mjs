@@ -12,8 +12,8 @@ export const deleteNotNodeDeps = async (workspacePaths) => {
         dependencies: Object.entries(packageJson.dependencies)
           .filter(
             ([key, value]) =>
-              !key.endsWith("browser") &&
-              !key.endsWith("native") &&
+              !key.endsWith("-browser") &&
+              !key.endsWith("-native") &&
               key !== "fetch-http-handler" &&
               key !== "chunked-blob-reader"
           )
