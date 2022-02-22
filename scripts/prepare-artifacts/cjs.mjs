@@ -5,6 +5,7 @@ import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.m
 import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeDeps } from "./deleteNotNodeDeps.mjs";
 import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
+import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
 import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 
 // In release automation, the steps need to be run for all workspace just once.
@@ -24,3 +25,7 @@ await deleteFilesWithExtension(workspacePaths, "dist-cjs", "*.native.js");
 await updateFilesInPackageJson(workspacePaths, ["dist-cjs"]);
 
 await deleteNotNodeDeps(workspacePaths);
+
+// Renaming org in package name is not needed in production script.
+// This is added for testing published packages with `@trivikr-test` org.
+await renameOrgInPackageName(workspacePaths, "@trivikr-test");
