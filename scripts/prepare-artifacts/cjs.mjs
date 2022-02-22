@@ -1,7 +1,7 @@
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
-import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.mjs";
+import { addPreReleaseVersionSuffix } from "./addPreReleaseVersionSuffix.mjs";
 import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeDeps } from "./deleteNotNodeDeps.mjs";
 import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
@@ -11,9 +11,9 @@ import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 // In release automation, the steps need to be run for all workspace just once.
 // After that the steps needs to be only for the packages which need to be published.
 const workspacePaths = getWorkspacePaths();
-const buildMetadata = "cjs";
+const prerelease = "latest.cjs";
 
-await addBuildMetadataVersionSuffix(workspacePaths, buildMetadata);
+await addPreReleaseVersionSuffix(workspacePaths, prerelease);
 
 updateVersions(getDepToCurrentVersionHash());
 
