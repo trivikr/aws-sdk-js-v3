@@ -8,6 +8,8 @@ import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
 const execPromise = promisify(exec);
 const workspacePaths = getWorkspacePaths().filter((workspacePath) => !basename(workspacePath).startsWith("aws-"));
 
+// All workspaces need to be published just once.
+// The release automation should publish only the changed workspaces.
 for (const workspacePath of workspacePaths) {
   const packageJsonPath = join(workspacePath, "package.json");
   const packageJsonBuffer = await readFile(packageJsonPath);
