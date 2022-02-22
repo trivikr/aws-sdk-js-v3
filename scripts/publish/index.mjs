@@ -14,7 +14,7 @@ for (const workspacePath of workspacePaths) {
   const packageJsonPath = join(workspacePath, "package.json");
   const packageJsonBuffer = await readFile(packageJsonPath);
   const { version } = JSON.parse(packageJsonBuffer.toString());
-  const tag = version.indexOf("+") > -1 ? version.substring(version.indexOf("+") + 1) : undefined;
+  const tag = version.indexOf("-") > -1 ? version.substring(version.indexOf("-") + 1) : undefined;
 
   // https://docs.npmjs.com/adding-dist-tags-to-packages
   const npmPublishCommand = `npm publish${tag ? ` --tag ${tag}` : ``}`;
