@@ -18,5 +18,14 @@ for (const workspacePath of workspacePaths) {
 
   // https://docs.npmjs.com/adding-dist-tags-to-packages
   const npmPublishCommand = `npm publish${tag ? ` --tag ${tag}` : ``}`;
-  await execPromise(npmPublishCommand, { cwd: workspacePath });
+  // npm token is set in ~/.npmrc
+  const response = await execPromise(npmPublishCommand, {
+    cwd: workspacePath,
+    env: {
+      npm_config_registry: "https://registry.npmjs.org/",
+      npm_config_access: "public",
+      PATH: process.env.PATH,
+    },
+  });
+  console.log(response);
 }
