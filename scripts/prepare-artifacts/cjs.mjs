@@ -1,6 +1,6 @@
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
-import { getWorkspacePaths } from "../update-versions/getWorkspacePaths.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
+import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
 import { addBuildMetadataVersionSuffix } from "./addBuildMetadataVersionSuffix.mjs";
 import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeDeps } from "./deleteNotNodeDeps.mjs";
