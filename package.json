@@ -51,7 +51,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "glob": "^7.1.6",
-    "yargs": "^15.1.0"
+    "yargs": "^17.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
