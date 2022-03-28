@@ -81,7 +81,7 @@
     "generate-changelog": "^1.7.1",
     "husky": "^4.2.3",
     "jasmine-core": "^3.5.0",
-    "jest": "27.4.5",
+    "jest": "27.5.1",
     "jmespath": "^0.15.0",
     "json5": "^2.2.0",
     "karma": "^5.1.0",
