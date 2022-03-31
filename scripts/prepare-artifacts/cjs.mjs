@@ -11,7 +11,7 @@ import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 // In release automation, the steps need to be run for all workspace just once.
 // After that the steps needs to be only for the packages which need to be published.
 const workspacePaths = getWorkspacePaths();
-const prerelease = "latest.cjs";
+const prerelease = "latest.node.cjs";
 
 await addPreReleaseVersionSuffix(workspacePaths, prerelease);
 
