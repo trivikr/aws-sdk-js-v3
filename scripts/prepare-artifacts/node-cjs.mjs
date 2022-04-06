@@ -9,6 +9,7 @@ import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeDeps } from "./deleteNotNodeDeps.mjs";
 import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
 import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
+import { replaceMarkdown } from "./replaceMarkdown.mjs";
 import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 
 // In release automation, the steps need to be run for all workspace just once.
@@ -29,6 +30,7 @@ await deleteFilesWithExtension(workspacePaths, distFolderName, "*.native.js");
 await updateFilesInPackageJson(workspacePaths, [distFolderName]);
 
 await deleteNotNodeDeps(workspacePaths);
+await replaceMarkdown(workspacePaths);
 
 // Renaming org in package name is not needed in production script.
 // This is added for testing published packages with `@trivikr-test` org.
