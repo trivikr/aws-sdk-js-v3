@@ -1,3 +1,6 @@
+import { existsSync } from "fs";
+import { join } from "path";
+
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
@@ -10,7 +13,8 @@ import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 
 // In release automation, the steps need to be run for all workspace just once.
 // After that the steps needs to be only for the packages which need to be published.
-const workspacePaths = getWorkspacePaths();
+const distFolderName = "dist-cjs";
+const workspacePaths = getWorkspacePaths().filter((workspacePath) => existsSync(join(workspacePath, distFolderName)));
 const prerelease = "latest.node.cjs";
 
 await addPreReleaseVersionSuffix(workspacePaths, prerelease);
@@ -19,10 +23,10 @@ updateVersions(getDepToCurrentVersionHash());
 
 await deleteNotNodeEntriesInPackageJson(workspacePaths);
 
-await deleteFilesWithExtension(workspacePaths, "dist-cjs", "*.browser.js");
-await deleteFilesWithExtension(workspacePaths, "dist-cjs", "*.native.js");
+await deleteFilesWithExtension(workspacePaths, distFolderName, "*.browser.js");
+await deleteFilesWithExtension(workspacePaths, distFolderName, "*.native.js");
 
-await updateFilesInPackageJson(workspacePaths, ["dist-cjs"]);
+await updateFilesInPackageJson(workspacePaths, [distFolderName]);
 
 await deleteNotNodeDeps(workspacePaths);
 
