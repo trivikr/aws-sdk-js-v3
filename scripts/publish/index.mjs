@@ -1,12 +1,18 @@
 import { exec } from "child_process";
 import { readFile } from "fs/promises";
-import { basename, join } from "path";
+import { join } from "path";
 import { promisify } from "util";
 
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
 
 const execPromise = promisify(exec);
-const workspacePaths = getWorkspacePaths().filter((workspacePath) => !basename(workspacePath).startsWith("aws-"));
+
+const workspacePaths = getWorkspacePaths().filter((workspacePath) => {
+  const packageJsonPath = join(workspacePath, "package.json");
+  const packageJsonBuffer = await readFile(packageJsonPath);
+  const packageJson = JSON.parse(packageJsonBuffer.toString());
+  return packageJson?.private !== true && packageJson.version.indexOf("-") > -1;
+});
 
 // All workspaces need to be published just once.
 // The release automation should publish only the changed workspaces.
