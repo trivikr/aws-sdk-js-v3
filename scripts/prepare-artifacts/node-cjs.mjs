@@ -15,7 +15,7 @@ import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 // After that the steps needs to be only for the packages which need to be published.
 const distFolderName = "dist-cjs";
 const workspacePaths = getWorkspacePaths().filter((workspacePath) => existsSync(join(workspacePath, distFolderName)));
-const prerelease = "latest.node.cjs";
+const prerelease = "node.cjs";
 
 await addPreReleaseVersionSuffix(workspacePaths, prerelease);
 
