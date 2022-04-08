@@ -4,7 +4,7 @@ import { join } from "path";
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
-import { addPreReleaseVersionSuffix } from "./addPreReleaseVersionSuffix.mjs";
+import { addVariantSuffix } from "./addVariantSuffix.mjs";
 import { deleteFilesWithExtension } from "./deleteFilesWithExtension.mjs";
 import { deleteNotNodeDeps } from "./deleteNotNodeDeps.mjs";
 import { deleteNotNodeEntriesInPackageJson } from "./deleteNotNodeEntriesInPackageJson.mjs";
@@ -16,9 +16,9 @@ import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 // After that the steps needs to be only for the packages which need to be published.
 const distFolderName = "dist-cjs";
 const workspacePaths = getWorkspacePaths().filter((workspacePath) => existsSync(join(workspacePath, distFolderName)));
-const prerelease = "node.cjs";
+const variant = "node";
 
-await addPreReleaseVersionSuffix(workspacePaths, prerelease);
+await addVariantSuffix(workspacePaths, variant);
 
 updateVersions(getDepToCurrentVersionHash());
 
