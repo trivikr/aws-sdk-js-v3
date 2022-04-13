@@ -4,7 +4,9 @@ import { basename, join } from "path";
 const getUpdatedDeps = (deps, packageNamesToAddSuffix, variantSuffix) =>
   Object.fromEntries(
     Object.entries(deps).map(([dep, version]) => [
-      packageNamesToAddSuffix.includes(dep) ? `${dep}-${variantSuffix}` : dep,
+      dep.startsWith(`@aws-sdk/`) && packageNamesToAddSuffix.includes(dep.substring(9))
+        ? `${dep}-${variantSuffix}`
+        : dep,
       version,
     ])
   );
