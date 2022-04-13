@@ -15,25 +15,15 @@ for (const workspacePath of workspacePaths) {
   const packageJsonPath = join(workspacePath, "package.json");
   const packageJsonBuffer = await readFile(packageJsonPath);
   const packageJson = JSON.parse(packageJsonBuffer.toString());
-  const { version } = packageJson;
 
   // Skip publishing private packages.
   if (packageJson?.private === true) {
     continue;
   }
 
-  // Comment this if block, if releasing default version while testing
-  if (version.indexOf("-") < 0) {
-    continue;
-  }
-
-  const tag = version.indexOf("-") > -1 ? version.substring(version.indexOf("-") + 1) : undefined;
-
-  // https://docs.npmjs.com/adding-dist-tags-to-packages
-  const npmPublishCommand = `npm publish${tag ? ` --tag ${tag}` : ``}`;
   // npm token is set in ~/.npmrc
   try {
-    const response = await execPromise(npmPublishCommand, {
+    const response = await execPromise("npm publish", {
       cwd: workspacePath,
       env: {
         npm_config_registry: "https://registry.npmjs.org/",
