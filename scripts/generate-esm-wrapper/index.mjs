@@ -19,7 +19,7 @@ updateVersions(getDepToCurrentVersionHash());
 
 // The variant suffix is not needed in production script.
 // This is added for testing publishined packahes with `@trivikr-test` org.
-await addVariantSuffix(workspacePaths, "esm");
+await addVariantSuffix(workspacePaths, "esm-wrapper");
 
 // gen-esm-wrapper throws error with file import in karma-credential-loader
 const packagesToGenerateEsmWrapper = workspacePaths.filter(
