@@ -1,5 +1,5 @@
 import { existsSync } from "fs";
-import { join } from "path";
+import { basename, join } from "path";
 
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
@@ -21,8 +21,12 @@ await addVariantSuffix(workspacePaths, "esm");
 
 updateVersions(getDepToCurrentVersionHash());
 
-await generateEsmWrapper(workspacePaths, distFolderName);
-await addConditionalExports(workspacePaths, distFolderName);
+// gen-esm-wrapper throws error with file import in karma-credential-loader
+const packagesToGenerateEsmWrapper = workspacePaths.filter(
+  (workspacePath) => basename(workspacePath) !== "karma-credential-loader"
+);
+await generateEsmWrapper(packagesToGenerateEsmWrapper, distFolderName);
+await addConditionalExports(packagesToGenerateEsmWrapper, distFolderName);
 
 // Renaming org in package name is not needed in production script.
 // This is added for testing published packages with `@trivikr-test` org.
