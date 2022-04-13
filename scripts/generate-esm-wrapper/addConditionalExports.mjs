@@ -9,8 +9,8 @@ export const addConditionalExports = async (workspacePaths, distFolderName) => {
     const updatedPackageJson = {
       ...packageJson,
       exports: {
-        import: `${distFolderName}/index.mjs`,
-        require: `${distFolderName}/index.js`,
+        import: `./${distFolderName}/index.mjs`,
+        require: `./${distFolderName}/index.js`,
       },
     };
     await writeFile(packageJsonPath, JSON.stringify(updatedPackageJson, null, 2).concat(`\n`));
