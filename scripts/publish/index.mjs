@@ -9,6 +9,8 @@ const execPromise = promisify(exec);
 
 const workspacePaths = getWorkspacePaths();
 
+const npmPublishStatus = {};
+
 // All workspaces need to be published just once.
 // The release automation should publish only the changed workspaces.
 for (const workspacePath of workspacePaths) {
@@ -21,6 +23,7 @@ for (const workspacePath of workspacePaths) {
     continue;
   }
 
+  const packageNameWithVersion = `${packageJson.name}@${packageJson.version}`;
   // npm token is set in ~/.npmrc
   try {
     const response = await execPromise("npm publish", {
@@ -32,9 +35,13 @@ for (const workspacePath of workspacePaths) {
       },
     });
     console.log(response);
+    npmPublishStatus[packageNameWithVersion] = "SUCCESS";
   } catch (error) {
     // Swallow error as this temporary script tries to publish over existing packages.
     // The release automation will publish only the changed workspaces.
     console.log(error);
+    npmPublishStatus[packageNameWithVersion] = "FAILURE";
   }
 }
+
+console.log({ npmPublishStatus });
