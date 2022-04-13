@@ -7,7 +7,6 @@ import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
 import { addConditionalExports } from "./addConditionalExports.mjs";
 import { addVariantSuffix } from "./addVariantSuffix.mjs";
 import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
-import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
 
 // In release automation, the steps need to be run for all workspace just once.
 // After that the steps needs to be only for the packages which need to be published.
@@ -22,8 +21,6 @@ await addVariantSuffix(workspacePaths, "esm");
 updateVersions(getDepToCurrentVersionHash());
 
 await addConditionalExports(workspacePaths, distFolderName);
-
-await updateFilesInPackageJson(workspacePaths, [distFolderName]);
 
 // Renaming org in package name is not needed in production script.
 // This is added for testing published packages with `@trivikr-test` org.
