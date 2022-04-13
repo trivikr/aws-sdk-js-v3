@@ -15,11 +15,11 @@ import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
 const distFolderName = "dist-cjs";
 const workspacePaths = getWorkspacePaths().filter((workspacePath) => existsSync(join(workspacePath, distFolderName)));
 
+updateVersions(getDepToCurrentVersionHash());
+
 // The variant suffix is not needed in production script.
 // This is added for testing publishined packahes with `@trivikr-test` org.
 await addVariantSuffix(workspacePaths, "esm");
-
-updateVersions(getDepToCurrentVersionHash());
 
 // gen-esm-wrapper throws error with file import in karma-credential-loader
 const packagesToGenerateEsmWrapper = workspacePaths.filter(
