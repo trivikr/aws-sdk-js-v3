@@ -4,6 +4,7 @@ import { join } from "path";
 import { getDepToCurrentVersionHash } from "../update-versions/getDepToCurrentVersionHash.mjs";
 import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
+import { addConditionalExports } from "./addConditionalExports.mjs";
 import { addVariantSuffix } from "./addVariantSuffix.mjs";
 import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
 import { updateFilesInPackageJson } from "./updateFilesInPackageJson.mjs";
@@ -19,6 +20,8 @@ const workspacePaths = getWorkspacePaths().filter((workspacePath) => existsSync(
 await addVariantSuffix(workspacePaths, "esm");
 
 updateVersions(getDepToCurrentVersionHash());
+
+await addConditionalExports(workspacePaths, distFolderName);
 
 await updateFilesInPackageJson(workspacePaths, [distFolderName]);
 
