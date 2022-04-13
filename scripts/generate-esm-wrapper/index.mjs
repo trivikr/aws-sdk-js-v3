@@ -6,6 +6,7 @@ import { updateVersions } from "../update-versions/updateVersions.mjs";
 import { getWorkspacePaths } from "../utils/getWorkspacePaths.mjs";
 import { addConditionalExports } from "./addConditionalExports.mjs";
 import { addVariantSuffix } from "./addVariantSuffix.mjs";
+import { generateEsmWrapper } from "./generateEsmWrapper.mjs";
 import { renameOrgInPackageName } from "./renameOrgInPackageName.mjs";
 
 // In release automation, the steps need to be run for all workspace just once.
@@ -20,6 +21,7 @@ await addVariantSuffix(workspacePaths, "esm");
 
 updateVersions(getDepToCurrentVersionHash());
 
+await generateEsmWrapper(workspacePaths, distFolderName);
 await addConditionalExports(workspacePaths, distFolderName);
 
 // Renaming org in package name is not needed in production script.
