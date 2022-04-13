@@ -10,7 +10,7 @@ const getUpdatedDeps = (deps, packageNamesToAddSuffix, variantSuffix) =>
   );
 
 export const addVariantSuffix = async (workspacePaths, variantSuffix) => {
-  const packageNamesToAddSuffix = workspacePaths.map(basename);
+  const packageNamesToAddSuffix = workspacePaths.map((workspacePath) => basename(workspacePath));
   for (const workspacePath of workspacePaths) {
     const packageJsonPath = join(workspacePath, "package.json");
     const packageJsonBuffer = await readFile(packageJsonPath);
