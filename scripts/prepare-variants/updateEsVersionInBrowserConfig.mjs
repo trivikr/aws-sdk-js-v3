@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "fs/promises";
-import { dirname, join } from "path";
+import { basename, dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -31,6 +31,7 @@ export const updateEsVersionInBrowserConfig = async (workspacePaths, esVersion) 
       compilerOptions: {
         ...compilerOptions,
         ...(compilerOptions.lib && { lib: getUpdatedLib(compilerOptions.lib, esVersion) }),
+        ...(basename(workspacePath).startsWith("client") && { target: esVersion }),
       },
     };
     await writeFile(tsconfigPath, JSON.stringify(updatedTsConfig, null, 2).concat(`\n`));
