@@ -229,10 +229,18 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
         String source = sourceBuilder.toString();
         // Validate the resulting target element is set.
         locationsToValidate.add(source);
+
         // Build a string of the elements to validate before deserializing.
         String validationStatement = locationsToValidate.stream()
                 .map(location -> location + " !== undefined")
                 .collect(Collectors.joining(" && "));
+
+        // Add an exception for "message"
+        if (locationsToValidate.size() == 1 && locationName == "message") {
+            validationStatement += new StringBuilder(" || ").append(inputLocation).append("['")
+                .append("Message").append("']");;
+        }
+
         String ifOrElseIfStatement = canMemberParsed ? "else if" : "if";
         writer.openBlock("$L ($L) {", "}", ifOrElseIfStatement, validationStatement, () -> {
             String dataSource = getNamedTargetWrapper(context, target, source);
