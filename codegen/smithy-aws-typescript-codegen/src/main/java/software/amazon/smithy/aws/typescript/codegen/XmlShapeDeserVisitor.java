@@ -235,10 +235,10 @@ final class XmlShapeDeserVisitor extends DocumentShapeDeserVisitor {
                 .map(location -> location + " !== undefined")
                 .collect(Collectors.joining(" && "));
 
-        // Add an exception for "message"
-        if (locationsToValidate.size() == 1 && locationName == "message") {
+        // Add an exception for "Message"
+        if (locationsToValidate.size() == 1 && locationName.equals("message")) {
             validationStatement += new StringBuilder(" || ").append(inputLocation).append("['")
-                .append("Message").append("']");;
+                .append("Message").append("'] !== undefined").toString();
         }
 
         String ifOrElseIfStatement = canMemberParsed ? "else if" : "if";
