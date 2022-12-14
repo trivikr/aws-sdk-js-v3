@@ -1,4 +1,3 @@
-import { getSuffixForArnEndpoint } from "@aws-sdk/middleware-bucket-endpoint";
 import { HttpRequest } from "@aws-sdk/protocol-http";
 import {
   BuildHandler,
@@ -8,14 +7,10 @@ import {
   HandlerExecutionContext,
   MetadataBearer,
   Pluggable,
-  Provider,
   RelativeMiddlewareOptions,
 } from "@aws-sdk/types";
 
 type PreviouslyResolved = {
-  region: Provider<string>;
-  isCustomEndpoint?: boolean;
-  disableHostPrefix: boolean;
   runtime: string;
 };
 
@@ -33,22 +28,14 @@ export const writeGetObjectResponseEndpointMiddleware =
     context: HandlerExecutionContext
   ): BuildHandler<Input, Output> =>
   async (args: BuildHandlerArguments<Input>): Promise<BuildHandlerOutput<Output>> => {
-    const { region: regionProvider, isCustomEndpoint, disableHostPrefix } = config;
-    const region = await regionProvider();
-    const { request, input } = args;
+    const { request } = args;
     if (!HttpRequest.isInstance(request)) return next({ ...args });
-    let hostname = request.hostname;
+
+    const { hostname } = request;
     if (hostname.endsWith("s3.amazonaws.com") || hostname.endsWith("s3-external-1.amazonaws.com")) {
       return next({ ...args });
     }
-    if (!isCustomEndpoint) {
-      const [, suffix] = getSuffixForArnEndpoint(request.hostname);
-      hostname = `s3-object-lambda.${region}.${suffix}`;
-    }
-    if (!disableHostPrefix && input.RequestRoute) {
-      hostname = `${input.RequestRoute}.${hostname}`;
-    }
-    request.hostname = hostname;
+
     context["signing_service"] = "s3-object-lambda";
 
     // Set the chunked transfer encoding when content-length cannot be inferred
@@ -56,6 +43,7 @@ export const writeGetObjectResponseEndpointMiddleware =
     if (config.runtime === "node" && !request.headers["content-length"]) {
       request.headers["transfer-encoding"] = "chunked";
     }
+
     return next({ ...args });
   };
 
