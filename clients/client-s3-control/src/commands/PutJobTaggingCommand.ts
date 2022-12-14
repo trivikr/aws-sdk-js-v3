@@ -1,6 +1,5 @@
 // smithy-typescript generated code
 import { EndpointParameterInstructions, getEndpointPlugin } from "@aws-sdk/middleware-endpoint";
-import { getProcessArnablesPlugin } from "@aws-sdk/middleware-sdk-s3-control";
 import { getSerdePlugin } from "@aws-sdk/middleware-serde";
 import { HttpRequest as __HttpRequest, HttpResponse as __HttpResponse } from "@aws-sdk/protocol-http";
 import { Command as $Command } from "@aws-sdk/smithy-client";
@@ -146,7 +145,6 @@ export class PutJobTaggingCommand extends $Command<
   ): Handler<PutJobTaggingCommandInput, PutJobTaggingCommandOutput> {
     this.middlewareStack.use(getSerdePlugin(configuration, this.serialize, this.deserialize));
     this.middlewareStack.use(getEndpointPlugin(configuration, PutJobTaggingCommand.getEndpointParameterInstructions()));
-    this.middlewareStack.use(getProcessArnablesPlugin(configuration));
 
     const stack = clientStack.concat(this.middlewareStack);
 

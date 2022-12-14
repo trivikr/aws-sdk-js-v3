@@ -510,7 +510,7 @@ export interface CreateAccessPointRequest {
   /**
    * <p>The Amazon Web Services account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name you want to assign to this access point.</p>
@@ -654,7 +654,7 @@ export interface CreateAccessPointForObjectLambdaRequest {
   /**
    * <p>The Amazon Web Services account ID for owner of the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name you want to assign to this Object Lambda Access Point.</p>
@@ -1704,7 +1704,7 @@ export interface CreateJobRequest {
   /**
    * <p>The Amazon Web Services account ID that creates the job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Indicates whether confirmation is required before Amazon S3 runs the job. Confirmation is
@@ -1841,7 +1841,7 @@ export interface CreateMultiRegionAccessPointRequest {
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point. The owner of the Multi-Region Access Point also must own
    *          the underlying buckets.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>An idempotency token used to identify the request and guarantee that requests are
@@ -1867,7 +1867,7 @@ export interface DeleteAccessPointRequest {
   /**
    * <p>The Amazon Web Services account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point you want to delete.</p>
@@ -1881,7 +1881,7 @@ export interface DeleteAccessPointForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point you want to delete.</p>
@@ -1893,7 +1893,7 @@ export interface DeleteAccessPointPolicyRequest {
   /**
    * <p>The account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point whose policy you want to delete.</p>
@@ -1907,7 +1907,7 @@ export interface DeleteAccessPointPolicyForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point you want to delete the policy for.</p>
@@ -1919,7 +1919,7 @@ export interface DeleteBucketRequest {
   /**
    * <p>The account ID that owns the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket being deleted.</p>
@@ -1933,7 +1933,7 @@ export interface DeleteBucketLifecycleConfigurationRequest {
   /**
    * <p>The account ID of the lifecycle configuration to delete.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -1947,7 +1947,7 @@ export interface DeleteBucketPolicyRequest {
   /**
    * <p>The account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -1961,7 +1961,7 @@ export interface DeleteBucketTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket tag set to be removed.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The bucket ARN that has the tag set to be removed.</p>
@@ -1975,7 +1975,7 @@ export interface DeleteJobTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID for the S3 Batch Operations job whose tags you want to delete.</p>
@@ -2010,7 +2010,7 @@ export interface DeleteMultiRegionAccessPointRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>An idempotency token used to identify the request and guarantee that requests are
@@ -2037,7 +2037,7 @@ export interface DeletePublicAccessBlockRequest {
    * <p>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code> configuration
    *          you want to remove.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 export interface DeleteStorageLensConfigurationRequest {
@@ -2049,7 +2049,7 @@ export interface DeleteStorageLensConfigurationRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 export interface DeleteStorageLensConfigurationTaggingRequest {
@@ -2061,7 +2061,7 @@ export interface DeleteStorageLensConfigurationTaggingRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 export interface DeleteStorageLensConfigurationTaggingResult {}
@@ -2070,7 +2070,7 @@ export interface DescribeJobRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID for the job whose information you want to retrieve.</p>
@@ -2287,7 +2287,7 @@ export interface DescribeMultiRegionAccessPointOperationRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The request token associated with the request you want to know about. This request token
@@ -2308,7 +2308,7 @@ export interface GetAccessPointRequest {
   /**
    * <p>The Amazon Web Services account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point whose configuration information you want to retrieve.</p>
@@ -2387,7 +2387,7 @@ export interface GetAccessPointConfigurationForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point you want to return the configuration for.</p>
@@ -2406,7 +2406,7 @@ export interface GetAccessPointForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point.</p>
@@ -2436,7 +2436,7 @@ export interface GetAccessPointPolicyRequest {
   /**
    * <p>The account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point whose policy you want to retrieve.</p>
@@ -2457,7 +2457,7 @@ export interface GetAccessPointPolicyForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point.</p>
@@ -2476,7 +2476,7 @@ export interface GetAccessPointPolicyStatusRequest {
   /**
    * <p>The account ID for the account that owns the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point whose policy status you want to retrieve.</p>
@@ -2506,7 +2506,7 @@ export interface GetAccessPointPolicyStatusForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point.</p>
@@ -2526,7 +2526,7 @@ export interface GetBucketRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -2557,7 +2557,7 @@ export interface GetBucketLifecycleConfigurationRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The Amazon Resource Name (ARN) of the bucket.</p>
@@ -2800,7 +2800,7 @@ export interface GetBucketPolicyRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -2821,7 +2821,7 @@ export interface GetBucketTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -2842,7 +2842,7 @@ export interface GetBucketVersioningRequest {
   /**
    * <p>The Amazon Web Services account ID of the S3 on Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The S3 on Outposts bucket to return the versioning state for.</p>
@@ -2878,7 +2878,7 @@ export interface GetJobTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID for the S3 Batch Operations job whose tags you want to retrieve.</p>
@@ -2897,7 +2897,7 @@ export interface GetMultiRegionAccessPointRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Multi-Region Access Point whose configuration information you want to receive. The name of
@@ -2988,7 +2988,7 @@ export interface GetMultiRegionAccessPointPolicyRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the Multi-Region Access Point. The name of the Multi-Region Access Point is different from the alias. For more
@@ -3056,7 +3056,7 @@ export interface GetMultiRegionAccessPointPolicyStatusRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the Multi-Region Access Point. The name of the Multi-Region Access Point is different from the alias. For more
@@ -3078,7 +3078,7 @@ export interface GetMultiRegionAccessPointRoutesRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The Multi-Region Access Point ARN.</p>
@@ -3153,7 +3153,7 @@ export interface GetPublicAccessBlockRequest {
    * <p>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code> configuration
    *          you want to retrieve.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 /**
@@ -3188,7 +3188,7 @@ export interface GetStorageLensConfigurationRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 /**
@@ -3280,7 +3280,7 @@ export interface S3BucketDestination {
   /**
    * <p>The account ID of the owner of the S3 Storage Lens metrics export bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The Amazon Resource Name (ARN) of the bucket. This property is read-only and follows the
@@ -3421,7 +3421,7 @@ export interface GetStorageLensConfigurationTaggingRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 /**
@@ -3450,7 +3450,7 @@ export interface ListAccessPointsRequest {
   /**
    * <p>The Amazon Web Services account ID for the account that owns the specified access points.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the bucket whose associated access points you want to list.</p>
@@ -3494,7 +3494,7 @@ export interface ListAccessPointsForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>If the list has more access points than can be returned in one call to this API, this field
@@ -3588,7 +3588,7 @@ export interface ListJobsRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The <code>List Jobs</code> request returns jobs that match the statuses listed in this
@@ -3692,7 +3692,7 @@ export interface ListMultiRegionAccessPointsRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Not currently used. Do not use this parameter.</p>
@@ -3723,7 +3723,7 @@ export interface ListRegionalBucketsRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p></p>
@@ -3794,7 +3794,7 @@ export interface ListStorageLensConfigurationsRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>A pagination token to request the next page of results.</p>
@@ -3849,7 +3849,7 @@ export interface PutAccessPointConfigurationForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point.</p>
@@ -3866,7 +3866,7 @@ export interface PutAccessPointPolicyRequest {
   /**
    * <p>The Amazon Web Services account ID for owner of the bucket associated with the specified access point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the access point that you want to associate with the specified policy.</p>
@@ -3887,7 +3887,7 @@ export interface PutAccessPointPolicyForObjectLambdaRequest {
   /**
    * <p>The account ID for the account that owns the specified Object Lambda Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the Object Lambda Access Point.</p>
@@ -3914,7 +3914,7 @@ export interface PutBucketLifecycleConfigurationRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The name of the bucket for which to set the configuration.</p>
@@ -3931,7 +3931,7 @@ export interface PutBucketPolicyRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>Specifies the bucket.</p>
@@ -3969,7 +3969,7 @@ export interface PutBucketTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The Amazon Resource Name (ARN) of the bucket.</p>
@@ -4010,7 +4010,7 @@ export interface PutBucketVersioningRequest {
   /**
    * <p>The Amazon Web Services account ID of the S3 on Outposts bucket.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The S3 on Outposts bucket to set the versioning state for.</p>
@@ -4033,7 +4033,7 @@ export interface PutJobTaggingRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID for the S3 Batch Operations job whose tags you want to replace.</p>
@@ -4073,7 +4073,7 @@ export interface PutMultiRegionAccessPointPolicyRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>An idempotency token used to identify the request and guarantee that requests are
@@ -4106,7 +4106,7 @@ export interface PutPublicAccessBlockRequest {
    * <p>The account ID for the Amazon Web Services account whose <code>PublicAccessBlock</code> configuration
    *          you want to set.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 }
 
 export interface PutStorageLensConfigurationRequest {
@@ -4118,7 +4118,7 @@ export interface PutStorageLensConfigurationRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The S3 Storage Lens configuration.</p>
@@ -4143,7 +4143,7 @@ export interface PutStorageLensConfigurationTaggingRequest {
   /**
    * <p>The account ID of the requester.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The tag set of the S3 Storage Lens configuration.</p>
@@ -4160,7 +4160,7 @@ export interface SubmitMultiRegionAccessPointRoutesRequest {
   /**
    * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The Multi-Region Access Point ARN.</p>
@@ -4180,7 +4180,7 @@ export interface UpdateJobPriorityRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID for the job whose priority you want to update.</p>
@@ -4235,7 +4235,7 @@ export interface UpdateJobStatusRequest {
   /**
    * <p>The Amazon Web Services account ID associated with the S3 Batch Operations job.</p>
    */
-  AccountId?: string;
+  AccountId: string | undefined;
 
   /**
    * <p>The ID of the job whose status you want to update.</p>

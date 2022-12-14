@@ -1,7 +1,6 @@
 // smithy-typescript generated code
 import { getApplyMd5BodyChecksumPlugin } from "@aws-sdk/middleware-apply-body-checksum";
 import { EndpointParameterInstructions, getEndpointPlugin } from "@aws-sdk/middleware-endpoint";
-import { getProcessArnablesPlugin } from "@aws-sdk/middleware-sdk-s3-control";
 import { getSerdePlugin } from "@aws-sdk/middleware-serde";
 import { HttpRequest as __HttpRequest, HttpResponse as __HttpResponse } from "@aws-sdk/protocol-http";
 import { Command as $Command } from "@aws-sdk/smithy-client";
@@ -118,7 +117,6 @@ export class DeleteMultiRegionAccessPointCommand extends $Command<
     this.middlewareStack.use(
       getEndpointPlugin(configuration, DeleteMultiRegionAccessPointCommand.getEndpointParameterInstructions())
     );
-    this.middlewareStack.use(getProcessArnablesPlugin(configuration));
     this.middlewareStack.use(getApplyMd5BodyChecksumPlugin(configuration));
 
     const stack = clientStack.concat(this.middlewareStack);

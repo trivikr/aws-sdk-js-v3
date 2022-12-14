@@ -1,6 +1,5 @@
 // smithy-typescript generated code
 import { EndpointParameterInstructions, getEndpointPlugin } from "@aws-sdk/middleware-endpoint";
-import { getRedirectFromPostIdPlugin } from "@aws-sdk/middleware-sdk-s3-control";
 import { getSerdePlugin } from "@aws-sdk/middleware-serde";
 import { HttpRequest as __HttpRequest, HttpResponse as __HttpResponse } from "@aws-sdk/protocol-http";
 import { Command as $Command } from "@aws-sdk/smithy-client";
@@ -89,7 +88,6 @@ export class ListRegionalBucketsCommand extends $Command<
     this.middlewareStack.use(
       getEndpointPlugin(configuration, ListRegionalBucketsCommand.getEndpointParameterInstructions())
     );
-    this.middlewareStack.use(getRedirectFromPostIdPlugin(configuration));
 
     const stack = clientStack.concat(this.middlewareStack);
 

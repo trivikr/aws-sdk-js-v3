@@ -17,6 +17,5 @@ export const getRuntimeConfig = (config: S3ControlClientConfig) => ({
   endpointProvider: config?.endpointProvider ?? defaultEndpointResolver,
   logger: config?.logger ?? new NoOpLogger(),
   serviceId: config?.serviceId ?? "S3 Control",
-  signingEscapePath: config?.signingEscapePath ?? false,
   urlParser: config?.urlParser ?? parseUrl,
 });

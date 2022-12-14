@@ -12,11 +12,6 @@ import { getLoggerPlugin } from "@aws-sdk/middleware-logger";
 import { getRecursionDetectionPlugin } from "@aws-sdk/middleware-recursion-detection";
 import { getRetryPlugin, resolveRetryConfig, RetryInputConfig, RetryResolvedConfig } from "@aws-sdk/middleware-retry";
 import {
-  resolveS3ControlConfig,
-  S3ControlInputConfig,
-  S3ControlResolvedConfig,
-} from "@aws-sdk/middleware-sdk-s3-control";
-import {
   AwsAuthInputConfig,
   AwsAuthResolvedConfig,
   getAwsAuthPlugin,
@@ -514,7 +509,6 @@ type S3ControlClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOpti
   RetryInputConfig &
   HostHeaderInputConfig &
   AwsAuthInputConfig &
-  S3ControlInputConfig &
   UserAgentInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -529,7 +523,6 @@ type S3ControlClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHan
   RetryResolvedConfig &
   HostHeaderResolvedConfig &
   AwsAuthResolvedConfig &
-  S3ControlResolvedConfig &
   UserAgentResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -559,10 +552,9 @@ export class S3ControlClient extends __Client<
     const _config_4 = resolveRetryConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
     const _config_6 = resolveAwsAuthConfig(_config_5);
-    const _config_7 = resolveS3ControlConfig(_config_6);
-    const _config_8 = resolveUserAgentConfig(_config_7);
-    super(_config_8);
-    this.config = _config_8;
+    const _config_7 = resolveUserAgentConfig(_config_6);
+    super(_config_7);
+    this.config = _config_7;
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
