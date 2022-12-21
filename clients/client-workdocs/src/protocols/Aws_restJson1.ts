@@ -1203,10 +1203,10 @@ export const serializeAws_restJson1InitiateDocumentVersionUploadCommand = async 
   let body: any;
   body = JSON.stringify({
     ...(input.ContentCreatedTimestamp != null && {
-      ContentCreatedTimestamp: Math.round(input.ContentCreatedTimestamp.getTime() / 1000),
+      ContentCreatedTimestamp: Math.round(input.ContentCreatedTimestamp.getTime() / 1000).toString(),
     }),
     ...(input.ContentModifiedTimestamp != null && {
-      ContentModifiedTimestamp: Math.round(input.ContentModifiedTimestamp.getTime() / 1000),
+      ContentModifiedTimestamp: Math.round(input.ContentModifiedTimestamp.getTime() / 1000).toString(),
     }),
     ...(input.ContentType != null && { ContentType: input.ContentType }),
     ...(input.DocumentSizeInBytes != null && { DocumentSizeInBytes: input.DocumentSizeInBytes }),

@@ -460,7 +460,7 @@ export const serializeAws_restJson1RevokeSigningProfileCommand = async (
   resolvedPath = __resolvedPath(resolvedPath, input, "profileName", () => input.profileName!, "{profileName}", false);
   let body: any;
   body = JSON.stringify({
-    ...(input.effectiveTime != null && { effectiveTime: Math.round(input.effectiveTime.getTime() / 1000) }),
+    ...(input.effectiveTime != null && { effectiveTime: Math.round(input.effectiveTime.getTime() / 1000).toString() }),
     ...(input.profileVersion != null && { profileVersion: input.profileVersion }),
     ...(input.reason != null && { reason: input.reason }),
   });

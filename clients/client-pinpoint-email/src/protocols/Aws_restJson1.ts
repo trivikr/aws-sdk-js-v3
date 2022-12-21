@@ -3763,7 +3763,7 @@ const serializeAws_restJson1DomainDeliverabilityTrackingOption = (
       ),
     }),
     ...(input.SubscriptionStartDate != null && {
-      SubscriptionStartDate: Math.round(input.SubscriptionStartDate.getTime() / 1000),
+      SubscriptionStartDate: Math.round(input.SubscriptionStartDate.getTime() / 1000).toString(),
     }),
   };
 };
@@ -3894,7 +3894,9 @@ const serializeAws_restJson1RawMessage = (input: RawMessage, context: __SerdeCon
 
 const serializeAws_restJson1ReputationOptions = (input: ReputationOptions, context: __SerdeContext): any => {
   return {
-    ...(input.LastFreshStart != null && { LastFreshStart: Math.round(input.LastFreshStart.getTime() / 1000) }),
+    ...(input.LastFreshStart != null && {
+      LastFreshStart: Math.round(input.LastFreshStart.getTime() / 1000).toString(),
+    }),
     ...(input.ReputationMetricsEnabled != null && { ReputationMetricsEnabled: input.ReputationMetricsEnabled }),
   };
 };

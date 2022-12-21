@@ -1307,7 +1307,7 @@ const serializeAws_ec2QueryTimestampsInput = (input: QueryTimestampsInput, conte
     entries["EpochMember"] = Math.round(input.epochMember.getTime() / 1000);
   }
   if (input.epochTarget != null) {
-    entries["EpochTarget"] = Math.round(input.epochTarget.getTime() / 1000);
+    entries["EpochTarget"] = Math.round(input.epochTarget.getTime() / 1000).toString();
   }
   return entries;
 };

@@ -507,7 +507,7 @@ export const serializeAws_restJson1CreateEventSourceMappingCommand = async (
     }),
     ...(input.StartingPosition != null && { StartingPosition: input.StartingPosition }),
     ...(input.StartingPositionTimestamp != null && {
-      StartingPositionTimestamp: Math.round(input.StartingPositionTimestamp.getTime() / 1000),
+      StartingPositionTimestamp: Math.round(input.StartingPositionTimestamp.getTime() / 1000).toString(),
     }),
     ...(input.Topics != null && { Topics: serializeAws_restJson1Topics(input.Topics, context) }),
     ...(input.TumblingWindowInSeconds != null && { TumblingWindowInSeconds: input.TumblingWindowInSeconds }),

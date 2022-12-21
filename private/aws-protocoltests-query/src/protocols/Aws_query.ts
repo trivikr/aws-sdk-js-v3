@@ -1872,7 +1872,7 @@ const serializeAws_queryQueryTimestampsInput = (input: QueryTimestampsInput, con
     entries["epochMember"] = Math.round(input.epochMember.getTime() / 1000);
   }
   if (input.epochTarget != null) {
-    entries["epochTarget"] = Math.round(input.epochTarget.getTime() / 1000);
+    entries["epochTarget"] = Math.round(input.epochTarget.getTime() / 1000).toString();
   }
   return entries;
 };

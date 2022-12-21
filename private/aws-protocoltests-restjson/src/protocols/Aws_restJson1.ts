@@ -1286,7 +1286,7 @@ export const serializeAws_restJson1JsonTimestampsCommand = async (
     ...(input.dateTime != null && { dateTime: input.dateTime.toISOString().split(".")[0] + "Z" }),
     ...(input.epochSeconds != null && { epochSeconds: Math.round(input.epochSeconds.getTime() / 1000) }),
     ...(input.httpDate != null && { httpDate: __dateToUtcString(input.httpDate) }),
-    ...(input.normal != null && { normal: Math.round(input.normal.getTime() / 1000) }),
+    ...(input.normal != null && { normal: Math.round(input.normal.getTime() / 1000).toString() }),
   });
   return new __HttpRequest({
     protocol,
@@ -1926,7 +1926,7 @@ export const serializeAws_restJson1MalformedTimestampBodyDefaultCommand = async 
     `${basePath?.endsWith("/") ? basePath.slice(0, -1) : basePath || ""}` + "/MalformedTimestampBodyDefault";
   let body: any;
   body = JSON.stringify({
-    ...(input.timestamp != null && { timestamp: Math.round(input.timestamp.getTime() / 1000) }),
+    ...(input.timestamp != null && { timestamp: Math.round(input.timestamp.getTime() / 1000).toString() }),
   });
   return new __HttpRequest({
     protocol,
@@ -5960,7 +5960,7 @@ const serializeAws_restJson1MyUnion = (input: MyUnion, context: __SerdeContext):
     }),
     stringValue: (value) => ({ stringValue: value }),
     structureValue: (value) => ({ structureValue: serializeAws_restJson1GreetingStruct(value, context) }),
-    timestampValue: (value) => ({ timestampValue: Math.round(value.getTime() / 1000) }),
+    timestampValue: (value) => ({ timestampValue: Math.round(value.getTime() / 1000).toString() }),
     _: (name, value) => ({ name: value } as any),
   });
 };
@@ -6221,7 +6221,7 @@ const serializeAws_restJson1TimestampList = (input: Date[], context: __SerdeCont
   return input
     .filter((e: any) => e != null)
     .map((entry) => {
-      return Math.round(entry.getTime() / 1000);
+      return Math.round(entry.getTime() / 1000).toString();
     });
 };
 

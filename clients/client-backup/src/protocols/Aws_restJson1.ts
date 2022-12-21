@@ -6908,8 +6908,8 @@ const serializeAws_restJson1CopyActions = (input: CopyAction[], context: __Serde
 
 const serializeAws_restJson1DateRange = (input: DateRange, context: __SerdeContext): any => {
   return {
-    ...(input.FromDate != null && { FromDate: Math.round(input.FromDate.getTime() / 1000) }),
-    ...(input.ToDate != null && { ToDate: Math.round(input.ToDate.getTime() / 1000) }),
+    ...(input.FromDate != null && { FromDate: Math.round(input.FromDate.getTime() / 1000).toString() }),
+    ...(input.ToDate != null && { ToDate: Math.round(input.ToDate.getTime() / 1000).toString() }),
   };
 };
 

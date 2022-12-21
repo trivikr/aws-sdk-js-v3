@@ -19477,7 +19477,7 @@ const serializeAws_json1_1CreateTrialComponentRequest = (
 ): any => {
   return {
     ...(input.DisplayName != null && { DisplayName: input.DisplayName }),
-    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000) }),
+    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000).toString() }),
     ...(input.InputArtifacts != null && {
       InputArtifacts: serializeAws_json1_1TrialComponentArtifacts(input.InputArtifacts, context),
     }),
@@ -19490,7 +19490,7 @@ const serializeAws_json1_1CreateTrialComponentRequest = (
     ...(input.Parameters != null && {
       Parameters: serializeAws_json1_1TrialComponentParameters(input.Parameters, context),
     }),
-    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000) }),
+    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000).toString() }),
     ...(input.Status != null && { Status: serializeAws_json1_1TrialComponentStatus(input.Status, context) }),
     ...(input.Tags != null && { Tags: serializeAws_json1_1TagList(input.Tags, context) }),
     ...(input.TrialComponentName != null && { TrialComponentName: input.TrialComponentName }),
@@ -21551,8 +21551,8 @@ const serializeAws_json1_1InferenceExperimentSchedule = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000) }),
-    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000) }),
+    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000).toString() }),
+    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000).toString() }),
   };
 };
 
@@ -21855,8 +21855,8 @@ const serializeAws_json1_1LineageEntityParameters = (input: Record<string, strin
 const serializeAws_json1_1ListActionsRequest = (input: ListActionsRequest, context: __SerdeContext): any => {
   return {
     ...(input.ActionType != null && { ActionType: input.ActionType }),
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
@@ -21867,9 +21867,11 @@ const serializeAws_json1_1ListActionsRequest = (input: ListActionsRequest, conte
 
 const serializeAws_json1_1ListAlgorithmsInput = (input: ListAlgorithmsInput, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -21894,14 +21896,18 @@ const serializeAws_json1_1ListAppImageConfigsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
-    ...(input.ModifiedTimeAfter != null && { ModifiedTimeAfter: Math.round(input.ModifiedTimeAfter.getTime() / 1000) }),
+    ...(input.ModifiedTimeAfter != null && {
+      ModifiedTimeAfter: Math.round(input.ModifiedTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.ModifiedTimeBefore != null && {
-      ModifiedTimeBefore: Math.round(input.ModifiedTimeBefore.getTime() / 1000),
+      ModifiedTimeBefore: Math.round(input.ModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -21925,8 +21931,8 @@ const serializeAws_json1_1ListAppsRequest = (input: ListAppsRequest, context: __
 const serializeAws_json1_1ListArtifactsRequest = (input: ListArtifactsRequest, context: __SerdeContext): any => {
   return {
     ...(input.ArtifactType != null && { ArtifactType: input.ArtifactType }),
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
@@ -21938,8 +21944,8 @@ const serializeAws_json1_1ListArtifactsRequest = (input: ListArtifactsRequest, c
 const serializeAws_json1_1ListAssociationsRequest = (input: ListAssociationsRequest, context: __SerdeContext): any => {
   return {
     ...(input.AssociationType != null && { AssociationType: input.AssociationType }),
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.DestinationArn != null && { DestinationArn: input.DestinationArn }),
     ...(input.DestinationType != null && { DestinationType: input.DestinationType }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -21953,15 +21959,17 @@ const serializeAws_json1_1ListAssociationsRequest = (input: ListAssociationsRequ
 
 const serializeAws_json1_1ListAutoMLJobsRequest = (input: ListAutoMLJobsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -21992,15 +22000,17 @@ const serializeAws_json1_1ListCodeRepositoriesInput = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22015,15 +22025,17 @@ const serializeAws_json1_1ListCompilationJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22037,8 +22049,8 @@ const serializeAws_json1_1ListCompilationJobsRequest = (
 const serializeAws_json1_1ListContextsRequest = (input: ListContextsRequest, context: __SerdeContext): any => {
   return {
     ...(input.ContextType != null && { ContextType: input.ContextType }),
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
@@ -22052,9 +22064,11 @@ const serializeAws_json1_1ListDataQualityJobDefinitionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22067,15 +22081,17 @@ const serializeAws_json1_1ListDataQualityJobDefinitionsRequest = (
 
 const serializeAws_json1_1ListDeviceFleetsRequest = (input: ListDeviceFleetsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22089,7 +22105,7 @@ const serializeAws_json1_1ListDevicesRequest = (input: ListDevicesRequest, conte
   return {
     ...(input.DeviceFleetName != null && { DeviceFleetName: input.DeviceFleetName }),
     ...(input.LatestHeartbeatAfter != null && {
-      LatestHeartbeatAfter: Math.round(input.LatestHeartbeatAfter.getTime() / 1000),
+      LatestHeartbeatAfter: Math.round(input.LatestHeartbeatAfter.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelName != null && { ModelName: input.ModelName }),
@@ -22109,16 +22125,18 @@ const serializeAws_json1_1ListEdgeDeploymentPlansRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.DeviceFleetNameContains != null && { DeviceFleetNameContains: input.DeviceFleetNameContains }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22133,15 +22151,17 @@ const serializeAws_json1_1ListEdgePackagingJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelNameContains != null && { ModelNameContains: input.ModelNameContains }),
@@ -22158,9 +22178,11 @@ const serializeAws_json1_1ListEndpointConfigsInput = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22172,15 +22194,17 @@ const serializeAws_json1_1ListEndpointConfigsInput = (
 
 const serializeAws_json1_1ListEndpointsInput = (input: ListEndpointsInput, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22193,8 +22217,8 @@ const serializeAws_json1_1ListEndpointsInput = (input: ListEndpointsInput, conte
 
 const serializeAws_json1_1ListExperimentsRequest = (input: ListExperimentsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
@@ -22207,9 +22231,11 @@ const serializeAws_json1_1ListFeatureGroupsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.FeatureGroupStatusEquals != null && { FeatureGroupStatusEquals: input.FeatureGroupStatusEquals }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22226,9 +22252,11 @@ const serializeAws_json1_1ListFlowDefinitionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -22238,9 +22266,11 @@ const serializeAws_json1_1ListFlowDefinitionsRequest = (
 
 const serializeAws_json1_1ListHubContentsRequest = (input: ListHubContentsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.HubContentType != null && { HubContentType: input.HubContentType }),
     ...(input.HubName != null && { HubName: input.HubName }),
@@ -22258,9 +22288,11 @@ const serializeAws_json1_1ListHubContentVersionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.HubContentName != null && { HubContentName: input.HubContentName }),
     ...(input.HubContentType != null && { HubContentType: input.HubContentType }),
@@ -22276,15 +22308,17 @@ const serializeAws_json1_1ListHubContentVersionsRequest = (
 
 const serializeAws_json1_1ListHubsRequest = (input: ListHubsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22296,9 +22330,11 @@ const serializeAws_json1_1ListHubsRequest = (input: ListHubsRequest, context: __
 
 const serializeAws_json1_1ListHumanTaskUisRequest = (input: ListHumanTaskUisRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -22311,15 +22347,17 @@ const serializeAws_json1_1ListHyperParameterTuningJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22332,15 +22370,17 @@ const serializeAws_json1_1ListHyperParameterTuningJobsRequest = (
 
 const serializeAws_json1_1ListImagesRequest = (input: ListImagesRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22355,16 +22395,18 @@ const serializeAws_json1_1ListImageVersionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.ImageName != null && { ImageName: input.ImageName }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -22378,15 +22420,17 @@ const serializeAws_json1_1ListInferenceExperimentsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22403,15 +22447,17 @@ const serializeAws_json1_1ListInferenceRecommendationsJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22440,9 +22486,11 @@ const serializeAws_json1_1ListLabelingJobsForWorkteamRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.JobReferenceCodeContains != null && { JobReferenceCodeContains: input.JobReferenceCodeContains }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22455,15 +22503,17 @@ const serializeAws_json1_1ListLabelingJobsForWorkteamRequest = (
 
 const serializeAws_json1_1ListLabelingJobsRequest = (input: ListLabelingJobsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22487,8 +22537,8 @@ const serializeAws_json1_1ListLineageGroupsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
@@ -22501,9 +22551,11 @@ const serializeAws_json1_1ListModelBiasJobDefinitionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22519,9 +22571,11 @@ const serializeAws_json1_1ListModelCardExportJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelCardExportJobNameContains != null && {
@@ -22538,9 +22592,11 @@ const serializeAws_json1_1ListModelCardExportJobsRequest = (
 
 const serializeAws_json1_1ListModelCardsRequest = (input: ListModelCardsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelCardStatus != null && { ModelCardStatus: input.ModelCardStatus }),
@@ -22556,9 +22612,11 @@ const serializeAws_json1_1ListModelCardVersionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelCardName != null && { ModelCardName: input.ModelCardName }),
@@ -22574,9 +22632,11 @@ const serializeAws_json1_1ListModelExplainabilityJobDefinitionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22605,9 +22665,11 @@ const serializeAws_json1_1ListModelPackageGroupsInput = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22619,9 +22681,11 @@ const serializeAws_json1_1ListModelPackageGroupsInput = (
 
 const serializeAws_json1_1ListModelPackagesInput = (input: ListModelPackagesInput, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.ModelApprovalStatus != null && { ModelApprovalStatus: input.ModelApprovalStatus }),
@@ -22639,9 +22703,11 @@ const serializeAws_json1_1ListModelQualityJobDefinitionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
@@ -22654,9 +22720,11 @@ const serializeAws_json1_1ListModelQualityJobDefinitionsRequest = (
 
 const serializeAws_json1_1ListModelsInput = (input: ListModelsInput, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22671,9 +22739,11 @@ const serializeAws_json1_1ListMonitoringAlertHistoryRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.MonitoringAlertName != null && { MonitoringAlertName: input.MonitoringAlertName }),
@@ -22701,16 +22771,18 @@ const serializeAws_json1_1ListMonitoringExecutionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.MonitoringJobDefinitionName != null && {
@@ -22720,10 +22792,10 @@ const serializeAws_json1_1ListMonitoringExecutionsRequest = (
     ...(input.MonitoringTypeEquals != null && { MonitoringTypeEquals: input.MonitoringTypeEquals }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.ScheduledTimeAfter != null && {
-      ScheduledTimeAfter: Math.round(input.ScheduledTimeAfter.getTime() / 1000),
+      ScheduledTimeAfter: Math.round(input.ScheduledTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.ScheduledTimeBefore != null && {
-      ScheduledTimeBefore: Math.round(input.ScheduledTimeBefore.getTime() / 1000),
+      ScheduledTimeBefore: Math.round(input.ScheduledTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.SortBy != null && { SortBy: input.SortBy }),
     ...(input.SortOrder != null && { SortOrder: input.SortOrder }),
@@ -22736,16 +22808,18 @@ const serializeAws_json1_1ListMonitoringSchedulesRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.EndpointName != null && { EndpointName: input.EndpointName }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.MonitoringJobDefinitionName != null && {
@@ -22765,15 +22839,17 @@ const serializeAws_json1_1ListNotebookInstanceLifecycleConfigsInput = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22791,18 +22867,20 @@ const serializeAws_json1_1ListNotebookInstancesInput = (
     ...(input.AdditionalCodeRepositoryEquals != null && {
       AdditionalCodeRepositoryEquals: input.AdditionalCodeRepositoryEquals,
     }),
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.DefaultCodeRepositoryContains != null && {
       DefaultCodeRepositoryContains: input.DefaultCodeRepositoryContains,
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22821,8 +22899,8 @@ const serializeAws_json1_1ListPipelineExecutionsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.PipelineName != null && { PipelineName: input.PipelineName }),
@@ -22856,8 +22934,8 @@ const serializeAws_json1_1ListPipelineParametersForExecutionRequest = (
 
 const serializeAws_json1_1ListPipelinesRequest = (input: ListPipelinesRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
     ...(input.PipelineNamePrefix != null && { PipelineNamePrefix: input.PipelineNamePrefix }),
@@ -22871,15 +22949,17 @@ const serializeAws_json1_1ListProcessingJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22892,9 +22972,11 @@ const serializeAws_json1_1ListProcessingJobsRequest = (
 
 const serializeAws_json1_1ListProjectsInput = (input: ListProjectsInput, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -22933,14 +23015,18 @@ const serializeAws_json1_1ListStudioLifecycleConfigsRequest = (
 ): any => {
   return {
     ...(input.AppTypeEquals != null && { AppTypeEquals: input.AppTypeEquals }),
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
-    ...(input.ModifiedTimeAfter != null && { ModifiedTimeAfter: Math.round(input.ModifiedTimeAfter.getTime() / 1000) }),
+    ...(input.ModifiedTimeAfter != null && {
+      ModifiedTimeAfter: Math.round(input.ModifiedTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.ModifiedTimeBefore != null && {
-      ModifiedTimeBefore: Math.round(input.ModifiedTimeBefore.getTime() / 1000),
+      ModifiedTimeBefore: Math.round(input.ModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -22986,15 +23072,17 @@ const serializeAws_json1_1ListTrainingJobsForHyperParameterTuningJobRequest = (
 
 const serializeAws_json1_1ListTrainingJobsRequest = (input: ListTrainingJobsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -23011,15 +23099,17 @@ const serializeAws_json1_1ListTransformJobsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreationTimeAfter != null && { CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000) }),
+    ...(input.CreationTimeAfter != null && {
+      CreationTimeAfter: Math.round(input.CreationTimeAfter.getTime() / 1000).toString(),
+    }),
     ...(input.CreationTimeBefore != null && {
-      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000),
+      CreationTimeBefore: Math.round(input.CreationTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeAfter != null && {
-      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000),
+      LastModifiedTimeAfter: Math.round(input.LastModifiedTimeAfter.getTime() / 1000).toString(),
     }),
     ...(input.LastModifiedTimeBefore != null && {
-      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000),
+      LastModifiedTimeBefore: Math.round(input.LastModifiedTimeBefore.getTime() / 1000).toString(),
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NameContains != null && { NameContains: input.NameContains }),
@@ -23043,8 +23133,8 @@ const serializeAws_json1_1ListTrialComponentsRequest = (
   context: __SerdeContext
 ): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.ExperimentName != null && { ExperimentName: input.ExperimentName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -23057,8 +23147,8 @@ const serializeAws_json1_1ListTrialComponentsRequest = (
 
 const serializeAws_json1_1ListTrialsRequest = (input: ListTrialsRequest, context: __SerdeContext): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.ExperimentName != null && { ExperimentName: input.ExperimentName }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
@@ -24318,13 +24408,15 @@ const serializeAws_json1_1PutModelPackageGroupPolicyInput = (
 
 const serializeAws_json1_1QueryFilters = (input: QueryFilters, context: __SerdeContext): any => {
   return {
-    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000) }),
-    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000) }),
+    ...(input.CreatedAfter != null && { CreatedAfter: Math.round(input.CreatedAfter.getTime() / 1000).toString() }),
+    ...(input.CreatedBefore != null && { CreatedBefore: Math.round(input.CreatedBefore.getTime() / 1000).toString() }),
     ...(input.LineageTypes != null && {
       LineageTypes: serializeAws_json1_1QueryLineageTypes(input.LineageTypes, context),
     }),
-    ...(input.ModifiedAfter != null && { ModifiedAfter: Math.round(input.ModifiedAfter.getTime() / 1000) }),
-    ...(input.ModifiedBefore != null && { ModifiedBefore: Math.round(input.ModifiedBefore.getTime() / 1000) }),
+    ...(input.ModifiedAfter != null && { ModifiedAfter: Math.round(input.ModifiedAfter.getTime() / 1000).toString() }),
+    ...(input.ModifiedBefore != null && {
+      ModifiedBefore: Math.round(input.ModifiedBefore.getTime() / 1000).toString(),
+    }),
     ...(input.Properties != null && { Properties: serializeAws_json1_1QueryProperties(input.Properties, context) }),
     ...(input.Types != null && { Types: serializeAws_json1_1QueryTypes(input.Types, context) }),
   };
@@ -25913,7 +26005,7 @@ const serializeAws_json1_1UpdateTrialComponentRequest = (
 ): any => {
   return {
     ...(input.DisplayName != null && { DisplayName: input.DisplayName }),
-    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000) }),
+    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000).toString() }),
     ...(input.InputArtifacts != null && {
       InputArtifacts: serializeAws_json1_1TrialComponentArtifacts(input.InputArtifacts, context),
     }),
@@ -25932,7 +26024,7 @@ const serializeAws_json1_1UpdateTrialComponentRequest = (
     ...(input.ParametersToRemove != null && {
       ParametersToRemove: serializeAws_json1_1ListTrialComponentKey256(input.ParametersToRemove, context),
     }),
-    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000) }),
+    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000).toString() }),
     ...(input.Status != null && { Status: serializeAws_json1_1TrialComponentStatus(input.Status, context) }),
     ...(input.TrialComponentName != null && { TrialComponentName: input.TrialComponentName }),
   };

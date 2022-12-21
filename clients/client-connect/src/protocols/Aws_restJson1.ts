@@ -2865,7 +2865,7 @@ export const serializeAws_restJson1GetMetricDataCommand = async (
   resolvedPath = __resolvedPath(resolvedPath, input, "InstanceId", () => input.InstanceId!, "{InstanceId}", false);
   let body: any;
   body = JSON.stringify({
-    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000) }),
+    ...(input.EndTime != null && { EndTime: Math.round(input.EndTime.getTime() / 1000).toString() }),
     ...(input.Filters != null && { Filters: serializeAws_restJson1Filters(input.Filters, context) }),
     ...(input.Groupings != null && { Groupings: serializeAws_restJson1Groupings(input.Groupings, context) }),
     ...(input.HistoricalMetrics != null && {
@@ -2873,7 +2873,7 @@ export const serializeAws_restJson1GetMetricDataCommand = async (
     }),
     ...(input.MaxResults != null && { MaxResults: input.MaxResults }),
     ...(input.NextToken != null && { NextToken: input.NextToken }),
-    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000) }),
+    ...(input.StartTime != null && { StartTime: Math.round(input.StartTime.getTime() / 1000).toString() }),
   });
   return new __HttpRequest({
     protocol,
@@ -4341,7 +4341,7 @@ export const serializeAws_restJson1StartTaskContactCommand = async (
     ...(input.PreviousContactId != null && { PreviousContactId: input.PreviousContactId }),
     ...(input.QuickConnectId != null && { QuickConnectId: input.QuickConnectId }),
     ...(input.References != null && { References: serializeAws_restJson1ContactReferences(input.References, context) }),
-    ...(input.ScheduledTime != null && { ScheduledTime: Math.round(input.ScheduledTime.getTime() / 1000) }),
+    ...(input.ScheduledTime != null && { ScheduledTime: Math.round(input.ScheduledTime.getTime() / 1000).toString() }),
     ...(input.TaskTemplateId != null && { TaskTemplateId: input.TaskTemplateId }),
   });
   return new __HttpRequest({
@@ -4829,7 +4829,7 @@ export const serializeAws_restJson1UpdateContactScheduleCommand = async (
   body = JSON.stringify({
     ...(input.ContactId != null && { ContactId: input.ContactId }),
     ...(input.InstanceId != null && { InstanceId: input.InstanceId }),
-    ...(input.ScheduledTime != null && { ScheduledTime: Math.round(input.ScheduledTime.getTime() / 1000) }),
+    ...(input.ScheduledTime != null && { ScheduledTime: Math.round(input.ScheduledTime.getTime() / 1000).toString() }),
   });
   return new __HttpRequest({
     protocol,

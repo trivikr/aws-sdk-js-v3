@@ -7492,11 +7492,11 @@ const serializeAws_restJson1BatchGetMetricDataQuery = (
 ): any => {
   return {
     ...(input.Dimensions != null && { Dimensions: serializeAws_restJson1Dimensions(input.Dimensions, context) }),
-    ...(input.EndDate != null && { EndDate: Math.round(input.EndDate.getTime() / 1000) }),
+    ...(input.EndDate != null && { EndDate: Math.round(input.EndDate.getTime() / 1000).toString() }),
     ...(input.Id != null && { Id: input.Id }),
     ...(input.Metric != null && { Metric: input.Metric }),
     ...(input.Namespace != null && { Namespace: input.Namespace }),
-    ...(input.StartDate != null && { StartDate: Math.round(input.StartDate.getTime() / 1000) }),
+    ...(input.StartDate != null && { StartDate: Math.round(input.StartDate.getTime() / 1000).toString() }),
   };
 };
 
@@ -7644,7 +7644,7 @@ const serializeAws_restJson1DomainDeliverabilityTrackingOption = (
       ),
     }),
     ...(input.SubscriptionStartDate != null && {
-      SubscriptionStartDate: Math.round(input.SubscriptionStartDate.getTime() / 1000),
+      SubscriptionStartDate: Math.round(input.SubscriptionStartDate.getTime() / 1000).toString(),
     }),
   };
 };
@@ -7863,7 +7863,9 @@ const serializeAws_restJson1ReplacementTemplate = (input: ReplacementTemplate, c
 
 const serializeAws_restJson1ReputationOptions = (input: ReputationOptions, context: __SerdeContext): any => {
   return {
-    ...(input.LastFreshStart != null && { LastFreshStart: Math.round(input.LastFreshStart.getTime() / 1000) }),
+    ...(input.LastFreshStart != null && {
+      LastFreshStart: Math.round(input.LastFreshStart.getTime() / 1000).toString(),
+    }),
     ...(input.ReputationMetricsEnabled != null && { ReputationMetricsEnabled: input.ReputationMetricsEnabled }),
   };
 };

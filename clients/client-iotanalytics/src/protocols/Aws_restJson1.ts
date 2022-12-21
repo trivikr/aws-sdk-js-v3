@@ -926,8 +926,8 @@ export const serializeAws_restJson1StartPipelineReprocessingCommand = async (
     ...(input.channelMessages != null && {
       channelMessages: serializeAws_restJson1ChannelMessages(input.channelMessages, context),
     }),
-    ...(input.endTime != null && { endTime: Math.round(input.endTime.getTime() / 1000) }),
-    ...(input.startTime != null && { startTime: Math.round(input.startTime.getTime() / 1000) }),
+    ...(input.endTime != null && { endTime: Math.round(input.endTime.getTime() / 1000).toString() }),
+    ...(input.startTime != null && { startTime: Math.round(input.startTime.getTime() / 1000).toString() }),
   });
   return new __HttpRequest({
     protocol,
