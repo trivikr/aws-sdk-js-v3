@@ -179,7 +179,7 @@ export interface DescribeKeyCommandOutput extends DescribeKeyResponse, __Metadat
  *   }
  * }
  * *\/
- * // example id: get-key-details-1
+ * // example id: get-key-details-1478565820907
  * ```
  *
  * @example To get details about an RSA asymmetric KMS key
@@ -217,7 +217,7 @@ export interface DescribeKeyCommandOutput extends DescribeKeyResponse, __Metadat
  *   }
  * }
  * *\/
- * // example id: to-get-details-about-an-rsa-asymmetric-kms-key-2
+ * // example id: to-get-details-about-an-rsa-asymmetric-kms-key-1637971611761
  * ```
  *
  * @example To get details about a multi-Region key
@@ -270,7 +270,7 @@ export interface DescribeKeyCommandOutput extends DescribeKeyResponse, __Metadat
  *   }
  * }
  * *\/
- * // example id: to-get-details-about-a-multi-region-key-3
+ * // example id: to-get-details-about-a-multi-region-key-1637969624239
  * ```
  *
  * @example To get details about an HMAC KMS key
@@ -302,79 +302,7 @@ export interface DescribeKeyCommandOutput extends DescribeKeyResponse, __Metadat
  *   }
  * }
  * *\/
- * // example id: to-get-details-about-an-hmac-kms-key-4
- * ```
- *
- * @example To get details about a KMS key in an AWS CloudHSM key store
- * ```javascript
- * // The following example gets the metadata of a KMS key in an AWS CloudHSM key store.
- * const input = {
- *   "KeyId": "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"
- * };
- * const command = new DescribeKeyCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "KeyMetadata": {
- *     "AWSAccountId": "123456789012",
- *     "Arn": "arn:aws:kms:us-west-2:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "CloudHsmClusterId": "cluster-1a23b4cdefg",
- *     "CreationDate": 1646160362.664,
- *     "CustomKeyStoreId": "cks-1234567890abcdef0",
- *     "CustomerMasterKeySpec": "SYMMETRIC_DEFAULT",
- *     "Description": "CloudHSM key store test key",
- *     "Enabled": true,
- *     "EncryptionAlgorithms": [
- *       "SYMMETRIC_DEFAULT"
- *     ],
- *     "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "KeyManager": "CUSTOMER",
- *     "KeySpec": "SYMMETRIC_DEFAULT",
- *     "KeyState": "Enabled",
- *     "KeyUsage": "ENCRYPT_DECRYPT",
- *     "MultiRegion": false,
- *     "Origin": "AWS_CLOUDHSM"
- *   }
- * }
- * *\/
- * // example id: to-get-details-about-a-kms-key-in-an-AWS-CloudHSM-key-store-5
- * ```
- *
- * @example To get details about a KMS key in an external key store
- * ```javascript
- * // The following example gets the metadata of a KMS key in an external key store.
- * const input = {
- *   "KeyId": "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"
- * };
- * const command = new DescribeKeyCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "KeyMetadata": {
- *     "AWSAccountId": "123456789012",
- *     "Arn": "arn:aws:kms:us-west-2:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "CreationDate": 1646160362.664,
- *     "CustomKeyStoreId": "cks-1234567890abcdef0",
- *     "CustomerMasterKeySpec": "SYMMETRIC_DEFAULT",
- *     "Description": "External key store test key",
- *     "Enabled": true,
- *     "EncryptionAlgorithms": [
- *       "SYMMETRIC_DEFAULT"
- *     ],
- *     "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "KeyManager": "CUSTOMER",
- *     "KeySpec": "SYMMETRIC_DEFAULT",
- *     "KeyState": "Enabled",
- *     "KeyUsage": "ENCRYPT_DECRYPT",
- *     "MultiRegion": false,
- *     "Origin": "EXTERNAL_KEY_STORE",
- *     "XksKeyConfiguration": {
- *       "Id": "bb8562717f809024"
- *     }
- *   }
- * }
- * *\/
- * // example id: to-get-details-about-a-kms-key-in-an-external-key-store-6
+ * // example id: to-get-details-about-an-hmac-kms-key-1637970472619
  * ```
  *
  */

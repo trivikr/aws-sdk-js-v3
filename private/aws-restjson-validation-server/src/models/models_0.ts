@@ -69,11 +69,15 @@ export namespace EnumUnion {
       if (memberValidators[member] === undefined) {
         switch (member) {
           case "first": {
-            memberValidators["first"] = new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]);
+            memberValidators["first"] = new __CompositeValidator<string>([
+              new __EnumValidator(["abc", "def"], ["abc", "def"]),
+            ]);
             break;
           }
           case "second": {
-            memberValidators["second"] = new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]);
+            memberValidators["second"] = new __CompositeValidator<string>([
+              new __EnumValidator(["abc", "def"], ["abc", "def"]),
+            ]);
             break;
           }
         }
@@ -126,21 +130,23 @@ export namespace MalformedEnumInput {
       if (memberValidators[member] === undefined) {
         switch (member) {
           case "string": {
-            memberValidators["string"] = new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]);
+            memberValidators["string"] = new __CompositeValidator<string>([
+              new __EnumValidator(["abc", "def"], ["abc", "def"]),
+            ]);
             break;
           }
           case "list": {
             memberValidators["list"] = new __CompositeCollectionValidator<string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])])
+              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"], ["abc", "def"])])
             );
             break;
           }
           case "map": {
             memberValidators["map"] = new __CompositeMapValidator<EnumString | string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]),
-              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])])
+              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"], ["abc", "def"])]),
+              new __CompositeValidator<string>([new __EnumValidator(["abc", "def"], ["abc", "def"])])
             );
             break;
           }
@@ -1150,7 +1156,9 @@ export namespace RecursiveUnionOne {
       if (memberValidators[member] === undefined) {
         switch (member) {
           case "string": {
-            memberValidators["string"] = new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]);
+            memberValidators["string"] = new __CompositeValidator<string>([
+              new __EnumValidator(["abc", "def"], ["abc", "def"]),
+            ]);
             break;
           }
           case "union": {
@@ -1229,7 +1237,9 @@ export namespace RecursiveUnionTwo {
       if (memberValidators[member] === undefined) {
         switch (member) {
           case "string": {
-            memberValidators["string"] = new __CompositeValidator<string>([new __EnumValidator(["abc", "def"])]);
+            memberValidators["string"] = new __CompositeValidator<string>([
+              new __EnumValidator(["abc", "def"], ["abc", "def"]),
+            ]);
             break;
           }
           case "union": {

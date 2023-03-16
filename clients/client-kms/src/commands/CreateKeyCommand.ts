@@ -363,7 +363,7 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-a-cmk-1
+ * // example id: to-create-a-cmk-1478028992966
  * ```
  *
  * @example To create an asymmetric RSA KMS key for encryption and decryption
@@ -398,7 +398,7 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-an-asymmetric-rsa-kms-key-for-encryption-and-decryption-2
+ * // example id: to-create-an-asymmetric-rsa-kms-key-for-encryption-and-decryption-1630533897833
  * ```
  *
  * @example To create an asymmetric elliptic curve KMS key for signing and verification
@@ -432,41 +432,7 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-an-asymmetric-elliptic-curve-kms-key-for-signing-and-verification-3
- * ```
- *
- * @example To create an HMAC KMS key
- * ```javascript
- * // This example creates a 384-bit symmetric HMAC KMS key. The GENERATE_VERIFY_MAC key usage value is required even though it's the only valid value for HMAC KMS keys. The key spec and key usage can't be changed after the key is created.
- * const input = {
- *   "KeySpec": "HMAC_384",
- *   "KeyUsage": "GENERATE_VERIFY_MAC"
- * };
- * const command = new CreateKeyCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "KeyMetadata": {
- *     "AWSAccountId": "111122223333",
- *     "Arn": "arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "CreationDate": "2022-04-05T14:04:55-07:00",
- *     "CustomerMasterKeySpec": "HMAC_384",
- *     "Description": "",
- *     "Enabled": true,
- *     "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
- *     "KeyManager": "CUSTOMER",
- *     "KeySpec": "HMAC_384",
- *     "KeyState": "Enabled",
- *     "KeyUsage": "GENERATE_VERIFY_MAC",
- *     "MacAlgorithms": [
- *       "HMAC_SHA_384"
- *     ],
- *     "MultiRegion": false,
- *     "Origin": "AWS_KMS"
- *   }
- * }
- * *\/
- * // example id: to-create-an-hmac-kms-key-1630628752841
+ * // example id: to-create-an-asymmetric-elliptic-curve-kms-key-for-signing-and-verification-1630541089401
  * ```
  *
  * @example To create a multi-Region primary KMS key
@@ -507,7 +473,7 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-a-multi-region-primary-kms-key-4
+ * // example id: to-create-a-multi-region-primary-kms-key-1630599158567
  * ```
  *
  * @example To create a KMS key for imported key material
@@ -540,12 +506,12 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-a-kms-key-for-imported-key-material-5
+ * // example id: to-create-a-kms-key-for-imported-key-material-1630603607560
  * ```
  *
- * @example To create a KMS key in an AWS CloudHSM key store
+ * @example To create a KMS key in a custom key store
  * ```javascript
- * // This example creates a KMS key in the specified AWS CloudHSM key store. The operation creates the KMS key and its metadata in AWS KMS and creates the key material in the AWS CloudHSM cluster associated with the custom key store. This example requires the CustomKeyStoreId  and Origin parameters.
+ * // This example creates a KMS key in the specified custom key store. The operation creates the KMS key and its metadata in AWS KMS and the key material in the AWS CloudHSM cluster associated with the custom key store. This example requires the Origin and CustomKeyStoreId parameters.
  * const input = {
  *   "CustomKeyStoreId": "cks-1234567890abcdef0",
  *   "Origin": "AWS_CLOUDHSM"
@@ -576,16 +542,15 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  *   }
  * }
  * *\/
- * // example id: to-create-a-kms-key-in-an-aws-cloudhsm-custom-key-store-6
+ * // example id: to-create-a-kms-key-in-a-custom-key-store-1630604382908
  * ```
  *
- * @example To create a KMS key in an external key store
+ * @example To create an HMAC KMS key
  * ```javascript
- * // This example creates a KMS key in the specified external key store. It uses the XksKeyId parameter to associate the KMS key with an existing symmetric encryption key in your external key manager. This CustomKeyStoreId, Origin, and XksKeyId parameters are required in this operation.
+ * // This example creates a 384-bit symmetric HMAC KMS key. The GENERATE_VERIFY_MAC key usage value is required even though it's the only valid value for HMAC KMS keys. The key spec and key usage can't be changed after the key is created.
  * const input = {
- *   "CustomKeyStoreId": "cks-9876543210fedcba9",
- *   "Origin": "EXTERNAL_KEY_STORE",
- *   "XksKeyId": "bb8562717f809024"
+ *   "KeySpec": "HMAC_384",
+ *   "KeyUsage": "GENERATE_VERIFY_MAC"
  * };
  * const command = new CreateKeyCommand(input);
  * const response = await client.send(command);
@@ -593,29 +558,25 @@ export interface CreateKeyCommandOutput extends CreateKeyResponse, __MetadataBea
  * {
  *   "KeyMetadata": {
  *     "AWSAccountId": "111122223333",
- *     "Arn": "arn:aws:kms:us-east-2:111122223333:key/0987dcba-09fe-87dc-65ba-ab0987654321",
- *     "CreationDate": "2022-02-02T07:48:55-07:00",
- *     "CustomKeyStoreId": "cks-9876543210fedcba9",
- *     "CustomerMasterKeySpec": "SYMMETRIC_DEFAULT",
+ *     "Arn": "arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
+ *     "CreationDate": "2022-04-05T14:04:55-07:00",
+ *     "CustomerMasterKeySpec": "HMAC_384",
  *     "Description": "",
  *     "Enabled": true,
- *     "EncryptionAlgorithms": [
- *       "SYMMETRIC_DEFAULT"
- *     ],
- *     "KeyId": "0987dcba-09fe-87dc-65ba-ab0987654321",
+ *     "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
  *     "KeyManager": "CUSTOMER",
- *     "KeySpec": "SYMMETRIC_DEFAULT",
+ *     "KeySpec": "HMAC_384",
  *     "KeyState": "Enabled",
- *     "KeyUsage": "ENCRYPT_DECRYPT",
+ *     "KeyUsage": "GENERATE_VERIFY_MAC",
+ *     "MacAlgorithms": [
+ *       "HMAC_SHA_384"
+ *     ],
  *     "MultiRegion": false,
- *     "Origin": "EXTERNAL_KEY_STORE",
- *     "XksKeyConfiguration": {
- *       "Id": "bb8562717f809024"
- *     }
+ *     "Origin": "AWS_KMS"
  *   }
  * }
  * *\/
- * // example id: to-create-a-kms-key-in-an-external-custom-key-store-7
+ * // example id: to-create-an-hmac-kms-key-1630628752841
  * ```
  *
  */

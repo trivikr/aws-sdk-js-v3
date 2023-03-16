@@ -219,14 +219,16 @@ export namespace AllQueryStringTypesInput {
           }
           case "queryEnum": {
             memberValidators["queryEnum"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
           case "queryEnumList": {
             memberValidators["queryEnumList"] = new __CompositeCollectionValidator<string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
@@ -653,7 +655,9 @@ export namespace EnumPayloadInput {
       if (memberValidators[member] === undefined) {
         switch (member) {
           case "payload": {
-            memberValidators["payload"] = new __CompositeValidator<string>([new __EnumValidator(["enumvalue"])]);
+            memberValidators["payload"] = new __CompositeValidator<string>([
+              new __EnumValidator(["enumvalue"], ["enumvalue"]),
+            ]);
             break;
           }
         }
@@ -1639,14 +1643,16 @@ export namespace InputAndOutputWithHeadersIO {
           }
           case "headerEnum": {
             memberValidators["headerEnum"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
           case "headerEnumList": {
             memberValidators["headerEnumList"] = new __CompositeCollectionValidator<string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
@@ -1763,33 +1769,37 @@ export namespace JsonEnumsInputOutput {
         switch (member) {
           case "fooEnum1": {
             memberValidators["fooEnum1"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
           case "fooEnum2": {
             memberValidators["fooEnum2"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
           case "fooEnum3": {
             memberValidators["fooEnum3"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
           case "fooEnumList": {
             memberValidators["fooEnumList"] = new __CompositeCollectionValidator<string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
           case "fooEnumSet": {
             memberValidators["fooEnumSet"] = new __CompositeCollectionValidator<string>(
               new __CompositeValidator<(FooEnum | string)[]>([new __UniqueItemsValidator()]),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
@@ -1797,7 +1807,9 @@ export namespace JsonEnumsInputOutput {
             memberValidators["fooEnumMap"] = new __CompositeMapValidator<FooEnum | string>(
               new __NoOpValidator(),
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
@@ -2038,7 +2050,9 @@ export namespace JsonListsInputOutput {
           case "enumList": {
             memberValidators["enumList"] = new __CompositeCollectionValidator<string>(
               new __NoOpValidator(),
-              new __CompositeValidator<string>([new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"])])
+              new __CompositeValidator<string>([
+                new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
+              ])
             );
             break;
           }
@@ -2587,7 +2601,7 @@ export namespace MyUnion {
           }
           case "enumValue": {
             memberValidators["enumValue"] = new __CompositeValidator<string>([
-              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"]),
+              new __EnumValidator(["Foo", "Baz", "Bar", "1", "0"], ["Foo", "Baz", "Bar", "1", "0"]),
             ]);
             break;
           }
