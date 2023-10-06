@@ -48,8 +48,7 @@ describe(getEndpointUrlConfig.name, () => {
   describe("configFileSelector", () => {
     const profile = { [CONFIG_ENDPOINT_URL]: mockEndpoint };
 
-    // ToDo: Enable once support for services section is added.
-    it.skip.each([
+    it.only.each([
       ["foo", "foo"],
       ["foobar", "foobar"],
       ["foo bar", "foo_bar"],
