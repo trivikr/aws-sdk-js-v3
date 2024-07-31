@@ -677,6 +677,12 @@
               "required": false,
               "documentation": "Parameter to indicate whether S3Express session auth should be disabled",
               "type": "Boolean"
+            },
+            "stringArrayParam": {
+              "type": "stringArray",
+              "required": true,
+              "default": ["defaultValue1", "defaultValue2"],
+              "documentation": "docs"
             }
           },
           "rules": [
