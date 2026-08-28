@@ -2061,6 +2061,29 @@ describe("S3TransferManager Unit Tests", () => {
       expect(existsSync(join(destination, "normal/file.txt"))).toBe(true);
     });
 
+    it("does not write through a symbolic link beneath the destination", async () => {
+      const destination = join(tmpDir, "downloads");
+      const outsideDirectory = join(tmpDir, "outside");
+      await mkdir(destination, { recursive: true });
+      await mkdir(outsideDirectory, { recursive: true });
+
+      const { symlink } = await import("node:fs/promises");
+      await symlink(outsideDirectory, join(destination, "linked"), process.platform === "win32" ? "junction" : "dir");
+
+      const mockClient = createMockClient([{ key: "linked/escaped.txt", size: 1024 }]);
+      const tm = new S3TransferManager({ s3: mockClient });
+
+      const result = await tm.downloadDirectory({
+        bucket: "example-bucket",
+        destination,
+        failurePolicy: "continue" as CannedFailurePolicy,
+      });
+
+      expect(existsSync(join(outsideDirectory, "escaped.txt"))).toBe(false);
+      expect(result.objectsDownloaded).toBe(0);
+      expect(result.objectsFailed).toBe(1);
+    });
+
     it("verify continue policy, a failed object does not stop the rest", async () => {
       const objects = [
         { key: "file1.txt", size: 1024 },

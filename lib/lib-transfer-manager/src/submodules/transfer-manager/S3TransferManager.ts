@@ -25,13 +25,14 @@ import {
 import type { Logger } from "@smithy/types";
 import type { StreamingBlobPayloadOutputTypes } from "@smithy/types";
 import { createReadStream, existsSync } from "node:fs";
-import { open, opendir, mkdir, realpath, stat } from "node:fs/promises";
-import { dirname, join, relative, resolve, sep } from "node:path";
+import { open, opendir, realpath, stat } from "node:fs/promises";
+import { join, relative, resolve, sep } from "node:path";
 import { Readable } from "node:stream";
 
 import { type RawDataPart, byteLength, getChunk } from "./chunker";
 import {
   createDestinationDirectory,
+  createLocalParentDirectories,
   deriveLocalPath,
   handleFailure,
   isFolderObject,
@@ -1425,8 +1426,8 @@ export class S3TransferManager implements IS3TransferManager {
               // Derive and validate the local destination path.
               const localPath = deriveLocalPath(destination, key);
 
-              // Ensure all intermediate sub directories exist before writing.
-              await mkdir(dirname(localPath), { recursive: true });
+              // Create intermediate directories without following a link outside the destination.
+              await createLocalParentDirectories(destination, localPath);
 
               if (request.downloadObjectRequestModifier) {
                 objectRequest = request.downloadObjectRequestModifier(objectRequest);

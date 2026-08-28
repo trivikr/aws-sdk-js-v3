@@ -1,8 +1,8 @@
 import type { _Object as S3Object } from "@aws-sdk/client-s3";
 import type { Stats } from "node:fs";
 import { existsSync } from "node:fs";
-import { mkdir, stat } from "node:fs/promises";
-import { isAbsolute, resolve, sep } from "node:path";
+import { mkdir, realpath, stat } from "node:fs/promises";
+import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 
 import type { CannedFailurePolicy, DirectoryTransferFailureContext, FailurePolicy } from "./types";
 
@@ -119,6 +119,37 @@ export async function createDestinationDirectory(dirPath: string): Promise<strin
   // If it does not exist, create the destination and any missing parent directories.
   await mkdir(absolutePath, { recursive: true });
   return absolutePath;
+}
+
+/**
+ * Creates the parent directories for a local download path while ensuring that
+ * no directory resolves outside the destination through a symbolic link.
+ *
+ * @param destination - The resolved absolute destination directory.
+ * @param localPath - The resolved absolute local file path.
+ *
+ * @internal
+ */
+export async function createLocalParentDirectories(destination: string, localPath: string): Promise<void> {
+  const canonicalDestination = await realpath(destination);
+  const relativeParent = relative(destination, dirname(localPath));
+  let currentDirectory = destination;
+
+  for (const segment of relativeParent.split(sep)) {
+    if (!segment || segment === ".") continue;
+
+    currentDirectory = join(currentDirectory, segment);
+    await mkdir(currentDirectory, { recursive: true });
+
+    const canonicalDirectory = await realpath(currentDirectory);
+    const canonicalRelative = relative(canonicalDestination, canonicalDirectory);
+    if (canonicalRelative === ".." || canonicalRelative.startsWith(`..${sep}`) || isAbsolute(canonicalRelative)) {
+      throw new Error(
+        `Resolved local path "${canonicalDirectory}" is outside destination directory "${canonicalDestination}". ` +
+          "Symbolic links outside the destination are not allowed."
+      );
+    }
+  }
 }
 
 /**
