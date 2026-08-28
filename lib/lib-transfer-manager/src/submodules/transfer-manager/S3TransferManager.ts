@@ -1309,8 +1309,12 @@ export class S3TransferManager implements IS3TransferManager {
     request: DownloadDirectoryRequest,
     transferOptions?: TransferOptions
   ): Promise<DownloadDirectoryResponse> {
-    const destination = await createDestinationDirectory(request.destination);
     const maxConcurrency = request.maxConcurrency ?? 64;
+    if (!Number.isInteger(maxConcurrency) || maxConcurrency < 1) {
+      throw new Error("maxConcurrency must be a positive integer");
+    }
+
+    const destination = await createDestinationDirectory(request.destination);
     const failurePolicy = request.failurePolicy ?? ("terminate" as CannedFailurePolicy);
     const semaphore = new Semaphore(maxConcurrency);
     const abortController = new AbortController();

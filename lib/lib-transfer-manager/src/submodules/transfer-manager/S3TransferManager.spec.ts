@@ -1968,6 +1968,22 @@ describe("S3TransferManager Unit Tests", () => {
       expect(existsSync(join(destination, "mixed/document.txt"))).toBe(false);
     });
 
+    it("rejects maxConcurrency of zero", async () => {
+      const destination = join(tmpDir, "downloads");
+      const mockClient = createMockClient([]);
+      const tm = new S3TransferManager({ s3: mockClient });
+
+      await expect(
+        tm.downloadDirectory({
+          bucket: "example-bucket",
+          destination,
+          maxConcurrency: 0,
+        })
+      ).rejects.toThrow(/maxConcurrency/);
+
+      expect(mockClient.send).not.toHaveBeenCalled();
+    });
+
     it("skip folder objects, zero-byte keys ending in / are not downloaded", async () => {
       const objects = [
         { key: "data/folder1/", size: 0 },
