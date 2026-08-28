@@ -1874,7 +1874,9 @@ describe("S3TransferManager Unit Tests", () => {
         const key = command.input.Key as string;
         const err = errorByKey[key];
         if (err) {
-          return Promise.reject(Object.assign(new Error(err.name), { name: err.name, $metadata: { httpStatusCode: err.status } }));
+          return Promise.reject(
+            Object.assign(new Error(err.name), { name: err.name, $metadata: { httpStatusCode: err.status } })
+          );
         }
         const size = sizeByKey.get(key) ?? 0;
         return Promise.resolve({
@@ -1908,7 +1910,12 @@ describe("S3TransferManager Unit Tests", () => {
       ];
       const destination = join(tmpDir, "downloads");
       const mockClient = createMockClient(objects);
-      const tm = new S3TransferManager({ s3: mockClient, targetPartSizeBytes: 8388608, multipartDownloadType: "PART", maxConcurrentDownloads: 10 });
+      const tm = new S3TransferManager({
+        s3: mockClient,
+        targetPartSizeBytes: 8388608,
+        multipartDownloadType: "PART",
+        maxConcurrentDownloads: 10,
+      });
 
       const result = await tm.downloadDirectory({ bucket: "example-bucket", destination });
 
@@ -2089,9 +2096,57 @@ describe("S3TransferManager Unit Tests", () => {
       });
       const tm = new S3TransferManager({ s3: mockClient });
 
-      await expect(
-        tm.downloadDirectory({ bucket: "example-bucket", destination, maxConcurrency: 1 })
-      ).rejects.toThrow("NoSuchKey");
+      await expect(tm.downloadDirectory({ bucket: "example-bucket", destination, maxConcurrency: 1 })).rejects.toThrow(
+        "NoSuchKey"
+      );
+    });
+
+    it("rejects with AbortError when aborted while GetObject is in flight", async () => {
+      const destination = join(tmpDir, "downloads");
+      const controller = new AbortController();
+      let getObjectStarted!: () => void;
+      const getObjectStartedPromise = new Promise<void>((resolve) => {
+        getObjectStarted = resolve;
+      });
+
+      const mockClient = {
+        send: vi.fn().mockImplementation((command: any, options: any) => {
+          const name = command.constructor.name;
+          if (name === "ListObjectsV2Command") {
+            return Promise.resolve({
+              Contents: [{ Key: "file.txt", Size: 1024 }],
+              IsTruncated: false,
+              $metadata: {},
+            });
+          }
+          if (name === "GetObjectCommand") {
+            return new Promise<never>((_resolve, reject) => {
+              const signal = options.abortSignal as AbortSignal;
+              signal.addEventListener(
+                "abort",
+                () => {
+                  reject(Object.assign(new Error("Request aborted"), { name: "AbortError" }));
+                },
+                { once: true }
+              );
+              getObjectStarted();
+            });
+          }
+          throw new Error(`Unexpected command: ${name}`);
+        }),
+        config: {},
+      } as any;
+      const tm = new S3TransferManager({ s3: mockClient });
+
+      const download = tm.downloadDirectory(
+        { bucket: "example-bucket", destination },
+        { abortSignal: controller.signal }
+      );
+
+      await getObjectStartedPromise;
+      controller.abort();
+
+      await expect(download).rejects.toMatchObject({ name: "AbortError" });
     });
 
     it("S3 directory bucket: downloads objects including nested keys", async () => {
@@ -2101,7 +2156,12 @@ describe("S3TransferManager Unit Tests", () => {
       ];
       const destination = join(tmpDir, "downloads");
       const mockClient = createMockClient(objects);
-      const tm = new S3TransferManager({ s3: mockClient, targetPartSizeBytes: 8388608, multipartDownloadType: "PART", maxConcurrentDownloads: 10 });
+      const tm = new S3TransferManager({
+        s3: mockClient,
+        targetPartSizeBytes: 8388608,
+        multipartDownloadType: "PART",
+        maxConcurrentDownloads: 10,
+      });
 
       const result = await tm.downloadDirectory({
         bucket: "example-directory-bucket--use1-az1--x-s3",

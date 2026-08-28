@@ -1320,6 +1320,17 @@ export class S3TransferManager implements IS3TransferManager {
     let terminated = false;
     let terminationError: unknown;
 
+    const userSignal = transferOptions?.abortSignal as AbortSignal | undefined;
+    const onUserAbort = () => {
+      if (!terminated) {
+        terminated = true;
+        terminationError = Object.assign(new Error("Transfer aborted."), {
+          name: "AbortError",
+        });
+      }
+      abortController.abort();
+    };
+
     this.checkAborted(transferOptions);
     this.addEventListeners(transferOptions?.eventListeners);
 
@@ -1333,6 +1344,7 @@ export class S3TransferManager implements IS3TransferManager {
 
     const removeLocalEventListeners = () => {
       this.removeEventListeners(transferOptions?.eventListeners);
+      userSignal?.removeEventListener("abort", onUserAbort);
       if (transferOptions?.abortSignal) {
         this.abortCleanupFunctions.get(transferOptions.abortSignal as AbortSignal)?.();
         this.abortCleanupFunctions.delete(transferOptions.abortSignal as AbortSignal);
@@ -1351,12 +1363,7 @@ export class S3TransferManager implements IS3TransferManager {
       })
     );
 
-    const userSignal = transferOptions?.abortSignal as AbortSignal | undefined;
-    if (userSignal) {
-      userSignal.addEventListener("abort", () => abortController.abort(), {
-        once: true,
-      });
-    }
+    userSignal?.addEventListener("abort", onUserAbort, { once: true });
 
     try {
       // Stream objects page by page. Using null delimiter so that
