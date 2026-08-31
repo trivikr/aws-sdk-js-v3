@@ -332,7 +332,10 @@ function encodeUrlPath(url: string): string {
  * @internal
  */
 function encodeQueryComponent(component: string): string {
-  return component
+  // URLSearchParams converted inputs to USVString, replacing lone surrogates
+  // with the Unicode replacement character. Preserve that behavior.
+  const wellFormedComponent = component.replace(/[\uD800-\uDFFF]/gu, "\uFFFD");
+  return wellFormedComponent
     .split(/(%[0-9A-Fa-f]{2}|\+)/g)
     .map((part, i) => {
       // Preserved separators (%XX or +); uppercase hex to match prior behavior.

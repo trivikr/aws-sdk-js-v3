@@ -1048,6 +1048,39 @@ describe("url component encoding", () => {
     expect(verifySignature(signature, policyStr)).toBeTruthy();
   });
 
+  it("should normalize lone surrogates in query strings", () => {
+    const expiration = "2026-01-01";
+    const inputUrl = `http://example.com/file.pdf?q=${String.fromCharCode(0xd800)}`;
+    const expectedBaseUrl = "http://example.com/file.pdf?q=%EF%BF%BD";
+    const signedUrl = getSignedUrl({
+      url: inputUrl,
+      keyPairId,
+      privateKey,
+      passphrase,
+      dateLessThan: expiration,
+    });
+
+    const cfParamStart = signedUrl.search(/[?&]Expires=/);
+    expect(cfParamStart).toBeGreaterThan(0);
+    expect(signedUrl.slice(0, cfParamStart)).toBe(expectedBaseUrl);
+
+    const parsedUrl = parseUrl(signedUrl);
+    const signature = denormalizeBase64(parsedUrl.query!["Signature"] as string);
+    const policyStr = JSON.stringify({
+      Statement: [
+        {
+          Resource: expectedBaseUrl,
+          Condition: {
+            DateLessThan: {
+              "AWS:EpochTime": Math.round(new Date(expiration).getTime() / 1000),
+            },
+          },
+        },
+      ],
+    });
+    expect(verifySignature(signature, policyStr)).toBeTruthy();
+  });
+
   // https://github.com/aws/aws-sdk-js-v3/issues/8277
   it("should normalize lowercase %xx hex to uppercase in query", () => {
     const signedUrl = getSignedUrl({
