@@ -299,7 +299,24 @@ export class SchemaBuilder {
    *   `[ref, memberTraits]` pair only when the member carries its own traits.
    */
   private memberRef(member: AstMember): $SchemaRef {
-    const targetRef = this.ref(member.target);
+    let targetRef = this.ref(member.target);
+    const targetShape = this.index.getShape(member.target);
+    const timestampFormat = member.traits?.["smithy.api#timestampFormat"];
+
+    if (
+      timestampFormat !== undefined &&
+      (member.target === "smithy.api#Timestamp" || targetShape?.type === "timestamp")
+    ) {
+      const timestampRef = sentinelForSimpleShape({ type: "timestamp", traits: member.traits })!;
+      const targetTraits = targetShape ? this.index.getTraits(targetShape) : 0;
+      if (targetShape && targetTraits !== 0) {
+        const { namespace, name } = parseShapeId(member.target);
+        targetRef = [0, namespace, name, targetTraits, timestampRef] as unknown as $SchemaRef;
+      } else {
+        targetRef = timestampRef as $SchemaRef;
+      }
+    }
+
     const memberTraits = this.index.getTraits(member);
     if (memberTraits === 0) {
       return targetRef;

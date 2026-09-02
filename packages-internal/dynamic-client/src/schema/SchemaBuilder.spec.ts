@@ -2,6 +2,7 @@ import { NormalizedSchema, SCHEMA, TypeRegistry } from "@smithy/core/schema";
 import { afterEach, describe, expect, test as it } from "vitest";
 
 import { ModelIndex } from "../ast/ModelIndex";
+import type { SmithyAst } from "../ast/types";
 import { rpcv2CborAst } from "./rpcv2CborAst.fixture";
 import { SchemaBuilder } from "./SchemaBuilder";
 
@@ -16,6 +17,45 @@ describe("SchemaBuilder", () => {
       registry.clear();
     }
     TypeRegistry["registries"].clear();
+  });
+
+  it("honors timestampFormat traits on members", () => {
+    const ast: SmithyAst = {
+      smithy: "2.0",
+      shapes: {
+        "example#Service": {
+          type: "service",
+          version: "1.0",
+          operations: [{ target: "example#Operation" }],
+        },
+        "example#Operation": {
+          type: "operation",
+          input: { target: "example#TimestampInput" },
+        },
+        "example#TimestampInput": {
+          type: "structure",
+          members: {
+            dateTime: {
+              target: "smithy.api#Timestamp",
+              traits: { "smithy.api#timestampFormat": "date-time" },
+            },
+            httpDate: {
+              target: "smithy.api#Timestamp",
+              traits: { "smithy.api#timestampFormat": "http-date" },
+            },
+            epochSeconds: {
+              target: "smithy.api#Timestamp",
+              traits: { "smithy.api#timestampFormat": "epoch-seconds" },
+            },
+          },
+        },
+      },
+    };
+
+    const { schemas } = new SchemaBuilder(new ModelIndex(ast)).build();
+    const input = schemas["TimestampInput$"] as any;
+
+    expect(input[5]).toEqual([SCHEMA.TIMESTAMP_DATE_TIME, SCHEMA.TIMESTAMP_HTTP_DATE, SCHEMA.TIMESTAMP_EPOCH_SECONDS]);
   });
 
   it("builds an empty structure schema", () => {
