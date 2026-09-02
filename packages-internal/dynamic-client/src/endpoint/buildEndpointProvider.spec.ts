@@ -38,4 +38,32 @@ describe("buildEndpointProvider", () => {
     const resolved = provider({ endpoint: "https://rules.example.com" });
     expect(resolved.url.href).toBe("https://rules.example.com/");
   });
+
+  it("caches endpoints separately for each ruleset parameter combination", () => {
+    const service: AstShape = {
+      type: "service",
+      traits: {
+        "smithy.rules#endpointRuleSet": {
+          version: "1.0",
+          parameters: {
+            Region: { type: "string", builtIn: "AWS::Region", required: true },
+          },
+          rules: [
+            {
+              conditions: [],
+              endpoint: { url: "https://{Region}.example.com" },
+              type: "endpoint",
+            },
+          ],
+        },
+      },
+    };
+    const provider = buildEndpointProvider(service);
+
+    const first = provider({ Region: "us-east-1" });
+    const second = provider({ Region: "eu-west-1" });
+
+    expect(first.url.href).toBe("https://us-east-1.example.com/");
+    expect(second.url.href).toBe("https://eu-west-1.example.com/");
+  });
 });

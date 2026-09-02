@@ -34,7 +34,7 @@ export function buildEndpointProvider(service: AstShape): EndpointProvider {
 
   const ruleSet = traits["smithy.rules#endpointRuleSet"] as RuleSetObject | undefined;
   if (ruleSet) {
-    const cache = new EndpointCache({ size: 50, params: ["endpoint"] });
+    const cache = new EndpointCache({ size: 50, params: Object.keys(ruleSet.parameters) });
     return (params, context = {}) =>
       cache.get(params, () => resolveEndpoint(ruleSet, { endpointParams: params, logger: context.logger }));
   }
