@@ -46,7 +46,7 @@ export function buildEndpointProvider(service: AstShape): EndpointProvider {
   // service's endpointPrefix) so endpoint resolution always runs through the
   // rules engine and honors the caller-supplied `Endpoint` builtin uniformly.
   return (params) => {
-    const endpoint = params?.endpoint;
+    const endpoint = params?.Endpoint ?? params?.endpoint;
     if (typeof endpoint === "string" && endpoint.length > 0) {
       return { url: new URL(endpoint), properties: {}, headers: {} };
     }

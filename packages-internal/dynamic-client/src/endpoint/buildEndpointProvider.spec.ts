@@ -15,6 +15,12 @@ describe("buildEndpointProvider", () => {
     expect(resolved.url.href).toBe("https://example.com/");
   });
 
+  it("returns the modeled Endpoint parameter when no endpoint traits exist", () => {
+    const provider = buildEndpointProvider({ type: "service" });
+    const resolved = provider({ Endpoint: "https://example.com" });
+    expect(resolved.url.href).toBe("https://example.com/");
+  });
+
   it("resolves via a ruleset trait", () => {
     const service: AstShape = {
       type: "service",
