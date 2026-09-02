@@ -68,6 +68,7 @@ export interface BuiltSchemas {
  */
 export class SchemaBuilder {
   private readonly schemas: Record<string, StaticSchema> = {};
+  private readonly schemasByShapeId = new Map<string, StaticSchema>();
   private readonly operations: Record<string, StaticOperationSchema> = {};
   private readonly errorRegistries = new Map<string, TypeRegistry>();
   private readonly visiting = new Set<string>();
@@ -136,9 +137,8 @@ export class SchemaBuilder {
     // Named aggregate or trait-bearing shape: ensure it is built and refer to
     // it lazily to support recursion.
     this.ensureNamed(shapeId, shape);
-    const symbol = symbolOf(shapeId);
-    const schemas = this.schemas;
-    return (() => schemas[symbol]) as $SchemaRef;
+    const schemasByShapeId = this.schemasByShapeId;
+    return (() => schemasByShapeId.get(shapeId)!) as $SchemaRef;
   }
 
   /**
@@ -201,11 +201,10 @@ export class SchemaBuilder {
    * Ensures a named static schema exists for the given shape, building it once.
    */
   private ensureNamed(shapeId: string, shape: AstShape): void {
-    const symbol = symbolOf(shapeId);
-    if (this.schemas[symbol] || this.visiting.has(symbol)) {
+    if (this.schemasByShapeId.has(shapeId) || this.visiting.has(shapeId)) {
       return;
     }
-    this.visiting.add(symbol);
+    this.visiting.add(shapeId);
 
     const { namespace, name } = parseShapeId(shapeId);
     const traits = this.index.getTraits(shape);
@@ -242,7 +241,9 @@ export class SchemaBuilder {
       }
     }
 
-    this.schemas[symbol] = schema;
+    this.schemasByShapeId.set(shapeId, schema);
+    this.schemas[symbolOf(shapeId)] ??= schema;
+    this.visiting.delete(shapeId);
     TypeRegistry.for(namespace).register(shapeId, schema as unknown as Parameters<TypeRegistry["register"]>[1]);
   }
 
@@ -361,8 +362,7 @@ export class SchemaBuilder {
    * Builds and registers an error schema and its constructor association.
    */
   private buildError(shapeId: string): void {
-    const symbol = symbolOf(shapeId);
-    if (this.schemas[symbol]) {
+    if (this.schemasByShapeId.has(shapeId)) {
       return;
     }
     const shape = this.index.getShape(shapeId);
@@ -372,7 +372,8 @@ export class SchemaBuilder {
     const { namespace, name } = parseShapeId(shapeId);
     const traits = this.index.getTraits(shape);
     const error = this.buildStruct(namespace, name, traits, shape, -3) as StaticErrorSchema;
-    this.schemas[symbol] = error;
+    this.schemasByShapeId.set(shapeId, error);
+    this.schemas[symbolOf(shapeId)] ??= error;
     this.registerError(namespace, error);
   }
 
@@ -383,8 +384,10 @@ export class SchemaBuilder {
     const { namespace, name } = parseShapeId(this.index.getServiceId());
     const syntheticNs = SYNTHETIC_PREFIX + namespace;
     const exceptionName = `${name}ServiceException`;
+    const exceptionId = `${syntheticNs}#${exceptionName}`;
     const baseException: StaticErrorSchema = [-3, syntheticNs, exceptionName, 0, [], []];
-    this.schemas[symbolOf(`${syntheticNs}#${exceptionName}`)] = baseException;
+    this.schemasByShapeId.set(exceptionId, baseException);
+    this.schemas[symbolOf(exceptionId)] ??= baseException;
     this.registerError(syntheticNs, baseException);
     return baseException;
   }

@@ -58,6 +58,45 @@ describe("SchemaBuilder", () => {
     expect(input[5]).toEqual([SCHEMA.TIMESTAMP_DATE_TIME, SCHEMA.TIMESTAMP_HTTP_DATE, SCHEMA.TIMESTAMP_EPOCH_SECONDS]);
   });
 
+  it("resolves same-named shapes in different namespaces independently", () => {
+    const ast: SmithyAst = {
+      smithy: "2.0",
+      shapes: {
+        "example#Service": {
+          type: "service",
+          version: "1.0",
+          operations: [{ target: "example#Operation" }],
+        },
+        "example#Operation": {
+          type: "operation",
+          input: { target: "example#Input" },
+        },
+        "example#Input": {
+          type: "structure",
+          members: {
+            first: { target: "a#Shared" },
+            second: { target: "b#Shared" },
+          },
+        },
+        "a#Shared": {
+          type: "structure",
+          members: { foo: { target: "smithy.api#String" } },
+        },
+        "b#Shared": {
+          type: "structure",
+          members: { bar: { target: "smithy.api#String" } },
+        },
+      },
+    };
+
+    const { schemas } = new SchemaBuilder(new ModelIndex(ast)).build();
+    const input = schemas["Input$"] as any;
+    const byName = Object.fromEntries(input[4].map((name: string, index: number) => [name, input[5][index]]));
+
+    expect(deref(byName.first)).toEqual([3, "a", "Shared", 0, ["foo"], [SCHEMA.STRING], 0]);
+    expect(deref(byName.second)).toEqual([3, "b", "Shared", 0, ["bar"], [SCHEMA.STRING], 0]);
+  });
+
   it("builds an empty structure schema", () => {
     const { schemas } = build();
     expect(schemas["EmptyStructure$"]).toEqual([3, "smithy.protocoltests.rpcv2Cbor", "EmptyStructure", 0, [], [], 0]);
