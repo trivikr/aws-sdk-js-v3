@@ -119,9 +119,9 @@ describe("@smithy/dynamic-client integration (rpcv2Cbor)", () => {
     const { exports, client } = clientWith(handler);
     const Command = exports["GreetingWithErrorsCommand"] as any;
 
-    await expect(client.send(new Command({}))).rejects.toMatchObject({
-      message: "nope",
-    });
+    const error = await client.send(new Command({})).catch((error: any) => error);
+    expect(error.message).toBe("nope");
+    expect(error.name ?? "<missing>").toBe("InvalidGreeting");
   });
 
   it("installs runtime typechecking that flags input mismatches", async () => {

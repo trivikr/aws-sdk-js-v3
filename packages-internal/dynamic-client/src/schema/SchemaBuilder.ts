@@ -398,7 +398,20 @@ export class SchemaBuilder {
    */
   private registerError(namespace: string, error: StaticErrorSchema): void {
     const registry = TypeRegistry.for(namespace);
-    registry.registerError(error, ServiceException);
+    const exceptionName = error[2];
+    const traits = error[3];
+    const fault = typeof traits === "object" ? traits.error : undefined;
+    const ModeledException = class extends ServiceException {
+      public constructor(options: ConstructorParameters<typeof ServiceException>[0]) {
+        super({
+          ...options,
+          name: exceptionName,
+          ...(fault ? { $fault: fault } : {}),
+        } as ConstructorParameters<typeof ServiceException>[0]);
+        Object.setPrototypeOf(this, ModeledException.prototype);
+      }
+    };
+    registry.registerError(error, ModeledException);
     this.errorRegistries.set(namespace, registry);
   }
 }
